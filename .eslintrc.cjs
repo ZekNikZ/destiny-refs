@@ -6,6 +6,8 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
     "@zeknikz/eslint-config",
+    "@zeknikz/eslint-config/react",
+    "@zeknikz/eslint-config/typescript",
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parser: "@typescript-eslint/parser",
