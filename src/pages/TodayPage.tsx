@@ -101,6 +101,20 @@ const example: LootPool = {
             },
           ],
         },
+        {
+          type: "pool",
+          quantity: "chance",
+          showInLootSummary: true,
+          pinnacleWhen: "never",
+          weeklyLimit: "infinite_after_first_clear",
+          availableWhen: "always",
+          loot: [
+            {
+              type: "item",
+              itemHash: 1036972937,
+            },
+          ],
+        },
       ],
     },
     {

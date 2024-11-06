@@ -27,10 +27,6 @@ export type Loot =
       quantity?: number;
     }
   | {
-      type: "mod";
-      modHash: number;
-    }
-  | {
       type: "group";
       name: string;
       groupType: "armor" | "head" | "chest" | "arms" | "legs" | "class" | "weapon";
