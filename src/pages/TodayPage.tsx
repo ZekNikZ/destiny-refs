@@ -33,6 +33,10 @@ const example: LootPool = {
               itemHash: 3569407878,
             },
             {
+              type: "item",
+              itemHash: 2001697739,
+            },
+            {
               type: "group",
               name: "Head Armor",
               groupType: "head",
