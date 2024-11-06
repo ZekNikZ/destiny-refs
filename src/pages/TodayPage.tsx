@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
-import { testBungieApi } from "../utils/test";
+import { useMemo } from "react";
+import { flattenLootPoolIntoItemHashes } from "../utils/flatten-loot-table";
 import { LootPool } from "../data/types";
-import { Group, Stack, Image, Text } from "@mantine/core";
-import { BungieDamageTypes } from "../data/bungie-types";
-import { settings } from "../utils/bungie";
+import { Stack } from "@mantine/core";
+import LootItemListing from "../components/testing/LootItemListing";
 
 const example: LootPool = {
   type: "mode_specific",
@@ -206,70 +205,14 @@ const example: LootPool = {
 };
 
 const TodayPage = () => {
-  const [state, setState] = useState<Awaited<ReturnType<typeof testBungieApi>>[0]>([]);
-  const [damageTypes, setDamageTypes] = useState<BungieDamageTypes>({});
-
-  useEffect(() => {
-    const fetcher = async () => {
-      const [s, d] = await testBungieApi(example);
-      setState(s);
-      setDamageTypes(d);
-    };
-    fetcher();
-  }, []);
+  const itemHashes = useMemo(() => {
+    return [...new Set(flattenLootPoolIntoItemHashes(example))];
+  }, [example]);
 
   return (
     <Stack>
-      {state.map((item) => (
-        <Group key={item.name}>
-          <div
-            style={{
-              width: 60,
-              height: 60,
-              position: "relative",
-            }}
-          >
-            <Image src={`https://bungie.net/${item.icon}`} />
-            {item.watermark && (
-              <Image
-                src={`https://bungie.net/${item.watermark}`}
-                style={{ position: "absolute", left: 0, top: 0 }}
-              />
-            )}
-            {item.quantity && (
-              <div
-                style={{
-                  position: "absolute",
-                  right: 0,
-                  bottom: 0,
-                  background: "rgba(0, 0, 0, 0.4)",
-                  height: 18,
-                  display: "flex",
-                  padding: "2px 6px",
-                  color: "white",
-                  lineHeight: "14px",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  fontSize: "14px",
-                }}
-              >
-                {item.quantity}
-              </div>
-            )}
-          </div>
-          <Stack gap={2}>
-            <Text fw="bold">{item.name}</Text>
-            <Group gap={4}>
-              {item.damageType !== 0 && (
-                <Image src={`https://bungie.net/${damageTypes[item.damageType].icon}`} h={16} />
-              )}
-              {item.ammoType && item.ammoType !== 0 && (
-                <Image src={`https://bungie.net/${settings!.ammoIcons[item.ammoType]}`} h={12} />
-              )}
-              <Text>{item.type}</Text>
-            </Group>
-          </Stack>
-        </Group>
+      {itemHashes.map((itemHash) => (
+        <LootItemListing key={itemHash} itemHash={itemHash} />
       ))}
     </Stack>
   );

@@ -7,17 +7,33 @@ import "@mantine/dates/styles.css";
 import { createTheme, MantineProvider } from "@mantine/core";
 
 import "@fontsource/bebas-neue";
-import { Provider } from "react-redux";
-import { store } from "./data/store";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const theme = createTheme({});
 
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      queryFn: async ({ queryKey: [url] }) => {
+        const data = await (
+          await fetch(`${url}`, {
+            headers: {
+              "X-API-Key": import.meta.env.REACT_APP_BUNGIE_API_KEY,
+            },
+          })
+        ).json();
+        return data;
+      },
+    },
+  },
+});
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Provider store={store}>
+    <QueryClientProvider client={queryClient}>
       <MantineProvider theme={theme} defaultColorScheme="dark">
         <App />
       </MantineProvider>
-    </Provider>
+    </QueryClientProvider>
   </StrictMode>
 );
