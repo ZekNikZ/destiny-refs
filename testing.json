@@ -1,0 +1,69 @@
+{
+  "activities": {
+    "raids": [
+      {
+        "name": "Salvation's Edge",
+        "activity_id": "",
+        "type": "raid",
+        "location": "Pale Heart, The Traveler",
+        "background_image": "",
+        "encounters": [
+          {
+            "name": "Encounter 1",
+            "description": "This is the first encounter",
+            "loot": [
+              {
+                "type": "guaranteed",
+                "name": "First Clear",
+                "count": 2,
+                "pool": [
+                  {
+                    "item_id": 1234,
+                    "note": "string",
+                    "quantity": 1
+                  }
+                ],
+                "notes": []
+              },
+              {
+                "type": "chance",
+                "item": {
+                  "item_id": 1234,
+                  "note": "string"
+                },
+                "notes": []
+              }
+            ],
+            "challenges": [
+              {
+                "name": "Triumph 1",
+                "type": "static",
+                "description": "This is the first triumph",
+                "record_id": ""
+              },
+              {
+                "name": "Challenge 1",
+                "type": "challenge",
+                "description": "This is the first challenge",
+                "record_id": "",
+                "modifier_id": ""
+              }
+            ]
+          }
+        ],
+        "triumphs": [],
+        "loot": [],
+        "secret_chests": [],
+        "extra_puzzles": []
+      }
+    ],
+    "dungeons": [],
+    "nightfalls": [],
+    "exotic_missions": [],
+    "lost_sectors": []
+  },
+  "rotations": {
+    "weekly": [],
+    "daily": []
+  }
+}
