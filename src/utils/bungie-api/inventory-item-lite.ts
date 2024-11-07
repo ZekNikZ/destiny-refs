@@ -14,6 +14,7 @@ export interface BungieInventoryItemLiteDefinition {
     itemTypeDisplayName: string;
     iconWatermark: string;
     defaultDamageType: number;
+    classType?: number;
   };
 }
 

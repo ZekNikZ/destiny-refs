@@ -1,8 +1,8 @@
 import { Group, Image, Stack, Text } from "@mantine/core";
 import {
-  useBungieDamageTypes,
   useBungieItemDetails,
   useBungieSettings,
+  useBungieStaticData,
 } from "../../utils/bungie-api";
 import LootItemIcon from "./LootItemIcon";
 
@@ -11,9 +11,9 @@ interface Props {
   quantity?: number;
 }
 
-const LootItemListing = (props: Props) => {
+export default function LootItemListing(props: Props) {
   const { data: item } = useBungieItemDetails(props.itemHash);
-  const { data: damageTypes } = useBungieDamageTypes();
+  const { data: staticData } = useBungieStaticData();
   const { data: settings } = useBungieSettings();
 
   return (
@@ -24,7 +24,7 @@ const LootItemListing = (props: Props) => {
         <Group gap={4}>
           {item?.defaultDamageType && item?.defaultDamageType !== 0 && (
             <Image
-              src={`https://bungie.net/${damageTypes?.[item?.defaultDamageType].icon}`}
+              src={`https://bungie.net/${staticData?.damageTypes[item?.defaultDamageType].icon}`}
               h={16}
             />
           )}
@@ -34,11 +34,14 @@ const LootItemListing = (props: Props) => {
               h={12}
             />
           )}
-          <Text>{item?.itemTypeDisplayName}</Text>
+          <Text>
+            {item?.classType !== undefined &&
+              item.classType !== 3 &&
+              staticData?.classes[item.classType].name}{" "}
+            {item?.itemTypeDisplayName}
+          </Text>
         </Group>
       </Stack>
     </Group>
   );
-};
-
-export default LootItemListing;
+}

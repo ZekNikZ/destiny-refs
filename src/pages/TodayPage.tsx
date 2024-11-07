@@ -1,6 +1,6 @@
-import { useCallback, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { flattenLootPoolIntoItemHashes } from "../utils/flatten-loot-table";
-import { LootPool } from "../data/types";
+import { Loot, LootPool } from "../data/types";
 import {
   Accordion,
   ActionIcon,
@@ -15,21 +15,19 @@ import {
   Title,
   useMantineTheme,
 } from "@mantine/core";
-import LootItemListing from "../components/testing/LootItemListing";
-
+import LootItemListing from "../components/loot/LootItemListing";
 import classes from "./TodayPage.module.scss";
-import LootItemIcon from "../components/testing/LootItemIcon";
 import { Link } from "react-router-dom";
 import {
   ArrowsInSimple,
   ArrowsOutSimple,
   CaretDown,
-  CaretUp,
-  List as ListIcon,
   Question,
   TreasureChest,
   Trophy,
 } from "@phosphor-icons/react";
+import LootItemIcon from "../components/loot/LootItemIcon";
+import LootIcon from "../components/loot/LootIcon";
 
 const example: LootPool = {
   type: "mode_specific",
@@ -231,6 +229,27 @@ const example: LootPool = {
   ],
 };
 
+const exampleGroup: Loot = {
+  type: "group",
+  name: "Helmet",
+  groupType: "head",
+  displayStaticIcon: "helmet",
+  children: [
+    {
+      type: "item",
+      itemHash: 659074261,
+    },
+    {
+      type: "item",
+      itemHash: 1026610441,
+    },
+    {
+      type: "item",
+      itemHash: 930168404,
+    },
+  ],
+};
+
 const TodayPage = () => {
   const itemHashes = useMemo(() => {
     return [...new Set(flattenLootPoolIntoItemHashes(example))];
@@ -317,8 +336,9 @@ const TodayPage = () => {
         <Card.Section p="xs">
           <Group gap="xs">
             {itemHashes.slice(0, 5).map((itemHash) => (
-              <LootItemIcon key={itemHash} itemHash={itemHash} quantity={5} />
+              <LootItemIcon key={itemHash} itemHash={itemHash} quantity={5} size={60} />
             ))}
+            <LootIcon loot={exampleGroup} />
           </Group>
         </Card.Section>
       </Card>
@@ -360,7 +380,7 @@ const TodayPage = () => {
           <Collapse in={!open}>
             <Group gap="xs" p="xs">
               {itemHashes.slice(0, 5).map((itemHash) => (
-                <LootItemIcon key={itemHash} itemHash={itemHash} quantity={5} />
+                <LootItemIcon key={itemHash} itemHash={itemHash} quantity={5} size={60} />
               ))}
             </Group>
           </Collapse>
@@ -514,7 +534,7 @@ const TodayPage = () => {
         <Card.Section p="xs">
           <Group gap="xs">
             {itemHashes.map((itemHash) => (
-              <LootItemIcon key={itemHash} itemHash={itemHash} quantity={5} />
+              <LootItemIcon key={itemHash} itemHash={itemHash} quantity={5} size={60} />
             ))}
           </Group>
         </Card.Section>

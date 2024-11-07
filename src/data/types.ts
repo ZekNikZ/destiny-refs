@@ -1,5 +1,14 @@
 export type ActivityType = "raid" | "dungeon" | "nightfall" | "exotic_mission" | "lost_sector";
 
+export type ActivityTags =
+  | "featured-newest"
+  | "featured-farmable"
+  | "featured-rotating"
+  | "challenge-active"
+  | "pinnacle"
+  | "double-loot-active"
+  | "not-available-rotating";
+
 export interface Activity {
   type: ActivityType;
 
@@ -23,15 +32,26 @@ export type Loot =
       itemHash: number;
       deepsight?: "chance" | "guaranteed";
       artiface?: boolean;
-      adept?: boolean;
       quantity?: number;
     }
   | {
       type: "group";
-      name: string;
-      groupType: "armor" | "head" | "chest" | "arms" | "legs" | "class" | "weapon";
+      name?: string;
+      groupType: string;
+      displayItemHash?: number;
+      displayStaticIcon?:
+        | "helmet"
+        | "arm-armor"
+        | "chest-armor"
+        | "leg-armor"
+        | "class-item"
+        | "weapon"
+        | "legendary-engram"
+        | "exotic-engram"
+        | "bright-engram"
+        | "prime-engram";
       artiface?: boolean;
-      adept?: boolean;
+      quantity?: number;
       children: Loot[];
     };
 

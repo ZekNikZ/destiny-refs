@@ -3,20 +3,18 @@ import { useBungieItemDetails } from "../../utils/bungie-api";
 
 interface Props {
   itemHash: number;
-  size?: number;
+  size: number;
   quantity?: number;
 }
 
-const LootItemIcon = (props: Props) => {
+export default function LootItemIcon(props: Props) {
   const { data: item, isSuccess } = useBungieItemDetails(props.itemHash);
-
-  const size = props.size ?? 60;
 
   return (
     <div
       style={{
-        width: size,
-        height: size,
+        width: props.size,
+        height: props.size,
         position: "relative",
       }}
     >
@@ -27,7 +25,7 @@ const LootItemIcon = (props: Props) => {
           style={{ position: "absolute", left: 0, top: 0 }}
         />
       )}
-      {props.quantity && (
+      {props.quantity && props.quantity > 1 && (
         <div
           style={{
             position: "absolute",
@@ -51,6 +49,4 @@ const LootItemIcon = (props: Props) => {
       )}
     </div>
   );
-};
-
-export default LootItemIcon;
+}
