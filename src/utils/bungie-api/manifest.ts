@@ -98,5 +98,5 @@ export interface BungieManifest {
 }
 
 export function useBungieManifest() {
-  return useBungieQuery<BungieManifest>("/Platform/Destiny2/Manifest");
+  return useBungieQuery<BungieManifest>("/Platform/Destiny2/Manifest/");
 }

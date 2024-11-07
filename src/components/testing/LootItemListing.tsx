@@ -11,7 +11,7 @@ interface Props {
 }
 
 const LootItemListing = (props: Props) => {
-  const { data: item } = useBungieItemDetails(props.itemHash);
+  const { data: item, isSuccess } = useBungieItemDetails(props.itemHash);
   const { data: damageTypes } = useBungieDamageTypes();
   const { data: settings } = useBungieSettings();
 
@@ -24,7 +24,7 @@ const LootItemListing = (props: Props) => {
           position: "relative",
         }}
       >
-        <Image src={`https://bungie.net/${item?.displayProperties.icon}`} />
+        {isSuccess && <Image src={`https://bungie.net/${item?.displayProperties.icon}`} />}
         {item?.iconWatermark && (
           <Image
             src={`https://bungie.net/${item.iconWatermark}`}
@@ -61,7 +61,7 @@ const LootItemListing = (props: Props) => {
               h={16}
             />
           )}
-          {item?.equippingBlock.ammoType && item.equippingBlock.ammoType !== 0 && (
+          {item?.equippingBlock?.ammoType && item.equippingBlock.ammoType !== 0 && (
             <Image
               src={`https://bungie.net/${settings?.ammoIcons[item.equippingBlock.ammoType]}`}
               h={12}

@@ -8,7 +8,7 @@ export interface BungieInventoryItemLiteDefinition {
       icon?: string;
       hasIcon: boolean;
     };
-    equippingBlock: {
+    equippingBlock?: {
       ammoType: number;
     };
     itemTypeDisplayName: string;

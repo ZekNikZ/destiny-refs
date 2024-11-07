@@ -4,12 +4,19 @@ import { BungieManifest, useBungieManifest } from "./manifest";
 export function useBungieQuery<T>(
   url: string | undefined,
   options?: Omit<UseQueryOptions<T>, "queryKey">,
-  manifestVersion?: string
+  meta?: {
+    manifestVersion?: string;
+    includeApiKey?: boolean;
+  }
 ) {
   return useQuery<T, Error, T, QueryKey>({
-    queryKey: [`https://bungie.net/${url}`, manifestVersion],
+    queryKey: [`https://www.bungie.net${url}`, meta?.manifestVersion],
     staleTime: 1000 * 60 * 60 * 24,
     ...options,
+    meta: {
+      includeApiKey: meta?.includeApiKey ?? true,
+      ...options?.meta,
+    },
   });
 }
 
@@ -19,8 +26,15 @@ export function useBungieQueryViaManifest<T>(
 ) {
   const { data: manifest } = useBungieManifest();
 
-  return useBungieQuery(manifest?.Response.jsonWorldComponentContentPaths.en[manifestKey], {
-    enabled: !!manifest,
-    ...options,
-  });
+  return useBungieQuery(
+    manifest?.Response.jsonWorldComponentContentPaths.en[manifestKey],
+    {
+      enabled: !!manifest,
+      ...options,
+    },
+    {
+      manifestVersion: manifest?.Response.version,
+      includeApiKey: false,
+    }
+  );
 }

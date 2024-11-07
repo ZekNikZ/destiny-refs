@@ -6,7 +6,7 @@ import "@mantine/core/styles.css";
 import "@mantine/dates/styles.css";
 import { createTheme, MantineProvider } from "@mantine/core";
 
-import "@fontsource/bebas-neue";
+import "@fontsource/bebas-neue/index.css";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const theme = createTheme({});
@@ -14,12 +14,16 @@ const theme = createTheme({});
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      queryFn: async ({ queryKey: [url] }) => {
+      queryFn: async ({ queryKey: [url], meta }) => {
+        const headers: HeadersInit = {};
+
+        if (meta?.includeApiKey) {
+          headers["X-API-Key"] = import.meta.env.VITE_BUNGIE_API_KEY;
+        }
+
         const data = await (
           await fetch(`${url}`, {
-            headers: {
-              "X-API-Key": import.meta.env.REACT_APP_BUNGIE_API_KEY,
-            },
+            headers,
           })
         ).json();
         return data;
