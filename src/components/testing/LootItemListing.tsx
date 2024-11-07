@@ -4,6 +4,7 @@ import {
   useBungieItemDetails,
   useBungieSettings,
 } from "../../utils/bungie-api";
+import LootItemIcon from "./LootItemIcon";
 
 interface Props {
   itemHash: number;
@@ -11,48 +12,14 @@ interface Props {
 }
 
 const LootItemListing = (props: Props) => {
-  const { data: item, isSuccess } = useBungieItemDetails(props.itemHash);
+  const { data: item } = useBungieItemDetails(props.itemHash);
   const { data: damageTypes } = useBungieDamageTypes();
   const { data: settings } = useBungieSettings();
 
   return (
-    <Group key={props.itemHash}>
-      <div
-        style={{
-          width: 60,
-          height: 60,
-          position: "relative",
-        }}
-      >
-        {isSuccess && <Image src={`https://bungie.net/${item?.displayProperties.icon}`} />}
-        {item?.iconWatermark && (
-          <Image
-            src={`https://bungie.net/${item.iconWatermark}`}
-            style={{ position: "absolute", left: 0, top: 0 }}
-          />
-        )}
-        {props.quantity && (
-          <div
-            style={{
-              position: "absolute",
-              right: 0,
-              bottom: 0,
-              background: "rgba(0, 0, 0, 0.4)",
-              height: 18,
-              display: "flex",
-              padding: "2px 6px",
-              color: "white",
-              lineHeight: "14px",
-              justifyContent: "center",
-              alignItems: "center",
-              fontSize: "14px",
-            }}
-          >
-            {props.quantity}
-          </div>
-        )}
-      </div>
-      <Stack gap={2}>
+    <Group key={props.itemHash} gap="xs" w={300}>
+      <LootItemIcon itemHash={props.itemHash} quantity={props.quantity} size={50} />
+      <Stack gap={0}>
         <Text fw="bold">{item?.displayProperties.name}</Text>
         <Group gap={4}>
           {item?.defaultDamageType && item?.defaultDamageType !== 0 && (

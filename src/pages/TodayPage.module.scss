@@ -1,7 +1,7 @@
 .darkOverlay {
   position: relative;
 
-  & p {
+  & * {
     position: relative;
     z-index: 1;
   }
@@ -15,4 +15,8 @@
     bottom: 0;
     background: rgba(0, 0, 0, 0.6);
   }
+}
+
+.mantine-List-item::marker {
+  margin-right: 4px;
 }

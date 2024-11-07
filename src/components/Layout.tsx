@@ -45,7 +45,7 @@ export default function Layout() {
               href="https://github.com/ZekNikZ/destiny-refs"
               target="_blank"
             >
-              <GithubLogo style={{ width: "70%", height: "70%" }} />
+              <GithubLogo size="65%" />
             </ActionIcon>
           </Group>
         </Group>
