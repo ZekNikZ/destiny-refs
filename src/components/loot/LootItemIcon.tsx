@@ -5,7 +5,6 @@ import { Loot } from "../../data/types";
 interface Props {
   loot: Extract<Loot, { type: "item" }>;
   size: number;
-  quantity?: number;
   hideArtiface?: boolean;
 }
 
@@ -54,7 +53,7 @@ export default function LootItemIcon(props: Props) {
             borderTopLeftRadius: 6,
           }}
         >
-          {props.quantity}
+          {props.loot.quantity}
         </div>
       )}
     </div>

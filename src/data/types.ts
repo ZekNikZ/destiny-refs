@@ -1,6 +1,6 @@
 export type ActivityType = "raid" | "dungeon" | "nightfall" | "exotic_mission" | "lost_sector";
 
-export type ActivityTags =
+export type ActivityTag =
   | "featured-newest"
   | "featured-farmable"
   | "featured-rotating"
@@ -9,21 +9,25 @@ export type ActivityTags =
   | "double-loot-active"
   | "not-available-rotating";
 
-export interface Activity {
-  type: ActivityType;
-
-  id: string;
+export interface ActivityMeta {
   name: string;
-  location: string;
+  description: string;
   backgroundImage: string;
 
-  bungieActivityHash: number;
+  loot?: LootPool[];
+  triumphs?: Triumph[];
+  guides?: string[];
+  secretChests?: SecretChest[];
+  extraPuzzles?: ExtraPuzzle[];
 
+  tagOverrides?: ActivityTag[];
+}
+
+export interface Activity extends ActivityMeta {
+  id: string;
+  type: ActivityType;
+  location: string;
   encounters: Encounter[];
-  triumphs: Triumph[];
-  loot: LootPool[];
-  secretChests: SecretChest[];
-  extraPuzzles: ExtraPuzzle[];
 }
 
 export type Loot =
@@ -63,7 +67,7 @@ export type LootPool =
   | {
       type: "pool";
       loot: Loot[];
-      quantity: number | "chance";
+      quantity: number | "chance" | "all";
       notes?: string[];
       showInLootSummary?: boolean;
 
@@ -88,11 +92,8 @@ export type LootPool =
         | "always"; // no note
     };
 
-export interface Encounter {
-  name: string;
-  description: string;
-  backgroundImage: string;
-  triumphs: Triumph[];
+export interface Encounter extends ActivityMeta {
+  id: string;
 }
 
 export interface Triumph {

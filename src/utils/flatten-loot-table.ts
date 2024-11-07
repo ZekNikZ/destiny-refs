@@ -1,21 +1,27 @@
 import { Loot, LootPool } from "../data/types";
 
-function flattenLootEntryIntoItemHashes(loot: Loot): number[] {
-  if (loot.type === "item") {
-    return [loot.itemHash];
-  } else if (loot.type === "group") {
-    return loot.children.flatMap(flattenLootEntryIntoItemHashes);
-  } else {
-    throw new Error("Invalid loot type");
-  }
-}
+export function summarizeLootPool(pool: LootPool): Loot[] {
+  let loot: Loot[];
 
-export function flattenLootPoolIntoItemHashes(pool: LootPool): number[] {
-  if (pool.type === "mode_specific") {
-    return pool.modes.flatMap((mode) => mode.children.flatMap(flattenLootPoolIntoItemHashes));
-  } else if (pool.type === "pool") {
-    return pool.loot.flatMap(flattenLootEntryIntoItemHashes);
-  } else {
-    throw new Error("Invalid pool type");
+  switch (pool.type) {
+    case "mode_specific":
+      loot = pool.modes.flatMap((mode) => mode.children.flatMap(summarizeLootPool));
+      break;
+    case "pool":
+      loot = pool.showInLootSummary ? pool.loot : [];
+      break;
   }
+
+  return loot.filter(
+    (item, index) =>
+      loot.findIndex((otherItem) => {
+        if (item.type === "item" && otherItem.type === "item") {
+          return item.itemHash === otherItem.itemHash;
+        } else if (item.type === "group" && otherItem.type === "group") {
+          return item.name === otherItem.name;
+        } else {
+          return false;
+        }
+      }) === index
+  );
 }

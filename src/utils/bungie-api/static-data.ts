@@ -71,11 +71,9 @@ export function useBungieStaticData() {
     BungieStaticData["ammoTypes"]
   >("/Platform/Settings", {
     select: (data: any) => ({
-      ammoIcons: {
-        1: { name: "primary", icon: data.Response.destiny2CoreSettings.ammoTypePrimaryIcon },
-        2: { name: "special", icon: data.Response.destiny2CoreSettings.ammoTypeSpecialIcon },
-        3: { name: "heavy", icon: data.Response.destiny2CoreSettings.ammoTypeHeavyIcon },
-      },
+      1: { name: "primary", icon: data.Response.destiny2CoreSettings.ammoTypePrimaryIcon },
+      2: { name: "special", icon: data.Response.destiny2CoreSettings.ammoTypeSpecialIcon },
+      3: { name: "heavy", icon: data.Response.destiny2CoreSettings.ammoTypeHeavyIcon },
     }),
   });
 
@@ -92,5 +90,5 @@ export function useBungieStaticData() {
         isSuccess: false,
       };
     }
-  }, [damageTypes, damageTypesSuccess]);
+  }, [damageTypesSuccess, classesSuccess, ammoIconSuccess]);
 }

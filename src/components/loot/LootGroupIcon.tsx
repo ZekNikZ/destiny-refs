@@ -14,7 +14,10 @@ export default function LootGroupIcon(props: Props) {
     <HoverCard shadow="md">
       <HoverCard.Target>
         {props.loot.displayItemHash ? (
-          <LootItemIcon loot={props.loot} size={props.size} />
+          <LootItemIcon
+            loot={{ type: "item", itemHash: props.loot.displayItemHash }}
+            size={props.size}
+          />
         ) : (
           <div
             style={{
