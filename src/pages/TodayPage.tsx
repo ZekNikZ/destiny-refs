@@ -1,8 +1,11 @@
 import { useMemo } from "react";
 import { flattenLootPoolIntoItemHashes } from "../utils/flatten-loot-table";
 import { LootPool } from "../data/types";
-import { Stack } from "@mantine/core";
+import { Card, Group, Stack, Text } from "@mantine/core";
 import LootItemListing from "../components/testing/LootItemListing";
+
+import classes from "./TodayPage.module.scss";
+import LootItemIcon from "../components/testing/LootItemIcon";
 
 const example: LootPool = {
   type: "mode_specific",
@@ -211,6 +214,32 @@ const TodayPage = () => {
 
   return (
     <Stack>
+      <Card shadow="sm" padding="sm" radius="md" withBorder>
+        <Card.Section
+          className={classes.darkOverlay}
+          mih={80}
+          p="sm"
+          style={{
+            backgroundImage: "url('/test-bg-img.webp')",
+            backgroundSize: "cover",
+            backgroundPosition: "50% 50%",
+          }}
+        >
+          <Stack gap={0}>
+            <Text size="lg" c="#fff" fw="bold">
+              Encounter 1: Verity
+            </Text>
+            <Text>Put the square into the square hole.</Text>
+          </Stack>
+        </Card.Section>
+        <Card.Section p="xs">
+          <Group>
+            {itemHashes.map((itemHash) => (
+              <LootItemIcon key={itemHash} itemHash={itemHash} />
+            ))}
+          </Group>
+        </Card.Section>
+      </Card>
       {itemHashes.map((itemHash) => (
         <LootItemListing key={itemHash} itemHash={itemHash} />
       ))}
