@@ -1,14 +1,16 @@
 import { Image } from "@mantine/core";
 import { useBungieItemDetails } from "../../utils/bungie-api";
+import { Loot } from "../../data/types";
 
 interface Props {
-  itemHash: number;
+  loot: Extract<Loot, { type: "item" }>;
   size: number;
   quantity?: number;
+  hideArtiface?: boolean;
 }
 
 export default function LootItemIcon(props: Props) {
-  const { data: item, isSuccess } = useBungieItemDetails(props.itemHash);
+  const { data: item, isSuccess } = useBungieItemDetails(props.loot.itemHash);
 
   return (
     <div
@@ -25,7 +27,15 @@ export default function LootItemIcon(props: Props) {
           style={{ position: "absolute", left: 0, top: 0 }}
         />
       )}
-      {props.quantity && props.quantity > 1 && (
+      {!props.hideArtiface && props.loot.artiface && (
+        <Image
+          src="/icons/attributes/artiface.png"
+          h="30%"
+          w="30%"
+          style={{ position: "absolute", right: 2, top: 2 }}
+        />
+      )}
+      {props.loot.quantity && props.loot.quantity > 1 && (
         <div
           style={{
             position: "absolute",

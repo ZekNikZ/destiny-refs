@@ -1,4 +1,4 @@
-import { useBungieQueryViaManifest } from "./helpers";
+import { useBungieQuery, useBungieQueryViaManifest } from "./helpers";
 import { useMemo } from "react";
 
 export interface BungieStaticData {
@@ -19,6 +19,9 @@ export interface BungieStaticData {
       name: string;
       icon: string;
     };
+  };
+  ammoTypes: {
+    [key: number]: { name: string; icon: string };
   };
 }
 
@@ -47,6 +50,7 @@ export function useBungieStaticData() {
       ),
   });
 
+  // Classes
   const { data: classes, isSuccess: classesSuccess } = useBungieQueryViaManifest<
     BungieStaticData["classes"]
   >("DestinyClassDefinition", {
@@ -62,9 +66,22 @@ export function useBungieStaticData() {
       ),
   });
 
+  // Ammo Types
+  const { data: ammoTypes, isSuccess: ammoIconSuccess } = useBungieQuery<
+    BungieStaticData["ammoTypes"]
+  >("/Platform/Settings", {
+    select: (data: any) => ({
+      ammoIcons: {
+        1: { name: "primary", icon: data.Response.destiny2CoreSettings.ammoTypePrimaryIcon },
+        2: { name: "special", icon: data.Response.destiny2CoreSettings.ammoTypeSpecialIcon },
+        3: { name: "heavy", icon: data.Response.destiny2CoreSettings.ammoTypeHeavyIcon },
+      },
+    }),
+  });
+
   return useMemo(() => {
-    if (damageTypesSuccess && classesSuccess) {
-      const data: BungieStaticData = { damageTypes, classes };
+    if (damageTypesSuccess && classesSuccess && ammoIconSuccess) {
+      const data: BungieStaticData = { damageTypes, classes, ammoTypes };
       return {
         data,
         isSuccess: true,

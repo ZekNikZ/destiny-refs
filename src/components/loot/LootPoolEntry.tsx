@@ -1,6 +1,6 @@
 import { Group, Stack } from "@mantine/core";
-import { LootPool } from "../data/types";
-import LootTable from "./loot/LootTable";
+import { LootPool } from "../../data/types";
+import LootTable from "./LootTable";
 
 interface Props {
   pool: LootPool;

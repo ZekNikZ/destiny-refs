@@ -15,7 +15,6 @@ import {
   Title,
   useMantineTheme,
 } from "@mantine/core";
-import LootItemListing from "../components/loot/LootItemListing";
 import classes from "./TodayPage.module.scss";
 import { Link } from "react-router-dom";
 import {
@@ -28,6 +27,7 @@ import {
 } from "@phosphor-icons/react";
 import LootItemIcon from "../components/loot/LootItemIcon";
 import LootIcon from "../components/loot/LootIcon";
+import LootListing from "../components/loot/LootListing";
 
 const example: LootPool = {
   type: "mode_specific",
@@ -231,9 +231,10 @@ const example: LootPool = {
 
 const exampleGroup: Loot = {
   type: "group",
-  name: "Helmet",
-  groupType: "head",
+  name: "Helmet (Class-Specific)",
+  groupType: "Armor",
   displayStaticIcon: "helmet",
+  artiface: true,
   children: [
     {
       type: "item",
@@ -335,10 +336,11 @@ const TodayPage = () => {
         </Card.Section>
         <Card.Section p="xs">
           <Group gap="xs">
-            {itemHashes.slice(0, 5).map((itemHash) => (
+            {/* {itemHashes.slice(0, 5).map((itemHash) => (
               <LootItemIcon key={itemHash} itemHash={itemHash} quantity={5} size={60} />
-            ))}
+            ))} */}
             <LootIcon loot={exampleGroup} />
+            <LootListing loot={exampleGroup} />
           </Group>
         </Card.Section>
       </Card>
@@ -379,9 +381,9 @@ const TodayPage = () => {
         <Card.Section>
           <Collapse in={!open}>
             <Group gap="xs" p="xs">
-              {itemHashes.slice(0, 5).map((itemHash) => (
+              {/* {itemHashes.slice(0, 5).map((itemHash) => (
                 <LootItemIcon key={itemHash} itemHash={itemHash} quantity={5} size={60} />
-              ))}
+              ))} */}
             </Group>
           </Collapse>
           <Collapse in={open}>
@@ -404,9 +406,9 @@ const TodayPage = () => {
                           </Badge>
                         </Group>
                         <Group gap="xs">
-                          {itemHashes.slice(0, 10).map((itemHash) => (
-                            <LootItemListing key={itemHash} itemHash={itemHash} />
-                          ))}
+                          {/* {itemHashes.slice(0, 10).map((itemHash) => (
+                            <LootListing key={itemHash} itemHash={itemHash} />
+                          ))} */}
                         </Group>
                         <List>
                           <List.Item>
@@ -457,9 +459,9 @@ const TodayPage = () => {
                         CHANCE FOR
                       </Text>
                       <Stack gap="xs">
-                        {itemHashes.slice(10, 11).map((itemHash) => (
-                          <LootItemListing key={itemHash} itemHash={itemHash} />
-                        ))}
+                        {/* {itemHashes.slice(10, 11).map((itemHash) => (
+                          <LootListing key={itemHash} itemHash={itemHash} />
+                        ))} */}
                       </Stack>
                     </Card>
                     <Card padding="xs" withBorder bg={theme.colors.dark[7]}>
@@ -467,9 +469,9 @@ const TodayPage = () => {
                         GUARANTEED
                       </Text>
                       <Stack gap="xs">
-                        {itemHashes.slice(11, 12).map((itemHash) => (
-                          <LootItemListing key={itemHash} itemHash={itemHash} quantity={5} />
-                        ))}
+                        {/* {itemHashes.slice(11, 12).map((itemHash) => (
+                          <LootListing key={itemHash} itemHash={itemHash} quantity={5} />
+                        ))} */}
                       </Stack>
                     </Card>
                   </Stack>
@@ -533,9 +535,9 @@ const TodayPage = () => {
         </Card.Section>
         <Card.Section p="xs">
           <Group gap="xs">
-            {itemHashes.map((itemHash) => (
+            {/* {itemHashes.map((itemHash) => (
               <LootItemIcon key={itemHash} itemHash={itemHash} quantity={5} size={60} />
-            ))}
+            ))} */}
           </Group>
         </Card.Section>
       </Card>
@@ -549,9 +551,9 @@ const TodayPage = () => {
           </Badge>
         </Group>
         <Stack gap="xs">
-          {itemHashes.slice(0, 10).map((itemHash) => (
-            <LootItemListing key={itemHash} itemHash={itemHash} />
-          ))}
+          {/* {itemHashes.slice(0, 10).map((itemHash) => (
+            <LootListing key={itemHash} itemHash={itemHash} />
+          ))} */}
         </Stack>
       </Card>
       <Card padding="xs" withBorder>
@@ -559,9 +561,9 @@ const TodayPage = () => {
           CHANCE FOR
         </Text>
         <Stack gap="xs">
-          {itemHashes.slice(10, 11).map((itemHash) => (
-            <LootItemListing key={itemHash} itemHash={itemHash} />
-          ))}
+          {/* {itemHashes.slice(10, 11).map((itemHash) => (
+            <LootListing key={itemHash} itemHash={itemHash} />
+          ))} */}
         </Stack>
       </Card>
       <Card padding="xs" withBorder>
@@ -569,9 +571,9 @@ const TodayPage = () => {
           GUARANTEED
         </Text>
         <Stack gap="xs">
-          {itemHashes.slice(11, 12).map((itemHash) => (
-            <LootItemListing key={itemHash} itemHash={itemHash} />
-          ))}
+          {/* {itemHashes.slice(11, 12).map((itemHash) => (
+            <LootListing key={itemHash} itemHash={itemHash} />
+          ))} */}
         </Stack>
       </Card>
       <Card padding="xs" withBorder>
@@ -579,9 +581,9 @@ const TodayPage = () => {
           CHANCE FOR
         </Text>
         <Stack gap="xs">
-          {itemHashes.slice(12).map((itemHash) => (
-            <LootItemListing key={itemHash} itemHash={itemHash} />
-          ))}
+          {/* {itemHashes.slice(12).map((itemHash) => (
+            <LootListing key={itemHash} itemHash={itemHash} />
+          ))} */}
         </Stack>
       </Card>
     </Stack>

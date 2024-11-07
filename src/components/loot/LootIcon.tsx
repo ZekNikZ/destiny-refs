@@ -5,18 +5,17 @@ import LootItemIcon from "./LootItemIcon";
 interface Props {
   loot: Loot;
   size?: number;
+  hideArtiface?: boolean;
 }
 
 export default function LootIcon(props: Props) {
   if (props.loot.type === "item") {
     return (
-      <LootItemIcon
-        itemHash={props.loot.itemHash}
-        quantity={props.loot.quantity}
-        size={props.size ?? 60}
-      />
+      <LootItemIcon loot={props.loot} size={props.size ?? 60} hideArtiface={props.hideArtiface} />
     );
   } else {
-    return <LootGroupIcon loot={props.loot} size={props.size ?? 60} />;
+    return (
+      <LootGroupIcon loot={props.loot} size={props.size ?? 60} hideArtiface={props.hideArtiface} />
+    );
   }
 }
