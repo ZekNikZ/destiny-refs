@@ -7,6 +7,7 @@ import {
   Badge,
   Breadcrumbs,
   Card,
+  Collapse,
   Group,
   List,
   Stack,
@@ -20,6 +21,8 @@ import classes from "./TodayPage.module.scss";
 import LootItemIcon from "../components/testing/LootItemIcon";
 import { Link } from "react-router-dom";
 import {
+  ArrowsInSimple,
+  ArrowsOutSimple,
   CaretDown,
   CaretUp,
   List as ListIcon,
@@ -235,12 +238,7 @@ const TodayPage = () => {
 
   const theme = useMantineTheme();
 
-  const [openPanel, setOpenPanel] = useState("summary");
-
-  const setOpenPanelProxy = useCallback(
-    (panel: string | null) => setOpenPanel(panel ?? "summary"),
-    []
-  );
+  const [open, setOpen] = useState(false);
 
   return (
     <Stack>
@@ -333,6 +331,7 @@ const TodayPage = () => {
             backgroundImage: "url('/test-bg-img.webp')",
             backgroundSize: "cover",
             backgroundPosition: "50% 50%",
+            borderBottom: `1px solid ${theme.colors.dark[4]}`,
           }}
         >
           <Stack gap="xs">
@@ -343,8 +342,8 @@ const TodayPage = () => {
                 </Text>
                 <Text lh="xs">Tic tac toe.</Text>
               </Stack>
-              <ActionIcon variant="default" size="md">
-                <CaretUp size="70%" />
+              <ActionIcon variant="default" size="md" onClick={() => setOpen((o) => !o)}>
+                {open ? <ArrowsInSimple size="70%" /> : <ArrowsOutSimple size="70%" />}
               </ActionIcon>
             </Group>
             <Group gap="xs">
@@ -358,112 +357,114 @@ const TodayPage = () => {
           </Stack>
         </Card.Section>
         <Card.Section>
-          <Accordion radius={0} defaultValue={"Loot"}>
-            <Accordion.Item key="Loot" value="Loot">
-              <Accordion.Control icon={<TreasureChest />}>Loot</Accordion.Control>
-              <Accordion.Panel>
-                <Stack gap="xs">
-                  <Card padding="xs" withBorder bg={theme.colors.dark[7]}>
-                    <Stack gap="sm">
-                      <Group gap="sm">
-                        <Text size="md" fw="bold" fs="italic">
-                          ONE OF
-                        </Text>
-                        <Badge color="blue" radius="sm">
-                          Double Loot Active
-                        </Badge>
-                        <Badge color="red" radius="sm">
-                          Not available this week
-                        </Badge>
-                      </Group>
-                      <Group gap="xs">
-                        {itemHashes.slice(0, 10).map((itemHash) => (
+          <Collapse in={!open}>
+            <Group gap="xs" p="xs">
+              {itemHashes.slice(0, 5).map((itemHash) => (
+                <LootItemIcon key={itemHash} itemHash={itemHash} quantity={5} />
+              ))}
+            </Group>
+          </Collapse>
+          <Collapse in={open}>
+            <Accordion radius={0}>
+              <Accordion.Item key="Loot" value="Loot">
+                <Accordion.Control icon={<TreasureChest />}>Loot</Accordion.Control>
+                <Accordion.Panel>
+                  <Stack gap="xs">
+                    <Card padding="xs" withBorder bg={theme.colors.dark[7]}>
+                      <Stack gap="sm">
+                        <Group gap="sm">
+                          <Text size="md" fw="bold" fs="italic">
+                            ONE OF
+                          </Text>
+                          <Badge color="blue" radius="sm">
+                            Double Loot Active
+                          </Badge>
+                          <Badge color="red" radius="sm">
+                            Not available this week
+                          </Badge>
+                        </Group>
+                        <Group gap="xs">
+                          {itemHashes.slice(0, 10).map((itemHash) => (
+                            <LootItemListing key={itemHash} itemHash={itemHash} />
+                          ))}
+                        </Group>
+                        <List>
+                          <List.Item>
+                            Activity is featured: first drop this week (per character) will be{" "}
+                            <Text c="pink" fw="bold" span>
+                              pinnacle
+                            </Text>
+                            .
+                          </List.Item>
+                          <List.Item>
+                            <Text td="line-through">Available once per character each week.</Text>
+                          </List.Item>
+                          <List.Item>
+                            Activity is featured: will drop every completion this week (
+                            <Text c="blue" span fw="bold">
+                              farmable
+                            </Text>
+                            ).
+                          </List.Item>
+                          <List.Item>
+                            <Text>
+                              Only available{" "}
+                              <Text fw="bold" span>
+                                after
+                              </Text>{" "}
+                              first clear of the week (per character).
+                            </Text>
+                          </List.Item>
+                          <List.Item>Available once per account each week.</List.Item>
+                          <List.Item>
+                            <Text c="blue" span fw="bold">
+                              Double loot
+                            </Text>{" "}
+                            is active this week: drops doubled.
+                          </List.Item>
+                          <List.Item>
+                            Activity is featured:{" "}
+                            <Text fw="bold" c="red" span>
+                              will not drop
+                            </Text>{" "}
+                            this week.
+                          </List.Item>
+                        </List>
+                      </Stack>
+                    </Card>
+                    <Card padding="xs" withBorder bg={theme.colors.dark[7]}>
+                      <Text size="md" mb="sm" fw="bold" fs="italic">
+                        CHANCE FOR
+                      </Text>
+                      <Stack gap="xs">
+                        {itemHashes.slice(10, 11).map((itemHash) => (
                           <LootItemListing key={itemHash} itemHash={itemHash} />
                         ))}
-                      </Group>
-                      <List>
-                        <List.Item>
-                          Activity is featured: first drop this week (per character) will be{" "}
-                          <Text c="pink" fw="bold" span>
-                            pinnacle
-                          </Text>
-                          .
-                        </List.Item>
-                        <List.Item>
-                          <Text td="line-through">Available once per character each week.</Text>
-                        </List.Item>
-                        <List.Item>
-                          Activity is featured: will drop every completion this week (
-                          <Text c="blue" span fw="bold">
-                            farmable
-                          </Text>
-                          ).
-                        </List.Item>
-                        <List.Item>
-                          <Text>
-                            Only available{" "}
-                            <Text fw="bold" span>
-                              after
-                            </Text>{" "}
-                            first clear of the week (per character).
-                          </Text>
-                        </List.Item>
-                        <List.Item>Available once per account each week.</List.Item>
-                        <List.Item>
-                          <Text c="blue" span fw="bold">
-                            Double loot
-                          </Text>{" "}
-                          is active this week: drops doubled.
-                        </List.Item>
-                        <List.Item>
-                          Activity is featured:{" "}
-                          <Text fw="bold" c="red" span>
-                            will not drop
-                          </Text>{" "}
-                          this week.
-                        </List.Item>
-                      </List>
-                    </Stack>
-                  </Card>
-                  <Card padding="xs" withBorder bg={theme.colors.dark[7]}>
-                    <Text size="md" mb="sm" fw="bold" fs="italic">
-                      CHANCE FOR
-                    </Text>
-                    <Stack gap="xs">
-                      {itemHashes.slice(10, 11).map((itemHash) => (
-                        <LootItemListing key={itemHash} itemHash={itemHash} />
-                      ))}
-                    </Stack>
-                  </Card>
-                  <Card padding="xs" withBorder bg={theme.colors.dark[7]}>
-                    <Text size="md" mb="sm" fw="bold" fs="italic">
-                      GUARANTEED
-                    </Text>
-                    <Stack gap="xs">
-                      {itemHashes.slice(11, 12).map((itemHash) => (
-                        <LootItemListing key={itemHash} itemHash={itemHash} quantity={5} />
-                      ))}
-                    </Stack>
-                  </Card>
-                </Stack>
-              </Accordion.Panel>
-            </Accordion.Item>
-            <Accordion.Item key="Triumphs" value="Triumphs">
-              <Accordion.Control icon={<Trophy />}>Triumphs</Accordion.Control>
-              <Accordion.Panel>Loooot!</Accordion.Panel>
-            </Accordion.Item>
-            <Accordion.Item key="Guides" value="Guides">
-              <Accordion.Control icon={<Question />}>Guides</Accordion.Control>
-              <Accordion.Panel>Loooot!</Accordion.Panel>
-            </Accordion.Item>
-          </Accordion>
-        </Card.Section>
-        <Card.Section p="xs">
-          <Group gap="xs">
-            {itemHashes.slice(0, 5).map((itemHash) => (
-              <LootItemIcon key={itemHash} itemHash={itemHash} quantity={5} />
-            ))}
-          </Group>
+                      </Stack>
+                    </Card>
+                    <Card padding="xs" withBorder bg={theme.colors.dark[7]}>
+                      <Text size="md" mb="sm" fw="bold" fs="italic">
+                        GUARANTEED
+                      </Text>
+                      <Stack gap="xs">
+                        {itemHashes.slice(11, 12).map((itemHash) => (
+                          <LootItemListing key={itemHash} itemHash={itemHash} quantity={5} />
+                        ))}
+                      </Stack>
+                    </Card>
+                  </Stack>
+                </Accordion.Panel>
+              </Accordion.Item>
+              <Accordion.Item key="Triumphs" value="Triumphs">
+                <Accordion.Control icon={<Trophy />}>Triumphs</Accordion.Control>
+                <Accordion.Panel>Loooot!</Accordion.Panel>
+              </Accordion.Item>
+              <Accordion.Item key="Guides" value="Guides">
+                <Accordion.Control icon={<Question />}>Guides</Accordion.Control>
+                <Accordion.Panel>Loooot!</Accordion.Panel>
+              </Accordion.Item>
+            </Accordion>
+          </Collapse>
         </Card.Section>
       </Card>
       <Card shadow="sm" padding="sm" radius="sm" withBorder>
