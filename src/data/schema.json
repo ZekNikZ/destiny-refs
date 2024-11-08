@@ -13,16 +13,7 @@
         },
         "encounters": {
           "items": {
-            "properties": {
-              "type": {
-                "const": "encounter",
-                "type": "string"
-              }
-            },
-            "required": [
-              "type"
-            ],
-            "type": "object"
+            "$ref": "#/definitions/Activity"
           },
           "type": "array"
         },
@@ -34,6 +25,9 @@
         },
         "guide": {
           "type": "string"
+        },
+        "hasMasterMode": {
+          "type": "boolean"
         },
         "id": {
           "type": "string"
@@ -103,6 +97,37 @@
         "encounter"
       ],
       "type": "string"
+    },
+    "ChallengeRotation": {
+      "additionalProperties": false,
+      "properties": {
+        "activityType": {
+          "$ref": "#/definitions/ActivityType"
+        },
+        "id": {
+          "type": "string"
+        },
+        "parentActivityId": {
+          "type": "string"
+        },
+        "rotation": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "startDate": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "activityType",
+        "parentActivityId",
+        "startDate",
+        "rotation"
+      ],
+      "type": "object"
     },
     "ExtraPuzzle": {
       "additionalProperties": false,
@@ -206,6 +231,12 @@
           },
           "type": "array"
         },
+        "challengeRotations": {
+          "items": {
+            "$ref": "#/definitions/ChallengeRotation"
+          },
+          "type": "array"
+        },
         "doubleLootOverrides": {
           "items": {
             "type": "string"
@@ -224,7 +255,9 @@
       },
       "required": [
         "activities",
+        "sharedLoot",
         "featuredRotations",
+        "challengeRotations",
         "doubleLootOverrides"
       ],
       "type": "object"
@@ -322,6 +355,23 @@
             "children",
             "groupType",
             "type"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "key": {
+              "type": "string"
+            },
+            "type": {
+              "const": "ref-loot",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "key"
           ],
           "type": "object"
         }
@@ -452,6 +502,23 @@
             "quantity"
           ],
           "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "key": {
+              "type": "string"
+            },
+            "type": {
+              "const": "ref-loot-pool",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "key"
+          ],
+          "type": "object"
         }
       ]
     },
@@ -506,16 +573,14 @@
         "bungieRecordHash": {
           "type": "number"
         },
-        "description": {
+        "guide": {
           "type": "string"
         },
-        "name": {
-          "type": "string"
+        "isChallenge": {
+          "type": "boolean"
         }
       },
       "required": [
-        "name",
-        "description",
         "bungieRecordHash"
       ],
       "type": "object"

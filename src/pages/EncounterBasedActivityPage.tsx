@@ -2,28 +2,19 @@ import { Box, Stack } from "@mantine/core";
 import ActivityCard from "../components/activity/ActivityCard";
 import { Activity } from "../data/types";
 import SmartBreadcrumbs from "../components/SmartBreadcrumbs";
+import useRotation from "../data/useRotation";
 
 interface Props {
   activity: Activity;
 }
 
 export default function EncounterBasedActivityPage(props: Props) {
-  const masterAvailable = true;
-  const featured = "newest";
-  const doubleLootActive = false;
+  const availability = useRotation(props.activity);
 
   return (
     <Stack>
       <SmartBreadcrumbs />
-      <ActivityCard
-        activity={props.activity}
-        availability={{
-          featured,
-          masterAvailable,
-          doubleLootActive,
-        }}
-        forceState="details"
-      />
+      <ActivityCard activity={props.activity} availability={availability} forceState="details" />
       <Box
         display="grid"
         style={{
@@ -37,12 +28,7 @@ export default function EncounterBasedActivityPage(props: Props) {
             key={encounter.name}
             titlePrefix={`Encounter ${index + 1}: `}
             activity={encounter}
-            availability={{
-              featured,
-              challengeActive: index === 4,
-              masterAvailable,
-              doubleLootActive,
-            }}
+            availability={availability}
           />
         ))}
       </Box>

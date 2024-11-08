@@ -10,6 +10,8 @@ export function summarizeLootPool(pool: LootPool): Loot[] {
     case "pool":
       loot = pool.showInLootSummary ? pool.loot : [];
       break;
+    case "ref-loot-pool":
+      throw new Error("Cannot summarize a reference loot pool");
   }
 
   return loot.filter(
@@ -40,4 +42,27 @@ export function anyLootIsPinnacle(pools: LootPool[], activityIsFeatured?: boolea
         );
     }
   });
+}
+
+export function getLootKey(loot: Loot) {
+  switch (loot.type) {
+    case "item":
+      return loot.itemHash;
+    case "group":
+      return loot.name;
+    case "ref-loot":
+      throw new Error("Cannot use a reference loot pool");
+  }
+}
+
+export function getUsableLoot(loot: Loot) {
+  if (loot.type === "ref-loot") {
+    throw new Error("Cannot use a reference loot pool");
+  }
+
+  return loot;
+}
+
+export function getUsableLoots(loot: Loot[]) {
+  return loot.map(getUsableLoot);
 }

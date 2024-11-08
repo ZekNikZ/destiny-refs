@@ -8,6 +8,7 @@ interface Props {
   size: number;
   hideArtiface?: boolean;
   disableHover?: boolean;
+  hideQuantity?: boolean;
 }
 
 export default function LootItemIcon(props: Props) {
@@ -19,6 +20,7 @@ export default function LootItemIcon(props: Props) {
         width: props.size,
         height: props.size,
         position: "relative",
+        flexShrink: 0,
       }}
     >
       <Image
@@ -39,7 +41,7 @@ export default function LootItemIcon(props: Props) {
           style={{ position: "absolute", right: 2, top: 2 }}
         />
       )}
-      {props.loot.quantity && props.loot.quantity > 1 && (
+      {!props.hideQuantity && props.loot.quantity && props.loot.quantity > 1 && (
         <div
           style={{
             position: "absolute",

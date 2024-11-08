@@ -34,11 +34,11 @@ function recurseAndApplyLootRefs(obj: any, sharedLoot: SharedLootPools): any {
   }
 }
 
-export function buildRealData(json: any): JsonData {
+export function buildRealData(json: JsonData): JsonData {
   const activities: Activity[] = recurseAndApplyLootRefs(json.activities, json.sharedLoot);
 
   return {
+    ...json,
     activities,
-    sharedLoot: json.sharedLoot,
   };
 }

@@ -1,22 +1,30 @@
 import { Badge, Card, Group, Stack, Title, useMantineTheme, Text, List, Box } from "@mantine/core";
-import { ActivityAvailability, LootPool } from "../../data/types";
+import { Activity, ActivityAvailability, LootPool } from "../../data/types";
 import React from "react";
 import LootListing from "./LootListing";
 import { numberToCardinal } from "../../utils/number-to-words";
 import classes from "./LootTable.module.scss";
+import { getLootKey } from "../../utils/loot";
 
 interface Props {
   lootPools: LootPool[];
   availability?: ActivityAvailability;
+  activity: Activity;
 }
 
 export default function LootTable(props: Props) {
   const theme = useMantineTheme();
 
+  const challengeActive =
+    props.availability?.allChallengesActive ||
+    props.availability?.activeChallenges?.includes(props.activity.id);
+
   return (
     <Group gap="xs" align="stretch">
       {props.lootPools.map((pool, index) => {
-        if (pool.type === "mode_specific") {
+        if (pool.type === "ref-loot-pool") {
+          throw new Error("Ref loot pools are not supported in LootTable");
+        } else if (pool.type === "mode_specific") {
           return (
             <Stack gap="xs" key={index} style={{ flexGrow: 1 }}>
               {pool.modes.map((mode) => (
@@ -29,7 +37,11 @@ export default function LootTable(props: Props) {
                       </Badge>
                     )}
                   </Group>
-                  <LootTable lootPools={mode.children} availability={props.availability} />
+                  <LootTable
+                    lootPools={mode.children}
+                    availability={props.availability}
+                    activity={props.activity}
+                  />
                 </React.Fragment>
               ))}
             </Stack>
@@ -67,18 +79,16 @@ export default function LootTable(props: Props) {
                     pool.availableWhen === "activity_not_featured") ||
                     (!props.availability?.featured &&
                       pool.availableWhen === "activity_is_featured") ||
-                    (!props.availability?.challengeActive &&
-                      pool.availableWhen === "challenge_completion")) && (
+                    (!challengeActive && pool.availableWhen === "challenge_completion")) && (
                     <Badge color="red" radius="sm">
                       Not available this week
                     </Badge>
                   )}
-                  {props.availability?.challengeActive &&
-                    pool.availableWhen === "challenge_completion" && (
-                      <Badge color="green" radius="sm">
-                        Challenge Reward
-                      </Badge>
-                    )}
+                  {challengeActive && pool.availableWhen === "challenge_completion" && (
+                    <Badge color="green" radius="sm">
+                      Challenge Reward
+                    </Badge>
+                  )}
                 </Group>
 
                 {/* Loot */}
@@ -90,10 +100,7 @@ export default function LootTable(props: Props) {
                   }}
                 >
                   {pool.loot.map((loot) => (
-                    <LootListing
-                      key={loot.type === "item" ? loot.itemHash : loot.name}
-                      loot={loot}
-                    />
+                    <LootListing key={getLootKey(loot)} loot={loot} />
                   ))}
                 </Box>
 
@@ -167,51 +174,48 @@ export default function LootTable(props: Props) {
                       is active this week: drops doubled.
                     </List.Item>
                   )}
-                  {pool.doubleLootWhen === "challenge_completion" &&
-                    props.availability?.challengeActive && (
-                      <List.Item>
-                        <Text c="green" span fw="bold">
-                          Challenge is active
-                        </Text>
-                        : successful challenge completion (once per character) will reward an{" "}
-                        <Text c="blue" span fw="bold">
-                          extra drop
-                        </Text>
-                        .
-                      </List.Item>
-                    )}
+                  {pool.doubleLootWhen === "challenge_completion" && challengeActive && (
+                    <List.Item>
+                      <Text c="green" span fw="bold">
+                        Challenge is active
+                      </Text>
+                      : successful challenge completion (once per character) will reward an{" "}
+                      <Text c="blue" span fw="bold">
+                        extra drop
+                      </Text>
+                      .
+                    </List.Item>
+                  )}
+                  {pool.doubleLootWhen === "challenge_completion_repeatable" && challengeActive && (
+                    <List.Item>
+                      <Text c="green" span fw="bold">
+                        Challenge is active
+                      </Text>
+                      : successful challenge completion (repeatable) will reward an{" "}
+                      <Text c="blue" span fw="bold">
+                        extra drop
+                      </Text>
+                      .
+                    </List.Item>
+                  )}
+                  {pool.doubleLootWhen === "challenge_completion" && !challengeActive && (
+                    <List.Item>
+                      <Text fw="bold" c="blue" span>
+                        Extra drop
+                      </Text>{" "}
+                      upon{" "}
+                      <Text fw="bold" c="green" span>
+                        successful challenge completion
+                      </Text>{" "}
+                      (once per character) (
+                      <Text fw="bold" c="red" span>
+                        not available this week
+                      </Text>
+                      ).
+                    </List.Item>
+                  )}
                   {pool.doubleLootWhen === "challenge_completion_repeatable" &&
-                    props.availability?.challengeActive && (
-                      <List.Item>
-                        <Text c="green" span fw="bold">
-                          Challenge is active
-                        </Text>
-                        : successful challenge completion (repeatable) will reward an{" "}
-                        <Text c="blue" span fw="bold">
-                          extra drop
-                        </Text>
-                        .
-                      </List.Item>
-                    )}
-                  {pool.doubleLootWhen === "challenge_completion" &&
-                    !props.availability?.challengeActive && (
-                      <List.Item>
-                        <Text fw="bold" c="blue" span>
-                          Extra drop
-                        </Text>{" "}
-                        upon{" "}
-                        <Text fw="bold" c="green" span>
-                          successful challenge completion
-                        </Text>{" "}
-                        (once per character) (
-                        <Text fw="bold" c="red" span>
-                          not available this week
-                        </Text>
-                        ).
-                      </List.Item>
-                    )}
-                  {pool.doubleLootWhen === "challenge_completion_repeatable" &&
-                    !props.availability?.challengeActive && (
+                    !challengeActive && (
                       <List.Item>
                         <Text fw="bold" c="blue" span>
                           Extra drop
@@ -249,30 +253,28 @@ export default function LootTable(props: Props) {
                         this week.
                       </List.Item>
                     )}
-                  {pool.availableWhen === "challenge_completion" &&
-                    props.availability?.challengeActive && (
-                      <List.Item>
-                        Only available upon{" "}
-                        <Text fw="bold" c="green" span>
-                          successful challenge completion
-                        </Text>
-                        .
-                      </List.Item>
-                    )}
-                  {pool.availableWhen === "challenge_completion" &&
-                    !props.availability?.challengeActive && (
-                      <List.Item>
-                        Only available upon{" "}
-                        <Text fw="bold" c="green" span>
-                          successful challenge completion
-                        </Text>{" "}
-                        (
-                        <Text fw="bold" c="red" span>
-                          not available this week
-                        </Text>
-                        ).
-                      </List.Item>
-                    )}
+                  {pool.availableWhen === "challenge_completion" && challengeActive && (
+                    <List.Item>
+                      Only available upon{" "}
+                      <Text fw="bold" c="green" span>
+                        successful challenge completion
+                      </Text>
+                      .
+                    </List.Item>
+                  )}
+                  {pool.availableWhen === "challenge_completion" && !challengeActive && (
+                    <List.Item>
+                      Only available upon{" "}
+                      <Text fw="bold" c="green" span>
+                        successful challenge completion
+                      </Text>{" "}
+                      (
+                      <Text fw="bold" c="red" span>
+                        not available this week
+                      </Text>
+                      ).
+                    </List.Item>
+                  )}
                 </List>
               </Stack>
             </Card>

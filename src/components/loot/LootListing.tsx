@@ -6,10 +6,16 @@ import LootIcon from "./LootIcon";
 interface Props {
   loot: Loot;
   noIcon?: boolean;
+  fullWidth?: boolean;
+  small?: boolean;
 }
 
 export default function LootListing(props: Props) {
   const type = props.loot.type;
+
+  if (type === "ref-loot") {
+    throw new Error("Cannot use a reference loot pool");
+  }
 
   const { data: item } = useBungieItemDetails(type === "item" ? props.loot.itemHash : 0);
   const { data: staticData } = useBungieStaticData();
@@ -21,24 +27,48 @@ export default function LootListing(props: Props) {
   const itemType = type === "item" ? item?.itemTypeDisplayName : props.loot.groupType;
 
   return (
-    <Group gap="xs" w={!props.noIcon ? 300 : undefined}>
-      {!props.noIcon && <LootIcon loot={props.loot} size={50} hideArtiface disableHover />}
+    <Group gap="xs" w={!props.noIcon && !props.fullWidth ? 300 : undefined} wrap="nowrap">
+      {!props.noIcon && (
+        <LootIcon
+          loot={props.loot}
+          size={props.small ? 30 : 50}
+          hideArtiface
+          disableHover
+          hideQuantity={props.small}
+        />
+      )}
       <Stack gap={0}>
-        <Text fw="bold">{name}</Text>
-        <Group gap={4}>
-          {damageType && damageType !== 0 && (
-            <Image src={`https://bungie.net/${staticData?.damageTypes[damageType]?.icon}`} h={16} />
-          )}
-          {ammoType && ammoType !== 0 && (
-            <Image src={`https://bungie.net/${staticData?.ammoTypes[ammoType]?.icon}`} h={12} />
-          )}
-          {props.loot.artiface && <Image src="/icons/attributes/artiface.png" h={16} />}
-          <Text>
-            {props.loot.artiface && "Artiface"}{" "}
-            {classType !== undefined && classType !== 3 && staticData?.classes[classType].name}{" "}
-            {itemType}
+        {props.small ? (
+          <Text size="sm">
+            {name}
+            <b>
+              {props.loot.quantity && props.loot.quantity > 1
+                ? ` \u00d7${props.loot.quantity}`
+                : ""}
+            </b>
           </Text>
-        </Group>
+        ) : (
+          <>
+            <Text fw="bold">{name}</Text>
+            <Group gap={4}>
+              {damageType && damageType !== 0 && (
+                <Image
+                  src={`https://bungie.net/${staticData?.damageTypes[damageType]?.icon}`}
+                  h={16}
+                />
+              )}
+              {ammoType && ammoType !== 0 && (
+                <Image src={`https://bungie.net/${staticData?.ammoTypes[ammoType]?.icon}`} h={12} />
+              )}
+              {props.loot.artiface && <Image src="/icons/attributes/artiface.png" h={16} />}
+              <Text>
+                {props.loot.artiface && "Artiface"}{" "}
+                {classType !== undefined && classType !== 3 && staticData?.classes[classType].name}{" "}
+                {itemType}
+              </Text>
+            </Group>
+          </>
+        )}
       </Stack>
     </Group>
   );

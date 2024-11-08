@@ -7,9 +7,27 @@
       "name": "Salvation's Edge",
       "description": "Free the Light.",
       "backgroundImage": "/images/raids/salvations-edge/banner.webp",
-      "triumphs": [],
+      "hasMasterMode": true,
+      "triumphs": [
+        {
+          "bungieRecordHash": 2487240675
+        },
+        {
+          "bungieRecordHash": 1728165205
+        },
+        {
+          "bungieRecordHash": 3553593767
+        },
+        {
+          "bungieRecordHash": 2307589343
+        },
+        {
+          "bungieRecordHash": 3202450274
+        }
+      ],
       "encounters": [
         {
+          "id": "raid-salvations-edge-encounter-1",
           "type": "encounter",
           "name": "Substraum",
           "description": "Gain Access to the Monolith",
@@ -90,9 +108,20 @@
                 }
               ]
             }
+          ],
+          "triumphs": [
+            {
+              "bungieRecordHash": 2062070439
+            },
+            {
+              "bungieRecordHash": 2705769344,
+              "guide": "Complete the encounter by only killing Overload Minotaurs in the fourth room of paths. You can tell which minotaur will be the correct one if there are Vex Hobgoblins in the starting room of the path.",
+              "isChallenge": true
+            }
           ]
         },
         {
+          "id": "raid-salvations-edge-encounter-2",
           "type": "encounter",
           "name": "Dissipation",
           "description": "Defeat the Herald",
@@ -173,9 +202,20 @@
                 }
               ]
             }
+          ],
+          "triumphs": [
+            {
+              "bungieRecordHash": 632048942
+            },
+            {
+              "bungieRecordHash": 61627171,
+              "guide": "When dunking resonance, team members must have a full inventory of 3 stacks of resonance. Dunking with less than 3 stacks will fail the challenge.",
+              "isChallenge": true
+            }
           ]
         },
         {
+          "id": "raid-salvations-edge-encounter-3",
           "type": "encounter",
           "name": "Repository",
           "description": "Carve a Path",
@@ -256,9 +296,20 @@
                 }
               ]
             }
+          ],
+          "triumphs": [
+            {
+              "bungieRecordHash": 1538747266
+            },
+            {
+              "bungieRecordHash": 4098731599,
+              "guide": "No team member can pick up the same type of resonance twice in a row, including between rooms.",
+              "isChallenge": true
+            }
           ]
         },
         {
+          "id": "raid-salvations-edge-encounter-4",
           "type": "encounter",
           "name": "Verity",
           "description": "See Beyond",
@@ -339,9 +390,20 @@
                 }
               ]
             }
+          ],
+          "triumphs": [
+            {
+              "bungieRecordHash": 1843442132
+            },
+            {
+              "bungieRecordHash": 1311861933,
+              "guide": "Complete the encounter while using each 3D shape at least once to allow teammates to escape the inside rooms before reusing any 3D shapes. The easy strategy is to perform the second phase as follows: rotate the call (TCS => CST) and make the \"double-shapes\" corresponding to that new call.",
+              "isChallenge": true
+            }
           ]
         },
         {
+          "id": "raid-salvations-edge-encounter-5",
           "type": "encounter",
           "name": "Zenith",
           "description": "Stop the Final Shape",
@@ -429,6 +491,16 @@
                   ]
                 }
               ]
+            }
+          ],
+          "triumphs": [
+            {
+              "bungieRecordHash": 2203607979
+            },
+            {
+              "bungieRecordHash": 870477756,
+              "guide": "Each damage phase, break all 6 of The Witness' seals at the same time.",
+              "isChallenge": true
             }
           ]
         }
@@ -722,6 +794,21 @@
       "type": "newest",
       "activityType": "raid",
       "activityId": "raid-salvations-edge"
+    }
+  ],
+  "challengeRotations": [
+    {
+      "id": "raid-salvations-edge-challenges",
+      "activityType": "raid",
+      "parentActivityId": "raid-salvations-edge",
+      "startDate": "2024-10-08T16:00:00Z",
+      "rotation": [
+        "raid-salvations-edge-encounter-1",
+        "raid-salvations-edge-encounter-2",
+        "raid-salvations-edge-encounter-3",
+        "raid-salvations-edge-encounter-4",
+        "raid-salvations-edge-encounter-5"
+      ]
     }
   ],
   "doubleLootOverrides": ["dungeon-vespers-host"]

@@ -10,6 +10,7 @@ import {
   Text,
   Title,
   TypographyStylesProvider,
+  Box,
 } from "@mantine/core";
 import {
   ArrowsInSimple,
@@ -22,10 +23,11 @@ import { Activity, ActivityAvailability } from "../../data/types";
 
 import classes from "./ActivityCard.module.scss";
 import { useMemo, useState } from "react";
-import { anyLootIsPinnacle, summarizeLootPool } from "../../utils/loot";
+import { anyLootIsPinnacle, getLootKey, summarizeLootPool } from "../../utils/loot";
 import LootIcon from "../loot/LootIcon";
 import LootTable from "../loot/LootTable";
 import Markdown from "react-markdown";
+import TriumphDisplay from "../TriumphDisplay";
 
 interface Props {
   activity: Activity;
@@ -60,6 +62,9 @@ export default function ActivityCard(props: Props) {
     props.activity.encounters?.some((encounter) =>
       anyLootIsPinnacle(encounter.loot ?? [], !!props.availability?.featured)
     );
+  const challengesActive =
+    props.availability?.allChallengesActive ||
+    props.availability?.activeChallenges?.includes(props.activity.id);
 
   return (
     <Card
@@ -130,12 +135,12 @@ export default function ActivityCard(props: Props) {
                 Newest
               </Badge>
             )}
-            {props.availability?.featured === "farmable" && !isEncounter && (
+            {props.availability?.featured === "active" && !isEncounter && (
               <Badge color="blue" radius="sm">
                 Farmable
               </Badge>
             )}
-            {props.availability?.featured === "farmable" && !isEncounter && (
+            {props.availability?.featured === "active" && !isEncounter && (
               <Badge color="yellow" radius="sm">
                 Featured
               </Badge>
@@ -145,19 +150,19 @@ export default function ActivityCard(props: Props) {
                 Master Available
               </Badge>
             )}
-            {props.availability?.challengeActive && isEncounter && (
+            {challengesActive && isEncounter && (
               <Badge color="green" radius="sm">
                 Challenge Active
-              </Badge>
-            )}
-            {props.availability?.doubleLootActive && isEncounter && (
-              <Badge color="blue" radius="sm">
-                Double Loot Active
               </Badge>
             )}
             {pinnacleRewards && (
               <Badge color="pink" radius="sm">
                 Pinnacle Rewards
+              </Badge>
+            )}
+            {props.availability?.doubleLootActive && (
+              <Badge color="blue" radius="sm">
+                Double Loot Active
               </Badge>
             )}
           </Group>
@@ -171,7 +176,7 @@ export default function ActivityCard(props: Props) {
           {lootSummary.length > 0 && (
             <Group gap="xs" p="xs">
               {lootSummary.map((loot) => (
-                <LootIcon key={loot.type === "item" ? loot.itemHash : loot.name} loot={loot} />
+                <LootIcon key={getLootKey(loot)} loot={loot} />
               ))}
             </Group>
           )}
@@ -190,16 +195,36 @@ export default function ActivityCard(props: Props) {
               <Accordion.Item key="Loot" value="Loot">
                 <Accordion.Control icon={<TreasureChest />}>Loot</Accordion.Control>
                 <Accordion.Panel>
-                  <LootTable lootPools={props.activity.loot} availability={props.availability} />
+                  <LootTable
+                    lootPools={props.activity.loot}
+                    availability={props.availability}
+                    activity={props.activity}
+                  />
                 </Accordion.Panel>
               </Accordion.Item>
             )}
 
-            {/* TODO: Triumphs */}
+            {/* Triumphs */}
             {props.activity.triumphs && (
               <Accordion.Item key="Triumphs" value="Triumphs">
                 <Accordion.Control icon={<Trophy />}>Triumphs</Accordion.Control>
-                <Accordion.Panel>Triumphs</Accordion.Panel>
+                <Accordion.Panel>
+                  <Box
+                    display="grid"
+                    style={{
+                      gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
+                      gap: "var(--mantine-spacing-md)",
+                    }}
+                  >
+                    {props.activity.triumphs.map((triumph) => (
+                      <TriumphDisplay
+                        triumph={triumph}
+                        key={triumph.bungieRecordHash}
+                        parentChallengesActive={challengesActive}
+                      />
+                    ))}
+                  </Box>
+                </Accordion.Panel>
               </Accordion.Item>
             )}
 

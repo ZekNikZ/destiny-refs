@@ -13,7 +13,7 @@ export const useGlobalData = create<GlobalState>()(
   devtools(
     persist(
       (_set) => ({
-        data: buildRealData(dataJson),
+        data: buildRealData(dataJson as any),
       }),
       {
         name: "global-data",

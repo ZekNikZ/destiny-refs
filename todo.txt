@@ -1,10 +1,11 @@
-- Implement triumphs
 - Implement guides
+- Implement rotations
+- Implement triumphs
+
 - Add additional raids for testing:
   - vow
   - lw
   - dsc
-- Implement rotations
 - Begin "Today" page
 - Add rest of raids
 - Implement "Rotations" page

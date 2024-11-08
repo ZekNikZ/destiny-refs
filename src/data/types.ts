@@ -23,6 +23,7 @@ export interface Activity {
   backgroundImage: string;
   location?: string;
   tagOverrides?: ActivityTag[];
+  hasMasterMode?: boolean;
 
   loot?: LootPool[];
   triumphs?: Triumph[];
@@ -30,45 +31,51 @@ export interface Activity {
   secretChests?: SecretChest[];
   extraPuzzles?: ExtraPuzzle[];
 
-  encounters?: (Activity & { type: "encounter" })[];
+  encounters?: Activity[];
 }
 
 export interface ActivityAvailability {
-  featured?: "newest" | "farmable" | "weekly" | false;
-  masterAvailable?: boolean;
-  challengeActive?: boolean;
+  featured: "newest" | "active" | false;
+  masterAvailable: boolean;
+  activeChallenges?: string[];
+  allChallengesActive?: boolean;
   doubleLootActive?: boolean;
 }
 
-export type Loot = {
-  artiface?: boolean;
-  statFocused?: boolean;
-  quantity?: number;
-  deepsight?: "chance" | "guaranteed";
-} & (
+export type Loot =
+  | ({
+      artiface?: boolean;
+      statFocused?: boolean;
+      quantity?: number;
+      deepsight?: "chance" | "guaranteed";
+    } & (
+      | {
+          type: "item";
+          itemHash: number;
+        }
+      | {
+          type: "group";
+          name?: string;
+          groupType: string;
+          displayItemHash?: number;
+          displayStaticIcon?:
+            | "helmet"
+            | "gauntlets"
+            | "chest-armor"
+            | "leg-armor"
+            | "class-item"
+            | "weapon"
+            | "legendary-engram"
+            | "exotic-engram"
+            | "bright-engram"
+            | "prime-engram";
+          children: Loot[];
+        }
+    ))
   | {
-      type: "item";
-      itemHash: number;
-    }
-  | {
-      type: "group";
-      name?: string;
-      groupType: string;
-      displayItemHash?: number;
-      displayStaticIcon?:
-        | "helmet"
-        | "gauntlets"
-        | "chest-armor"
-        | "leg-armor"
-        | "class-item"
-        | "weapon"
-        | "legendary-engram"
-        | "exotic-engram"
-        | "bright-engram"
-        | "prime-engram";
-      children: Loot[];
-    }
-);
+      type: "ref-loot";
+      key: string;
+    };
 
 export type LootPool =
   | {
@@ -114,12 +121,16 @@ export type LootPool =
         | "double_loot_is_active" // if featured: "Double loot is active this week: drops doubled"
         | "challenge_completion" // "Double loot on challenge completion"
         | "challenge_completion_repeatable"; // "Double loot on challenge completion"
+    }
+  | {
+      type: "ref-loot-pool";
+      key: string;
     };
 
 export interface Triumph {
-  name: string;
-  description: string;
   bungieRecordHash: number;
+  guide?: string;
+  isChallenge?: boolean;
 }
 
 export interface SecretChest {
@@ -155,10 +166,19 @@ export type FeaturedRotation =
       activityId: string;
     };
 
+export type ChallengeRotation = {
+  id: string;
+  activityType: ActivityType;
+  parentActivityId: string;
+  startDate: string;
+  rotation: string[];
+};
+
 export interface JsonData {
   $schema?: string;
   activities: Activity[];
-  sharedLoot?: SharedLootPools;
+  sharedLoot: SharedLootPools;
   featuredRotations: FeaturedRotation[];
+  challengeRotations: ChallengeRotation[];
   doubleLootOverrides: string[];
 }
