@@ -1,5 +1,7 @@
 import { ArrowClockwise, Calendar, Icon, TreasureChest } from "@phosphor-icons/react";
 import TodayPage from "./pages/TodayPage";
+import { useGlobalData } from "./data/useGlobalData";
+import EncounterBasedActivityPage from "./pages/EncounterBasedActivityPage";
 
 export interface RouteData {
   path: string;
@@ -7,7 +9,7 @@ export interface RouteData {
   element?: React.ReactNode;
   navbarProperties?: {
     label?: string;
-    icon: Icon;
+    icon?: Icon;
   };
   children?: RouteData[];
 }
@@ -44,16 +46,17 @@ const routes: RouteData[] = [
         navbarProperties: {
           icon: TreasureChest,
         },
-        children: [
-          {
-            path: "/info/raids/vault-of-glass",
-            title: "Vault of Glass",
-            element: <TodayPage />,
+        children: useGlobalData
+          .getState()
+          .data.activities.filter((activity) => activity.type === "raid")
+          .map((activity) => ({
+            path: "/info/raids/" + activity.name.toLowerCase().replace(/ /g, "-").replace(/'/g, ""),
+            title: activity.name,
+            element: <EncounterBasedActivityPage activity={activity} />,
             navbarProperties: {
-              icon: TreasureChest,
+              //   icon: TreasureChest,
             },
-          },
-        ],
+          })),
       },
     ],
   },
