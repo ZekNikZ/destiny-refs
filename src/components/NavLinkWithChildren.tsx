@@ -25,7 +25,7 @@ const NavLinkWithChildren = (props: Props) => {
       <NavLink
         key={props.route.path}
         label={props.route.navbarProperties?.label ?? props.route.title}
-        pl={12 + 8 * (props.level ?? 0)}
+        pl={12}
         leftSection={makeIcon(props.route.navbarProperties?.icon)}
         rightSection={
           props.route.children?.filter((subroute) => subroute.navbarProperties) ? (
@@ -48,13 +48,17 @@ const NavLinkWithChildren = (props: Props) => {
         }}
       />
       {props.route.children && (
-        <Collapse key={`${props.route.path}-collapse`} in={routeOrSubrouteSelected}>
+        <Collapse
+          key={`${props.route.path}-collapse`}
+          in={routeOrSubrouteSelected}
+          pl={12 * (props.level ?? 1)}
+        >
           {props.route.children.map((subroute) => {
             return (
               <NavLinkWithChildren
                 key={subroute.path}
                 route={subroute}
-                level={(props.level ?? 0) + 1}
+                level={(props.level ?? 1) + 1}
               />
             );
           })}
