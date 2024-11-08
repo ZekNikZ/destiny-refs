@@ -60,7 +60,7 @@ export default function ActivityCard(props: Props) {
     );
 
   return (
-    <Card shadow="sm" padding="sm" radius="sm" withBorder>
+    <Card shadow="sm" padding="sm" radius="sm" withBorder miw="45%" style={{ flexGrow: 1 }}>
       {/* Header */}
       <Card.Section
         className={classes.darkOverlay}

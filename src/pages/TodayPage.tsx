@@ -1,5 +1,5 @@
 import { Activity, LootPool } from "../data/types";
-import { Breadcrumbs, Stack, Text } from "@mantine/core";
+import { Breadcrumbs, Group, Stack, Text } from "@mantine/core";
 import { Link } from "react-router-dom";
 import ActivityCard from "../components/activity/ActivityCard";
 
@@ -277,7 +277,7 @@ const activity: Activity = {
 const TodayPage = () => {
   const masterAvailable = true;
   const featured = "newest";
-  const doubleLootActive = true;
+  const doubleLootActive = false;
 
   return (
     <Stack>
@@ -294,20 +294,22 @@ const TodayPage = () => {
           doubleLootActive,
         }}
       />
-      {activity.encounters?.map((encounter, index) => (
-        <ActivityCard
-          encounter
-          key={encounter.name}
-          titlePrefix={`Encounter ${index + 1}: `}
-          activity={encounter}
-          availability={{
-            featured,
-            challengeActive: index === 4,
-            masterAvailable,
-            doubleLootActive,
-          }}
-        />
-      ))}
+      <Group align="stretch">
+        {activity.encounters?.map((encounter, index) => (
+          <ActivityCard
+            encounter
+            key={encounter.name}
+            titlePrefix={`Encounter ${index + 1}: `}
+            activity={encounter}
+            availability={{
+              featured,
+              challengeActive: index === 4,
+              masterAvailable,
+              doubleLootActive,
+            }}
+          />
+        ))}
+      </Group>
     </Stack>
   );
 };
