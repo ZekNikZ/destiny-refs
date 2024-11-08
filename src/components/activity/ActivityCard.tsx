@@ -9,6 +9,7 @@ import {
   useMantineTheme,
   Text,
   Title,
+  TypographyStylesProvider,
 } from "@mantine/core";
 import {
   ArrowsInSimple,
@@ -24,6 +25,7 @@ import { useMemo, useState } from "react";
 import { anyLootIsPinnacle, summarizeLootPool } from "../../utils/loot";
 import LootIcon from "../loot/LootIcon";
 import LootTable from "../loot/LootTable";
+import Markdown from "react-markdown";
 
 interface Props {
   activity: Activity;
@@ -81,7 +83,7 @@ export default function ActivityCard(props: Props) {
               ? props.activity.loot && props.activity.loot.length > 0
               : props.activity.loot ||
                 props.activity.triumphs ||
-                props.activity.guides ||
+                props.activity.guide ||
                 props.activity.extraPuzzles
           )
             ? `1px solid ${theme.colors.dark[4]}`
@@ -201,11 +203,15 @@ export default function ActivityCard(props: Props) {
               </Accordion.Item>
             )}
 
-            {/* TODO: Guides */}
-            {props.activity.guides && (
-              <Accordion.Item key="Guides" value="Guides">
-                <Accordion.Control icon={<Question />}>Guides</Accordion.Control>
-                <Accordion.Panel>Guides!</Accordion.Panel>
+            {/* Guides */}
+            {props.activity.guide && (
+              <Accordion.Item key="Guide" value="Guide">
+                <Accordion.Control icon={<Question />}>Guide</Accordion.Control>
+                <Accordion.Panel>
+                  <TypographyStylesProvider>
+                    <Markdown>{props.activity.guide}</Markdown>
+                  </TypographyStylesProvider>
+                </Accordion.Panel>
               </Accordion.Item>
             )}
 

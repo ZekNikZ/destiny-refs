@@ -26,7 +26,7 @@ export interface Activity {
 
   loot?: LootPool[];
   triumphs?: Triumph[];
-  guides?: string[];
+  guide?: string;
   secretChests?: SecretChest[];
   extraPuzzles?: ExtraPuzzle[];
 

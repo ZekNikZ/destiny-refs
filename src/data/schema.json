@@ -32,11 +32,8 @@
           },
           "type": "array"
         },
-        "guides": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
+        "guide": {
+          "type": "string"
         },
         "id": {
           "type": "string"
