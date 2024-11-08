@@ -112,7 +112,8 @@ export type LootPool =
       doubleLootWhen?:
         | "never" // no note
         | "double_loot_is_active" // if featured: "Double loot is active this week: drops doubled"
-        | "challenge_completion"; // "Double loot on challenge completion"
+        | "challenge_completion" // "Double loot on challenge completion"
+        | "challenge_completion_repeatable"; // "Double loot on challenge completion"
     };
 
 export interface Triumph {
@@ -132,4 +133,9 @@ export interface ExtraPuzzle {
   name: string;
   description: string;
   loot: LootPool[];
+}
+
+export interface JsonData {
+  $schema?: string;
+  activities: Activity[];
 }

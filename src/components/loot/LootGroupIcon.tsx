@@ -7,6 +7,7 @@ interface Props {
   loot: Extract<Loot, { type: "group" }>;
   size: number;
   hideArtiface?: boolean;
+  disableHover?: boolean;
 }
 
 export default function LootGroupIcon(props: Props) {

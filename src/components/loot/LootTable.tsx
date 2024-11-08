@@ -164,11 +164,58 @@ export default function LootTable(props: Props) {
                         <Text c="green" span fw="bold">
                           Challenge is active
                         </Text>
-                        : successful challenge completion will reward{" "}
+                        : successful challenge completion (once per character) will reward an{" "}
                         <Text c="blue" span fw="bold">
-                          double loot
+                          extra drop
                         </Text>
                         .
+                      </List.Item>
+                    )}
+                  {pool.doubleLootWhen === "challenge_completion_repeatable" &&
+                    props.availability?.challengeActive && (
+                      <List.Item>
+                        <Text c="green" span fw="bold">
+                          Challenge is active
+                        </Text>
+                        : successful challenge completion (repeatable) will reward an{" "}
+                        <Text c="blue" span fw="bold">
+                          extra drop
+                        </Text>
+                        .
+                      </List.Item>
+                    )}
+                  {pool.doubleLootWhen === "challenge_completion" &&
+                    !props.availability?.challengeActive && (
+                      <List.Item>
+                        <Text fw="bold" c="blue" span>
+                          Extra drop
+                        </Text>{" "}
+                        upon{" "}
+                        <Text fw="bold" c="green" span>
+                          successful challenge completion
+                        </Text>{" "}
+                        (once per character) (
+                        <Text fw="bold" c="red" span>
+                          not available this week
+                        </Text>
+                        ).
+                      </List.Item>
+                    )}
+                  {pool.doubleLootWhen === "challenge_completion_repeatable" &&
+                    !props.availability?.challengeActive && (
+                      <List.Item>
+                        <Text fw="bold" c="blue" span>
+                          Extra drop
+                        </Text>{" "}
+                        upon{" "}
+                        <Text fw="bold" c="green" span>
+                          successful challenge completion
+                        </Text>{" "}
+                        (repeatable) (
+                        <Text fw="bold" c="red" span>
+                          not available this week
+                        </Text>
+                        ).
                       </List.Item>
                     )}
 

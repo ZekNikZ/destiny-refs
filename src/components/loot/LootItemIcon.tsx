@@ -1,17 +1,19 @@
-import { Image } from "@mantine/core";
+import { HoverCard, HoverCardDropdown, Image } from "@mantine/core";
 import { useBungieItemDetails } from "../../utils/bungie-api";
 import { Loot } from "../../data/types";
+import LootListing from "./LootListing";
 
 interface Props {
   loot: Extract<Loot, { type: "item" }>;
   size: number;
   hideArtiface?: boolean;
+  disableHover?: boolean;
 }
 
 export default function LootItemIcon(props: Props) {
   const { data: item, isSuccess } = useBungieItemDetails(props.loot.itemHash);
 
-  return (
+  const img = (
     <div
       style={{
         width: props.size,
@@ -57,5 +59,16 @@ export default function LootItemIcon(props: Props) {
         </div>
       )}
     </div>
+  );
+
+  return props.disableHover ? (
+    img
+  ) : (
+    <HoverCard shadow="md" closeDelay={0}>
+      <HoverCard.Target>{img}</HoverCard.Target>
+      <HoverCardDropdown p="sm">
+        <LootListing loot={props.loot} noIcon />
+      </HoverCardDropdown>
+    </HoverCard>
   );
 }

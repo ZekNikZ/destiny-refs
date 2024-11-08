@@ -1,0 +1,425 @@
+{
+  "$ref": "#/definitions/JsonData",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "Activity": {
+      "additionalProperties": false,
+      "properties": {
+        "backgroundImage": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "encounters": {
+          "items": {
+            "properties": {
+              "type": {
+                "const": "encounter",
+                "type": "string"
+              }
+            },
+            "required": [
+              "type"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "extraPuzzles": {
+          "items": {
+            "$ref": "#/definitions/ExtraPuzzle"
+          },
+          "type": "array"
+        },
+        "guides": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "id": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "loot": {
+          "items": {
+            "$ref": "#/definitions/LootPool"
+          },
+          "type": "array"
+        },
+        "name": {
+          "type": "string"
+        },
+        "secretChests": {
+          "items": {
+            "$ref": "#/definitions/SecretChest"
+          },
+          "type": "array"
+        },
+        "tagOverrides": {
+          "items": {
+            "$ref": "#/definitions/ActivityTag"
+          },
+          "type": "array"
+        },
+        "triumphs": {
+          "items": {
+            "$ref": "#/definitions/Triumph"
+          },
+          "type": "array"
+        },
+        "type": {
+          "$ref": "#/definitions/ActivityType"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "name",
+        "description",
+        "backgroundImage"
+      ],
+      "type": "object"
+    },
+    "ActivityTag": {
+      "enum": [
+        "featured-newest",
+        "featured-farmable",
+        "featured-rotating",
+        "challenge-active",
+        "pinnacle",
+        "double-loot-active",
+        "not-available-rotating"
+      ],
+      "type": "string"
+    },
+    "ActivityType": {
+      "enum": [
+        "raid",
+        "dungeon",
+        "nightfall",
+        "exotic_mission",
+        "lost_sector",
+        "encounter"
+      ],
+      "type": "string"
+    },
+    "ExtraPuzzle": {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "loot": {
+          "items": {
+            "$ref": "#/definitions/LootPool"
+          },
+          "type": "array"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "loot"
+      ],
+      "type": "object"
+    },
+    "JsonData": {
+      "additionalProperties": false,
+      "properties": {
+        "$schema": {
+          "type": "string"
+        },
+        "activities": {
+          "items": {
+            "$ref": "#/definitions/Activity"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "activities"
+      ],
+      "type": "object"
+    },
+    "Loot": {
+      "anyOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artiface": {
+              "type": "boolean"
+            },
+            "deepsight": {
+              "enum": [
+                "chance",
+                "guaranteed"
+              ],
+              "type": "string"
+            },
+            "itemHash": {
+              "type": "number"
+            },
+            "quantity": {
+              "type": "number"
+            },
+            "statFocused": {
+              "type": "boolean"
+            },
+            "type": {
+              "const": "item",
+              "type": "string"
+            }
+          },
+          "required": [
+            "itemHash",
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "artiface": {
+              "type": "boolean"
+            },
+            "children": {
+              "items": {
+                "$ref": "#/definitions/Loot"
+              },
+              "type": "array"
+            },
+            "deepsight": {
+              "enum": [
+                "chance",
+                "guaranteed"
+              ],
+              "type": "string"
+            },
+            "displayItemHash": {
+              "type": "number"
+            },
+            "displayStaticIcon": {
+              "enum": [
+                "helmet",
+                "arm-armor",
+                "chest-armor",
+                "leg-armor",
+                "class-item",
+                "weapon",
+                "legendary-engram",
+                "exotic-engram",
+                "bright-engram",
+                "prime-engram"
+              ],
+              "type": "string"
+            },
+            "groupType": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "quantity": {
+              "type": "number"
+            },
+            "statFocused": {
+              "type": "boolean"
+            },
+            "type": {
+              "const": "group",
+              "type": "string"
+            }
+          },
+          "required": [
+            "children",
+            "groupType",
+            "type"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "LootPool": {
+      "anyOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "modes": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "bungieActivityHash": {
+                    "type": "number"
+                  },
+                  "children": {
+                    "items": {
+                      "$ref": "#/definitions/LootPool"
+                    },
+                    "type": "array"
+                  },
+                  "mode": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "mode",
+                  "bungieActivityHash",
+                  "children"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "type": {
+              "const": "mode_specific",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "modes"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "availableWhen": {
+              "enum": [
+                "activity_is_featured",
+                "activity_not_featured",
+                "challenge_completion",
+                "always"
+              ],
+              "type": "string"
+            },
+            "doubleLootWhen": {
+              "enum": [
+                "never",
+                "double_loot_is_active",
+                "challenge_completion"
+              ],
+              "type": "string"
+            },
+            "knockout": {
+              "type": "boolean"
+            },
+            "loot": {
+              "items": {
+                "$ref": "#/definitions/Loot"
+              },
+              "type": "array"
+            },
+            "notes": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "pinnacleWhen": {
+              "enum": [
+                "never",
+                "activity_is_featured",
+                "always"
+              ],
+              "type": "string"
+            },
+            "quantity": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "const": "chance",
+                  "type": "string"
+                },
+                {
+                  "const": "all",
+                  "type": "string"
+                }
+              ]
+            },
+            "showInLootSummary": {
+              "type": "boolean"
+            },
+            "type": {
+              "const": "pool",
+              "type": "string"
+            },
+            "weeklyLimit": {
+              "enum": [
+                "infinite",
+                "infinite_when_featured",
+                "infinite_after_first_clear",
+                "once_per_character",
+                "once_per_account"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "loot",
+            "quantity",
+            "availableWhen"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "SecretChest": {
+      "additionalProperties": false,
+      "properties": {
+        "backgroundImage": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "loot": {
+          "items": {
+            "$ref": "#/definitions/LootPool"
+          },
+          "type": "array"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "backgroundImage",
+        "loot"
+      ],
+      "type": "object"
+    },
+    "Triumph": {
+      "additionalProperties": false,
+      "properties": {
+        "bungieRecordHash": {
+          "type": "number"
+        },
+        "description": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "bungieRecordHash"
+      ],
+      "type": "object"
+    }
+  }
+}

@@ -60,7 +60,13 @@ export default function ActivityCard(props: Props) {
     );
 
   return (
-    <Card shadow="sm" padding="sm" radius="sm" withBorder miw="45%" style={{ flexGrow: 1 }}>
+    <Card
+      shadow="sm"
+      padding="sm"
+      radius="sm"
+      withBorder
+      //   style={props.encounter ? { flexGrow: 1, flexBasis: "max(45%, 450px)" } : undefined}
+    >
       {/* Header */}
       <Card.Section
         className={classes.darkOverlay}
@@ -70,7 +76,16 @@ export default function ActivityCard(props: Props) {
           backgroundImage: `url('${props.activity.backgroundImage}')`,
           backgroundSize: "cover",
           backgroundPosition: "50% 50%",
-          borderBottom: `1px solid ${theme.colors.dark[4]}`,
+          borderBottom: (
+            collapseOpen === "summary"
+              ? props.activity.loot && props.activity.loot.length > 0
+              : props.activity.loot ||
+                props.activity.triumphs ||
+                props.activity.guides ||
+                props.activity.extraPuzzles
+          )
+            ? `1px solid ${theme.colors.dark[4]}`
+            : undefined,
         }}
       >
         <Stack gap="xs" style={{ position: "relative" }}>

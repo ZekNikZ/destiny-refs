@@ -5,6 +5,7 @@ import LootIcon from "./LootIcon";
 
 interface Props {
   loot: Loot;
+  noIcon?: boolean;
 }
 
 export default function LootListing(props: Props) {
@@ -20,8 +21,8 @@ export default function LootListing(props: Props) {
   const itemType = type === "item" ? item?.itemTypeDisplayName : props.loot.groupType;
 
   return (
-    <Group gap="xs" w={300}>
-      <LootIcon loot={props.loot} size={50} hideArtiface />
+    <Group gap="xs" w={!props.noIcon ? 300 : undefined}>
+      {!props.noIcon && <LootIcon loot={props.loot} size={50} hideArtiface disableHover />}
       <Stack gap={0}>
         <Text fw="bold">{name}</Text>
         <Group gap={4}>
