@@ -1,0 +1,24 @@
+{
+  "$ref": "#/definitions/ActivitiesJson",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "ActivitiesJson": {
+      "additionalProperties": false,
+      "properties": {
+        "$schema": {
+          "type": "string"
+        },
+        "activities": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "activities"
+      ],
+      "type": "object"
+    }
+  }
+}

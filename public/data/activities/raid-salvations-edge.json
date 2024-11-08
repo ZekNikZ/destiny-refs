@@ -1,0 +1,508 @@
+{
+  "$schema": "../schema/activity.json",
+  "activity": {
+    "id": "raid-salvations-edge",
+    "type": "raid",
+    "name": "Salvation's Edge",
+    "description": "Free the Light.",
+    "backgroundImage": "/images/raids/salvations-edge/banner.webp",
+    "hasMasterMode": true,
+    "triumphs": [
+      {
+        "bungieRecordHash": 2487240675
+      },
+      {
+        "bungieRecordHash": 1728165205
+      },
+      {
+        "bungieRecordHash": 3553593767
+      },
+      {
+        "bungieRecordHash": 2307589343
+      },
+      {
+        "bungieRecordHash": 3202450274
+      }
+    ],
+    "encounters": [
+      {
+        "id": "raid-salvations-edge-encounter-1",
+        "type": "encounter",
+        "name": "Substraum",
+        "description": "Gain Access to the Monolith",
+        "backgroundImage": "/images/raids/salvations-edge/encounter-1.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "pinnacleWhen": "always",
+                    "weeklyLimit": "once_per_character",
+                    "doubleLootWhen": "challenge_completion",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 1258168956
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1770490683
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 859869931
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-salvations-edge-arms"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-salvations-edge-chest"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-newest"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "pinnacleWhen": "always",
+                    "weeklyLimit": "once_per_character",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-salvations-edge-arms-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-salvations-edge-chest-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-salvations-edge-adepts"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-newest"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 2062070439
+          },
+          {
+            "bungieRecordHash": 2705769344,
+            "guide": "Complete the encounter by only killing Overload Minotaurs in the fourth room of paths. You can tell which minotaur will be the correct one if there are Vex Hobgoblins in the starting room of the path.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-salvations-edge-encounter-2",
+        "type": "encounter",
+        "name": "Dissipation",
+        "description": "Defeat the Herald",
+        "backgroundImage": "/images/raids/salvations-edge/encounter-2.jpg",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "pinnacleWhen": "always",
+                    "weeklyLimit": "once_per_character",
+                    "doubleLootWhen": "challenge_completion",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 1258168956
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 535198113
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1770490683
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-salvations-edge-head"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-salvations-edge-class"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-newest"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "pinnacleWhen": "always",
+                    "weeklyLimit": "once_per_character",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-salvations-edge-head-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-salvations-edge-class-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-salvations-edge-adepts"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-newest"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 632048942
+          },
+          {
+            "bungieRecordHash": 61627171,
+            "guide": "When dunking resonance, team members must have a full inventory of 3 stacks of resonance. Dunking with less than 3 stacks will fail the challenge.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-salvations-edge-encounter-3",
+        "type": "encounter",
+        "name": "Repository",
+        "description": "Carve a Path",
+        "backgroundImage": "/images/raids/salvations-edge/encounter-3.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "pinnacleWhen": "always",
+                    "weeklyLimit": "once_per_character",
+                    "doubleLootWhen": "challenge_completion",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 445197843
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 535198113
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 859869931
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-salvations-edge-arms"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-salvations-edge-class"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-newest"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "pinnacleWhen": "always",
+                    "weeklyLimit": "once_per_character",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-salvations-edge-arms-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-salvations-edge-class-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-salvations-edge-adepts"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-newest"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 1538747266
+          },
+          {
+            "bungieRecordHash": 4098731599,
+            "guide": "No team member can pick up the same type of resonance twice in a row, including between rooms.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-salvations-edge-encounter-4",
+        "type": "encounter",
+        "name": "Verity",
+        "description": "See Beyond",
+        "backgroundImage": "/images/raids/salvations-edge/encounter-4.webp",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "pinnacleWhen": "always",
+                    "weeklyLimit": "once_per_character",
+                    "doubleLootWhen": "challenge_completion",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 1258168956
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3569407878
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1770490683
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-salvations-edge-chest"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-salvations-edge-legs"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-newest"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "pinnacleWhen": "always",
+                    "weeklyLimit": "once_per_character",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-salvations-edge-chest-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-salvations-edge-legs-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-salvations-edge-adepts"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-newest"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 1843442132
+          },
+          {
+            "bungieRecordHash": 1311861933,
+            "guide": "Complete the encounter while using each 3D shape at least once to allow teammates to escape the inside rooms before reusing any 3D shapes. The easy strategy is to perform the second phase as follows: rotate the call (TCS => CST) and make the \"double-shapes\" corresponding to that new call.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-salvations-edge-encounter-5",
+        "type": "encounter",
+        "name": "Zenith",
+        "description": "Stop the Final Shape",
+        "backgroundImage": "/images/raids/salvations-edge/encounter-5.jfif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-salvations-edge-exotic"
+                  },
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "pinnacleWhen": "always",
+                    "weeklyLimit": "once_per_character",
+                    "doubleLootWhen": "challenge_completion",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 445197843
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3569407878
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 859869931
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-salvations-edge-head"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-salvations-edge-legs"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-newest"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-salvations-edge-exotic"
+                  },
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "pinnacleWhen": "always",
+                    "weeklyLimit": "once_per_character",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-salvations-edge-head-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-salvations-edge-legs-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-salvations-edge-adepts"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-newest"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 2203607979
+          },
+          {
+            "bungieRecordHash": 870477756,
+            "guide": "Each damage phase, break all 6 of The Witness' seals at the same time.",
+            "isChallenge": true
+          }
+        ]
+      }
+    ]
+  }
+}

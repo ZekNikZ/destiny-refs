@@ -173,12 +173,3 @@ export type ChallengeRotation = {
   startDate: string;
   rotation: string[];
 };
-
-export interface JsonData {
-  $schema?: string;
-  activities: Activity[];
-  sharedLoot: SharedLootPools;
-  featuredRotations: FeaturedRotation[];
-  challengeRotations: ChallengeRotation[];
-  doubleLootOverrides: string[];
-}

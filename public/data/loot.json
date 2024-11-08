@@ -1,0 +1,273 @@
+{
+  "$schema": "./schema/loot.json",
+  "sharedLoot": {
+    "loot": {
+      "raid-salvations-edge-head": {
+        "type": "group",
+        "name": "Helmet (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "helmet",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 659074261
+          },
+          {
+            "type": "item",
+            "itemHash": 1026610441
+          },
+          {
+            "type": "item",
+            "itemHash": 930168404
+          }
+        ]
+      },
+      "raid-salvations-edge-head-focused": {
+        "type": "group",
+        "name": "Helmet (Class-Specific)",
+        "groupType": "Stat-Focused Armor",
+        "displayStaticIcon": "helmet",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 659074261
+          },
+          {
+            "type": "item",
+            "itemHash": 1026610441
+          },
+          {
+            "type": "item",
+            "itemHash": 930168404
+          }
+        ]
+      },
+      "raid-salvations-edge-arms": {
+        "type": "group",
+        "name": "Gauntlets (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "gauntlets",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 3629884836
+          },
+          {
+            "type": "item",
+            "itemHash": 2730105984
+          },
+          {
+            "type": "item",
+            "itemHash": 4055964141
+          }
+        ]
+      },
+      "raid-salvations-edge-arms-focused": {
+        "type": "group",
+        "name": "Gauntlets (Class-Specific)",
+        "groupType": "Stat-Focused Armor",
+        "displayStaticIcon": "gauntlets",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 3629884836
+          },
+          {
+            "type": "item",
+            "itemHash": 2730105984
+          },
+          {
+            "type": "item",
+            "itemHash": 4055964141
+          }
+        ]
+      },
+      "raid-salvations-edge-chest": {
+        "type": "group",
+        "name": "Chest Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "chest-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 3725435036
+          },
+          {
+            "type": "item",
+            "itemHash": 2256359240
+          },
+          {
+            "type": "item",
+            "itemHash": 1806218131
+          }
+        ]
+      },
+      "raid-salvations-edge-chest-focused": {
+        "type": "group",
+        "name": "Chest Armor (Class-Specific)",
+        "groupType": "Stat-Focused Armor",
+        "displayStaticIcon": "chest-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 3725435036
+          },
+          {
+            "type": "item",
+            "itemHash": 2256359240
+          },
+          {
+            "type": "item",
+            "itemHash": 1806218131
+          }
+        ]
+      },
+      "raid-salvations-edge-legs": {
+        "type": "group",
+        "name": "Leg Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "leg-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 1265563470
+          },
+          {
+            "type": "item",
+            "itemHash": 1807926458
+          },
+          {
+            "type": "item",
+            "itemHash": 7338415
+          }
+        ]
+      },
+      "raid-salvations-edge-legs-focused": {
+        "type": "group",
+        "name": "Leg Armor (Class-Specific)",
+        "groupType": "Stat-Focused Armor",
+        "displayStaticIcon": "leg-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 1265563470
+          },
+          {
+            "type": "item",
+            "itemHash": 1807926458
+          },
+          {
+            "type": "item",
+            "itemHash": 7338415
+          }
+        ]
+      },
+      "raid-salvations-edge-class": {
+        "type": "group",
+        "name": "Class Item (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "class-item",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 1140861969
+          },
+          {
+            "type": "item",
+            "itemHash": 87946917
+          },
+          {
+            "type": "item",
+            "itemHash": 141134282
+          }
+        ]
+      },
+      "raid-salvations-edge-class-focused": {
+        "type": "group",
+        "name": "Class Item (Class-Specific)",
+        "groupType": "Stat-Focused Armor",
+        "displayStaticIcon": "class-item",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 1140861969
+          },
+          {
+            "type": "item",
+            "itemHash": 87946917
+          },
+          {
+            "type": "item",
+            "itemHash": 141134282
+          }
+        ]
+      }
+    },
+    "pools": {
+      "raid-spoils-newest": {
+        "type": "pool",
+        "quantity": "all",
+        "showInLootSummary": true,
+        "pinnacleWhen": "never",
+        "weeklyLimit": "infinite_after_first_clear",
+        "doubleLootWhen": "challenge_completion_repeatable",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 3702027555,
+            "quantity": 5
+          }
+        ]
+      },
+      "raid-salvations-edge-adepts": {
+        "type": "pool",
+        "quantity": 1,
+        "pinnacleWhen": "never",
+        "weeklyLimit": "once_per_character",
+        "availableWhen": "challenge_completion",
+        "knockout": true,
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 3951511045
+          },
+          {
+            "type": "item",
+            "itemHash": 172461430
+          },
+          {
+            "type": "item",
+            "itemHash": 1039915310
+          },
+          {
+            "type": "item",
+            "itemHash": 3123651616
+          },
+          {
+            "type": "item",
+            "itemHash": 892183998
+          },
+          {
+            "type": "item",
+            "itemHash": 2001697739
+          }
+        ]
+      },
+      "raid-salvations-edge-exotic": {
+        "type": "pool",
+        "quantity": "chance",
+        "showInLootSummary": true,
+        "pinnacleWhen": "never",
+        "weeklyLimit": "once_per_character",
+        "availableWhen": "always",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 3284383335
+          }
+        ]
+      }
+    }
+  },
+  "doubleLootOverrides": ["dungeon-vespers-host"]
+}

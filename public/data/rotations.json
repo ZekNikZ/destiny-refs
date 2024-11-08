@@ -1,0 +1,38 @@
+{
+  "$schema": "./schema/rotations.json",
+  "featuredRotations": [
+    {
+      "id": "raids",
+      "type": "weekly",
+      "activityType": "raid",
+      "startDate": "2024-10-08T16:00:00Z",
+      "rotation": [
+        ["raid-last-wish", "raid-vow-of-the-disciple"],
+        ["raid-garden-of-salvation", "raid-kings-fall"],
+        ["raid-deep-stone-crypt", "raid-root-of-nightmares"],
+        ["raid-vault-of-glass", "raid-crotas-end"]
+      ]
+    },
+    {
+      "id": "newest-raid",
+      "type": "newest",
+      "activityType": "raid",
+      "activityId": "raid-salvations-edge"
+    }
+  ],
+  "challengeRotations": [
+    {
+      "id": "raid-salvations-edge-challenges",
+      "activityType": "raid",
+      "parentActivityId": "raid-salvations-edge",
+      "startDate": "2024-10-08T16:00:00Z",
+      "rotation": [
+        "raid-salvations-edge-encounter-1",
+        "raid-salvations-edge-encounter-2",
+        "raid-salvations-edge-encounter-3",
+        "raid-salvations-edge-encounter-4",
+        "raid-salvations-edge-encounter-5"
+      ]
+    }
+  ]
+}

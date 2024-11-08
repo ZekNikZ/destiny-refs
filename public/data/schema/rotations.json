@@ -1,0 +1,140 @@
+{
+  "$ref": "#/definitions/RotationsJson",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "ActivityType": {
+      "enum": [
+        "raid",
+        "dungeon",
+        "nightfall",
+        "exotic_mission",
+        "lost_sector",
+        "encounter"
+      ],
+      "type": "string"
+    },
+    "ChallengeRotation": {
+      "additionalProperties": false,
+      "properties": {
+        "activityType": {
+          "$ref": "#/definitions/ActivityType"
+        },
+        "id": {
+          "type": "string"
+        },
+        "parentActivityId": {
+          "type": "string"
+        },
+        "rotation": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "startDate": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "activityType",
+        "parentActivityId",
+        "startDate",
+        "rotation"
+      ],
+      "type": "object"
+    },
+    "FeaturedRotation": {
+      "anyOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "activityType": {
+              "$ref": "#/definitions/ActivityType"
+            },
+            "id": {
+              "type": "string"
+            },
+            "rotation": {
+              "items": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "startDate": {
+              "type": "string"
+            },
+            "type": {
+              "enum": [
+                "weekly",
+                "daily"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "type",
+            "activityType",
+            "startDate",
+            "rotation"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "activityId": {
+              "type": "string"
+            },
+            "activityType": {
+              "$ref": "#/definitions/ActivityType"
+            },
+            "id": {
+              "type": "string"
+            },
+            "type": {
+              "const": "newest",
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "type",
+            "activityType",
+            "activityId"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "RotationsJson": {
+      "additionalProperties": false,
+      "properties": {
+        "$schema": {
+          "type": "string"
+        },
+        "challengeRotations": {
+          "items": {
+            "$ref": "#/definitions/ChallengeRotation"
+          },
+          "type": "array"
+        },
+        "featuredRotations": {
+          "items": {
+            "$ref": "#/definitions/FeaturedRotation"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "featuredRotations",
+        "challengeRotations"
+      ],
+      "type": "object"
+    }
+  }
+}

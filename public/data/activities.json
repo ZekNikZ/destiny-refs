@@ -1,0 +1,4 @@
+{
+  "$schema": "./schema/activities.json",
+  "activities": ["raid-salvations-edge"]
+}

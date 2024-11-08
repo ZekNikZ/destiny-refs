@@ -48,7 +48,7 @@ const routes: RouteData[] = [
         },
         children: useGlobalData
           .getState()
-          .data.activities.filter((activity) => activity.type === "raid")
+          .activities.filter((activity) => activity.type === "raid")
           .map((activity) => ({
             path: "/info/raids/" + activity.name.toLowerCase().replace(/ /g, "-").replace(/'/g, ""),
             title: activity.name,

@@ -1,5 +1,5 @@
 {
-  "$ref": "#/definitions/JsonData",
+  "$ref": "#/definitions/ActivityJson",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
     "Activity": {
@@ -75,6 +75,21 @@
       ],
       "type": "object"
     },
+    "ActivityJson": {
+      "additionalProperties": false,
+      "properties": {
+        "$schema": {
+          "type": "string"
+        },
+        "activity": {
+          "$ref": "#/definitions/Activity"
+        }
+      },
+      "required": [
+        "activity"
+      ],
+      "type": "object"
+    },
     "ActivityTag": {
       "enum": [
         "featured-newest",
@@ -98,37 +113,6 @@
       ],
       "type": "string"
     },
-    "ChallengeRotation": {
-      "additionalProperties": false,
-      "properties": {
-        "activityType": {
-          "$ref": "#/definitions/ActivityType"
-        },
-        "id": {
-          "type": "string"
-        },
-        "parentActivityId": {
-          "type": "string"
-        },
-        "rotation": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "startDate": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "id",
-        "activityType",
-        "parentActivityId",
-        "startDate",
-        "rotation"
-      ],
-      "type": "object"
-    },
     "ExtraPuzzle": {
       "additionalProperties": false,
       "properties": {
@@ -149,116 +133,6 @@
         "name",
         "description",
         "loot"
-      ],
-      "type": "object"
-    },
-    "FeaturedRotation": {
-      "anyOf": [
-        {
-          "additionalProperties": false,
-          "properties": {
-            "activityType": {
-              "$ref": "#/definitions/ActivityType"
-            },
-            "id": {
-              "type": "string"
-            },
-            "rotation": {
-              "items": {
-                "items": {
-                  "type": "string"
-                },
-                "type": "array"
-              },
-              "type": "array"
-            },
-            "startDate": {
-              "type": "string"
-            },
-            "type": {
-              "enum": [
-                "weekly",
-                "daily"
-              ],
-              "type": "string"
-            }
-          },
-          "required": [
-            "id",
-            "type",
-            "activityType",
-            "startDate",
-            "rotation"
-          ],
-          "type": "object"
-        },
-        {
-          "additionalProperties": false,
-          "properties": {
-            "activityId": {
-              "type": "string"
-            },
-            "activityType": {
-              "$ref": "#/definitions/ActivityType"
-            },
-            "id": {
-              "type": "string"
-            },
-            "type": {
-              "const": "newest",
-              "type": "string"
-            }
-          },
-          "required": [
-            "id",
-            "type",
-            "activityType",
-            "activityId"
-          ],
-          "type": "object"
-        }
-      ]
-    },
-    "JsonData": {
-      "additionalProperties": false,
-      "properties": {
-        "$schema": {
-          "type": "string"
-        },
-        "activities": {
-          "items": {
-            "$ref": "#/definitions/Activity"
-          },
-          "type": "array"
-        },
-        "challengeRotations": {
-          "items": {
-            "$ref": "#/definitions/ChallengeRotation"
-          },
-          "type": "array"
-        },
-        "doubleLootOverrides": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "featuredRotations": {
-          "items": {
-            "$ref": "#/definitions/FeaturedRotation"
-          },
-          "type": "array"
-        },
-        "sharedLoot": {
-          "$ref": "#/definitions/SharedLootPools"
-        }
-      },
-      "required": [
-        "activities",
-        "sharedLoot",
-        "featuredRotations",
-        "challengeRotations",
-        "doubleLootOverrides"
       ],
       "type": "object"
     },
@@ -547,24 +421,6 @@
         "backgroundImage",
         "loot"
       ],
-      "type": "object"
-    },
-    "SharedLootPools": {
-      "additionalProperties": false,
-      "properties": {
-        "loot": {
-          "additionalProperties": {
-            "$ref": "#/definitions/Loot"
-          },
-          "type": "object"
-        },
-        "pools": {
-          "additionalProperties": {
-            "$ref": "#/definitions/LootPool"
-          },
-          "type": "object"
-        }
-      },
       "type": "object"
     },
     "Triumph": {

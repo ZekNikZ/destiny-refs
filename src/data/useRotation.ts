@@ -4,13 +4,13 @@ import { useGlobalData } from "./useGlobalData";
 import { useMemo } from "react";
 
 export default function useRotation(activity: Activity) {
-  const featuredRotations = useGlobalData((state) => state.data.featuredRotations);
-  const challengeRotations = useGlobalData((state) => state.data.challengeRotations);
+  const featuredRotations = useGlobalData((state) => state.rotations.featuredRotations);
+  const challengeRotations = useGlobalData((state) => state.rotations.challengeRotations);
   const date = dayjs().date();
 
   // Get double loot state
   const doubleLootActive = useGlobalData((state) =>
-    state.data.doubleLootOverrides.includes(activity.id)
+    state.loot.doubleLootOverrides.includes(activity.id)
   );
 
   const availability = useMemo(() => {
@@ -22,7 +22,7 @@ export default function useRotation(activity: Activity) {
         break;
       } else if (
         (rotation.type === "weekly" || rotation.type === "daily") &&
-        rotation.rotation.some((week) => week.includes(activity.id))
+        rotation.rotation.some((set) => set.includes(activity.id))
       ) {
         let index: number = -1;
         const startDate = dayjs(rotation.startDate);

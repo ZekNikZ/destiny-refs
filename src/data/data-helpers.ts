@@ -1,4 +1,4 @@
-import { Activity, JsonData, SharedLootPools } from "./types";
+import { Activity, SharedLootPools } from "./types";
 
 function recurseAndApplyLootRefs(obj: any, sharedLoot: SharedLootPools): any {
   if (typeof obj === "object" && obj !== null) {
@@ -34,11 +34,7 @@ function recurseAndApplyLootRefs(obj: any, sharedLoot: SharedLootPools): any {
   }
 }
 
-export function buildRealData(json: JsonData): JsonData {
-  const activities: Activity[] = recurseAndApplyLootRefs(json.activities, json.sharedLoot);
-
-  return {
-    ...json,
-    activities,
-  };
+export function applyLootRefs(json: Activity, sharedLoot: SharedLootPools): Activity {
+  const activity: Activity = recurseAndApplyLootRefs(json, sharedLoot);
+  return activity;
 }
