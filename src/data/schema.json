@@ -130,6 +130,73 @@
       ],
       "type": "object"
     },
+    "FeaturedRotation": {
+      "anyOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "activityType": {
+              "$ref": "#/definitions/ActivityType"
+            },
+            "id": {
+              "type": "string"
+            },
+            "rotation": {
+              "items": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "startDate": {
+              "type": "string"
+            },
+            "type": {
+              "enum": [
+                "weekly",
+                "daily"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "type",
+            "activityType",
+            "startDate",
+            "rotation"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "activityId": {
+              "type": "string"
+            },
+            "activityType": {
+              "$ref": "#/definitions/ActivityType"
+            },
+            "id": {
+              "type": "string"
+            },
+            "type": {
+              "const": "newest",
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "type",
+            "activityType",
+            "activityId"
+          ],
+          "type": "object"
+        }
+      ]
+    },
     "JsonData": {
       "additionalProperties": false,
       "properties": {
@@ -142,12 +209,26 @@
           },
           "type": "array"
         },
+        "doubleLootOverrides": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "featuredRotations": {
+          "items": {
+            "$ref": "#/definitions/FeaturedRotation"
+          },
+          "type": "array"
+        },
         "sharedLoot": {
           "$ref": "#/definitions/SharedLootPools"
         }
       },
       "required": [
-        "activities"
+        "activities",
+        "featuredRotations",
+        "doubleLootOverrides"
       ],
       "type": "object"
     },

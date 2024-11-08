@@ -140,8 +140,25 @@ export interface SharedLootPools {
   pools?: Record<string, LootPool>;
 }
 
+export type FeaturedRotation =
+  | {
+      id: string;
+      type: "weekly" | "daily";
+      activityType: ActivityType;
+      startDate: string;
+      rotation: string[][];
+    }
+  | {
+      id: string;
+      type: "newest";
+      activityType: ActivityType;
+      activityId: string;
+    };
+
 export interface JsonData {
   $schema?: string;
   activities: Activity[];
   sharedLoot?: SharedLootPools;
+  featuredRotations: FeaturedRotation[];
+  doubleLootOverrides: string[];
 }

@@ -703,5 +703,26 @@
         ]
       }
     }
-  }
+  },
+  "featuredRotations": [
+    {
+      "id": "raids",
+      "type": "weekly",
+      "activityType": "raid",
+      "startDate": "2024-10-08T16:00:00Z",
+      "rotation": [
+        ["raid-last-wish", "raid-vow-of-the-disciple"],
+        ["raid-garden-of-salvation", "raid-kings-fall"],
+        ["raid-deep-stone-crypt", "raid-root-of-nightmares"],
+        ["raid-vault-of-glass", "raid-crotas-end"]
+      ]
+    },
+    {
+      "id": "newest-raid",
+      "type": "newest",
+      "activityType": "raid",
+      "activityId": "raid-salvations-edge"
+    }
+  ],
+  "doubleLootOverrides": ["dungeon-vespers-host"]
 }
