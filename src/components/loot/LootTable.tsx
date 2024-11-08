@@ -3,6 +3,7 @@ import { ActivityAvailability, LootPool } from "../../data/types";
 import React from "react";
 import LootListing from "./LootListing";
 import { numberToCardinal } from "../../utils/number-to-words";
+import classes from "./LootTable.module.scss";
 
 interface Props {
   lootPools: LootPool[];
@@ -88,7 +89,7 @@ export default function LootTable(props: Props) {
                 </Group>
 
                 {/* Notes */}
-                <List>
+                <List classNames={{ item: classes.listItem }}>
                   {/* Limit */}
                   {pool.weeklyLimit === "once_per_character" && (
                     <List.Item>Available once per character each week.</List.Item>
