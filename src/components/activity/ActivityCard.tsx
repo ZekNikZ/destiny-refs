@@ -65,7 +65,7 @@ export default function ActivityCard(props: Props) {
       padding="sm"
       radius="sm"
       withBorder
-      //   style={props.encounter ? { flexGrow: 1, flexBasis: "max(45%, 450px)" } : undefined}
+      style={props.encounter ? { alignSelf: "start" } : undefined}
     >
       {/* Header */}
       <Card.Section

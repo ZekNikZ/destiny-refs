@@ -1,4 +1,4 @@
-import { Badge, Card, Group, Stack, Title, useMantineTheme, Text, List } from "@mantine/core";
+import { Badge, Card, Group, Stack, Title, useMantineTheme, Text, List, Box } from "@mantine/core";
 import { ActivityAvailability, LootPool } from "../../data/types";
 import React from "react";
 import LootListing from "./LootListing";
@@ -14,7 +14,7 @@ export default function LootTable(props: Props) {
   const theme = useMantineTheme();
 
   return (
-    <Group gap="xs">
+    <Group gap="xs" align="stretch">
       {props.lootPools.map((pool, index) => {
         if (pool.type === "mode_specific") {
           return (
@@ -41,7 +41,10 @@ export default function LootTable(props: Props) {
               withBorder
               bg={theme.colors.dark[7]}
               key={index}
-              style={{ flexGrow: 1 }}
+              style={{
+                flexGrow: 1,
+                flexBasis: pool.loot.length === 1 ? "320px" : undefined,
+              }}
             >
               <Stack gap="sm">
                 {/* Header */}
@@ -79,14 +82,20 @@ export default function LootTable(props: Props) {
                 </Group>
 
                 {/* Loot */}
-                <Group gap="xs">
+                <Box
+                  display="grid"
+                  style={{
+                    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                    gap: "var(--mantine-spacing-xs)",
+                  }}
+                >
                   {pool.loot.map((loot) => (
                     <LootListing
                       key={loot.type === "item" ? loot.itemHash : loot.name}
                       loot={loot}
                     />
                   ))}
-                </Group>
+                </Box>
 
                 {/* Notes */}
                 <List classNames={{ item: classes.listItem }}>

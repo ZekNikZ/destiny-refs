@@ -1,13 +1,12 @@
-import { Activity } from "../data/types";
 import { Box, Breadcrumbs, Stack, Text } from "@mantine/core";
 import { Link } from "react-router-dom";
 import ActivityCard from "../components/activity/ActivityCard";
 
-import data from "../data/data.json";
-
-const activity: Activity = data.activities[0] as unknown as any;
+import { useGlobalData } from "../data/useData";
 
 const TodayPage = () => {
+  const activity = useGlobalData((state) => state.data.activities[0]);
+
   const masterAvailable = true;
   const featured = "newest";
   const doubleLootActive = false;

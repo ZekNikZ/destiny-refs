@@ -57,7 +57,7 @@ export type Loot = {
       displayItemHash?: number;
       displayStaticIcon?:
         | "helmet"
-        | "arm-armor"
+        | "gauntlets"
         | "chest-armor"
         | "leg-armor"
         | "class-item"
@@ -102,7 +102,7 @@ export type LootPool =
         | "once_per_account"; // "Only available once per account"
 
       // Availability notes (default: always)
-      availableWhen:
+      availableWhen?:
         | "activity_is_featured" // if not featured: "Activity is not featured: will not drop this week"
         | "activity_not_featured" // if featured: "Activity is featured: will not drop this week"
         | "challenge_completion" // "Only available on challenge completion"
@@ -135,7 +135,13 @@ export interface ExtraPuzzle {
   loot: LootPool[];
 }
 
+export interface SharedLootPools {
+  loot?: Record<string, Loot>;
+  pools?: Record<string, LootPool>;
+}
+
 export interface JsonData {
   $schema?: string;
   activities: Activity[];
+  sharedLoot?: SharedLootPools;
 }

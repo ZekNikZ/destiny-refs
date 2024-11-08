@@ -141,6 +141,9 @@
             "$ref": "#/definitions/Activity"
           },
           "type": "array"
+        },
+        "sharedLoot": {
+          "$ref": "#/definitions/SharedLootPools"
         }
       },
       "required": [
@@ -208,7 +211,7 @@
             "displayStaticIcon": {
               "enum": [
                 "helmet",
-                "arm-armor",
+                "gauntlets",
                 "chest-armor",
                 "leg-armor",
                 "class-item",
@@ -304,7 +307,8 @@
               "enum": [
                 "never",
                 "double_loot_is_active",
-                "challenge_completion"
+                "challenge_completion",
+                "challenge_completion_repeatable"
               ],
               "type": "string"
             },
@@ -367,8 +371,7 @@
           "required": [
             "type",
             "loot",
-            "quantity",
-            "availableWhen"
+            "quantity"
           ],
           "type": "object"
         }
@@ -399,6 +402,24 @@
         "backgroundImage",
         "loot"
       ],
+      "type": "object"
+    },
+    "SharedLootPools": {
+      "additionalProperties": false,
+      "properties": {
+        "loot": {
+          "additionalProperties": {
+            "$ref": "#/definitions/Loot"
+          },
+          "type": "object"
+        },
+        "pools": {
+          "additionalProperties": {
+            "$ref": "#/definitions/LootPool"
+          },
+          "type": "object"
+        }
+      },
       "type": "object"
     },
     "Triumph": {

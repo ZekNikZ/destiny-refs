@@ -21,12 +21,7 @@ export default function LootIcon(props: Props) {
     );
   } else {
     return (
-      <LootGroupIcon
-        loot={props.loot}
-        size={props.size ?? 60}
-        hideArtiface={props.hideArtiface}
-        disableHover={props.disableHover}
-      />
+      <LootGroupIcon loot={props.loot} size={props.size ?? 60} hideArtiface={props.hideArtiface} />
     );
   }
 }
