@@ -1,5 +1,5 @@
 import { Activity, LootPool } from "../data/types";
-import { Badge, Box, Breadcrumbs, Group, List, Stack, Text } from "@mantine/core";
+import { Breadcrumbs, Stack, Text } from "@mantine/core";
 import { Link } from "react-router-dom";
 import ActivityCard from "../components/activity/ActivityCard";
 
@@ -12,11 +12,12 @@ const exampleLootPool: LootPool = {
       children: [
         {
           type: "pool",
-          quantity: 2,
+          quantity: 1,
           showInLootSummary: true,
           pinnacleWhen: "always",
           weeklyLimit: "once_per_character",
           availableWhen: "always",
+          doubleLootWhen: "challenge_completion",
           loot: [
             {
               type: "item",
@@ -110,7 +111,6 @@ const exampleLootPool: LootPool = {
         {
           type: "pool",
           quantity: 1,
-          showInLootSummary: true,
           pinnacleWhen: "always",
           weeklyLimit: "once_per_character",
           availableWhen: "always",
@@ -159,8 +159,41 @@ const exampleLootPool: LootPool = {
         },
         {
           type: "pool",
+          quantity: 1,
+          pinnacleWhen: "never",
+          weeklyLimit: "once_per_character",
+          availableWhen: "challenge_completion",
+          knockout: true,
+          loot: [
+            {
+              type: "item",
+              itemHash: 3951511045,
+            },
+            {
+              type: "item",
+              itemHash: 172461430,
+            },
+            {
+              type: "item",
+              itemHash: 1039915310,
+            },
+            {
+              type: "item",
+              itemHash: 3123651616,
+            },
+            {
+              type: "item",
+              itemHash: 892183998,
+            },
+            {
+              type: "item",
+              itemHash: 2001697739,
+            },
+          ],
+        },
+        {
+          type: "pool",
           quantity: "chance",
-          showInLootSummary: true,
           pinnacleWhen: "never",
           weeklyLimit: "once_per_character",
           availableWhen: "always",
@@ -173,8 +206,7 @@ const exampleLootPool: LootPool = {
         },
         {
           type: "pool",
-          quantity: 1,
-          showInLootSummary: true,
+          quantity: "all",
           pinnacleWhen: "never",
           weeklyLimit: "infinite_after_first_clear",
           availableWhen: "always",
@@ -201,15 +233,52 @@ const activity: Activity = {
   encounters: [
     {
       id: "encounter-salvations-edge-1",
+      type: "encounter",
       name: "Substratum",
       backgroundImage: "/test-bg-img.webp",
+      description: "Play tic tac toe.",
+      loot: [exampleLootPool],
+    },
+    {
+      id: "encounter-salvations-edge-2",
+      type: "encounter",
+      name: "Dissipation",
+      backgroundImage: "/test-bg-img.webp",
+      description: "Taniks, again?",
+      loot: [exampleLootPool],
+    },
+    {
+      id: "encounter-salvations-edge-3",
+      type: "encounter",
+      name: "Repository",
+      backgroundImage: "/test-bg-img.webp",
+      description: "TORMENTORS!!!",
+      loot: [exampleLootPool],
+    },
+    {
+      id: "encounter-salvations-edge-4",
+      type: "encounter",
+      name: "Verity",
+      backgroundImage: "/test-bg-img.webp",
       description: "Put the square into the square hole.",
+      loot: [exampleLootPool],
+    },
+    {
+      id: "encounter-salvations-edge-5",
+      type: "encounter",
+      name: "The Witness",
+      backgroundImage: "/test-bg-img.webp",
+      description: "Prevent the final shape.",
       loot: [exampleLootPool],
     },
   ],
 };
 
 const TodayPage = () => {
+  const masterAvailable = true;
+  const featured = "newest";
+  const doubleLootActive = true;
+
   return (
     <Stack>
       <Breadcrumbs>
@@ -217,85 +286,28 @@ const TodayPage = () => {
         <Link to="/info/raids">Raids</Link>
         <Text>Salvation's Edge</Text>
       </Breadcrumbs>
-      <ActivityCard titleStyle="large" meta={activity} />
-      {activity.encounters.map((encounter, index) => (
+      <ActivityCard
+        activity={activity}
+        availability={{
+          featured,
+          masterAvailable,
+          doubleLootActive,
+        }}
+      />
+      {activity.encounters?.map((encounter, index) => (
         <ActivityCard
+          encounter
           key={encounter.name}
           titlePrefix={`Encounter ${index + 1}: `}
-          meta={encounter}
+          activity={encounter}
+          availability={{
+            featured,
+            challengeActive: index === 4,
+            masterAvailable,
+            doubleLootActive,
+          }}
         />
       ))}
-
-      {/* TODO: remove */}
-      <Box size="xl" />
-      <Group gap="xs" mt="xs">
-        <Badge color="yellow" radius="sm">
-          Newest
-        </Badge>
-        <Badge color="orange" radius="sm">
-          Master Available
-        </Badge>
-        <Badge color="pink" radius="sm">
-          Pinnacle Rewards
-        </Badge>
-        <Badge color="green" radius="sm">
-          All Challenges Active
-        </Badge>
-        <Badge color="green" radius="sm">
-          Challenge Active
-        </Badge>
-        <Badge color="blue" radius="sm">
-          Double Loot Active
-        </Badge>
-        <Badge color="blue" radius="sm">
-          Farmable
-        </Badge>
-        <Badge color="red" radius="sm">
-          Not Available this week
-        </Badge>
-      </Group>
-      <List>
-        <List.Item>
-          Activity is featured: first drop this week (per character) will be{" "}
-          <Text c="pink" fw="bold" span>
-            pinnacle
-          </Text>
-          .
-        </List.Item>
-        <List.Item>
-          <Text td="line-through">Available once per character each week.</Text>
-        </List.Item>
-        <List.Item>
-          Activity is featured: will drop every completion this week (
-          <Text c="blue" span fw="bold">
-            farmable
-          </Text>
-          ).
-        </List.Item>
-        <List.Item>
-          <Text>
-            Only available{" "}
-            <Text fw="bold" span>
-              after
-            </Text>{" "}
-            first clear of the week (per character).
-          </Text>
-        </List.Item>
-        <List.Item>Available once per account each week.</List.Item>
-        <List.Item>
-          <Text c="blue" span fw="bold">
-            Double loot
-          </Text>{" "}
-          is active this week: drops doubled.
-        </List.Item>
-        <List.Item>
-          Activity is featured:{" "}
-          <Text fw="bold" c="red" span>
-            will not drop
-          </Text>{" "}
-          this week.
-        </List.Item>
-      </List>
     </Stack>
   );
 };

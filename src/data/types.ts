@@ -1,4 +1,10 @@
-export type ActivityType = "raid" | "dungeon" | "nightfall" | "exotic_mission" | "lost_sector";
+export type ActivityType =
+  | "raid"
+  | "dungeon"
+  | "nightfall"
+  | "exotic_mission"
+  | "lost_sector"
+  | "encounter";
 
 export type ActivityTag =
   | "featured-newest"
@@ -9,10 +15,14 @@ export type ActivityTag =
   | "double-loot-active"
   | "not-available-rotating";
 
-export interface ActivityMeta {
+export interface Activity {
+  id: string;
+  type: ActivityType;
   name: string;
   description: string;
   backgroundImage: string;
+  location?: string;
+  tagOverrides?: ActivityTag[];
 
   loot?: LootPool[];
   triumphs?: Triumph[];
@@ -20,23 +30,25 @@ export interface ActivityMeta {
   secretChests?: SecretChest[];
   extraPuzzles?: ExtraPuzzle[];
 
-  tagOverrides?: ActivityTag[];
+  encounters?: (Activity & { type: "encounter" })[];
 }
 
-export interface Activity extends ActivityMeta {
-  id: string;
-  type: ActivityType;
-  location: string;
-  encounters: Encounter[];
+export interface ActivityAvailability {
+  featured?: "newest" | "farmable" | "weekly" | false;
+  masterAvailable?: boolean;
+  challengeActive?: boolean;
+  doubleLootActive?: boolean;
 }
 
-export type Loot =
+export type Loot = {
+  artiface?: boolean;
+  statFocused?: boolean;
+  quantity?: number;
+  deepsight?: "chance" | "guaranteed";
+} & (
   | {
       type: "item";
       itemHash: number;
-      deepsight?: "chance" | "guaranteed";
-      artiface?: boolean;
-      quantity?: number;
     }
   | {
       type: "group";
@@ -54,15 +66,18 @@ export type Loot =
         | "exotic-engram"
         | "bright-engram"
         | "prime-engram";
-      artiface?: boolean;
-      quantity?: number;
       children: Loot[];
-    };
+    }
+);
 
 export type LootPool =
   | {
       type: "mode_specific";
-      modes: { mode: string; bungieActivityHash: number; children: LootPool[] }[];
+      modes: {
+        mode: string;
+        bungieActivityHash: number;
+        children: LootPool[];
+      }[];
     }
   | {
       type: "pool";
@@ -70,31 +85,35 @@ export type LootPool =
       quantity: number | "chance" | "all";
       notes?: string[];
       showInLootSummary?: boolean;
+      knockout?: boolean;
 
-      // Adds a "First drop each week (per character) is pinnacle" note
-      pinnacleWhen:
+      // Pinnacle notes (default: never)
+      pinnacleWhen?:
         | "never" // no note
         | "activity_is_featured" // if featured: "Activity is featured: first drop this week (per character) will be pinnacle"
         | "always"; // "First drop each week (per character) is pinnacle"
 
-      // Changes the tag
-      weeklyLimit:
+      // Limit notes (default: infinite)
+      weeklyLimit?:
         | "infinite" // no note
         | "infinite_when_featured" // if featured: "Activity is featured: will drop every completion" / "chance to drop every completion"
         | "infinite_after_first_clear" // "Only available after first clear per character"
         | "once_per_character" // "Only available once per character"
         | "once_per_account"; // "Only available once per account"
 
-      // Adds a "Not available this week" note
+      // Availability notes (default: always)
       availableWhen:
         | "activity_is_featured" // if not featured: "Activity is not featured: will not drop this week"
         | "activity_not_featured" // if featured: "Activity is featured: will not drop this week"
+        | "challenge_completion" // "Only available on challenge completion"
         | "always"; // no note
-    };
 
-export interface Encounter extends ActivityMeta {
-  id: string;
-}
+      // Double loot notes (default: never)
+      doubleLootWhen?:
+        | "never" // no note
+        | "double_loot_is_active" // if featured: "Double loot is active this week: drops doubled"
+        | "challenge_completion"; // "Double loot on challenge completion"
+    };
 
 export interface Triumph {
   name: string;

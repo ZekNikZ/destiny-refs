@@ -11,7 +11,7 @@ interface Props {
 
 export default function LootGroupIcon(props: Props) {
   return (
-    <HoverCard shadow="md">
+    <HoverCard shadow="md" closeDelay={0}>
       <HoverCard.Target>
         {props.loot.displayItemHash ? (
           <LootItemIcon

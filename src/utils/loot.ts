@@ -25,3 +25,19 @@ export function summarizeLootPool(pool: LootPool): Loot[] {
       }) === index
   );
 }
+
+export function anyLootIsPinnacle(pools: LootPool[], activityIsFeatured?: boolean): boolean {
+  return pools.some((pool) => {
+    switch (pool.type) {
+      case "mode_specific":
+        return pool.modes.some((mode) =>
+          mode.children.some((child) => anyLootIsPinnacle([child], activityIsFeatured))
+        );
+      case "pool":
+        return (
+          pool.pinnacleWhen === "always" ||
+          (activityIsFeatured && pool.pinnacleWhen === "activity_is_featured")
+        );
+    }
+  });
+}
