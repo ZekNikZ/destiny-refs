@@ -7,23 +7,22 @@ function routeDataToRoute(routeData: RouteData): RouteObject {
   return { path, element, children: children?.map(routeDataToRoute), handle: title };
 }
 
-function unflattenRoutes(route: RouteObject): RouteObject[] {
+function flattenRoutes(route: RouteObject): RouteObject[] {
   if (route.element && route.children) {
-    return [{ ...route, children: [] }, ...route.children.flatMap(unflattenRoutes)];
+    return [{ ...route, children: [] }, ...route.children.flatMap(flattenRoutes)];
   } else {
     return [route];
   }
 }
 
-const children = routes.map(routeDataToRoute).flatMap(unflattenRoutes);
-console.log(children);
+export const flattenedRoutes = routes.map(routeDataToRoute).flatMap(flattenRoutes);
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
     errorElement: <Navigate replace to="/" />,
-    children,
+    children: flattenedRoutes,
   },
 ]);
 

@@ -1,0 +1,8 @@
+.link {
+  text-decoration: none;
+  color: var(--mantine-color-blue-text);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
