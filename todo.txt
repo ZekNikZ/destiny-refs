@@ -1,0 +1,14 @@
+- Implement triumphs
+- Implement guides
+- Add additional raids for testing:
+  - vow
+  - lw
+  - dsc
+- Implement rotations
+- Begin "Today" page
+- Add rest of raids
+- Implement "Rotations" page
+- Implement nightfalls
+- Implement lost sectors
+- Implement exotic missions
+- Implement dungeons

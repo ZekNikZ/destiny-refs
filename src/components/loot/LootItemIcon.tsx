@@ -21,7 +21,10 @@ export default function LootItemIcon(props: Props) {
         position: "relative",
       }}
     >
-      {isSuccess && <Image src={`https://bungie.net/${item?.displayProperties.icon}`} />}
+      <Image
+        src={isSuccess ? `https://bungie.net/${item?.displayProperties.icon}` : null}
+        fallbackSrc="/icons/loot/loading.gif"
+      />
       {item?.iconWatermark && (
         <Image
           src={`https://bungie.net/${item.iconWatermark}`}
