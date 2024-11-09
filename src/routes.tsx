@@ -3,6 +3,7 @@ import TodayPage from "./pages/TodayPage";
 import { useGlobalData } from "./data/useGlobalData";
 import EncounterBasedActivityPage from "./pages/EncounterBasedActivityPage";
 import ActivityListPage from "./pages/ActivityListPage";
+import { makeRouteFromActivity } from "./utils/routes";
 
 export interface RouteData {
   path: string;
@@ -51,7 +52,7 @@ const routes: RouteData[] = [
           .getState()
           .activities.filter((activity) => activity.type === "raid")
           .map((activity) => ({
-            path: "/info/raids/" + activity.name.toLowerCase().replace(/ /g, "-").replace(/'/g, ""),
+            path: makeRouteFromActivity(activity),
             title: activity.name,
             element: <EncounterBasedActivityPage activity={activity} />,
           })),
@@ -67,8 +68,7 @@ const routes: RouteData[] = [
           .getState()
           .activities.filter((activity) => activity.type === "dungeon")
           .map((activity) => ({
-            path:
-              "/info/dungeons/" + activity.name.toLowerCase().replace(/ /g, "-").replace(/'/g, ""),
+            path: makeRouteFromActivity(activity),
             title: activity.name,
             element: <EncounterBasedActivityPage activity={activity} />,
           })),

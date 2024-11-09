@@ -6,6 +6,9 @@ import { Box, Stack } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import ActivityCard from "../components/activity/ActivityCard";
 import useRotation from "../data/useRotation";
+import { Link } from "react-router-dom";
+import classes from "./ActivityListPage.module.scss";
+import { makeRouteFromActivity } from "../utils/routes";
 
 interface Props {
   activityType: ActivityType;
@@ -13,13 +16,17 @@ interface Props {
 
 function ActivityCardWrapper(props: { activity: Activity }) {
   const availability = useRotation(props.activity);
+  const link = makeRouteFromActivity(props.activity);
+
   return (
-    <ActivityCard
-      key={props.activity.id}
-      activity={props.activity}
-      availability={availability}
-      forceState="summary"
-    />
+    <Link to={link} className={classes.activityLink}>
+      <ActivityCard
+        key={props.activity.id}
+        activity={props.activity}
+        availability={availability}
+        forceState="summary"
+      />
+    </Link>
   );
 }
 
