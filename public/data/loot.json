@@ -434,6 +434,19 @@
           }
         ]
       },
+      "raid-spoils-lwgosdsc": {
+        "type": "pool",
+        "quantity": "all",
+        "pinnacleWhen": "never",
+        "weeklyLimit": "once_per_character",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 3702027555,
+            "quantity": 5
+          }
+        ]
+      },
 
       "raid-salvations-edge-adepts": {
         "type": "pool",
@@ -528,6 +541,167 @@
           {
             "type": "item",
             "itemHash": 3505113722
+          }
+        ]
+      },
+
+      "raid-last-wish-encounter": {
+        "type": "pool",
+        "quantity": 1,
+        "weeklyLimit": "infinite_when_featured",
+        "showInLootSummary": true,
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 3591141932,
+            "deepsight": "craftable"
+          },
+          {
+            "type": "item",
+            "itemHash": 501329015,
+            "deepsight": "craftable"
+          },
+          {
+            "type": "item",
+            "itemHash": 3885259140,
+            "deepsight": "craftable"
+          },
+          {
+            "type": "item",
+            "itemHash": 2884596447,
+            "deepsight": "craftable"
+          },
+          {
+            "type": "item",
+            "itemHash": 424291879,
+            "deepsight": "craftable"
+          },
+          {
+            "type": "item",
+            "itemHash": 3388655311,
+            "deepsight": "craftable"
+          },
+          {
+            "type": "item",
+            "itemHash": 70083888,
+            "deepsight": "craftable"
+          },
+          {
+            "type": "item",
+            "itemHash": 1851777734,
+            "deepsight": "craftable"
+          },
+          {
+            "type": "group",
+            "name": "Helmet (Class-Specific)",
+            "groupType": "Armor",
+            "displayStaticIcon": "helmet",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 362541459
+              },
+              {
+                "type": "item",
+                "itemHash": 1649346047
+              },
+              {
+                "type": "item",
+                "itemHash": 2316722050
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "name": "Gauntlets (Class-Specific)",
+            "groupType": "Armor",
+            "displayStaticIcon": "gauntlets",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 2150515362
+              },
+              {
+                "type": "item",
+                "itemHash": 1583213254
+              },
+              {
+                "type": "item",
+                "itemHash": 1656263403
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "name": "Chest Armor (Class-Specific)",
+            "groupType": "Armor",
+            "displayStaticIcon": "chest-armor",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 1627640710
+              },
+              {
+                "type": "item",
+                "itemHash": 3487540074
+              },
+              {
+                "type": "item",
+                "itemHash": 3300312357
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "name": "Leg Armor (Class-Specific)",
+            "groupType": "Armor",
+            "displayStaticIcon": "leg-armor",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 365727964
+              },
+              {
+                "type": "item",
+                "itemHash": 1566699968
+              },
+              {
+                "type": "item",
+                "itemHash": 2748020989
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "name": "Class Item (Class-Specific)",
+            "groupType": "Armor",
+            "displayStaticIcon": "class-item",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 2370089583
+              },
+              {
+                "type": "item",
+                "itemHash": 4124357755
+              },
+              {
+                "type": "item",
+                "itemHash": 2422261368
+              }
+            ]
+          }
+        ]
+      },
+      "raid-last-wish-encounter-rare": {
+        "type": "pool",
+        "quantity": "chance",
+        "weeklyLimit": "infinite_when_featured",
+        "showInLootSummary": true,
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 1511214613
           }
         ]
       }

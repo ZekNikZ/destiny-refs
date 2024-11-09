@@ -48,15 +48,18 @@
                     "loot": [
                       {
                         "type": "item",
-                        "itemHash": 768621510
+                        "itemHash": 768621510,
+                        "deepsight": "craftable"
                       },
                       {
                         "type": "item",
-                        "itemHash": 3886416794
+                        "itemHash": 3886416794,
+                        "deepsight": "craftable"
                       },
                       {
                         "type": "item",
-                        "itemHash": 999767358
+                        "itemHash": 999767358,
+                        "deepsight": "craftable"
                       },
                       {
                         "type": "ref-loot",
@@ -148,19 +151,23 @@
                     "loot": [
                       {
                         "type": "item",
-                        "itemHash": 3886416794
+                        "itemHash": 3886416794,
+                        "deepsight": "craftable"
                       },
                       {
                         "type": "item",
-                        "itemHash": 613334176
+                        "itemHash": 613334176,
+                        "deepsight": "craftable"
                       },
                       {
                         "type": "item",
-                        "itemHash": 3428521585
+                        "itemHash": 3428521585,
+                        "deepsight": "craftable"
                       },
                       {
                         "type": "item",
-                        "itemHash": 999767358
+                        "itemHash": 999767358,
+                        "deepsight": "craftable"
                       },
                       {
                         "type": "ref-loot",
@@ -252,11 +259,13 @@
                     "loot": [
                       {
                         "type": "item",
-                        "itemHash": 768621510
+                        "itemHash": 768621510,
+                        "deepsight": "craftable"
                       },
                       {
                         "type": "item",
-                        "itemHash": 3886416794
+                        "itemHash": 3886416794,
+                        "deepsight": "craftable"
                       },
                       {
                         "type": "ref-loot",
@@ -345,15 +354,18 @@
                     "loot": [
                       {
                         "type": "item",
-                        "itemHash": 2534546147
+                        "itemHash": 2534546147,
+                        "deepsight": "craftable"
                       },
                       {
                         "type": "item",
-                        "itemHash": 613334176
+                        "itemHash": 613334176,
+                        "deepsight": "craftable"
                       },
                       {
                         "type": "item",
-                        "itemHash": 3428521585
+                        "itemHash": 3428521585,
+                        "deepsight": "craftable"
                       },
                       {
                         "type": "ref-loot",

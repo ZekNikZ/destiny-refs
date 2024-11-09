@@ -10,14 +10,14 @@ function recurseAndApplyLootRefs(obj: any, sharedLoot: SharedLootPools): any {
       if (obj.type === "ref-loot" && obj.key) {
         const ref = sharedLoot.loot?.[obj.key];
         if (ref) {
-          return ref;
+          return { ...obj, ...ref };
         } else {
           throw new Error(`Loot not found: ${obj.key}`);
         }
       } else if (obj.type === "ref-loot-pool" && obj.key) {
         const ref = sharedLoot.pools?.[obj.key];
         if (ref) {
-          return ref;
+          return { ...obj, ...ref };
         } else {
           throw new Error(`Loot pool not found: ${obj.key}`);
         }

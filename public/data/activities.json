@@ -1,4 +1,4 @@
 {
   "$schema": "./schema/activities.json",
-  "activities": ["raid-salvations-edge", "raid-vow-of-the-disciple"]
+  "activities": ["raid-salvations-edge", "raid-vow-of-the-disciple", "raid-last-wish"]
 }

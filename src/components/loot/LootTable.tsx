@@ -1,10 +1,22 @@
-import { Badge, Card, Group, Stack, Title, useMantineTheme, Text, List, Box } from "@mantine/core";
+import {
+  Badge,
+  Card,
+  Group,
+  Stack,
+  Title,
+  useMantineTheme,
+  Text,
+  List,
+  Box,
+  TypographyStylesProvider,
+} from "@mantine/core";
 import { Activity, ActivityAvailability, LootPool } from "../../data/types";
 import React from "react";
 import LootListing from "./LootListing";
 import { numberToCardinal } from "../../utils/number-to-words";
 import classes from "./LootTable.module.scss";
 import { getLootKey } from "../../utils/loot";
+import Markdown from "react-markdown";
 
 interface Props {
   lootPools: LootPool[];
@@ -106,6 +118,13 @@ export default function LootTable(props: Props) {
 
                 {/* Notes */}
                 <List classNames={{ item: classes.listItem }}>
+                  {/* Custom Notes */}
+                  {pool.notes?.map((note) => (
+                    <TypographyStylesProvider key={note}>
+                      <Markdown>{note}</Markdown>
+                    </TypographyStylesProvider>
+                  ))}
+
                   {/* Limit */}
                   {pool.weeklyLimit === "once_per_character" && (
                     <List.Item>Available once per character each week.</List.Item>

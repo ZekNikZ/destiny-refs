@@ -1,0 +1,210 @@
+{
+  "$schema": "../schema/activity.json",
+  "activity": {
+    "id": "raid-last-wish",
+    "type": "raid",
+    "name": "Last Wish",
+    "description": "\"The opportunity of a lifetime.\"",
+    "backgroundImage": "/images/raids/last-wish/banner.jpeg",
+    "triumphs": [
+      {
+        "bungieRecordHash": 717856991
+      },
+      {
+        "bungieRecordHash": 380332968
+      },
+      {
+        "bungieRecordHash": 3000516033
+      },
+      {
+        "bungieRecordHash": 2826160801
+      },
+      {
+        "bungieRecordHash": 623283604
+      },
+      {
+        "bungieRecordHash": 342038729
+      }
+    ],
+    "encounters": [
+      {
+        "id": "raid-last-wish-encounter-1",
+        "type": "encounter",
+        "name": "Kalli, the Corrupted",
+        "description": "Defeat Kalli",
+        "backgroundImage": "/images/raids/last-wish/encounter-1.avif",
+        "loot": [
+          {
+            "type": "ref-loot-pool",
+            "key": "raid-last-wish-encounter"
+          },
+          {
+            "type": "ref-loot-pool",
+            "key": "raid-last-wish-encounter-rare"
+          },
+          {
+            "type": "pool",
+            "quantity": "chance",
+            "weeklyLimit": "infinite_when_featured",
+            "showInLootSummary": true,
+            "loot": [
+              {
+                "type": "item",
+                "itemHash": 3862768196
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 1847670729,
+            "guide": "Activate all 9 plates and kill all Knights and Ogres before damaging Kalli.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-last-wish-encounter-2",
+        "type": "encounter",
+        "name": "Shuro Chi, the Corrupted",
+        "description": "Defeat Shuro Chi",
+        "backgroundImage": "/images/raids/last-wish/encounter-2.webp",
+        "loot": [
+          {
+            "type": "ref-loot-pool",
+            "key": "raid-last-wish-encounter"
+          },
+          {
+            "type": "ref-loot-pool",
+            "key": "raid-last-wish-encounter-rare"
+          },
+          {
+            "type": "pool",
+            "quantity": "chance",
+            "weeklyLimit": "infinite_when_featured",
+            "showInLootSummary": true,
+            "loot": [
+              {
+                "type": "item",
+                "itemHash": 3862768196
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 3533973498,
+            "guide": "Complete the encounter without any guardian being hit or taking damage from Shuro Chi's arc blast.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-last-wish-encounter-3",
+        "type": "encounter",
+        "name": "Morgeth, the Spirekeeper",
+        "description": "Defeat Morgeth, the Spirekeeper",
+        "backgroundImage": "/images/raids/last-wish/encounter-3.jpeg",
+        "loot": [
+          {
+            "type": "ref-loot-pool",
+            "key": "raid-last-wish-encounter"
+          },
+          {
+            "type": "ref-loot-pool",
+            "key": "raid-last-wish-encounter-rare"
+          },
+          {
+            "type": "pool",
+            "quantity": "chance",
+            "weeklyLimit": "infinite_when_featured",
+            "showInLootSummary": true,
+            "loot": [
+              {
+                "type": "item",
+                "itemHash": 2081719592
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 989244596,
+            "guide": "Complete the encounter without killing the small Taken Ogres.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-last-wish-encounter-4",
+        "type": "encounter",
+        "name": "The Vault",
+        "description": "Unlock the Way Forward",
+        "backgroundImage": "/images/raids/last-wish/encounter-4.jpeg",
+        "loot": [
+          {
+            "type": "ref-loot-pool",
+            "key": "raid-last-wish-encounter"
+          },
+          {
+            "type": "ref-loot-pool",
+            "key": "raid-last-wish-encounter-rare"
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 3234595894,
+            "guide": "Unlock the Vault without allowing any Might of Riven Taken Knights to enter the center chamber.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-last-wish-encounter-5",
+        "type": "encounter",
+        "name": "Riven of a Thousand Voices",
+        "description": "Slay Riven",
+        "backgroundImage": "/images/raids/last-wish/encounter-5.avif",
+        "loot": [
+          {
+            "type": "pool",
+            "quantity": "chance",
+            "weeklyLimit": "infinite_when_featured",
+            "showInLootSummary": true,
+            "loot": [
+              {
+                "type": "item",
+                "itemHash": 3314893283
+              }
+            ]
+          },
+          {
+            "type": "ref-loot-pool",
+            "key": "raid-last-wish-encounter-rare"
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 1711136422,
+            "guide": "Each of Riven's eyes cannot be shot by the same guardian more than once.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-last-wish-encounter-6",
+        "type": "encounter",
+        "name": "The Queenswalk",
+        "description": "Take the Stone to the Techeun",
+        "backgroundImage": "/images/raids/last-wish/encounter-6.jpg",
+        "loot": [
+          {
+            "type": "ref-loot-pool",
+            "key": "raid-last-wish-encounter",
+            "pinnacleWhen": "activity_is_featured"
+          }
+        ]
+      }
+    ]
+  }
+}

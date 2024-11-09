@@ -42,40 +42,39 @@ export interface ActivityAvailability {
   doubleLootActive?: boolean;
 }
 
-export type Loot =
-  | ({
-      artiface?: boolean;
-      statFocused?: boolean;
-      quantity?: number;
-      deepsight?: "chance" | "guaranteed";
-    } & (
-      | {
-          type: "item";
-          itemHash: number;
-        }
-      | {
-          type: "group";
-          name?: string;
-          groupType: string;
-          displayItemHash?: number;
-          displayStaticIcon?:
-            | "helmet"
-            | "gauntlets"
-            | "chest-armor"
-            | "leg-armor"
-            | "class-item"
-            | "weapon"
-            | "legendary-engram"
-            | "exotic-engram"
-            | "bright-engram"
-            | "prime-engram";
-          children: Loot[];
-        }
-    ))
+export type Loot = {
+  artiface?: boolean;
+  statFocused?: boolean;
+  quantity?: number;
+  deepsight?: "craftable" | "guaranteed-deepsight";
+} & (
+  | {
+      type: "item";
+      itemHash: number;
+    }
+  | {
+      type: "group";
+      name?: string;
+      groupType: string;
+      displayItemHash?: number;
+      displayStaticIcon?:
+        | "helmet"
+        | "gauntlets"
+        | "chest-armor"
+        | "leg-armor"
+        | "class-item"
+        | "weapon"
+        | "legendary-engram"
+        | "exotic-engram"
+        | "bright-engram"
+        | "prime-engram";
+      children: Loot[];
+    }
   | {
       type: "ref-loot";
       key: string;
-    };
+    }
+);
 
 export type LootPool =
   | {
@@ -86,14 +85,7 @@ export type LootPool =
         children: LootPool[];
       }[];
     }
-  | {
-      type: "pool";
-      loot: Loot[];
-      quantity: number | "chance" | "all";
-      notes?: string[];
-      showInLootSummary?: boolean;
-      knockout?: boolean;
-
+  | ({
       // Pinnacle notes (default: never)
       pinnacleWhen?:
         | "never" // no note
@@ -121,11 +113,17 @@ export type LootPool =
         | "double_loot_is_active" // if featured: "Double loot is active this week: drops doubled"
         | "challenge_completion" // "Double loot on challenge completion"
         | "challenge_completion_repeatable"; // "Double loot on challenge completion"
-    }
-  | {
-      type: "ref-loot-pool";
-      key: string;
-    };
+    } & (
+      | {
+          type: "pool";
+          loot: Loot[];
+          quantity: number | "chance" | "all";
+          notes?: string[];
+          showInLootSummary?: boolean;
+          knockout?: boolean;
+        }
+      | { type: "ref-loot-pool"; key: string }
+    ));
 
 export interface Triumph {
   bungieRecordHash: number;

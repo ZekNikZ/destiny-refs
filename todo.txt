@@ -1,15 +1,17 @@
 - Implement guides
 - Implement rotations
 - Implement triumphs
-
 - Add additional raids for testing:
   - vow
   - lw
+
+- Add additional raids for testing:
   - dsc
+- Implement "Rotations" page
+- Be able to mark weapons as deepsight
+- Implement dungeons
 - Begin "Today" page
 - Add rest of raids
-- Implement "Rotations" page
 - Implement nightfalls
 - Implement lost sectors
 - Implement exotic missions
-- Implement dungeons
