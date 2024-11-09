@@ -4,14 +4,16 @@
 - Add additional raids for testing:
   - vow
   - lw
+  - dsc
 
 - Add additional raids for testing:
-  - dsc
+  - lw extra loot
 - Implement "Rotations" page
 - Be able to mark weapons as deepsight
 - Implement dungeons
-- Begin "Today" page
+- Begin "Today" page (list everything currently active in grid)
 - Add rest of raids
 - Implement nightfalls
 - Implement lost sectors
 - Implement exotic missions
+- Raid and dungeon secret chests & puzzles
