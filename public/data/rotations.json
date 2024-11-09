@@ -33,6 +33,18 @@
         "raid-salvations-edge-encounter-4",
         "raid-salvations-edge-encounter-5"
       ]
+    },
+    {
+      "id": "raid-deep-stone-crypt-challenges",
+      "activityType": "raid",
+      "parentActivityId": "raid-deep-stone-crypt",
+      "startDate": "2024-10-15T16:00:00Z",
+      "rotation": [
+        "raid-deep-stone-crypt-encounter-1",
+        "raid-deep-stone-crypt-encounter-2",
+        "raid-deep-stone-crypt-encounter-3",
+        "raid-deep-stone-crypt-encounter-4"
+      ]
     }
   ]
 }
