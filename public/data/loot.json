@@ -201,6 +201,207 @@
             "itemHash": 141134282
           }
         ]
+      },
+
+      "raid-vow-of-the-disciple-head": {
+        "type": "group",
+        "name": "Helmet (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "helmet",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 362541459
+          },
+          {
+            "type": "item",
+            "itemHash": 1649346047
+          },
+          {
+            "type": "item",
+            "itemHash": 2316722050
+          }
+        ]
+      },
+      "raid-vow-of-the-disciple-head-focused": {
+        "type": "group",
+        "name": "Helmet (Class-Specific)",
+        "groupType": "Stat-Focused Armor",
+        "displayStaticIcon": "helmet",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 362541459
+          },
+          {
+            "type": "item",
+            "itemHash": 1649346047
+          },
+          {
+            "type": "item",
+            "itemHash": 2316722050
+          }
+        ]
+      },
+      "raid-vow-of-the-disciple-arms": {
+        "type": "group",
+        "name": "Gauntlets (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "gauntlets",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 2150515362
+          },
+          {
+            "type": "item",
+            "itemHash": 1583213254
+          },
+          {
+            "type": "item",
+            "itemHash": 1656263403
+          }
+        ]
+      },
+      "raid-vow-of-the-disciple-arms-focused": {
+        "type": "group",
+        "name": "Gauntlets (Class-Specific)",
+        "groupType": "Stat-Focused Armor",
+        "displayStaticIcon": "gauntlets",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 2150515362
+          },
+          {
+            "type": "item",
+            "itemHash": 1583213254
+          },
+          {
+            "type": "item",
+            "itemHash": 1656263403
+          }
+        ]
+      },
+      "raid-vow-of-the-disciple-chest": {
+        "type": "group",
+        "name": "Chest Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "chest-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 1627640710
+          },
+          {
+            "type": "item",
+            "itemHash": 3487540074
+          },
+          {
+            "type": "item",
+            "itemHash": 3300312357
+          }
+        ]
+      },
+      "raid-vow-of-the-disciple-chest-focused": {
+        "type": "group",
+        "name": "Chest Armor (Class-Specific)",
+        "groupType": "Stat-Focused Armor",
+        "displayStaticIcon": "chest-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 1627640710
+          },
+          {
+            "type": "item",
+            "itemHash": 3487540074
+          },
+          {
+            "type": "item",
+            "itemHash": 3300312357
+          }
+        ]
+      },
+      "raid-vow-of-the-disciple-legs": {
+        "type": "group",
+        "name": "Leg Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "leg-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 365727964
+          },
+          {
+            "type": "item",
+            "itemHash": 1566699968
+          },
+          {
+            "type": "item",
+            "itemHash": 2748020989
+          }
+        ]
+      },
+      "raid-vow-of-the-disciple-legs-focused": {
+        "type": "group",
+        "name": "Leg Armor (Class-Specific)",
+        "groupType": "Stat-Focused Armor",
+        "displayStaticIcon": "leg-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 365727964
+          },
+          {
+            "type": "item",
+            "itemHash": 1566699968
+          },
+          {
+            "type": "item",
+            "itemHash": 2748020989
+          }
+        ]
+      },
+      "raid-vow-of-the-disciple-class": {
+        "type": "group",
+        "name": "Class Item (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "class-item",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 2370089583
+          },
+          {
+            "type": "item",
+            "itemHash": 4124357755
+          },
+          {
+            "type": "item",
+            "itemHash": 2422261368
+          }
+        ]
+      },
+      "raid-vow-of-the-disciple-class-focused": {
+        "type": "group",
+        "name": "Class Item (Class-Specific)",
+        "groupType": "Stat-Focused Armor",
+        "displayStaticIcon": "class-item",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 2370089583
+          },
+          {
+            "type": "item",
+            "itemHash": 4124357755
+          },
+          {
+            "type": "item",
+            "itemHash": 2422261368
+          }
+        ]
       }
     },
     "pools": {
@@ -219,6 +420,21 @@
           }
         ]
       },
+      "raid-spoils-vogvow": {
+        "type": "pool",
+        "quantity": "all",
+        "pinnacleWhen": "never",
+        "weeklyLimit": "once_per_character",
+        "availableWhen": "challenge_completion",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 3702027555,
+            "quantity": 5
+          }
+        ]
+      },
+
       "raid-salvations-edge-adepts": {
         "type": "pool",
         "quantity": 1,
@@ -266,8 +482,56 @@
             "itemHash": 3284383335
           }
         ]
+      },
+
+      "raid-vow-of-the-disciple-adepts": {
+        "type": "pool",
+        "quantity": 1,
+        "pinnacleWhen": "never",
+        "availableWhen": "challenge_completion",
+        "knockout": true,
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 2943293195
+          },
+          {
+            "type": "item",
+            "itemHash": 1941816543
+          },
+          {
+            "type": "item",
+            "itemHash": 1466006054
+          },
+          {
+            "type": "item",
+            "itemHash": 4038592169
+          },
+          {
+            "type": "item",
+            "itemHash": 786352912
+          },
+          {
+            "type": "item",
+            "itemHash": 2886339027
+          }
+        ]
+      },
+      "raid-vow-of-the-disciple-exotic": {
+        "type": "pool",
+        "quantity": "chance",
+        "showInLootSummary": true,
+        "pinnacleWhen": "never",
+        "weeklyLimit": "infinite_when_featured",
+        "availableWhen": "always",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 3505113722
+          }
+        ]
       }
     }
   },
-  "doubleLootOverrides": ["dungeon-vespers-host"]
+  "doubleLootOverrides": []
 }

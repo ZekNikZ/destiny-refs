@@ -127,10 +127,10 @@ export default function LootTable(props: Props) {
                   {pool.weeklyLimit === "infinite_when_featured" &&
                     props.availability?.featured && (
                       <>
-                        <List.Item td="line-through">
-                          Available once per character each week.
-                        </List.Item>
                         <List.Item>
+                          <Text td="line-through" span>
+                            Available once per character each week.
+                          </Text>{" "}
                           Activity is featured: will drop every completion this week (
                           <Text c="blue" span fw="bold">
                             farmable

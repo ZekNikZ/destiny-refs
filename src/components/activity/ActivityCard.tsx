@@ -143,11 +143,6 @@ export default function ActivityCard(props: Props) {
                 Farmable
               </Badge>
             )}
-            {props.availability?.featured === "active" && !isEncounter && (
-              <Badge color="yellow" radius="sm">
-                Featured
-              </Badge>
-            )}
             {props.availability?.masterAvailable && !isEncounter && (
               <Badge color="orange" radius="sm">
                 Master Available

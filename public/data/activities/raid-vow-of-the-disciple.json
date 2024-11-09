@@ -1,0 +1,428 @@
+{
+  "$schema": "../schema/activity.json",
+  "activity": {
+    "id": "raid-vow-of-the-disciple",
+    "type": "raid",
+    "name": "Vow of the Disciple",
+    "description": "The disciple beckons...",
+    "backgroundImage": "/images/raids/vow-of-the-disciple/banner.avif",
+    "hasMasterMode": true,
+    "triumphs": [
+      {
+        "bungieRecordHash": 2168422218
+      },
+      {
+        "bungieRecordHash": 610864524
+      },
+      {
+        "bungieRecordHash": 4019717242
+      },
+      {
+        "bungieRecordHash": 2383291155
+      },
+      {
+        "bungieRecordHash": 3950568572
+      }
+    ],
+    "encounters": [
+      {
+        "id": "raid-vow-of-the-disciple-encounter-1",
+        "type": "encounter",
+        "name": "Acquisition",
+        "description": "Truth. Symbolize. Is. Materialize. Everywhere.",
+        "backgroundImage": "/images/raids/vow-of-the-disciple/encounter-1.jpg",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "doubleLootWhen": "challenge_completion_repeatable",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 768621510
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3886416794
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 999767358
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vow-of-the-disciple-head"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vow-of-the-disciple-chest"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vow-of-the-disciple-legs"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-vogvow"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vow-of-the-disciple-head-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vow-of-the-disciple-chest-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vow-of-the-disciple-legs-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-vow-of-the-disciple-adepts"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-vogvow"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 1673084356
+          },
+          {
+            "bungieRecordHash": 1682546621,
+            "guide": "Each phase, kill all three Unstoppable Abominations within 3 seconds.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-vow-of-the-disciple-encounter-2",
+        "type": "encounter",
+        "name": "Collection",
+        "description": "Do Not Disrupt the Caretaker",
+        "backgroundImage": "/images/raids/vow-of-the-disciple/encounter-2.webp",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "doubleLootWhen": "challenge_completion_repeatable",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 3886416794
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 613334176
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3428521585
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 999767358
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vow-of-the-disciple-head"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vow-of-the-disciple-arms"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vow-of-the-disciple-class"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-vogvow"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vow-of-the-disciple-head-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vow-of-the-disciple-arms-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vow-of-the-disciple-class-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-vow-of-the-disciple-adepts"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-vogvow"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 1959737632
+          },
+          {
+            "bungieRecordHash": 146328065,
+            "guide": "Runners must not grab more than one symbol at a time.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-vow-of-the-disciple-encounter-3",
+        "type": "encounter",
+        "name": "Exhibition",
+        "description": "Nothing More than Meaningless Trinkets",
+        "backgroundImage": "/images/raids/vow-of-the-disciple/encounter-3.jpg",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "doubleLootWhen": "challenge_completion_repeatable",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 768621510
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3886416794
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vow-of-the-disciple-chest"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vow-of-the-disciple-legs"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-vogvow"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vow-of-the-disciple-chest-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vow-of-the-disciple-legs-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-vow-of-the-disciple-adepts"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-vogvow"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 1120467498
+          },
+          {
+            "bungieRecordHash": 2006434999,
+            "guide": "Throughout the encounter as a whole, each player can kill only one shielded Taken Knight.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-vow-of-the-disciple-encounter-4",
+        "type": "encounter",
+        "name": "Dominion",
+        "description": "DROWNDROWNDROWN",
+        "backgroundImage": "/images/raids/vow-of-the-disciple/encounter-4.jpg",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-vow-of-the-disciple-exotic"
+                  },
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "doubleLootWhen": "challenge_completion_repeatable",
+                    "pinnacleWhen": "activity_is_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 2534546147
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 613334176
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3428521585
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vow-of-the-disciple-head"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vow-of-the-disciple-arms"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vow-of-the-disciple-class"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-vogvow"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "pinnacleWhen": "activity_is_featured",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vow-of-the-disciple-head-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vow-of-the-disciple-arms-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vow-of-the-disciple-class-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-vow-of-the-disciple-adepts"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-vogvow"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 801186532
+          },
+          {
+            "bungieRecordHash": 990479197,
+            "guide": "Complete the encounter while never losing the Leeching Force buff (except after successfully purging Rhulk's forcefield, allowing you to progress up the stairs).",
+            "isChallenge": true
+          }
+        ]
+      }
+    ]
+  }
+}
