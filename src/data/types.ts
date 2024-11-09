@@ -122,7 +122,7 @@ export type LootPool =
           showInLootSummary?: boolean;
           knockout?: boolean;
         }
-      | { type: "ref-loot-pool"; key: string }
+      | { type: "ref-loot-pool"; key: string; notes?: string[]; showInLootSummary?: boolean }
     ));
 
 export interface Triumph {

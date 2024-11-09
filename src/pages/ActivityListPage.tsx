@@ -25,6 +25,7 @@ function ActivityCardWrapper(props: { activity: Activity }) {
         activity={props.activity}
         availability={availability}
         forceState="summary"
+        style={{ height: "100%" }}
       />
     </Link>
   );

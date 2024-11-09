@@ -402,6 +402,107 @@
             "itemHash": 2422261368
           }
         ]
+      },
+
+      "raid-deep-stone-crypt-head": {
+        "type": "group",
+        "name": "Helmet (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "helmet",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 3015085684
+          },
+          {
+            "type": "item",
+            "itemHash": 893751566
+          },
+          {
+            "type": "item",
+            "itemHash": 1462908657
+          }
+        ]
+      },
+      "raid-deep-stone-crypt-arms": {
+        "type": "group",
+        "name": "Gauntlets (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "gauntlets",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 1887490701
+          },
+          {
+            "type": "item",
+            "itemHash": 2343515647
+          },
+          {
+            "type": "item",
+            "itemHash": 79460168
+          }
+        ]
+      },
+      "raid-deep-stone-crypt-chest": {
+        "type": "group",
+        "name": "Chest Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "chest-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 751162931
+          },
+          {
+            "type": "item",
+            "itemHash": 4001862073
+          },
+          {
+            "type": "item",
+            "itemHash": 3975122240
+          }
+        ]
+      },
+      "raid-deep-stone-crypt-legs": {
+        "type": "group",
+        "name": "Leg Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "leg-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 2558289743
+          },
+          {
+            "type": "item",
+            "itemHash": 1264765761
+          },
+          {
+            "type": "item",
+            "itemHash": 756445218
+          }
+        ]
+      },
+      "raid-deep-stone-crypt-class": {
+        "type": "group",
+        "name": "Class Item (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "class-item",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 2956588906
+          },
+          {
+            "type": "item",
+            "itemHash": 1021060724
+          },
+          {
+            "type": "item",
+            "itemHash": 2902277629
+          }
+        ]
       }
     },
     "pools": {
@@ -443,7 +544,7 @@
           {
             "type": "item",
             "itemHash": 3702027555,
-            "quantity": 5
+            "quantity": 3
           }
         ]
       },

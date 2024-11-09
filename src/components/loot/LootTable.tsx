@@ -120,9 +120,11 @@ export default function LootTable(props: Props) {
                 <List classNames={{ item: classes.listItem }}>
                   {/* Custom Notes */}
                   {pool.notes?.map((note) => (
-                    <TypographyStylesProvider key={note}>
-                      <Markdown>{note}</Markdown>
-                    </TypographyStylesProvider>
+                    <List.Item>
+                      <TypographyStylesProvider key={note}>
+                        <Markdown>{note}</Markdown>
+                      </TypographyStylesProvider>
+                    </List.Item>
                   ))}
 
                   {/* Limit */}
@@ -144,20 +146,20 @@ export default function LootTable(props: Props) {
                     </List.Item>
                   )}
                   {pool.weeklyLimit === "infinite_when_featured" &&
-                    props.availability?.featured && (
-                      <>
-                        <List.Item>
-                          <Text td="line-through" span>
-                            Available once per character each week.
-                          </Text>{" "}
-                          Activity is featured: will drop every completion this week (
-                          <Text c="blue" span fw="bold">
-                            farmable
-                          </Text>
-                          ).
-                        </List.Item>
-                      </>
-                    )}
+                    (props.availability?.featured ? (
+                      <List.Item>
+                        <Text td="line-through" span>
+                          Available once per character each week.
+                        </Text>{" "}
+                        Activity is featured: will drop every completion this week (
+                        <Text c="blue" span fw="bold">
+                          farmable
+                        </Text>
+                        ).
+                      </List.Item>
+                    ) : (
+                      <List.Item>Available once per character each week.</List.Item>
+                    ))}
 
                   {/* Knockout */}
                   {pool.knockout && (
@@ -210,7 +212,9 @@ export default function LootTable(props: Props) {
                       <Text c="green" span fw="bold">
                         Challenge is active
                       </Text>
-                      : successful challenge completion (repeatable) will reward an{" "}
+                      : successful challenge completion (
+                      {props.availability?.featured ? "repeatable" : "once per character"}) will
+                      reward an{" "}
                       <Text c="blue" span fw="bold">
                         extra drop
                       </Text>
@@ -226,7 +230,7 @@ export default function LootTable(props: Props) {
                       <Text fw="bold" c="green" span>
                         successful challenge completion
                       </Text>{" "}
-                      (once per character) (
+                      (
                       <Text fw="bold" c="red" span>
                         not available this week
                       </Text>
@@ -243,7 +247,7 @@ export default function LootTable(props: Props) {
                         <Text fw="bold" c="green" span>
                           successful challenge completion
                         </Text>{" "}
-                        (repeatable) (
+                        (
                         <Text fw="bold" c="red" span>
                           not available this week
                         </Text>

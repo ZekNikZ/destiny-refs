@@ -1,0 +1,261 @@
+{
+  "$schema": "../schema/activity.json",
+  "activity": {
+    "id": "raid-deep-stone-crypt",
+    "type": "raid",
+    "name": "Deep Stone Crypt",
+    "description": "The chains of legacy must be broken.",
+    "backgroundImage": "/images/raids/deep-stone-crypt/banner.jpg",
+    "triumphs": [
+      {
+        "bungieRecordHash": 3185876102
+      },
+      {
+        "bungieRecordHash": 3560923614
+      },
+      {
+        "bungieRecordHash": 513707022
+      },
+      {
+        "bungieRecordHash": 564366615
+      },
+      {
+        "bungieRecordHash": 134885948
+      },
+      {
+        "bungieRecordHash": 3323713181
+      },
+      {
+        "bungieRecordHash": 992355976
+      }
+    ],
+    "encounters": [
+      {
+        "id": "raid-deep-stone-crypt-encounter-1",
+        "type": "encounter",
+        "name": "Crypt Security",
+        "description": "Disable Crypt Security",
+        "backgroundImage": "/images/raids/deep-stone-crypt/encounter-1.avif",
+        "loot": [
+          {
+            "type": "pool",
+            "quantity": 1,
+            "showInLootSummary": true,
+            "weeklyLimit": "infinite_when_featured",
+            "doubleLootWhen": "challenge_completion_repeatable",
+            "loot": [
+              {
+                "type": "item",
+                "itemHash": 1392919471,
+                "deepsight": "craftable"
+              },
+              {
+                "type": "ref-loot",
+                "key": "raid-deep-stone-crypt-arms"
+              },
+              {
+                "type": "ref-loot",
+                "key": "raid-deep-stone-crypt-legs"
+              },
+              {
+                "type": "ref-loot",
+                "key": "raid-deep-stone-crypt-class"
+              }
+            ]
+          },
+          {
+            "type": "ref-loot-pool",
+            "key": "raid-spoils-lwgosdsc"
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 4216504853
+          },
+          {
+            "bungieRecordHash": 22094034,
+            "guide": "All six guardians need to have the operator buff and shoot one lower level panel. Thus, this requires a three-phase.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-deep-stone-crypt-encounter-2",
+        "type": "encounter",
+        "name": "Atraks-1, Fallen Exo",
+        "description": "Defeat Atraks-1",
+        "backgroundImage": "/images/raids/deep-stone-crypt/encounter-2.jpg",
+        "loot": [
+          {
+            "type": "pool",
+            "quantity": 1,
+            "showInLootSummary": true,
+            "weeklyLimit": "infinite_when_featured",
+            "doubleLootWhen": "challenge_completion_repeatable",
+            "loot": [
+              {
+                "type": "item",
+                "itemHash": 4248569242,
+                "deepsight": "craftable"
+              },
+              {
+                "type": "item",
+                "itemHash": 2990047042,
+                "deepsight": "craftable"
+              },
+
+              {
+                "type": "ref-loot",
+                "key": "raid-deep-stone-crypt-arms"
+              },
+              {
+                "type": "ref-loot",
+                "key": "raid-deep-stone-crypt-legs"
+              },
+              {
+                "type": "ref-loot",
+                "key": "raid-deep-stone-crypt-class"
+              }
+            ]
+          },
+          {
+            "type": "ref-loot-pool",
+            "key": "raid-spoils-lwgosdsc"
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 3771160417
+          },
+          {
+            "bungieRecordHash": 64856166,
+            "guide": "Complete the encounter without sending Replication debuffs into space.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-deep-stone-crypt-encounter-3",
+        "type": "encounter",
+        "name": "Descent",
+        "description": "Prevent Europa's Destruction",
+        "backgroundImage": "/images/raids/deep-stone-crypt/encounter-3.jpg",
+        "loot": [
+          {
+            "type": "pool",
+            "quantity": 1,
+            "showInLootSummary": true,
+            "weeklyLimit": "infinite_when_featured",
+            "doubleLootWhen": "challenge_completion_repeatable",
+            "loot": [
+              {
+                "type": "item",
+                "itemHash": 4248569242,
+                "deepsight": "craftable"
+              },
+              {
+                "type": "item",
+                "itemHash": 3281285075,
+                "deepsight": "craftable"
+              },
+
+              {
+                "type": "ref-loot",
+                "key": "raid-deep-stone-crypt-arms"
+              },
+              {
+                "type": "ref-loot",
+                "key": "raid-deep-stone-crypt-chest"
+              },
+              {
+                "type": "ref-loot",
+                "key": "raid-deep-stone-crypt-class"
+              }
+            ]
+          },
+          {
+            "type": "ref-loot-pool",
+            "key": "raid-spoils-lwgosdsc"
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 1277450448
+          },
+          {
+            "bungieRecordHash": 337542929,
+            "guide": "Each guardian must successfully complete each of the three roles.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-deep-stone-crypt-encounter-4",
+        "type": "encounter",
+        "name": "Taniks, the Abomination",
+        "description": "Defeat Taniks, the Abomination",
+        "backgroundImage": "/images/raids/deep-stone-crypt/encounter-4.webp",
+        "loot": [
+          {
+            "type": "pool",
+            "quantity": "chance",
+            "weeklyLimit": "infinite_when_featured",
+            "showInLootSummary": true,
+            "loot": [
+              {
+                "type": "item",
+                "itemHash": 2399110176
+              }
+            ]
+          },
+          {
+            "type": "pool",
+            "quantity": 1,
+            "showInLootSummary": true,
+            "weeklyLimit": "infinite_when_featured",
+            "doubleLootWhen": "challenge_completion_repeatable",
+            "pinnacleWhen": "activity_is_featured",
+            "loot": [
+              {
+                "type": "item",
+                "itemHash": 4230965989,
+                "deepsight": "craftable"
+              },
+              {
+                "type": "item",
+                "itemHash": 3366545721,
+                "deepsight": "craftable"
+              },
+              {
+                "type": "ref-loot",
+                "key": "raid-deep-stone-crypt-head"
+              },
+              {
+                "type": "ref-loot",
+                "key": "raid-deep-stone-crypt-chest"
+              },
+              {
+                "type": "ref-loot",
+                "key": "raid-deep-stone-crypt-legs"
+              }
+            ]
+          },
+          {
+            "type": "ref-loot-pool",
+            "key": "raid-spoils-lwgosdsc"
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 1487317889
+          },
+          {
+            "bungieRecordHash": 2530940166,
+            "guide": "Spawn all 4 cores at once and dunk them before each damage phase begins.",
+            "isChallenge": true
+          }
+        ]
+      }
+    ]
+  }
+}

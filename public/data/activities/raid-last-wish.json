@@ -199,8 +199,22 @@
         "backgroundImage": "/images/raids/last-wish/encounter-6.jpg",
         "loot": [
           {
+            "type": "pool",
+            "quantity": "chance",
+            "weeklyLimit": "infinite_when_featured",
+            "showInLootSummary": true,
+            "notes": ["Requires **Ethereal Key** to open loot chest."],
+            "loot": [
+              {
+                "type": "item",
+                "itemHash": 2069224589
+              }
+            ]
+          },
+          {
             "type": "ref-loot-pool",
             "key": "raid-last-wish-encounter",
+            "notes": ["Requires **Ethereal Key** to open loot chest."],
             "pinnacleWhen": "activity_is_featured"
           }
         ]

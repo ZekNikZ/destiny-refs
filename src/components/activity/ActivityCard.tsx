@@ -22,7 +22,7 @@ import {
 import { Activity, ActivityAvailability } from "../../data/types";
 
 import classes from "./ActivityCard.module.scss";
-import { useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { anyLootIsPinnacle, getLootKey, summarizeLootPool } from "../../utils/loot";
 import LootIcon from "../loot/LootIcon";
 import LootTable from "../loot/LootTable";
@@ -39,6 +39,8 @@ interface Props {
   availability?: ActivityAvailability;
 
   forceState?: "summary" | "details" | false;
+
+  style?: React.CSSProperties;
 }
 
 export default function ActivityCard(props: Props) {
@@ -75,7 +77,7 @@ export default function ActivityCard(props: Props) {
       padding="sm"
       radius="sm"
       withBorder
-      style={props.encounter ? { alignSelf: "start" } : undefined}
+      style={{ ...props.style, ...(props.encounter ? { alignSelf: "start" } : undefined) }}
     >
       {/* Header */}
       <Card.Section
@@ -96,6 +98,7 @@ export default function ActivityCard(props: Props) {
           )
             ? `1px solid ${theme.colors.dark[4]}`
             : undefined,
+          flexGrow: 1,
         }}
       >
         <Stack gap="xs" style={{ position: "relative" }}>

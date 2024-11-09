@@ -417,6 +417,12 @@
             "key": {
               "type": "string"
             },
+            "notes": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
             "pinnacleWhen": {
               "enum": [
                 "never",
@@ -424,6 +430,9 @@
                 "always"
               ],
               "type": "string"
+            },
+            "showInLootSummary": {
+              "type": "boolean"
             },
             "type": {
               "const": "ref-loot-pool",
