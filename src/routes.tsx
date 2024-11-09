@@ -2,6 +2,7 @@ import { ArrowClockwise, Calendar, Icon, TreasureChest } from "@phosphor-icons/r
 import TodayPage from "./pages/TodayPage";
 import { useGlobalData } from "./data/useGlobalData";
 import EncounterBasedActivityPage from "./pages/EncounterBasedActivityPage";
+import ActivityListPage from "./pages/ActivityListPage";
 
 export interface RouteData {
   path: string;
@@ -42,7 +43,7 @@ const routes: RouteData[] = [
       {
         path: "/info/raids",
         title: "Raids",
-        element: <TodayPage />,
+        element: <ActivityListPage activityType="raid" />,
         navbarProperties: {
           icon: TreasureChest,
         },
@@ -53,9 +54,23 @@ const routes: RouteData[] = [
             path: "/info/raids/" + activity.name.toLowerCase().replace(/ /g, "-").replace(/'/g, ""),
             title: activity.name,
             element: <EncounterBasedActivityPage activity={activity} />,
-            navbarProperties: {
-              //   icon: TreasureChest,
-            },
+          })),
+      },
+      {
+        path: "/info/dungeons",
+        title: "Dungeons",
+        element: <ActivityListPage activityType="dungeon" />,
+        navbarProperties: {
+          icon: TreasureChest,
+        },
+        children: useGlobalData
+          .getState()
+          .activities.filter((activity) => activity.type === "dungeon")
+          .map((activity) => ({
+            path:
+              "/info/dungeons/" + activity.name.toLowerCase().replace(/ /g, "-").replace(/'/g, ""),
+            title: activity.name,
+            element: <EncounterBasedActivityPage activity={activity} />,
           })),
       },
     ],

@@ -28,6 +28,7 @@ import LootIcon from "../loot/LootIcon";
 import LootTable from "../loot/LootTable";
 import Markdown from "react-markdown";
 import TriumphDisplay from "../TriumphDisplay";
+import { useMediaQuery } from "@mantine/hooks";
 
 interface Props {
   activity: Activity;
@@ -45,6 +46,8 @@ export default function ActivityCard(props: Props) {
 
   const [collapseOpen, setCollapseOpen] = useState(props.forceState || "summary");
   const [accordionOpen, setAccordionOpen] = useState<string | null>(null);
+
+  const isLargeScreen = useMediaQuery("(min-width: 1000px)");
 
   const lootSummary = useMemo(
     () => props.activity.loot?.flatMap(summarizeLootPool) ?? [],
@@ -212,7 +215,7 @@ export default function ActivityCard(props: Props) {
                   <Box
                     display="grid"
                     style={{
-                      gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
+                      gridTemplateColumns: `repeat(auto-fit, ${isLargeScreen ? "minmax(450px, 1fr)" : "1fr"})`,
                       gap: "var(--mantine-spacing-md)",
                     }}
                   >

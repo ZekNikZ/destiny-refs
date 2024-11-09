@@ -24,11 +24,11 @@ export default function Layout() {
           <Group>
             <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
             <Box onClick={() => navigate("/")}>
-              <Group gap={0} style={{ cursor: "pointer" }}>
+              <Group gap="xs" style={{ cursor: "pointer" }} align="end">
                 <Text size="2.2rem" ff="Bebas Neue">
                   Destiny Refs
                 </Text>
-                <Text size="2.2rem" ff="Bebas Neue" c="blue" ml="xs">
+                <Text size="1.4rem" ff="Bebas Neue" c="blue" mb={2}>
                   by ZekNikZ
                 </Text>
               </Group>
