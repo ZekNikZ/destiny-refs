@@ -5,7 +5,7 @@
     "type": "raid",
     "name": "Salvation's Edge",
     "description": "Free the Light.",
-    "backgroundImage": "/images/raids/salvations-edge/banner.webp",
+    "backgroundImage": "/images/raids/salvations-edge/banner.avif",
     "hasMasterMode": true,
     "triumphs": [
       {
@@ -127,7 +127,7 @@
         "type": "encounter",
         "name": "Dissipation",
         "description": "Defeat the Herald",
-        "backgroundImage": "/images/raids/salvations-edge/encounter-2.jpg",
+        "backgroundImage": "/images/raids/salvations-edge/encounter-2.avif",
         "loot": [
           {
             "type": "mode_specific",
@@ -321,7 +321,7 @@
         "type": "encounter",
         "name": "Verity",
         "description": "See Beyond",
-        "backgroundImage": "/images/raids/salvations-edge/encounter-4.webp",
+        "backgroundImage": "/images/raids/salvations-edge/encounter-4.avif",
         "loot": [
           {
             "type": "mode_specific",
@@ -418,7 +418,7 @@
         "type": "encounter",
         "name": "Zenith",
         "description": "Stop the Final Shape",
-        "backgroundImage": "/images/raids/salvations-edge/encounter-5.jfif",
+        "backgroundImage": "/images/raids/salvations-edge/encounter-5.avif",
         "loot": [
           {
             "type": "mode_specific",

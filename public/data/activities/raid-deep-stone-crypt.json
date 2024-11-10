@@ -5,7 +5,7 @@
     "type": "raid",
     "name": "Deep Stone Crypt",
     "description": "The chains of legacy must be broken.",
-    "backgroundImage": "/images/raids/deep-stone-crypt/banner.jpg",
+    "backgroundImage": "/images/raids/deep-stone-crypt/banner.avif",
     "triumphs": [
       {
         "bungieRecordHash": 3185876102
@@ -84,7 +84,7 @@
         "type": "encounter",
         "name": "Atraks-1, Fallen Exo",
         "description": "Defeat Atraks-1",
-        "backgroundImage": "/images/raids/deep-stone-crypt/encounter-2.jpg",
+        "backgroundImage": "/images/raids/deep-stone-crypt/encounter-2.avif",
         "loot": [
           {
             "type": "pool",
@@ -139,7 +139,7 @@
         "type": "encounter",
         "name": "Descent",
         "description": "Prevent Europa's Destruction",
-        "backgroundImage": "/images/raids/deep-stone-crypt/encounter-3.jpg",
+        "backgroundImage": "/images/raids/deep-stone-crypt/encounter-3.avif",
         "loot": [
           {
             "type": "pool",
@@ -194,7 +194,7 @@
         "type": "encounter",
         "name": "Taniks, the Abomination",
         "description": "Defeat Taniks, the Abomination",
-        "backgroundImage": "/images/raids/deep-stone-crypt/encounter-4.webp",
+        "backgroundImage": "/images/raids/deep-stone-crypt/encounter-4.avif",
         "loot": [
           {
             "type": "pool",

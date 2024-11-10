@@ -5,7 +5,7 @@
     "type": "raid",
     "name": "Garden of Salvation",
     "description": "\"The garden calls out to you.\"",
-    "backgroundImage": "/images/raids/garden-of-salvation/banner.webp",
+    "backgroundImage": "/images/raids/garden-of-salvation/banner.avif",
     "loot": [
       {
         "type": "pool",
@@ -190,7 +190,7 @@
         "type": "encounter",
         "name": "Sanctified Mind",
         "description": "Conquer the Sanctified Mind",
-        "backgroundImage": "/images/raids/garden-of-salvation/encounter-4.png",
+        "backgroundImage": "/images/raids/garden-of-salvation/encounter-4.avif",
         "loot": [
           {
             "type": "pool",

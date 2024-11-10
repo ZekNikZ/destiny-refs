@@ -4,14 +4,28 @@
 - Add additional raids for testing:
   - vow
   - lw
-
-- Add additional raids for testing:
   - dsc
+  - gos
+  - se
+
 - Implement "Rotations" page
 - Be able to mark weapons as deepsight
 - Implement dungeons
+  - st
+  - pit
+  - prophecy
+  - goa
+  - duality
+  - spire
+  - ghosts
+  - warlord
+  - vesper
 - Begin "Today" page
 - Add rest of raids
+  - ron
+  - vog
+  - kf
+  - crota
 - Implement nightfalls
 - Implement lost sectors
 - Implement exotic missions

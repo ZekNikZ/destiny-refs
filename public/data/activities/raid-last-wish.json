@@ -5,7 +5,7 @@
     "type": "raid",
     "name": "Last Wish",
     "description": "\"The opportunity of a lifetime.\"",
-    "backgroundImage": "/images/raids/last-wish/banner.jpeg",
+    "backgroundImage": "/images/raids/last-wish/banner.avif",
     "loot": [
       {
         "type": "pool",
@@ -133,7 +133,7 @@
         "type": "encounter",
         "name": "Shuro Chi, the Corrupted",
         "description": "Defeat Shuro Chi",
-        "backgroundImage": "/images/raids/last-wish/encounter-2.webp",
+        "backgroundImage": "/images/raids/last-wish/encounter-2.avif",
         "loot": [
           {
             "type": "ref-loot-pool",
@@ -169,7 +169,7 @@
         "type": "encounter",
         "name": "Morgeth, the Spirekeeper",
         "description": "Defeat Morgeth, the Spirekeeper",
-        "backgroundImage": "/images/raids/last-wish/encounter-3.jpeg",
+        "backgroundImage": "/images/raids/last-wish/encounter-3.avif",
         "loot": [
           {
             "type": "ref-loot-pool",
@@ -205,7 +205,7 @@
         "type": "encounter",
         "name": "The Vault",
         "description": "Unlock the Way Forward",
-        "backgroundImage": "/images/raids/last-wish/encounter-4.jpeg",
+        "backgroundImage": "/images/raids/last-wish/encounter-4.avif",
         "loot": [
           {
             "type": "ref-loot-pool",
@@ -261,7 +261,7 @@
         "type": "encounter",
         "name": "The Queenswalk",
         "description": "Take the Stone to the Techeun",
-        "backgroundImage": "/images/raids/last-wish/encounter-6.jpg",
+        "backgroundImage": "/images/raids/last-wish/encounter-6.avif",
         "loot": [
           {
             "type": "pool",

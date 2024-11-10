@@ -30,7 +30,7 @@
         "type": "encounter",
         "name": "Acquisition",
         "description": "Truth. Symbolize. Is. Materialize. Everywhere.",
-        "backgroundImage": "/images/raids/vow-of-the-disciple/encounter-1.jpg",
+        "backgroundImage": "/images/raids/vow-of-the-disciple/encounter-1.avif",
         "loot": [
           {
             "type": "mode_specific",
@@ -133,7 +133,7 @@
         "type": "encounter",
         "name": "Collection",
         "description": "Do Not Disrupt the Caretaker",
-        "backgroundImage": "/images/raids/vow-of-the-disciple/encounter-2.webp",
+        "backgroundImage": "/images/raids/vow-of-the-disciple/encounter-2.avif",
         "loot": [
           {
             "type": "mode_specific",
@@ -241,7 +241,7 @@
         "type": "encounter",
         "name": "Exhibition",
         "description": "Nothing More than Meaningless Trinkets",
-        "backgroundImage": "/images/raids/vow-of-the-disciple/encounter-3.jpg",
+        "backgroundImage": "/images/raids/vow-of-the-disciple/encounter-3.avif",
         "loot": [
           {
             "type": "mode_specific",
@@ -331,7 +331,7 @@
         "type": "encounter",
         "name": "Dominion",
         "description": "DROWNDROWNDROWN",
-        "backgroundImage": "/images/raids/vow-of-the-disciple/encounter-4.jpg",
+        "backgroundImage": "/images/raids/vow-of-the-disciple/encounter-4.avif",
         "loot": [
           {
             "type": "mode_specific",
