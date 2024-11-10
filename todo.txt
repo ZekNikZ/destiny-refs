@@ -29,3 +29,4 @@
 - Implement nightfalls
 - Implement lost sectors
 - Implement exotic missions
+- Raid and dungeon secret chests & puzzles
