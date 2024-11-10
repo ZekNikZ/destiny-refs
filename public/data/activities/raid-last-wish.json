@@ -6,6 +6,71 @@
     "name": "Last Wish",
     "description": "\"The opportunity of a lifetime.\"",
     "backgroundImage": "/images/raids/last-wish/banner.jpeg",
+    "loot": [
+      {
+        "type": "pool",
+        "quantity": "all",
+        "notes": ["Obtained by completing the raid for the first time."],
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 1059304051
+          }
+        ]
+      },
+      {
+        "type": "pool",
+        "quantity": "all",
+        "notes": ["Obtained by completing all encounter challenges."],
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 1511214612
+          }
+        ]
+      },
+      {
+        "type": "pool",
+        "quantity": "all",
+        "notes": ["Obtained by inputting Wish #3 into the Wish Wall."],
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 2419113768
+          }
+        ]
+      },
+      {
+        "type": "pool",
+        "quantity": "all",
+        "notes": [
+          "Obtained by inputting Wish #2 into the Wish Wall to spawn a chest after Morgeth and using a **Glittering Key** to open the chest."
+        ],
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 2269373482
+          }
+        ]
+      },
+      {
+        "type": "pool",
+        "quantity": "chance",
+        "notes": [
+          "Obtained randomly by dismantling a raid weapon or armor piece with the shader equipped."
+        ],
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 3668669364
+          },
+          {
+            "type": "item",
+            "itemHash": 3668669365
+          }
+        ]
+      }
+    ],
     "triumphs": [
       {
         "bungieRecordHash": 717856991
@@ -216,6 +281,19 @@
             "key": "raid-last-wish-encounter",
             "notes": ["Requires **Ethereal Key** to open loot chest."],
             "pinnacleWhen": "activity_is_featured"
+          },
+          {
+            "type": "pool",
+            "quantity": "chance",
+            "weeklyLimit": "infinite_when_featured",
+            "showInLootSummary": true,
+            "notes": ["Requires **Ethereal Key** to open loot chest."],
+            "loot": [
+              {
+                "type": "item",
+                "itemHash": 3314893282
+              }
+            ]
           }
         ]
       }

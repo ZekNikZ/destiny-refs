@@ -503,6 +503,107 @@
             "itemHash": 2902277629
           }
         ]
+      },
+
+      "raid-garden-of-salvation-head": {
+        "type": "group",
+        "name": "Helmet (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "helmet",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 959087754
+          },
+          {
+            "type": "item",
+            "itemHash": 407842012
+          },
+          {
+            "type": "item",
+            "itemHash": 2367878193
+          }
+        ]
+      },
+      "raid-garden-of-salvation-arms": {
+        "type": "group",
+        "name": "Gauntlets (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "gauntlets",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 964752083
+          },
+          {
+            "type": "item",
+            "itemHash": 1804192853
+          },
+          {
+            "type": "item",
+            "itemHash": 984532872
+          }
+        ]
+      },
+      "raid-garden-of-salvation-chest": {
+        "type": "group",
+        "name": "Chest Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "chest-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 3876398589
+          },
+          {
+            "type": "item",
+            "itemHash": 210208587
+          },
+          {
+            "type": "item",
+            "itemHash": 1789501056
+          }
+        ]
+      },
+      "raid-garden-of-salvation-legs": {
+        "type": "group",
+        "name": "Leg Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "leg-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 275145509
+          },
+          {
+            "type": "item",
+            "itemHash": 3380315063
+          },
+          {
+            "type": "item",
+            "itemHash": 2085872226
+          }
+        ]
+      },
+      "raid-garden-of-salvation-class": {
+        "type": "group",
+        "name": "Class Item (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "class-item",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 1043419184
+          },
+          {
+            "type": "item",
+            "itemHash": 2861892194
+          },
+          {
+            "type": "item",
+            "itemHash": 1141217085
+          }
+        ]
       }
     },
     "pools": {
@@ -540,6 +641,7 @@
         "quantity": "all",
         "pinnacleWhen": "never",
         "weeklyLimit": "once_per_character",
+        "showInLootSummary": true,
         "loot": [
           {
             "type": "item",

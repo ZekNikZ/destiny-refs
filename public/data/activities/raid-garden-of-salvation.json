@@ -1,0 +1,236 @@
+{
+  "$schema": "../schema/activity.json",
+  "activity": {
+    "id": "raid-garden-of-salvation",
+    "type": "raid",
+    "name": "Garden of Salvation",
+    "description": "\"The garden calls out to you.\"",
+    "backgroundImage": "/images/raids/garden-of-salvation/banner.webp",
+    "loot": [
+      {
+        "type": "pool",
+        "quantity": "all",
+        "notes": ["Obtained by completing the raid for the first time."],
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 298334059
+          }
+        ]
+      },
+      {
+        "type": "pool",
+        "quantity": "all",
+        "notes": ["Obtained by completing all encounter challenges."],
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 3996862462
+          }
+        ]
+      },
+      {
+        "type": "pool",
+        "quantity": "all",
+        "notes": ["Obtained by completing the \"Divine Fragmentation\" quest."],
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 4103414242
+          }
+        ]
+      }
+    ],
+    "triumphs": [
+      {
+        "bungieRecordHash": 1522774125
+      }
+    ],
+    "encounters": [
+      {
+        "id": "raid-garden-of-salvation-encounter-1",
+        "type": "encounter",
+        "name": "Evade",
+        "description": "Track the Unknown Artifact's Signal",
+        "backgroundImage": "/images/raids/garden-of-salvation/encounter-1.avif",
+        "loot": [
+          {
+            "type": "pool",
+            "quantity": 1,
+            "showInLootSummary": true,
+            "weeklyLimit": "infinite_when_featured",
+            "doubleLootWhen": "challenge_completion_repeatable",
+            "loot": [
+              {
+                "type": "item",
+                "itemHash": 2720651699,
+                "deepsight": "craftable"
+              },
+              {
+                "type": "item",
+                "itemHash": 3621336854,
+                "deepsight": "craftable"
+              },
+              {
+                "type": "ref-loot",
+                "key": "raid-garden-of-salvation-legs"
+              }
+            ]
+          },
+          {
+            "type": "ref-loot-pool",
+            "key": "raid-spoils-lwgosdsc"
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 4105510833
+          },
+          {
+            "bungieRecordHash": 3719309782,
+            "guide": "All six guardians need to have the operator buff and shoot one lower level panel. Thus, this requires a three-phase.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-garden-of-salvation-encounter-2",
+        "type": "encounter",
+        "name": "Summon",
+        "description": "Draw Out the Consecrated Mind",
+        "backgroundImage": "/images/raids/garden-of-salvation/encounter-2.avif",
+        "loot": [
+          {
+            "type": "pool",
+            "quantity": 1,
+            "showInLootSummary": true,
+            "weeklyLimit": "infinite_when_featured",
+            "doubleLootWhen": "challenge_completion_repeatable",
+            "loot": [
+              {
+                "type": "item",
+                "itemHash": 2145441168,
+                "deepsight": "craftable"
+              },
+              {
+                "type": "item",
+                "itemHash": 1992309064,
+                "deepsight": "craftable"
+              },
+              {
+                "type": "ref-loot",
+                "key": "raid-garden-of-salvation-arms"
+              }
+            ]
+          },
+          {
+            "type": "ref-loot-pool",
+            "key": "raid-spoils-lwgosdsc"
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 44547560
+          },
+          {
+            "bungieRecordHash": 637935773,
+            "guide": "Complete the encounter by having all guardians acquire the Enlighted buff at the same time.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-garden-of-salvation-encounter-3",
+        "type": "encounter",
+        "name": "Consecrated Mind",
+        "description": "Subdue the Consecrated Mind",
+        "backgroundImage": "/images/raids/garden-of-salvation/encounter-3.avif",
+        "loot": [
+          {
+            "type": "pool",
+            "quantity": 1,
+            "showInLootSummary": true,
+            "weeklyLimit": "infinite_when_featured",
+            "doubleLootWhen": "challenge_completion_repeatable",
+            "loot": [
+              {
+                "type": "item",
+                "itemHash": 963574173,
+                "deepsight": "craftable"
+              },
+              {
+                "type": "item",
+                "itemHash": 2241507890,
+                "deepsight": "craftable"
+              },
+              {
+                "type": "ref-loot",
+                "key": "raid-garden-of-salvation-chest"
+              }
+            ]
+          },
+          {
+            "type": "ref-loot-pool",
+            "key": "raid-spoils-lwgosdsc"
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 3860668859
+          },
+          {
+            "bungieRecordHash": 2381358572,
+            "guide": "Guardians can only deposit a full stack of 10 motes when charging the relay.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-garden-of-salvation-encounter-4",
+        "type": "encounter",
+        "name": "Sanctified Mind",
+        "description": "Conquer the Sanctified Mind",
+        "backgroundImage": "/images/raids/garden-of-salvation/encounter-4.png",
+        "loot": [
+          {
+            "type": "pool",
+            "quantity": 1,
+            "showInLootSummary": true,
+            "weeklyLimit": "infinite_when_featured",
+            "doubleLootWhen": "challenge_completion_repeatable",
+            "pinnacleWhen": "activity_is_featured",
+            "loot": [
+              {
+                "type": "item",
+                "itemHash": 147444292,
+                "deepsight": "craftable"
+              },
+              {
+                "type": "ref-loot",
+                "key": "raid-garden-of-salvation-head"
+              },
+              {
+                "type": "ref-loot",
+                "key": "raid-garden-of-salvation-class"
+              }
+            ]
+          },
+          {
+            "type": "ref-loot-pool",
+            "key": "raid-spoils-lwgosdsc"
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 3949104239
+          },
+          {
+            "bungieRecordHash": 2191554152,
+            "guide": "Charge both relays by depositing all 30 required motes within 10 seconds (per relay).",
+            "isChallenge": true
+          }
+        ]
+      }
+    ]
+  }
+}

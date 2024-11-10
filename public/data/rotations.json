@@ -45,6 +45,18 @@
         "raid-deep-stone-crypt-encounter-3",
         "raid-deep-stone-crypt-encounter-4"
       ]
+    },
+    {
+      "id": "raid-garden-of-salvation-challenges",
+      "activityType": "raid",
+      "parentActivityId": "raid-garden-of-salvation",
+      "startDate": "2024-10-15T16:00:00Z",
+      "rotation": [
+        "raid-garden-of-salvation-encounter-1",
+        "raid-garden-of-salvation-encounter-2",
+        "raid-garden-of-salvation-encounter-3",
+        "raid-garden-of-salvation-encounter-4"
+      ]
     }
   ]
 }
