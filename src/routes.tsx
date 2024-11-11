@@ -4,6 +4,7 @@ import { useGlobalData } from "./data/useGlobalData";
 import EncounterBasedActivityPage from "./pages/EncounterBasedActivityPage";
 import ActivityListPage from "./pages/ActivityListPage";
 import { makeRouteFromActivity } from "./utils/routes";
+import RotationsPage from "./pages/RotationsPage";
 
 export interface RouteData {
   path: string;
@@ -28,7 +29,7 @@ const routes: RouteData[] = [
   {
     path: "/rotations",
     title: "Rotations",
-    element: <TodayPage />,
+    element: <RotationsPage />,
     navbarProperties: {
       icon: ArrowClockwise,
     },

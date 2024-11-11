@@ -2,6 +2,20 @@
   "$schema": "./schema/rotations.json",
   "activityRotations": [
     {
+      "id": "newest-raid",
+      "name": "Newest Raid",
+      "type": "newest",
+      "activityType": "raid",
+      "activityId": "raid-salvations-edge"
+    },
+    {
+      "id": "newest-dungeon",
+      "name": "Newest Dungeon",
+      "type": "newest",
+      "activityType": "dungeon",
+      "activityId": "raid-salvations-edge"
+    },
+    {
       "id": "raids",
       "name": "Raids",
       "type": "weekly",
@@ -15,11 +29,17 @@
       ]
     },
     {
-      "id": "newest-raid",
-      "name": "Newest Raid",
-      "type": "newest",
-      "activityType": "raid",
-      "activityId": "raid-salvations-edge"
+      "id": "dungeons",
+      "name": "Dungeons",
+      "type": "weekly",
+      "activityType": "dungeon",
+      "startDate": "2024-10-08T16:00:00Z",
+      "rotation": [
+        ["raid-last-wish", "raid-vow-of-the-disciple"],
+        ["raid-garden-of-salvation", "raid-kings-fall"],
+        ["raid-deep-stone-crypt", "raid-root-of-nightmares"],
+        ["raid-vault-of-glass", "raid-crotas-end"]
+      ]
     }
   ],
   "challengeRotations": [

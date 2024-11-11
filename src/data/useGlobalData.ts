@@ -16,7 +16,7 @@ export const useGlobalData = create<GlobalState>()(
     persist(
       (_set) => ({
         activities: [],
-        rotations: { featuredRotations: [], challengeRotations: [] },
+        rotations: { activityRotations: [], challengeRotations: [] },
         loot: { sharedLoot: {}, doubleLootOverrides: [] },
       }),
       {

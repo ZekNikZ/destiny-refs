@@ -1,0 +1,47 @@
+.darkOverlay {
+  position: relative;
+
+  & * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.link {
+  text-decoration: none;
+  flex-grow: 1;
+  flex-basis: 150px;
+}
+
+.entry {
+  --border: 1px solid #424242;
+  border-left: var(--border);
+  border-right: var(--border);
+  border-bottom: var(--border);
+
+  &:first-child {
+    border-top: var(--border);
+  }
+
+  &:nth-child(odd) {
+    background-color: #3b3b3b;
+  }
+
+  &:hover {
+    background-color: #4b4b4b;
+  }
+}
