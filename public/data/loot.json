@@ -705,6 +705,107 @@
             "itemHash": 213803727
           }
         ]
+      },
+
+      "dungeon-warlords-ruin-head": {
+        "type": "group",
+        "name": "Helmet (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "helmet",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 2792429007
+          },
+          {
+            "type": "item",
+            "itemHash": 220527011
+          },
+          {
+            "type": "item",
+            "itemHash": 3007862180
+          }
+        ]
+      },
+      "dungeon-warlords-ruin-arms": {
+        "type": "group",
+        "name": "Gauntlets (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "gauntlets",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 652593750
+          },
+          {
+            "type": "item",
+            "itemHash": 1316592242
+          },
+          {
+            "type": "item",
+            "itemHash": 2572175997
+          }
+        ]
+      },
+      "dungeon-warlords-ruin-chest": {
+        "type": "group",
+        "name": "Chest Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "chest-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 3788388762
+          },
+          {
+            "type": "item",
+            "itemHash": 1450838966
+          },
+          {
+            "type": "item",
+            "itemHash": 787709443
+          }
+        ]
+      },
+      "dungeon-warlords-ruin-legs": {
+        "type": "group",
+        "name": "Leg Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "leg-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 1864873008
+          },
+          {
+            "type": "item",
+            "itemHash": 1717830540
+          },
+          {
+            "type": "item",
+            "itemHash": 601360799
+          }
+        ]
+      },
+      "dungeon-warlords-ruin-class": {
+        "type": "group",
+        "name": "Class Item (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "class-item",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 3012281579
+          },
+          {
+            "type": "item",
+            "itemHash": 822042719
+          },
+          {
+            "type": "item",
+            "itemHash": 3981499770
+          }
+        ]
       }
     },
     "pools": {
@@ -1019,6 +1120,18 @@
           {
             "type": "item",
             "itemHash": 1111334348
+          }
+        ]
+      },
+      "dungeon-warlords-ruin-exotic": {
+        "type": "pool",
+        "quantity": "chance",
+        "showInLootSummary": true,
+        "weeklyLimit": "infinite_when_featured",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 3886719505
           }
         ]
       }

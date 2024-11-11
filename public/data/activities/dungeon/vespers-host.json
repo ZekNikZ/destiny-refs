@@ -223,7 +223,7 @@
                   },
                   {
                     "type": "pool",
-                    "quantity": 1,
+                    "quantity": 2,
                     "showInLootSummary": true,
                     "pinnacleWhen": "always",
                     "weeklyLimit": "infinite_when_featured",
@@ -257,7 +257,7 @@
                   },
                   {
                     "type": "pool",
-                    "quantity": 1,
+                    "quantity": 2,
                     "pinnacleWhen": "always",
                     "weeklyLimit": "infinite_when_featured",
                     "loot": [

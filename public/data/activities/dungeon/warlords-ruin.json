@@ -4,9 +4,292 @@
     "id": "dungeon-warlords-ruin",
     "type": "dungeon",
     "name": "Warlord's Ruin",
-    "description": "TODO",
+    "description": "Nestled deep in the mountains of the EDZ, Scorn lay claim to a Dark Age castle containing dangerous relics, and a blighted vengeance festers in the dirt.",
     "backgroundImage": "/images/dungeons/warlords-ruin/banner.avif",
-    "triumphs": [],
-    "encounters": []
+    "hasMasterMode": true,
+    "loot": [
+      {
+        "type": "pool",
+        "notes": [
+          "Obtained by completing the \"In the Shadow of the Mountain\" quest and subsequently completing the catalyst puzzle."
+        ],
+        "quantity": "all",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 2199828458
+          }
+        ]
+      }
+    ],
+    "triumphs": [
+      {
+        "bungieRecordHash": 131896889
+      },
+      {
+        "bungieRecordHash": 982579018
+      },
+      {
+        "bungieRecordHash": 2905044529
+      },
+      {
+        "bungieRecordHash": 238037026
+      },
+      {
+        "bungieRecordHash": 4288088327
+      },
+      {
+        "bungieRecordHash": 2438176321
+      }
+    ],
+    "encounters": [
+      {
+        "id": "dungeon-warlords-ruin-encounter-1",
+        "name": "Vesper Station",
+        "type": "encounter",
+        "description": "Activation",
+        "backgroundImage": "/images/dungeons/warlords-ruin/encounter-1.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "normal",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 839344841
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3381450498
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3668817296
+                      },
+                      { "type": "ref-loot", "key": "dungeon-warlords-ruin-head" },
+                      { "type": "ref-loot", "key": "dungeon-warlords-ruin-arms" },
+                      { "type": "ref-loot", "key": "dungeon-warlords-ruin-legs" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "mode": "master",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 839344841
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3381450498
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3668817296
+                      },
+                      { "type": "ref-loot", "key": "dungeon-warlords-ruin-head", "artiface": true },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-warlords-ruin-arms",
+                        "artiface": true
+                      },
+                      { "type": "ref-loot", "key": "dungeon-warlords-ruin-legs", "artiface": true }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dungeon-warlords-ruin-encounter-2",
+        "name": "Raneiks Unified",
+        "type": "encounter",
+        "description": "Dismemberment",
+        "backgroundImage": "/images/dungeons/warlords-ruin/encounter-2.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "normal",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 839344841
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3381450498
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 2806569825
+                      },
+                      { "type": "ref-loot", "key": "dungeon-warlords-ruin-arms" },
+                      { "type": "ref-loot", "key": "dungeon-warlords-ruin-chest" },
+                      { "type": "ref-loot", "key": "dungeon-warlords-ruin-class" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "mode": "master",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 839344841
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3381450498
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 2806569825
+                      },
+                      { "type": "ref-loot", "key": "dungeon-warlords-ruin-arms", "artiface": true },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-warlords-ruin-chest",
+                        "artiface": true
+                      },
+                      { "type": "ref-loot", "key": "dungeon-warlords-ruin-class", "artiface": true }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dungeon-warlords-ruin-encounter-3",
+        "name": "The Corrupted Puppeteer",
+        "type": "encounter",
+        "description": "Shutdown",
+        "backgroundImage": "/images/dungeons/warlords-ruin/encounter-3.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "normal",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "dungeon-warlords-ruin-exotic"
+                  },
+                  {
+                    "type": "pool",
+                    "quantity": 2,
+                    "showInLootSummary": true,
+                    "pinnacleWhen": "activity_is_featured",
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 839344841
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3381450498
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 2806569825
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3668817296
+                      },
+                      { "type": "ref-loot", "key": "dungeon-warlords-ruin-head" },
+                      { "type": "ref-loot", "key": "dungeon-warlords-ruin-arms" },
+                      { "type": "ref-loot", "key": "dungeon-warlords-ruin-chest" },
+                      { "type": "ref-loot", "key": "dungeon-warlords-ruin-legs" },
+                      { "type": "ref-loot", "key": "dungeon-warlords-ruin-class" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "mode": "master",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "dungeon-warlords-ruin-exotic"
+                  },
+                  {
+                    "type": "pool",
+                    "quantity": 2,
+                    "pinnacleWhen": "activity_is_featured",
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 839344841
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3381450498
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 2806569825
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3668817296
+                      },
+                      { "type": "ref-loot", "key": "dungeon-warlords-ruin-head", "artiface": true },
+                      { "type": "ref-loot", "key": "dungeon-warlords-ruin-arms", "artiface": true },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-warlords-ruin-chest",
+                        "artiface": true
+                      },
+                      { "type": "ref-loot", "key": "dungeon-warlords-ruin-legs", "artiface": true },
+                      { "type": "ref-loot", "key": "dungeon-warlords-ruin-class", "artiface": true }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 }
