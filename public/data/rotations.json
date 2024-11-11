@@ -19,6 +19,7 @@
       "id": "raids",
       "name": "Raids",
       "type": "weekly",
+      "rotationLimit": "infinite",
       "activityType": "raid",
       "startDate": "2024-10-08T16:00:00Z",
       "rotation": [
@@ -32,6 +33,7 @@
       "id": "dungeons",
       "name": "Dungeons",
       "type": "weekly",
+      "rotationLimit": "infinite",
       "activityType": "dungeon",
       "startDate": "2024-10-08T16:00:00Z",
       "rotation": [
@@ -39,6 +41,99 @@
         ["dungeon-pit-of-heresy", "dungeon-spire-of-the-watcher"],
         ["dungeon-prophecy", "dungeon-ghosts-of-the-deep"],
         ["dungeon-grasp-of-avarice", "dungeon-warlords-ruin"]
+      ]
+    },
+    {
+      "id": "nightfalls",
+      "name": "Nightfalls",
+      "type": "weekly",
+      "rotationLimit": "limited",
+      "activityType": "nightfall",
+      "startDate": "2024-10-08T16:00:00Z",
+      "rotation": [
+        ["nightfall-the-lightblade"],
+        ["nightfall-proving-grounds"],
+        ["nightfall-heist-battleground-moon"],
+
+        ["nightfall-the-lightblade"],
+        ["nightfall-proving-grounds"],
+        ["nightfall-heist-battleground-moon"],
+
+        ["nightfall-birthplace-of-the-vile"],
+        ["nightfall-the-arms-dealer"],
+        ["nightfall-the-inverted-spire"],
+
+        ["nightfall-birthplace-of-the-vile"],
+        ["nightfall-the-arms-dealer"],
+        ["nightfall-the-inverted-spire"],
+
+        ["nightfall-liminality"],
+        ["nightfall-the-corrupted"],
+        ["nightfall-battleground-behemoth"],
+
+        ["nightfall-liminality"],
+        ["nightfall-the-corrupted"],
+        ["nightfall-battleground-behemoth"]
+      ],
+      "lootRotation": [
+        [
+          {
+            "type": "item",
+            "itemHash": 3686538757
+          },
+          {
+            "type": "item",
+            "adept": true,
+            "itemHash": 817909300
+          }
+        ],
+        [
+          {
+            "type": "item",
+            "itemHash": 2591257541
+          },
+          {
+            "type": "item",
+            "adept": true,
+            "itemHash": 1492522228
+          }
+        ],
+        [
+          {
+            "type": "item",
+            "itemHash": 42874240
+          },
+          {
+            "type": "item",
+            "adept": true,
+            "itemHash": 3610521673
+          }
+        ],
+        [
+          {
+            "type": "item",
+            "itemHash": 2298039571
+          },
+          {
+            "type": "item",
+            "adept": true,
+            "itemHash": 3997086838
+          }
+        ],
+        [
+          {
+            "type": "item",
+            "itemHash": 2322926844
+          },
+          {
+            "type": "item",
+            "adept": true,
+            "itemHash": 1056103557
+          }
+        ],
+        [],
+        [],
+        []
       ]
     }
   ],

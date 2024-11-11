@@ -51,6 +51,13 @@ export default function LootListing(props: Props) {
           <>
             <Group gap={6}>
               <Text fw="bold">{name}</Text>
+              {props.loot.adept && (
+                <Tooltip label="Adept weapon: higher stats and access to adept mods">
+                  <Group gap={2}>
+                    <Image src="/icons/attributes/enhanced.svg" h={14} />
+                  </Group>
+                </Tooltip>
+              )}
               {props.loot.deepsight && (
                 <Tooltip
                   label={

@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "nightfall-the-inverted-spire",
+    "type": "nightfall",
+    "name": "The Inverted Spire",
+    "description": "TODO",
+    "backgroundImage": "/images/nightfalls/the-inverted-spire.avif",
+    "triumphs": [],
+    "encounters": []
+  }
+}

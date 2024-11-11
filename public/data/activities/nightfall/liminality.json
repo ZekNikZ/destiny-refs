@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "nightfall-liminality",
+    "type": "nightfall",
+    "name": "Liminality",
+    "description": "TODO",
+    "backgroundImage": "/images/nightfalls/liminality.avif",
+    "triumphs": [],
+    "encounters": []
+  }
+}

@@ -74,7 +74,7 @@ export default function LootItemIcon(props: Props) {
   return props.disableHover ? (
     img
   ) : (
-    <HoverCard shadow="md" closeDelay={0}>
+    <HoverCard shadow="md" closeDelay={100}>
       <HoverCard.Target>{img}</HoverCard.Target>
       <HoverCardDropdown p="sm">
         <LootListing loot={props.loot} noIcon />

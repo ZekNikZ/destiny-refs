@@ -34,6 +34,13 @@
               },
               "type": "array"
             },
+            "rotationLimit": {
+              "enum": [
+                "infinite",
+                "limited"
+              ],
+              "type": "string"
+            },
             "startDate": {
               "type": "string"
             },
@@ -49,6 +56,7 @@
             "id",
             "name",
             "type",
+            "rotationLimit",
             "activityType",
             "startDate",
             "rotation"

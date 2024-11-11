@@ -155,6 +155,7 @@ export type ActivityRotation =
       id: string;
       name: string;
       type: "weekly" | "daily";
+      rotationLimit: "infinite" | "limited";
       activityType: ActivityType;
       startDate: string;
       rotation: string[][];
