@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/activity.json",
+  "activity": {
+    "id": "dungeon-vespers-host",
+    "type": "dungeon",
+    "name": "Vesper's Host",
+    "description": "TODO",
+    "backgroundImage": "/images/dungeons/vespers-host/banner.avif",
+    "triumphs": [],
+    "encounters": []
+  }
+}

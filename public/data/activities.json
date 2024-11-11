@@ -2,9 +2,22 @@
   "$schema": "./schema/activities.json",
   "activities": [
     "raid-salvations-edge",
+    "raid-crotas-end",
+    "raid-root-of-nightmares",
+    "raid-kings-fall",
     "raid-vow-of-the-disciple",
+    "raid-vault-of-glass",
     "raid-deep-stone-crypt",
     "raid-garden-of-salvation",
-    "raid-last-wish"
+    "raid-last-wish",
+    "dungeon-vespers-host",
+    "dungeon-warlords-ruin",
+    "dungeon-ghosts-of-the-deep",
+    "dungeon-spire-of-the-watcher",
+    "dungeon-duality",
+    "dungeon-grasp-of-avarice",
+    "dungeon-prophecy",
+    "dungeon-pit-of-heresy",
+    "dungeon-shattered-throne"
   ]
 }

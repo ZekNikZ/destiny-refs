@@ -13,7 +13,7 @@
       "name": "Newest Dungeon",
       "type": "newest",
       "activityType": "dungeon",
-      "activityId": "raid-salvations-edge"
+      "activityId": "dungeon-vespers-host"
     },
     {
       "id": "raids",
@@ -35,10 +35,10 @@
       "activityType": "dungeon",
       "startDate": "2024-10-08T16:00:00Z",
       "rotation": [
-        ["raid-last-wish", "raid-vow-of-the-disciple"],
-        ["raid-garden-of-salvation", "raid-kings-fall"],
-        ["raid-deep-stone-crypt", "raid-root-of-nightmares"],
-        ["raid-vault-of-glass", "raid-crotas-end"]
+        ["dungeon-shattered-throne", "dungeon-duality"],
+        ["dungeon-pit-of-heresy", "dungeon-spire-of-the-watcher"],
+        ["dungeon-prophecy", "dungeon-ghosts-of-the-deep"],
+        ["dungeon-grasp-of-avarice", "dungeon-warlords-ruin"]
       ]
     }
   ],

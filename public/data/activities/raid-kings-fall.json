@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/activity.json",
+  "activity": {
+    "id": "raid-kings-fall",
+    "type": "raid",
+    "name": "King's Fall",
+    "description": "TODO",
+    "backgroundImage": "/images/raids/kings-fall/banner.avif",
+    "triumphs": [],
+    "encounters": []
+  }
+}

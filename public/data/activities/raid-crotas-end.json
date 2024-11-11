@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/activity.json",
+  "activity": {
+    "id": "raid-crotas-end",
+    "type": "raid",
+    "name": "Crota's End",
+    "description": "TODO",
+    "backgroundImage": "/images/raids/crotas-end/banner.avif",
+    "triumphs": [],
+    "encounters": []
+  }
+}

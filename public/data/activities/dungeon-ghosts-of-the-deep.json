@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/activity.json",
+  "activity": {
+    "id": "dungeon-ghosts-of-the-deep",
+    "type": "dungeon",
+    "name": "Ghosts of the Deep",
+    "description": "TODO",
+    "backgroundImage": "/images/dungeons/ghosts-of-the-deep/banner.avif",
+    "triumphs": [],
+    "encounters": []
+  }
+}

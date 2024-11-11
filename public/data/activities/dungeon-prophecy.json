@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/activity.json",
+  "activity": {
+    "id": "dungeon-prophecy",
+    "type": "dungeon",
+    "name": "Prophecy",
+    "description": "TODO",
+    "backgroundImage": "/images/dungeons/prophecy/banner.avif",
+    "triumphs": [],
+    "encounters": []
+  }
+}

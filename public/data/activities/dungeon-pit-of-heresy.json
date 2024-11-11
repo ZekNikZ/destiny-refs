@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/activity.json",
+  "activity": {
+    "id": "dungeon-pit-of-heresy",
+    "type": "dungeon",
+    "name": "Pit of Heresy",
+    "description": "TODO",
+    "backgroundImage": "/images/dungeons/pit-of-heresy/banner.avif",
+    "triumphs": [],
+    "encounters": []
+  }
+}

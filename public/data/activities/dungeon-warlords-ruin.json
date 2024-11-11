@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/activity.json",
+  "activity": {
+    "id": "dungeon-warlords-ruin",
+    "type": "dungeon",
+    "name": "Warlord's Ruin",
+    "description": "TODO",
+    "backgroundImage": "/images/dungeons/warlords-ruin/banner.avif",
+    "triumphs": [],
+    "encounters": []
+  }
+}

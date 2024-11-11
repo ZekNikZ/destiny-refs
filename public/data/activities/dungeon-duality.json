@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/activity.json",
+  "activity": {
+    "id": "dungeon-duality",
+    "type": "dungeon",
+    "name": "Duality",
+    "description": "TODO",
+    "backgroundImage": "/images/dungeons/duality/banner.avif",
+    "triumphs": [],
+    "encounters": []
+  }
+}

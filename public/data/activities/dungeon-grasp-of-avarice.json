@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/activity.json",
+  "activity": {
+    "id": "dungeon-grasp-of-avarice",
+    "type": "dungeon",
+    "name": "Grasp of Avarice",
+    "description": "TODO",
+    "backgroundImage": "/images/dungeons/grasp-of-avarice/banner.avif",
+    "triumphs": [],
+    "encounters": []
+  }
+}

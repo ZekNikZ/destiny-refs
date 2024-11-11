@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/activity.json",
+  "activity": {
+    "id": "raid-vault-of-glass",
+    "type": "raid",
+    "name": "Vault of Glass",
+    "description": "TODO",
+    "backgroundImage": "/images/raids/vault-of-glass/banner.avif",
+    "triumphs": [],
+    "encounters": []
+  }
+}

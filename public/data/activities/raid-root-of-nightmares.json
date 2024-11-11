@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/activity.json",
+  "activity": {
+    "id": "raid-root-of-nightmares",
+    "type": "raid",
+    "name": "Root of Nightmares",
+    "description": "TODO",
+    "backgroundImage": "/images/raids/root-of-nightmares/banner.avif",
+    "triumphs": [],
+    "encounters": []
+  }
+}

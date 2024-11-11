@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/activity.json",
+  "activity": {
+    "id": "dungeon-spire-of-the-watcher",
+    "type": "dungeon",
+    "name": "Spire of the Watcher",
+    "description": "TODO",
+    "backgroundImage": "/images/dungeons/spire-of-the-watcher/banner.avif",
+    "triumphs": [],
+    "encounters": []
+  }
+}

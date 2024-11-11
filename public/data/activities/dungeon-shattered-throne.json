@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/activity.json",
+  "activity": {
+    "id": "dungeon-shattered-throne",
+    "type": "dungeon",
+    "name": "Shattered Throne",
+    "description": "TODO",
+    "backgroundImage": "/images/dungeons/shattered-throne/banner.avif",
+    "triumphs": [],
+    "encounters": []
+  }
+}
