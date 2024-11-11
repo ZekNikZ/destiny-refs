@@ -604,6 +604,107 @@
             "itemHash": 1141217085
           }
         ]
+      },
+
+      "dungeon-vespers-host-head": {
+        "type": "group",
+        "name": "Helmet (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "helmet",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 2244013188
+          },
+          {
+            "type": "item",
+            "itemHash": 283230886
+          },
+          {
+            "type": "item",
+            "itemHash": 1446639859
+          }
+        ]
+      },
+      "dungeon-vespers-host-arms": {
+        "type": "group",
+        "name": "Gauntlets (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "gauntlets",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 1808327005
+          },
+          {
+            "type": "item",
+            "itemHash": 3592158071
+          },
+          {
+            "type": "item",
+            "itemHash": 3234613634
+          }
+        ]
+      },
+      "dungeon-vespers-host-chest": {
+        "type": "group",
+        "name": "Chest Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "chest-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 1615763427
+          },
+          {
+            "type": "item",
+            "itemHash": 2436714433
+          },
+          {
+            "type": "item",
+            "itemHash": 4190676582
+          }
+        ]
+      },
+      "dungeon-vespers-host-legs": {
+        "type": "group",
+        "name": "Leg Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "leg-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 4132376063
+          },
+          {
+            "type": "item",
+            "itemHash": 1105725465
+          },
+          {
+            "type": "item",
+            "itemHash": 1025368892
+          }
+        ]
+      },
+      "dungeon-vespers-host-class": {
+        "type": "group",
+        "name": "Class Item (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "class-item",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 514586330
+          },
+          {
+            "type": "item",
+            "itemHash": 3219219484
+          },
+          {
+            "type": "item",
+            "itemHash": 213803727
+          }
+        ]
       }
     },
     "pools": {
@@ -905,6 +1006,19 @@
           {
             "type": "item",
             "itemHash": 1511214613
+          }
+        ]
+      },
+
+      "dungeon-vespers-host-exotic": {
+        "type": "pool",
+        "quantity": "chance",
+        "showInLootSummary": true,
+        "weeklyLimit": "once_per_character",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 1111334348
           }
         ]
       }

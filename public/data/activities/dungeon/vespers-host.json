@@ -4,9 +4,286 @@
     "id": "dungeon-vespers-host",
     "type": "dungeon",
     "name": "Vesper's Host",
-    "description": "TODO",
+    "description": "Defy the algorith. Cut through its web.",
     "backgroundImage": "/images/dungeons/vespers-host/banner.avif",
-    "triumphs": [],
-    "encounters": []
+    "hasMasterMode": true,
+    "loot": [
+      {
+        "type": "pool",
+        "notes": ["Obtained by completing the \"Rogue Network\" quest."],
+        "quantity": "all",
+        "loot": [
+          {
+            "type": "ref-loot",
+            "key": "dungeon-vespers-host-class"
+          }
+        ]
+      },
+      {
+        "type": "pool",
+        "notes": [
+          "Obtained by completing the \"Rogue Network\" quest and subsequently completing the catalyst puzzle."
+        ],
+        "quantity": "all",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 4045752130
+          }
+        ]
+      }
+    ],
+    "triumphs": [
+      {
+        "bungieRecordHash": 2944960648
+      },
+      {
+        "bungieRecordHash": 1141690897
+      },
+      {
+        "bungieRecordHash": 591040974
+      },
+      {
+        "bungieRecordHash": 1553599507
+      },
+      {
+        "bungieRecordHash": 4009562
+      },
+      {
+        "bungieRecordHash": 4146803854
+      },
+      {
+        "bungieRecordHash": 694978627
+      }
+    ],
+    "encounters": [
+      {
+        "id": "dungeon-vespers-host-encounter-1",
+        "name": "Vesper Station",
+        "type": "encounter",
+        "description": "Activation",
+        "backgroundImage": "/images/dungeons/vespers-host/encounter-1.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "normal",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "pinnacleWhen": "always",
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 93061497
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1762785663
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1762785662
+                      },
+                      { "type": "ref-loot", "key": "dungeon-vespers-host-arms" },
+                      { "type": "ref-loot", "key": "dungeon-vespers-host-chest" },
+                      { "type": "ref-loot", "key": "dungeon-vespers-host-legs" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "mode": "master",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "pinnacleWhen": "always",
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 93061497
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1762785663
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1762785662
+                      },
+                      { "type": "ref-loot", "key": "dungeon-vespers-host-arms", "artiface": true },
+                      { "type": "ref-loot", "key": "dungeon-vespers-host-chest", "artiface": true },
+                      { "type": "ref-loot", "key": "dungeon-vespers-host-legs", "artiface": true }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dungeon-vespers-host-encounter-2",
+        "name": "Raneiks Unified",
+        "type": "encounter",
+        "description": "Dismemberment",
+        "backgroundImage": "/images/dungeons/vespers-host/encounter-2.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "normal",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "pinnacleWhen": "always",
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 4232480042
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 93061497
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1762785662
+                      },
+                      { "type": "ref-loot", "key": "dungeon-vespers-host-head" },
+                      { "type": "ref-loot", "key": "dungeon-vespers-host-arms" },
+                      { "type": "ref-loot", "key": "dungeon-vespers-host-legs" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "mode": "master",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "pinnacleWhen": "always",
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 4232480042
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 93061497
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1762785662
+                      },
+                      { "type": "ref-loot", "key": "dungeon-vespers-host-head", "artiface": true },
+                      { "type": "ref-loot", "key": "dungeon-vespers-host-arms", "artiface": true },
+                      { "type": "ref-loot", "key": "dungeon-vespers-host-legs", "artiface": true }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dungeon-vespers-host-encounter-3",
+        "name": "The Corrupted Puppeteer",
+        "type": "encounter",
+        "description": "Shutdown",
+        "backgroundImage": "/images/dungeons/vespers-host/encounter-3.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "normal",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "dungeon-vespers-host-exotic"
+                  },
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "pinnacleWhen": "always",
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 4232480042
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 93061497
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1762785663
+                      },
+                      { "type": "ref-loot", "key": "dungeon-vespers-host-head" },
+                      { "type": "ref-loot", "key": "dungeon-vespers-host-chest" },
+                      { "type": "ref-loot", "key": "dungeon-vespers-host-legs" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "mode": "master",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "dungeon-vespers-host-exotic"
+                  },
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "pinnacleWhen": "always",
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 4232480042
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 93061497
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1762785663
+                      },
+                      { "type": "ref-loot", "key": "dungeon-vespers-host-head", "artiface": true },
+                      { "type": "ref-loot", "key": "dungeon-vespers-host-chest", "artiface": true },
+                      { "type": "ref-loot", "key": "dungeon-vespers-host-legs", "artiface": true }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 }
