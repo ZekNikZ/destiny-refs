@@ -5,6 +5,7 @@ import EncounterBasedActivityPage from "./pages/EncounterBasedActivityPage";
 import ActivityListPage from "./pages/ActivityListPage";
 import { makeRouteFromActivity } from "./utils/routes";
 import RotationsPage from "./pages/RotationsPage";
+import BungiePresentationNodeIcon from "./components/BungiePresentationNodeIcon";
 
 export interface RouteData {
   path: string;
@@ -12,9 +13,13 @@ export interface RouteData {
   element?: React.ReactNode;
   navbarProperties?: {
     label?: string;
-    icon?: Icon;
+    icon?: React.ReactNode;
   };
   children?: RouteData[];
+}
+
+function makePhosphorIcon(Icon: Icon) {
+  return <Icon size={20} />;
 }
 
 const routes: RouteData[] = [
@@ -23,7 +28,7 @@ const routes: RouteData[] = [
     title: "Today",
     element: <TodayPage />,
     navbarProperties: {
-      icon: Calendar,
+      icon: makePhosphorIcon(Calendar),
     },
   },
   {
@@ -31,7 +36,7 @@ const routes: RouteData[] = [
     title: "Rotations",
     element: <RotationsPage />,
     navbarProperties: {
-      icon: ArrowClockwise,
+      icon: makePhosphorIcon(ArrowClockwise),
     },
   },
   {
@@ -39,7 +44,7 @@ const routes: RouteData[] = [
     title: "Loot & Details",
     element: <TodayPage />,
     navbarProperties: {
-      icon: TreasureChest,
+      icon: makePhosphorIcon(TreasureChest),
     },
     children: [
       {
@@ -47,7 +52,7 @@ const routes: RouteData[] = [
         title: "Raids",
         element: <ActivityListPage activityType="raid" />,
         navbarProperties: {
-          icon: TreasureChest,
+          icon: <BungiePresentationNodeIcon hash={3472409870} />,
         },
         children: useGlobalData
           .getState()
@@ -63,7 +68,7 @@ const routes: RouteData[] = [
         title: "Dungeons",
         element: <ActivityListPage activityType="dungeon" />,
         navbarProperties: {
-          icon: TreasureChest,
+          icon: <BungiePresentationNodeIcon hash={2196753074} />,
         },
         children: useGlobalData
           .getState()
@@ -79,7 +84,7 @@ const routes: RouteData[] = [
         title: "Nightfalls",
         element: <ActivityListPage activityType="nightfall" />,
         navbarProperties: {
-          icon: TreasureChest,
+          icon: <BungiePresentationNodeIcon hash={1507864044} />,
         },
         children: useGlobalData
           .getState()
@@ -95,7 +100,7 @@ const routes: RouteData[] = [
         title: "Lost Sectors",
         element: <ActivityListPage activityType="lost_sector" />,
         navbarProperties: {
-          icon: TreasureChest,
+          icon: <BungiePresentationNodeIcon hash={4111930674} />,
         },
         children: useGlobalData
           .getState()

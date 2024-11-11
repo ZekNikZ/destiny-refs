@@ -1,16 +1,12 @@
 import { generatePath, matchPath, useLocation, useNavigate } from "react-router-dom";
 import { RouteData } from "../routes";
-import { CaretDown, CaretRight, Icon } from "@phosphor-icons/react";
+import { CaretDown, CaretRight } from "@phosphor-icons/react";
 import { Collapse, NavLink } from "@mantine/core";
 
 interface Props {
   route: RouteData;
   level?: number;
   onClick?: (route: RouteData) => void;
-}
-
-function makeIcon(Icon?: Icon) {
-  return Icon ? <Icon size={20} /> : undefined;
 }
 
 const NavLinkWithChildren = (props: Props) => {
@@ -26,7 +22,7 @@ const NavLinkWithChildren = (props: Props) => {
         key={props.route.path}
         label={props.route.navbarProperties?.label ?? props.route.title}
         pl={12}
-        leftSection={makeIcon(props.route.navbarProperties?.icon)}
+        leftSection={props.route.navbarProperties?.icon}
         rightSection={
           props.route.children?.filter((subroute) => subroute.navbarProperties) ? (
             pathname.startsWith(props.route.path) ? (
