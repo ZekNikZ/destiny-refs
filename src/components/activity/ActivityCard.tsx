@@ -90,7 +90,7 @@ export default function ActivityCard(props: Props) {
           backgroundPosition: "50% 50%",
           borderBottom: (
             collapseOpen === "summary"
-              ? props.activity.loot && props.activity.loot.length > 0
+              ? lootSummary.length > 0
               : props.activity.loot ||
                 props.activity.triumphs ||
                 props.activity.guide ||

@@ -1,8 +1,9 @@
 {
   "$schema": "./schema/rotations.json",
-  "featuredRotations": [
+  "activityRotations": [
     {
       "id": "raids",
+      "name": "Raids",
       "type": "weekly",
       "activityType": "raid",
       "startDate": "2024-10-08T16:00:00Z",
@@ -15,6 +16,7 @@
     },
     {
       "id": "newest-raid",
+      "name": "Newest Raid",
       "type": "newest",
       "activityType": "raid",
       "activityId": "raid-salvations-edge"

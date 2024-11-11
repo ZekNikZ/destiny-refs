@@ -120,7 +120,7 @@ export default function LootTable(props: Props) {
                 <List classNames={{ item: classes.listItem }}>
                   {/* Custom Notes */}
                   {pool.notes?.map((note) => (
-                    <List.Item>
+                    <List.Item key={note}>
                       <TypographyStylesProvider key={note}>
                         <Markdown>{note}</Markdown>
                       </TypographyStylesProvider>

@@ -149,9 +149,10 @@ export interface SharedLootPools {
   pools?: Record<string, LootPool>;
 }
 
-export type FeaturedRotation =
+export type ActivityRotation =
   | {
       id: string;
+      name: string;
       type: "weekly" | "daily";
       activityType: ActivityType;
       startDate: string;
@@ -159,6 +160,7 @@ export type FeaturedRotation =
     }
   | {
       id: string;
+      name: string;
       type: "newest";
       activityType: ActivityType;
       activityId: string;

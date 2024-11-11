@@ -1,4 +1,4 @@
-import { Activity, ChallengeRotation, FeaturedRotation, SharedLootPools } from "./types";
+import { Activity, ChallengeRotation, ActivityRotation, SharedLootPools } from "./types";
 
 export interface ActivitiesJson {
   $schema?: string;
@@ -7,7 +7,7 @@ export interface ActivitiesJson {
 
 export interface RotationsJson {
   $schema?: string;
-  featuredRotations: FeaturedRotation[];
+  activityRotations: ActivityRotation[];
   challengeRotations: ChallengeRotation[];
 }
 

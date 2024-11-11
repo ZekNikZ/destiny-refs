@@ -4,7 +4,7 @@ import { useGlobalData } from "./useGlobalData";
 import { useMemo } from "react";
 
 export default function useRotation(activity: Activity) {
-  const featuredRotations = useGlobalData((state) => state.rotations.featuredRotations);
+  const featuredRotations = useGlobalData((state) => state.rotations.activityRotations);
   const challengeRotations = useGlobalData((state) => state.rotations.challengeRotations);
   const date = dayjs().date();
 
