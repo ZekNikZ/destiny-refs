@@ -1,4 +1,4 @@
-import { Group, Image, Stack, Text } from "@mantine/core";
+import { Group, Image, Stack, Text, Tooltip } from "@mantine/core";
 import { useBungieItemDetails, useBungieStaticData } from "../../utils/bungie-api";
 import { Loot } from "../../data/types";
 import LootIcon from "./LootIcon";
@@ -49,7 +49,27 @@ export default function LootListing(props: Props) {
           </Text>
         ) : (
           <>
-            <Text fw="bold">{name}</Text>
+            <Group gap={6}>
+              <Text fw="bold">{name}</Text>
+              {props.loot.deepsight && (
+                <Tooltip
+                  label={
+                    props.loot.deepsight === "craftable"
+                      ? "Craftable: drops have a chance to be deepsight"
+                      : "Craftable: first drop each week is guaranteed to be deepsight"
+                  }
+                >
+                  <Group gap={2}>
+                    <Image src="/icons/attributes/shaped.svg" h={14} />
+                    {/* {props.loot.deepsight === "craftable" ? (
+                      <Percent size={16} color="#d25336" weight="bold" />
+                    ) : (
+                      <CheckFat size={16} color="#d25336" weight="fill" />
+                    )} */}
+                  </Group>
+                </Tooltip>
+              )}
+            </Group>
             <Group gap={4}>
               {damageType && damageType !== 0 && (
                 <Image

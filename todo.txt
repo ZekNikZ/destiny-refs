@@ -7,8 +7,8 @@
   - dsc
   - gos
   - se
-
 - Implement "Rotations" page
+
 - Be able to mark weapons as deepsight
 - Implement dungeons
   - st

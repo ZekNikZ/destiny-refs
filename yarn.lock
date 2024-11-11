@@ -2398,6 +2398,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^8.13.0"
     "@typescript-eslint/parser": "npm:^8.13.0"
     "@vitejs/plugin-react": "npm:^4.3.3"
+    clsx: "npm:^2.1.1"
     concurrently: "npm:^9.1.0"
     dayjs: "npm:^1.11.13"
     eslint: "npm:^9.14.0"

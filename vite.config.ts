@@ -9,4 +9,11 @@ export default defineConfig({
       "top-level-await": true,
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: "modern",
+      },
+    },
+  },
 });

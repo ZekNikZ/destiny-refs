@@ -2,6 +2,8 @@ import { HoverCard, HoverCardDropdown, Image } from "@mantine/core";
 import { useBungieItemDetails } from "../../utils/bungie-api";
 import { Loot } from "../../data/types";
 import LootListing from "./LootListing";
+import clsx from "clsx";
+import classes from "./LootItemIcon.module.scss";
 
 interface Props {
   loot: Extract<Loot, { type: "item" }>;
@@ -22,6 +24,9 @@ export default function LootItemIcon(props: Props) {
         position: "relative",
         flexShrink: 0,
       }}
+      className={clsx({
+        [classes.deepsight]: props.loot.deepsight === "guaranteed-deepsight",
+      })}
     >
       <Image
         src={isSuccess ? `https://bungie.net/${item?.displayProperties.icon}` : null}

@@ -47,6 +47,7 @@ export type Loot = {
   statFocused?: boolean;
   quantity?: number;
   deepsight?: "craftable" | "guaranteed-deepsight";
+  adept?: boolean;
 } & (
   | {
       type: "item";
