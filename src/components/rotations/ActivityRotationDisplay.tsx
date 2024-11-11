@@ -1,4 +1,4 @@
-import { Stack, Title } from "@mantine/core";
+import { Box, Stack, Title } from "@mantine/core";
 import { ActivityRotation } from "../../data/types";
 import RotationEntry from "./RotationEntry";
 import dayjs from "dayjs";
@@ -43,9 +43,9 @@ export default function ActivityRotationDisplay(props: Props) {
           <Title order={2} size="h2">
             {props.rotation.name}
           </Title>
-          <Stack gap={0}>
+          <Box>
             <RotationEntry activityIds={[props.rotation.activityId]} big />
-          </Stack>
+          </Box>
         </Stack>
       );
   }

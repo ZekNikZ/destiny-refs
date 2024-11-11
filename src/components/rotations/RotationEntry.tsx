@@ -4,6 +4,7 @@ import classes from "./RotationEntry.module.scss";
 import { Link } from "react-router-dom";
 import { makeRouteFromActivity } from "../../utils/routes";
 import { Dayjs } from "dayjs";
+import clsx from "clsx";
 
 interface Props {
   date?: Dayjs;
@@ -19,7 +20,13 @@ export default function RotationEntry(props: Props) {
   );
 
   return (
-    <Group gap={0} wrap="nowrap" className={classes.entry}>
+    <Group
+      gap={0}
+      wrap="nowrap"
+      className={clsx(classes.entry, {
+        [classes.big]: props.big,
+      })}
+    >
       {props.date && (
         <Text w={120} ta="center">
           {props.date.format("MMMM D")}

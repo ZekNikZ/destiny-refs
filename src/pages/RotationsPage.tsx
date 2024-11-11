@@ -8,7 +8,7 @@ export default function RotationsPage() {
 
   return (
     <Stack>
-      <Title>Rotations</Title>
+      <Title ta="center">Rotations</Title>
       <ResponsiveMasonry columnsCountBreakPoints={{ 300: 1, 1500: 2 }}>
         <Masonry columnsCount={2} gutter="10px">
           {rotations.activityRotations.map((rotation) => (
