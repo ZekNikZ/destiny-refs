@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "lost_sector-the-blooming-deep",
+    "type": "lost_sector",
+    "name": "The Blooming Deep",
+    "location": "Pale Heart",
+    "backgroundImage": "/images/lost_sectors/the-blooming-deep.avif"
+  }
+}

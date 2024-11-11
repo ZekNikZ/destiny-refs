@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "lost_sector-bay-of-drowned-wishes",
+    "type": "lost_sector",
+    "name": "Bay of Drowned Wishes",
+    "location": "Dreaming City",
+    "backgroundImage": "/images/lost_sectors/bay-of-drowned-wishes.avif"
+  }
+}

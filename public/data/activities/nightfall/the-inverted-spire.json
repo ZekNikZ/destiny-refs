@@ -4,9 +4,6 @@
     "id": "nightfall-the-inverted-spire",
     "type": "nightfall",
     "name": "The Inverted Spire",
-    "description": "TODO",
-    "backgroundImage": "/images/nightfalls/the-inverted-spire.avif",
-    "triumphs": [],
-    "encounters": []
+    "backgroundImage": "/images/nightfalls/the-inverted-spire.avif"
   }
 }

@@ -70,7 +70,6 @@
         "id",
         "type",
         "name",
-        "description",
         "backgroundImage"
       ],
       "type": "object"

@@ -4,9 +4,6 @@
     "id": "nightfall-the-corrupted",
     "type": "nightfall",
     "name": "The Corrupted",
-    "description": "TODO",
-    "backgroundImage": "/images/nightfalls/the-corrupted.avif",
-    "triumphs": [],
-    "encounters": []
+    "backgroundImage": "/images/nightfalls/the-corrupted.avif"
   }
 }

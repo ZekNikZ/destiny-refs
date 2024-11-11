@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "lost_sector-k1-revelation",
+    "type": "lost_sector",
+    "name": "K1 Revelation",
+    "location": "Moon",
+    "backgroundImage": "/images/lost_sectors/k1-revelation.avif"
+  }
+}

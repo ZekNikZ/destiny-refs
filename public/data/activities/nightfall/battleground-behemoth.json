@@ -4,9 +4,6 @@
     "id": "nightfall-battleground-behemoth",
     "type": "nightfall",
     "name": "Battleground: Behemoth",
-    "description": "TODO",
-    "backgroundImage": "/images/nightfalls/battleground-behemoth.avif",
-    "triumphs": [],
-    "encounters": []
+    "backgroundImage": "/images/nightfalls/battleground-behemoth.avif"
   }
 }

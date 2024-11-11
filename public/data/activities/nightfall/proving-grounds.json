@@ -4,9 +4,6 @@
     "id": "nightfall-proving-grounds",
     "type": "nightfall",
     "name": "Proving Grounds",
-    "description": "TODO",
-    "backgroundImage": "/images/nightfalls/proving-grounds.avif",
-    "triumphs": [],
-    "encounters": []
+    "backgroundImage": "/images/nightfalls/proving-grounds.avif"
   }
 }

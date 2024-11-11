@@ -74,6 +74,38 @@ const routes: RouteData[] = [
             element: <EncounterBasedActivityPage activity={activity} />,
           })),
       },
+      {
+        path: "/info/nightfalls",
+        title: "Nightfalls",
+        element: <ActivityListPage activityType="nightfall" />,
+        navbarProperties: {
+          icon: TreasureChest,
+        },
+        children: useGlobalData
+          .getState()
+          .activities.filter((activity) => activity.type === "nightfall")
+          .map((activity) => ({
+            path: makeRouteFromActivity(activity),
+            title: activity.name,
+            element: <EncounterBasedActivityPage activity={activity} />,
+          })),
+      },
+      {
+        path: "/info/lost_sectors",
+        title: "Lost Sectors",
+        element: <ActivityListPage activityType="lost_sector" />,
+        navbarProperties: {
+          icon: TreasureChest,
+        },
+        children: useGlobalData
+          .getState()
+          .activities.filter((activity) => activity.type === "lost_sector")
+          .map((activity) => ({
+            path: makeRouteFromActivity(activity),
+            title: activity.name,
+            element: <EncounterBasedActivityPage activity={activity} />,
+          })),
+      },
     ],
   },
 ];

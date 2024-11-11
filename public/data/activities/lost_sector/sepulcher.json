@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "lost_sector-sepulcher",
+    "type": "lost_sector",
+    "name": "Sepulcher",
+    "location": "Savathun's Throne World",
+    "backgroundImage": "/images/lost_sectors/sepulcher.avif"
+  }
+}

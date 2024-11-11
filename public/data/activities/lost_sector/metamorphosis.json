@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "lost_sector-metamorphosis",
+    "type": "lost_sector",
+    "name": "Metamorphosis",
+    "location": "Savathun's Throne World",
+    "backgroundImage": "/images/lost_sectors/metamorphosis.avif"
+  }
+}

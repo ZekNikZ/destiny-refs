@@ -29,6 +29,18 @@
     "nightfall/the-arms-dealer",
     "nightfall/the-corrupted",
     "nightfall/the-inverted-spire",
-    "nightfall/the-lightblade"
+    "nightfall/the-lightblade",
+
+    "lost_sector/sepulcher",
+    "lost_sector/metamorphosis",
+    "lost_sector/k1-revelation",
+    "lost_sector/bay-of-drowned-wishes",
+    "lost_sector/chamber-of-starlight",
+    "lost_sector/the-quarry",
+    "lost_sector/excavation-site-xii",
+    "lost_sector/the-broken-deep",
+    "lost_sector/the-blooming-deep",
+    "lost_sector/the-forgotten-deep",
+    "lost_sector/extraction"
   ]
 }

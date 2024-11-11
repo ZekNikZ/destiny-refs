@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "lost_sector-the-quarry",
+    "type": "lost_sector",
+    "name": "The Quarry",
+    "location": "EDZ",
+    "backgroundImage": "/images/lost_sectors/the-quarry.avif"
+  }
+}

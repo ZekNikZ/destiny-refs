@@ -19,7 +19,7 @@ export interface Activity {
   id: string;
   type: ActivityType;
   name: string;
-  description: string;
+  description?: string;
   backgroundImage: string;
   location?: string;
   tagOverrides?: ActivityTag[];

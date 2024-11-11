@@ -4,9 +4,6 @@
     "id": "nightfall-the-lightblade",
     "type": "nightfall",
     "name": "The Lightblade",
-    "description": "TODO",
-    "backgroundImage": "/images/nightfalls/the-lightblade.avif",
-    "triumphs": [],
-    "encounters": []
+    "backgroundImage": "/images/nightfalls/the-lightblade.avif"
   }
 }

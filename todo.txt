@@ -9,6 +9,8 @@
   - se
 - Implement "Rotations" page
 - Be able to mark weapons as deepsight
+- Implement nightfalls
+- Implement lost sectors
 
 - Implement dungeons
   - st
@@ -26,7 +28,5 @@
   - vog
   - kf
   - crota
-- Implement nightfalls
-- Implement lost sectors
 - Implement exotic missions
 - Raid and dungeon secret chests & puzzles

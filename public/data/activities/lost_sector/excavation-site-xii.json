@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "lost_sector-excavation-site-xii",
+    "type": "lost_sector",
+    "name": "Excavation Site XII",
+    "location": "EDZ",
+    "backgroundImage": "/images/lost_sectors/excavation-site-xii.avif"
+  }
+}

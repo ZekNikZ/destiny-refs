@@ -4,9 +4,6 @@
     "id": "nightfall-birthplace-of-the-vile",
     "type": "nightfall",
     "name": "Birthplace of the Vile",
-    "description": "TODO",
-    "backgroundImage": "/images/nightfalls/birthplace-of-the-vile.avif",
-    "triumphs": [],
-    "encounters": []
+    "backgroundImage": "/images/nightfalls/birthplace-of-the-vile.avif"
   }
 }

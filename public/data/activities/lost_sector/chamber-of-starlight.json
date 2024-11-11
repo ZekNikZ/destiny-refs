@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "lost_sector-chamber-of-starlight",
+    "type": "lost_sector",
+    "name": "Chamber of Starlight",
+    "location": "Dreaming City",
+    "backgroundImage": "/images/lost_sectors/chamber-of-starlight.avif"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "lost_sector-extraction",
+    "type": "lost_sector",
+    "name": "Extraction",
+    "location": "Savathun's Throne World",
+    "backgroundImage": "/images/lost_sectors/extraction.avif"
+  }
+}
