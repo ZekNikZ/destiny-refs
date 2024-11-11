@@ -13,6 +13,15 @@
             "id": {
               "type": "string"
             },
+            "lootRotation": {
+              "items": {
+                "items": {
+                  "$ref": "#/definitions/Loot"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
             "name": {
               "type": "string"
             },
@@ -118,6 +127,146 @@
         "rotation"
       ],
       "type": "object"
+    },
+    "Loot": {
+      "anyOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "adept": {
+              "type": "boolean"
+            },
+            "artiface": {
+              "type": "boolean"
+            },
+            "deepsight": {
+              "enum": [
+                "craftable",
+                "guaranteed-deepsight"
+              ],
+              "type": "string"
+            },
+            "itemHash": {
+              "type": "number"
+            },
+            "quantity": {
+              "type": "number"
+            },
+            "statFocused": {
+              "type": "boolean"
+            },
+            "type": {
+              "const": "item",
+              "type": "string"
+            }
+          },
+          "required": [
+            "itemHash",
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "adept": {
+              "type": "boolean"
+            },
+            "artiface": {
+              "type": "boolean"
+            },
+            "children": {
+              "items": {
+                "$ref": "#/definitions/Loot"
+              },
+              "type": "array"
+            },
+            "deepsight": {
+              "enum": [
+                "craftable",
+                "guaranteed-deepsight"
+              ],
+              "type": "string"
+            },
+            "displayItemHash": {
+              "type": "number"
+            },
+            "displayStaticIcon": {
+              "enum": [
+                "helmet",
+                "gauntlets",
+                "chest-armor",
+                "leg-armor",
+                "class-item",
+                "weapon",
+                "legendary-engram",
+                "exotic-engram",
+                "bright-engram",
+                "prime-engram"
+              ],
+              "type": "string"
+            },
+            "groupType": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "quantity": {
+              "type": "number"
+            },
+            "statFocused": {
+              "type": "boolean"
+            },
+            "type": {
+              "const": "group",
+              "type": "string"
+            }
+          },
+          "required": [
+            "children",
+            "groupType",
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "adept": {
+              "type": "boolean"
+            },
+            "artiface": {
+              "type": "boolean"
+            },
+            "deepsight": {
+              "enum": [
+                "craftable",
+                "guaranteed-deepsight"
+              ],
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "quantity": {
+              "type": "number"
+            },
+            "statFocused": {
+              "type": "boolean"
+            },
+            "type": {
+              "const": "ref-loot",
+              "type": "string"
+            }
+          },
+          "required": [
+            "key",
+            "type"
+          ],
+          "type": "object"
+        }
+      ]
     },
     "RotationsJson": {
       "additionalProperties": false,

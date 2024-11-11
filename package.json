@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "gen-json-schema:win": "./gen-schemas.bat",
+    "gen-json-schema:unix": "./gen-schemas.sh",
     "serve": "serve -s dist"
   },
   "dependencies": {

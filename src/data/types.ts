@@ -158,6 +158,7 @@ export type ActivityRotation =
       activityType: ActivityType;
       startDate: string;
       rotation: string[][];
+      lootRotation?: Loot[][];
     }
   | {
       id: string;

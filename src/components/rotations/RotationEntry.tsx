@@ -5,11 +5,15 @@ import { Link } from "react-router-dom";
 import { makeRouteFromActivity } from "../../utils/routes";
 import { Dayjs } from "dayjs";
 import clsx from "clsx";
+import { Loot } from "../../data/types";
+import LootIcon from "../loot/LootIcon";
+import { getLootKey } from "../../utils/loot";
 
 interface Props {
   date?: Dayjs;
   activityIds: string[];
   big?: boolean;
+  loot?: Loot[];
 }
 
 export default function RotationEntry(props: Props) {
@@ -58,6 +62,14 @@ export default function RotationEntry(props: Props) {
             </Link>
           ))}
       </Group>
+
+      {props.loot && (
+        <Group className={classes.loot} gap={4}>
+          {props.loot.map((loot) => (
+            <LootIcon key={getLootKey(loot)} loot={loot} size={30} />
+          ))}
+        </Group>
+      )}
     </Group>
   );
 }

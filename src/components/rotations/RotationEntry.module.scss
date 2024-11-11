@@ -32,6 +32,8 @@
 }
 
 .entry {
+  position: relative;
+
   --border: 1px solid #424242;
   border-left: var(--border);
   border-right: var(--border);
@@ -53,4 +55,10 @@
 .big {
   border-radius: 4px;
   overflow: hidden;
+}
+
+.loot {
+  position: absolute;
+  right: 6px;
+  z-index: 100;
 }

@@ -7,6 +7,9 @@
         {
           "additionalProperties": false,
           "properties": {
+            "adept": {
+              "type": "boolean"
+            },
             "artiface": {
               "type": "boolean"
             },
@@ -40,6 +43,9 @@
         {
           "additionalProperties": false,
           "properties": {
+            "adept": {
+              "type": "boolean"
+            },
             "artiface": {
               "type": "boolean"
             },
@@ -101,6 +107,9 @@
         {
           "additionalProperties": false,
           "properties": {
+            "adept": {
+              "type": "boolean"
+            },
             "artiface": {
               "type": "boolean"
             },

@@ -18,6 +18,7 @@ export default function ActivityRotationDisplay(props: Props) {
         props.rotation.rotation,
         startIndex % props.rotation.rotation.length
       );
+      const lootRotation = props.rotation.lootRotation;
 
       return (
         <Stack style={{ flexGrow: 1 }}>
@@ -28,9 +29,10 @@ export default function ActivityRotationDisplay(props: Props) {
             {rotation.concat(rotation).map((activities, index) => {
               return (
                 <RotationEntry
-                  key={activities.join("|")}
+                  key={activities.join("|") + index}
                   date={startDate.add(index + startIndex, "weeks")}
                   activityIds={activities}
+                  loot={lootRotation ? lootRotation[index % lootRotation.length] : undefined}
                 />
               );
             })}
