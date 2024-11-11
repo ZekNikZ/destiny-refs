@@ -4,9 +4,321 @@
     "id": "dungeon-ghosts-of-the-deep",
     "type": "dungeon",
     "name": "Ghosts of the Deep",
-    "description": "TODO",
+    "description": "Drown in the deep, or rise from it.",
     "backgroundImage": "/images/dungeons/ghosts-of-the-deep/banner.avif",
-    "triumphs": [],
-    "encounters": []
+    "loot": [
+      {
+        "type": "pool",
+        "notes": ["Obtained by completing the catalyst puzzle."],
+        "quantity": "all",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 3116569677
+          }
+        ]
+      }
+    ],
+    "triumphs": [
+      {
+        "bungieRecordHash": 4136119953
+      },
+      {
+        "bungieRecordHash": 4050558210
+      },
+      {
+        "bungieRecordHash": 3584441401
+      },
+      {
+        "bungieRecordHash": 2105117002
+      },
+      {
+        "bungieRecordHash": 470621007
+      },
+      {
+        "bungieRecordHash": 2238420633
+      }
+    ],
+    "encounters": [
+      {
+        "id": "dungeon-ghosts-of-the-deep-encounter-1",
+        "name": "Hive Ritual",
+        "type": "encounter",
+        "description": "Break the Ritual",
+        "backgroundImage": "/images/dungeons/ghosts-of-the-deep/encounter-1.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "normal",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 1125217994
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3262192268
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 839786290
+                      },
+                      { "type": "ref-loot", "key": "dungeon-ghosts-of-the-deep-head" },
+                      { "type": "ref-loot", "key": "dungeon-ghosts-of-the-deep-arms" },
+                      { "type": "ref-loot", "key": "dungeon-ghosts-of-the-deep-legs" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "mode": "master",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 1125217994
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3262192268
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 839786290
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-ghosts-of-the-deep-head",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-ghosts-of-the-deep-arms",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-ghosts-of-the-deep-legs",
+                        "artiface": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dungeon-ghosts-of-the-deep-encounter-2",
+        "name": "Ecthar, the Shield of Savathun",
+        "type": "encounter",
+        "description": "Defeat the Shield of Savathun",
+        "backgroundImage": "/images/dungeons/ghosts-of-the-deep/encounter-2.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "normal",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 3262192268
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1757202961
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 839786290
+                      },
+                      { "type": "ref-loot", "key": "dungeon-ghosts-of-the-deep-head" },
+                      { "type": "ref-loot", "key": "dungeon-ghosts-of-the-deep-chest" },
+                      { "type": "ref-loot", "key": "dungeon-ghosts-of-the-deep-class" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "mode": "master",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 3262192268
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1757202961
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 839786290
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-ghosts-of-the-deep-head",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-ghosts-of-the-deep-chest",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-ghosts-of-the-deep-class",
+                        "artiface": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dungeon-ghosts-of-the-deep-encounter-3",
+        "name": "Šimmumah ur-Nokru, Lucent Necromancer",
+        "type": "encounter",
+        "description": "Stop the Necromancer's Ritual",
+        "backgroundImage": "/images/dungeons/ghosts-of-the-deep/encounter-3.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "normal",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "dungeon-ghosts-of-the-deep-exotic"
+                  },
+                  {
+                    "type": "pool",
+                    "quantity": 2,
+                    "showInLootSummary": true,
+                    "pinnacleWhen": "activity_is_featured",
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 1125217994
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1757202961
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3262192268
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 839786290
+                      },
+                      { "type": "ref-loot", "key": "dungeon-ghosts-of-the-deep-head" },
+                      { "type": "ref-loot", "key": "dungeon-ghosts-of-the-deep-arms" },
+                      { "type": "ref-loot", "key": "dungeon-ghosts-of-the-deep-chest" },
+                      { "type": "ref-loot", "key": "dungeon-ghosts-of-the-deep-legs" },
+                      { "type": "ref-loot", "key": "dungeon-ghosts-of-the-deep-class" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "mode": "master",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "dungeon-ghosts-of-the-deep-exotic"
+                  },
+                  {
+                    "type": "pool",
+                    "quantity": 2,
+                    "pinnacleWhen": "activity_is_featured",
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 1125217994
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1757202961
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3262192268
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 839786290
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-ghosts-of-the-deep-head",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-ghosts-of-the-deep-arms",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-ghosts-of-the-deep-chest",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-ghosts-of-the-deep-legs",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-ghosts-of-the-deep-class",
+                        "artiface": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 }

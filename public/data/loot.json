@@ -806,6 +806,107 @@
             "itemHash": 3981499770
           }
         ]
+      },
+
+      "dungeon-ghosts-of-the-deep-head": {
+        "type": "group",
+        "name": "Helmet (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "helmet",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 2324998093
+          },
+          {
+            "type": "item",
+            "itemHash": 896458489
+          },
+          {
+            "type": "item",
+            "itemHash": 540625098
+          }
+        ]
+      },
+      "dungeon-ghosts-of-the-deep-arms": {
+        "type": "group",
+        "name": "Gauntlets (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "gauntlets",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 2977663932
+          },
+          {
+            "type": "item",
+            "itemHash": 409820272
+          },
+          {
+            "type": "item",
+            "itemHash": 587762963
+          }
+        ]
+      },
+      "dungeon-ghosts-of-the-deep-chest": {
+        "type": "group",
+        "name": "Chest Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "chest-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 2978918436
+          },
+          {
+            "type": "item",
+            "itemHash": 42941848
+          },
+          {
+            "type": "item",
+            "itemHash": 457617725
+          }
+        ]
+      },
+      "dungeon-ghosts-of-the-deep-legs": {
+        "type": "group",
+        "name": "Leg Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "leg-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 2363472582
+          },
+          {
+            "type": "item",
+            "itemHash": 726878794
+          },
+          {
+            "type": "item",
+            "itemHash": 322717029
+          }
+        ]
+      },
+      "dungeon-ghosts-of-the-deep-class": {
+        "type": "group",
+        "name": "Class Item (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "class-item",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 3722748537
+          },
+          {
+            "type": "item",
+            "itemHash": 2733403573
+          },
+          {
+            "type": "item",
+            "itemHash": 1961182320
+          }
+        ]
       }
     },
     "pools": {
@@ -1132,6 +1233,18 @@
           {
             "type": "item",
             "itemHash": 3886719505
+          }
+        ]
+      },
+      "dungeon-ghosts-of-the-deep-exotic": {
+        "type": "pool",
+        "quantity": "chance",
+        "showInLootSummary": true,
+        "weeklyLimit": "infinite_when_featured",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 1441805468
           }
         ]
       }
