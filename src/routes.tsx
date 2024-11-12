@@ -6,6 +6,8 @@ import ActivityListPage from "./pages/ActivityListPage";
 import { makeRouteFromActivity } from "./utils/routes";
 import RotationsPage from "./pages/RotationsPage";
 import BungiePresentationNodeIcon from "./components/BungiePresentationNodeIcon";
+import LootAndDetailsPage from "./pages/LootAndDetailsPage";
+import { ActivityType } from "./data/types";
 
 export interface RouteData {
   path: string;
@@ -21,6 +23,48 @@ export interface RouteData {
 function makePhosphorIcon(Icon: Icon) {
   return <Icon size={20} />;
 }
+
+export const activityTypes: {
+  type: ActivityType;
+  title: string;
+  presentationNodeHash: number;
+  backgroundImage: string;
+  disableLinks?: boolean;
+}[] = [
+  {
+    type: "raid",
+    title: "Raids",
+    presentationNodeHash: 3472409870,
+    backgroundImage: "/images/raids/salvations-edge/banner.avif",
+  },
+  {
+    type: "dungeon",
+    title: "Dungeons",
+    presentationNodeHash: 2196753074,
+    backgroundImage: "/images/dungeons/vespers-host/banner.avif",
+  },
+  {
+    type: "exotic_mission",
+    title: "Exotic Missions",
+    presentationNodeHash: 2916787939,
+    backgroundImage: "/images/exotic_missions/zero-hour.avif",
+    disableLinks: true,
+  },
+  {
+    type: "nightfall",
+    title: "Nightfalls",
+    presentationNodeHash: 1507864044,
+    backgroundImage: "/images/nightfalls/liminality.avif",
+    disableLinks: true,
+  },
+  {
+    type: "lost_sector",
+    title: "Lost Sectors",
+    presentationNodeHash: 4111930674,
+    backgroundImage: "/images/lost_sectors/sepulcher.avif",
+    disableLinks: true,
+  },
+];
 
 const routes: RouteData[] = [
   {
@@ -42,92 +86,26 @@ const routes: RouteData[] = [
   {
     path: "/info",
     title: "Loot & Details",
-    element: <TodayPage />,
+    element: <LootAndDetailsPage />,
     navbarProperties: {
       icon: makePhosphorIcon(TreasureChest),
     },
-    children: [
-      {
-        path: "/info/raids",
-        title: "Raids",
-        element: <ActivityListPage activityType="raid" />,
-        navbarProperties: {
-          icon: <BungiePresentationNodeIcon hash={3472409870} />,
-        },
-        children: useGlobalData
-          .getState()
-          .activities.filter((activity) => activity.type === "raid")
-          .map((activity) => ({
-            path: makeRouteFromActivity(activity),
-            title: activity.name,
-            element: <EncounterBasedActivityPage activity={activity} />,
-          })),
+    children: activityTypes.map((activityType) => ({
+      path: `/info/${activityType.type}s`,
+      title: activityType.title,
+      element: <ActivityListPage activityType={activityType.type} />,
+      navbarProperties: {
+        icon: <BungiePresentationNodeIcon hash={activityType.presentationNodeHash} />,
       },
-      {
-        path: "/info/dungeons",
-        title: "Dungeons",
-        element: <ActivityListPage activityType="dungeon" />,
-        navbarProperties: {
-          icon: <BungiePresentationNodeIcon hash={2196753074} />,
-        },
-        children: useGlobalData
-          .getState()
-          .activities.filter((activity) => activity.type === "dungeon")
-          .map((activity) => ({
-            path: makeRouteFromActivity(activity),
-            title: activity.name,
-            element: <EncounterBasedActivityPage activity={activity} />,
-          })),
-      },
-      {
-        path: "/info/exotic_missions",
-        title: "Exotic Missions",
-        element: <ActivityListPage activityType="exotic_mission" disableLinks />,
-        navbarProperties: {
-          icon: <BungiePresentationNodeIcon hash={2916787939} />,
-        },
-        children: useGlobalData
-          .getState()
-          .activities.filter((activity) => activity.type === "exotic_mission")
-          .map((activity) => ({
-            path: makeRouteFromActivity(activity),
-            title: activity.name,
-            element: <EncounterBasedActivityPage activity={activity} />,
-          })),
-      },
-      {
-        path: "/info/nightfalls",
-        title: "Nightfalls",
-        element: <ActivityListPage activityType="nightfall" disableLinks />,
-        navbarProperties: {
-          icon: <BungiePresentationNodeIcon hash={1507864044} />,
-        },
-        children: useGlobalData
-          .getState()
-          .activities.filter((activity) => activity.type === "nightfall")
-          .map((activity) => ({
-            path: makeRouteFromActivity(activity),
-            title: activity.name,
-            element: <EncounterBasedActivityPage activity={activity} />,
-          })),
-      },
-      {
-        path: "/info/lost_sectors",
-        title: "Lost Sectors",
-        element: <ActivityListPage activityType="lost_sector" disableLinks />,
-        navbarProperties: {
-          icon: <BungiePresentationNodeIcon hash={4111930674} />,
-        },
-        children: useGlobalData
-          .getState()
-          .activities.filter((activity) => activity.type === "lost_sector")
-          .map((activity) => ({
-            path: makeRouteFromActivity(activity),
-            title: activity.name,
-            element: <EncounterBasedActivityPage activity={activity} />,
-          })),
-      },
-    ],
+      children: useGlobalData
+        .getState()
+        .activities.filter((activity) => activity.type === activityType.type)
+        .map((activity) => ({
+          path: makeRouteFromActivity(activity),
+          title: activity.name,
+          element: <EncounterBasedActivityPage activity={activity} />,
+        })),
+    })),
   },
 ];
 
