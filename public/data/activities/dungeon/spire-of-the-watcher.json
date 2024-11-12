@@ -4,9 +4,328 @@
     "id": "dungeon-spire-of-the-watcher",
     "type": "dungeon",
     "name": "Spire of the Watcher",
-    "description": "TODO",
+    "description": "Machinations run wild in this dust-ridden ruin. Bring them to heel.",
     "backgroundImage": "/images/dungeons/spire-of-the-watcher/banner.avif",
-    "triumphs": [],
-    "encounters": []
+    "hasMasterMode": true,
+    "triumphs": [
+      {
+        "bungieRecordHash": 1584772332
+      },
+      {
+        "bungieRecordHash": 1591054373
+      },
+      {
+        "bungieRecordHash": 1151761978
+      },
+      {
+        "bungieRecordHash": 4032136335
+      },
+      {
+        "bungieRecordHash": 958830294
+      },
+      {
+        "bungieRecordHash": 3610349332
+      }
+    ],
+    "encounters": [
+      {
+        "id": "dungeon-spire-of-the-watcher-encounter-1",
+        "name": "Ascend the Spire",
+        "type": "encounter",
+        "description": "Ascend the Spire",
+        "backgroundImage": "/images/dungeons/spire-of-the-watcher/encounter-1.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "normal",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 8293111
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 4070357005
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 487205709
+                      },
+                      { "type": "ref-loot", "key": "dungeon-spire-of-the-watcher-head" },
+                      { "type": "ref-loot", "key": "dungeon-spire-of-the-watcher-arms" },
+                      { "type": "ref-loot", "key": "dungeon-spire-of-the-watcher-legs" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "mode": "master",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 8293111
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 4070357005
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 487205709
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-spire-of-the-watcher-head",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-spire-of-the-watcher-arms",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-spire-of-the-watcher-legs",
+                        "artiface": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dungeon-spire-of-the-watcher-encounter-2",
+        "name": "Akelous, the Siren's Current",
+        "type": "encounter",
+        "description": "Silence the Siren",
+        "backgroundImage": "/images/dungeons/spire-of-the-watcher/encounter-2.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "normal",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 1555959830
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 487205709
+                      },
+                      { "type": "ref-loot", "key": "dungeon-spire-of-the-watcher-arms" },
+                      { "type": "ref-loot", "key": "dungeon-spire-of-the-watcher-chest" },
+                      { "type": "ref-loot", "key": "dungeon-spire-of-the-watcher-class" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "mode": "master",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 1555959830
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 487205709
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-spire-of-the-watcher-arms",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-spire-of-the-watcher-chest",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-spire-of-the-watcher-class",
+                        "artiface": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dungeon-spire-of-the-watcher-encounter-3",
+        "name": "Persys, Primordial Ruin",
+        "type": "encounter",
+        "description": "Prompt Critical",
+        "backgroundImage": "/images/dungeons/spire-of-the-watcher/encounter-3.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "normal",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "dungeon-spire-of-the-watcher-exotic"
+                  },
+                  {
+                    "type": "pool",
+                    "quantity": 2,
+                    "showInLootSummary": true,
+                    "pinnacleWhen": "activity_is_featured",
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 3138208275
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 2306182339
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 8293111
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 4070357005
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1555959830
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 487205709
+                      },
+                      { "type": "ref-loot", "key": "dungeon-spire-of-the-watcher-head" },
+                      { "type": "ref-loot", "key": "dungeon-spire-of-the-watcher-arms" },
+                      { "type": "ref-loot", "key": "dungeon-spire-of-the-watcher-chest" },
+                      { "type": "ref-loot", "key": "dungeon-spire-of-the-watcher-legs" },
+                      { "type": "ref-loot", "key": "dungeon-spire-of-the-watcher-class" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "mode": "master",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "dungeon-spire-of-the-watcher-exotic"
+                  },
+                  {
+                    "type": "pool",
+                    "quantity": 2,
+                    "pinnacleWhen": "activity_is_featured",
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 3138208275
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 2306182339
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 8293111
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 4070357005
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1555959830
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 487205709
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-spire-of-the-watcher-head",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-spire-of-the-watcher-arms",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-spire-of-the-watcher-chest",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-spire-of-the-watcher-legs",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-spire-of-the-watcher-class",
+                        "artiface": true
+                      }
+                    ]
+                  },
+                  {
+                    "type": "pool",
+                    "quantity": "all",
+                    "notes": ["Requires \"Hierarchy of Needs\" to drop."],
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 122307549
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 }

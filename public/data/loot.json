@@ -1008,6 +1008,107 @@
             "itemHash": 3742442925
           }
         ]
+      },
+
+      "dungeon-spire-of-the-watcher-head": {
+        "type": "group",
+        "name": "Helmet (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "helmet",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 2599025960
+          },
+          {
+            "type": "item",
+            "itemHash": 2976233114
+          },
+          {
+            "type": "item",
+            "itemHash": 2014814167
+          }
+        ]
+      },
+      "dungeon-spire-of-the-watcher-arms": {
+        "type": "group",
+        "name": "Gauntlets (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "gauntlets",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 1480429241
+          },
+          {
+            "type": "item",
+            "itemHash": 918537443
+          },
+          {
+            "type": "item",
+            "itemHash": 1088225118
+          }
+        ]
+      },
+      "dungeon-spire-of-the-watcher-chest": {
+        "type": "group",
+        "name": "Chest Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "chest-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 3088058655
+          },
+          {
+            "type": "item",
+            "itemHash": 597199405
+          },
+          {
+            "type": "item",
+            "itemHash": 3185363346
+          }
+        ]
+      },
+      "dungeon-spire-of-the-watcher-legs": {
+        "type": "group",
+        "name": "Leg Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "leg-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 119121067
+          },
+          {
+            "type": "item",
+            "itemHash": 2839517205
+          },
+          {
+            "type": "item",
+            "itemHash": 1932168248
+          }
+        ]
+      },
+      "dungeon-spire-of-the-watcher-class": {
+        "type": "group",
+        "name": "Class Item (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "class-item",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 506181038
+          },
+          {
+            "type": "item",
+            "itemHash": 3006077984
+          },
+          {
+            "type": "item",
+            "itemHash": 3780604323
+          }
+        ]
       }
     },
     "pools": {
@@ -1358,6 +1459,18 @@
           {
             "type": "item",
             "itemHash": 3664831848
+          }
+        ]
+      },
+      "dungeon-spire-of-the-watcher-exotic": {
+        "type": "pool",
+        "quantity": "chance",
+        "showInLootSummary": true,
+        "weeklyLimit": "infinite_when_featured",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 4174431791
           }
         ]
       }
