@@ -11,7 +11,8 @@
     "gen-json-schema:win": "./gen-schemas.bat",
     "gen-json-schema:unix": "./gen-schemas.sh",
     "serve": "serve -s dist",
-    "tsc": "tsc --build"
+    "tsc": "tsc --build",
+    "husky:install": "husky"
   },
   "dependencies": {
     "@fontsource/bebas-neue": "^5.1.0",
