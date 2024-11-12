@@ -30,6 +30,7 @@ export const activityTypes: {
   presentationNodeHash: number;
   backgroundImage: string;
   disableLinks?: boolean;
+  dashboard?: boolean;
 }[] = [
   {
     type: "raid",
@@ -49,6 +50,7 @@ export const activityTypes: {
     presentationNodeHash: 2916787939,
     backgroundImage: "/images/exotic_missions/zero-hour.avif",
     disableLinks: true,
+    dashboard: true,
   },
   {
     type: "nightfall",
@@ -93,7 +95,13 @@ const routes: RouteData[] = [
     children: activityTypes.map((activityType) => ({
       path: `/info/${activityType.type}s`,
       title: activityType.title,
-      element: <ActivityListPage activityType={activityType.type} />,
+      element: (
+        <ActivityListPage
+          activityType={activityType.type}
+          disableLinks={activityType.disableLinks}
+          dashboard={activityType.dashboard}
+        />
+      ),
       navbarProperties: {
         icon: <BungiePresentationNodeIcon hash={activityType.presentationNodeHash} />,
       },

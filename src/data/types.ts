@@ -75,6 +75,10 @@ export type Loot = {
       type: "ref-loot";
       key: string;
     }
+  | {
+      type: "ref-loot-set";
+      key: string;
+    }
 );
 
 export type LootPool =
@@ -99,7 +103,8 @@ export type LootPool =
         | "infinite_when_featured" // if featured: "Activity is featured: will drop every completion" / "chance to drop every completion"
         | "infinite_after_first_clear" // "Only available after first clear per character"
         | "once_per_character" // "Only available once per character"
-        | "once_per_account"; // "Only available once per account"
+        | "once_per_account" // "Only available once per account"
+        | "once_ever"; // Will drop if not yet unlocked in collections
 
       // Availability notes (default: always)
       availableWhen?:
@@ -123,7 +128,13 @@ export type LootPool =
           showInLootSummary?: boolean;
           knockout?: boolean;
         }
-      | { type: "ref-loot-pool"; key: string; notes?: string[]; showInLootSummary?: boolean }
+      | {
+          type: "ref-loot-pool";
+          key: string;
+          notes?: string[];
+          showInLootSummary?: boolean;
+          loot?: Loot[];
+        }
     ));
 
 export interface Triumph {
@@ -146,8 +157,9 @@ export interface ExtraPuzzle {
 }
 
 export interface SharedLootPools {
-  loot?: Record<string, Loot>;
-  pools?: Record<string, LootPool>;
+  loot: Record<string, Partial<Loot>>;
+  pools: Record<string, Partial<LootPool>>;
+  sets: Record<string, Loot[]>;
 }
 
 export type ActivityRotation =

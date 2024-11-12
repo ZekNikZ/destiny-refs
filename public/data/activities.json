@@ -41,6 +41,8 @@
     "lost_sector/the-broken-deep",
     "lost_sector/the-blooming-deep",
     "lost_sector/the-forgotten-deep",
-    "lost_sector/extraction"
+    "lost_sector/extraction",
+
+    "exotic_mission/node-ovrd-avalon"
   ]
 }

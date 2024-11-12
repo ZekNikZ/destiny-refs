@@ -272,6 +272,42 @@
             "type"
           ],
           "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "adept": {
+              "type": "boolean"
+            },
+            "artiface": {
+              "type": "boolean"
+            },
+            "deepsight": {
+              "enum": [
+                "craftable",
+                "guaranteed-deepsight"
+              ],
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "quantity": {
+              "type": "number"
+            },
+            "statFocused": {
+              "type": "boolean"
+            },
+            "type": {
+              "const": "ref-loot-set",
+              "type": "string"
+            }
+          },
+          "required": [
+            "key",
+            "type"
+          ],
+          "type": "object"
         }
       ]
     },
@@ -389,7 +425,8 @@
                 "infinite_when_featured",
                 "infinite_after_first_clear",
                 "once_per_character",
-                "once_per_account"
+                "once_per_account",
+                "once_ever"
               ],
               "type": "string"
             }
@@ -425,6 +462,12 @@
             "key": {
               "type": "string"
             },
+            "loot": {
+              "items": {
+                "$ref": "#/definitions/Loot"
+              },
+              "type": "array"
+            },
             "notes": {
               "items": {
                 "type": "string"
@@ -452,7 +495,8 @@
                 "infinite_when_featured",
                 "infinite_after_first_clear",
                 "once_per_character",
-                "once_per_account"
+                "once_per_account",
+                "once_ever"
               ],
               "type": "string"
             }

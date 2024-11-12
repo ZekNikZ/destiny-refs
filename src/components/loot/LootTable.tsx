@@ -134,6 +134,9 @@ export default function LootTable(props: Props) {
                   {pool.weeklyLimit === "once_per_account" && (
                     <List.Item>Available once per account each week.</List.Item>
                   )}
+                  {pool.weeklyLimit === "once_ever" && (
+                    <List.Item>Will drop if not yet unlocked in collections.</List.Item>
+                  )}
                   {pool.weeklyLimit === "infinite_after_first_clear" && (
                     <List.Item>
                       <Text>

@@ -214,6 +214,21 @@
           }
         ]
       ]
+    },
+    {
+      "id": "exotic-missions",
+      "type": "weekly",
+      "activityType": "exotic_mission",
+      "name": "Exotic Missions",
+      "rotationLimit": "infinite",
+      "startDate": "2024-10-08T16:00:00Z",
+      "rotation": [
+        ["exotic_mission-starcrossed"],
+        ["exotic_mission-presage"],
+        ["exotic_mission-vox-obscura"],
+        ["exotic_mission-operation-seraph-shield"],
+        ["exotic_mission-node-ovrd-avalon"]
+      ]
     }
   ],
   "challengeRotations": [

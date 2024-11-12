@@ -2225,7 +2225,275 @@
             ]
           }
         ]
+      },
+
+      "exotic_mission-rotator-exotic": {
+        "type": "pool",
+        "quantity": "all",
+        "showInLootSummary": true,
+        "weeklyLimit": "once_ever"
+      },
+      "exotic_mission-rotator-intrinsics": {
+        "type": "pool",
+        "quantity": "all",
+        "knockout": true,
+        "notes": ["Exotic intrinsic upgrades."]
+      },
+      "exotic_mission-rotator-catalysts": {
+        "type": "pool",
+        "quantity": "all",
+        "knockout": true,
+        "notes": ["Exotic catalyst upgrades."]
+      },
+      "exotic_mission-rotator-loot": {
+        "type": "pool",
+        "quantity": 1,
+        "showInLootSummary": true
+      },
+      "exotic_mission-rotator-deepsight-weapons": {
+        "type": "pool",
+        "quantity": 1,
+        "notes": [
+          "Available once per character each week. Normal and Expert modes have separate weekly reward lockouts.",
+          "Will drop a Deepsight weapon that has not yet had its pattern unlocked. If all patterns are unlocked, a random world drop will be dropped instead."
+        ]
+      },
+      "exotic_mission-rotator-armor": {
+        "type": "pool",
+        "quantity": 1,
+        "showInLootSummary": true,
+        "notes": [
+          "Available once per character each week. Normal and Expert modes have separate weekly reward lockouts.",
+          "Will drop an armor piece that has not yet been unlocked in collections for the current class. If all armor pieces are unlocked, a random world drop will be dropped instead."
+        ]
+      },
+      "exotic_mission-rotator-challenge": {
+        "type": "pool",
+        "quantity": 1,
+        "notes": [
+          "Will drop a Deepsight weapon that has not yet had its pattern unlocked. If all patterns are unlocked, will drop an armor piece that has not yet been unlocked in collections for the current class. If all armor pieces are unlocked, a random world drop will be dropped instead."
+        ]
+      },
+
+      "exotic_mission-node-ovrd-avalon-exotic": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-exotic",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 3118061005,
+            "deepsight": "guaranteed-deepsight"
+          }
+        ]
+      },
+      "exotic_mission-node-ovrd-avalon-intrinsics": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-intrinsics",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 2751656639
+          },
+          {
+            "type": "item",
+            "itemHash": 2898674463
+          },
+          {
+            "type": "item",
+            "itemHash": 2898674462
+          },
+          {
+            "type": "item",
+            "itemHash": 2898674457
+          }
+        ]
+      },
+      "exotic_mission-node-ovrd-avalon-catalysts": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-catalysts",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 3146691101
+          },
+          {
+            "type": "item",
+            "itemHash": 3146691100
+          },
+          {
+            "type": "item",
+            "itemHash": 3146691103
+          }
+        ]
+      },
+      "exotic_mission-node-ovrd-avalon-loot": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-loot",
+        "loot": [
+          {
+            "type": "ref-loot-set",
+            "key": "exotic_mission-node-ovrd-avalon-weapons"
+          }
+        ]
+      },
+      "exotic_mission-node-ovrd-avalon-deepsight-weapons": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-deepsight-weapons",
+        "loot": [
+          {
+            "type": "ref-loot-set",
+            "key": "exotic_mission-node-ovrd-avalon-deepsight-weapons",
+            "deepsight": "guaranteed-deepsight"
+          }
+        ]
+      },
+      "exotic_mission-node-ovrd-avalon-armor": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-armor",
+        "loot": [
+          {
+            "type": "ref-loot-set",
+            "key": "exotic_mission-node-ovrd-avalon-armor"
+          }
+        ]
       }
+    },
+    "sets": {
+      "exotic_mission-node-ovrd-avalon-weapons": [
+        {
+          "type": "ref-loot-set",
+          "key": "exotic_mission-node-ovrd-avalon-deepsight-weapons",
+          "deepsight": "craftable"
+        }
+      ],
+      "exotic_mission-node-ovrd-avalon-deepsight-weapons": [
+        {
+          "type": "item",
+          "itemHash": 392008588
+        },
+        {
+          "type": "item",
+          "itemHash": 45643573
+        },
+        {
+          "type": "item",
+          "itemHash": 268260372
+        },
+        {
+          "type": "item",
+          "itemHash": 2508948099
+        },
+        {
+          "type": "item",
+          "itemHash": 268260373
+        },
+        {
+          "type": "item",
+          "itemHash": 1720503118
+        }
+      ],
+      "exotic_mission-node-ovrd-avalon-armor": [
+        {
+          "type": "group",
+          "name": "Helmet (Class-Specific)",
+          "groupType": "Armor",
+          "displayStaticIcon": "helmet",
+          "children": [
+            {
+              "type": "item",
+              "itemHash": 1089162050
+            },
+            {
+              "type": "item",
+              "itemHash": 2598029856
+            },
+            {
+              "type": "item",
+              "itemHash": 3056490591
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Gauntlets (Class-Specific)",
+          "groupType": "Armor",
+          "displayStaticIcon": "gauntlets",
+          "children": [
+            {
+              "type": "item",
+              "itemHash": 428806571
+            },
+            {
+              "type": "item",
+              "itemHash": 164103153
+            },
+            {
+              "type": "item",
+              "itemHash": 3031934630
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Chest Armor (Class-Specific)",
+          "groupType": "Armor",
+          "displayStaticIcon": "chest-armor",
+          "children": [
+            {
+              "type": "item",
+              "itemHash": 3312368357
+            },
+            {
+              "type": "item",
+              "itemHash": 3995603239
+            },
+            {
+              "type": "item",
+              "itemHash": 988330314
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Leg Armor (Class-Specific)",
+          "groupType": "Armor",
+          "displayStaticIcon": "leg-armor",
+          "children": [
+            {
+              "type": "item",
+              "itemHash": 1903444925
+            },
+            {
+              "type": "item",
+              "itemHash": 4290220099
+            },
+            {
+              "type": "item",
+              "itemHash": 2549387168
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Class Item (Class-Specific)",
+          "groupType": "Armor",
+          "displayStaticIcon": "class-item",
+          "children": [
+            {
+              "type": "item",
+              "itemHash": 1968283192
+            },
+            {
+              "type": "item",
+              "itemHash": 840487990
+            },
+            {
+              "type": "item",
+              "itemHash": 1159113819
+            }
+          ]
+        }
+      ]
     }
   },
   "doubleLootOverrides": []

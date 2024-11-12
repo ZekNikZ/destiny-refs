@@ -139,6 +139,42 @@
             "type"
           ],
           "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "adept": {
+              "type": "boolean"
+            },
+            "artiface": {
+              "type": "boolean"
+            },
+            "deepsight": {
+              "enum": [
+                "craftable",
+                "guaranteed-deepsight"
+              ],
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "quantity": {
+              "type": "number"
+            },
+            "statFocused": {
+              "type": "boolean"
+            },
+            "type": {
+              "const": "ref-loot-set",
+              "type": "string"
+            }
+          },
+          "required": [
+            "key",
+            "type"
+          ],
+          "type": "object"
         }
       ]
     },
@@ -278,7 +314,8 @@
                 "infinite_when_featured",
                 "infinite_after_first_clear",
                 "once_per_character",
-                "once_per_account"
+                "once_per_account",
+                "once_ever"
               ],
               "type": "string"
             }
@@ -314,6 +351,12 @@
             "key": {
               "type": "string"
             },
+            "loot": {
+              "items": {
+                "$ref": "#/definitions/Loot"
+              },
+              "type": "array"
+            },
             "notes": {
               "items": {
                 "type": "string"
@@ -341,7 +384,8 @@
                 "infinite_when_featured",
                 "infinite_after_first_clear",
                 "once_per_character",
-                "once_per_account"
+                "once_per_account",
+                "once_ever"
               ],
               "type": "string"
             }
@@ -359,17 +403,208 @@
       "properties": {
         "loot": {
           "additionalProperties": {
-            "$ref": "#/definitions/Loot"
+            "additionalProperties": false,
+            "properties": {
+              "adept": {
+                "type": "boolean"
+              },
+              "artiface": {
+                "type": "boolean"
+              },
+              "children": {
+                "items": {
+                  "$ref": "#/definitions/Loot"
+                },
+                "type": "array"
+              },
+              "deepsight": {
+                "enum": [
+                  "craftable",
+                  "guaranteed-deepsight"
+                ],
+                "type": "string"
+              },
+              "displayItemHash": {
+                "type": "number"
+              },
+              "displayStaticIcon": {
+                "enum": [
+                  "helmet",
+                  "gauntlets",
+                  "chest-armor",
+                  "leg-armor",
+                  "class-item",
+                  "weapon",
+                  "legendary-engram",
+                  "exotic-engram",
+                  "bright-engram",
+                  "prime-engram"
+                ],
+                "type": "string"
+              },
+              "groupType": {
+                "type": "string"
+              },
+              "itemHash": {
+                "type": "number"
+              },
+              "key": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "quantity": {
+                "type": "number"
+              },
+              "statFocused": {
+                "type": "boolean"
+              },
+              "type": {
+                "enum": [
+                  "item",
+                  "group",
+                  "ref-loot",
+                  "ref-loot-set"
+                ],
+                "type": "string"
+              }
+            },
+            "type": "object"
           },
           "type": "object"
         },
         "pools": {
           "additionalProperties": {
-            "$ref": "#/definitions/LootPool"
+            "additionalProperties": false,
+            "properties": {
+              "availableWhen": {
+                "enum": [
+                  "activity_is_featured",
+                  "activity_not_featured",
+                  "challenge_completion",
+                  "always"
+                ],
+                "type": "string"
+              },
+              "doubleLootWhen": {
+                "enum": [
+                  "never",
+                  "double_loot_is_active",
+                  "challenge_completion",
+                  "challenge_completion_repeatable"
+                ],
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "knockout": {
+                "type": "boolean"
+              },
+              "loot": {
+                "items": {
+                  "$ref": "#/definitions/Loot"
+                },
+                "type": "array"
+              },
+              "modes": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "bungieActivityHash": {
+                      "type": "number"
+                    },
+                    "children": {
+                      "items": {
+                        "$ref": "#/definitions/LootPool"
+                      },
+                      "type": "array"
+                    },
+                    "mode": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "mode",
+                    "bungieActivityHash",
+                    "children"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "notes": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "pinnacleWhen": {
+                "enum": [
+                  "never",
+                  "activity_is_featured",
+                  "always"
+                ],
+                "type": "string"
+              },
+              "quantity": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "const": "chance",
+                    "type": "string"
+                  },
+                  {
+                    "const": "all",
+                    "type": "string"
+                  }
+                ]
+              },
+              "showInLootSummary": {
+                "type": "boolean"
+              },
+              "type": {
+                "enum": [
+                  "mode_specific",
+                  "pool",
+                  "ref-loot-pool"
+                ],
+                "type": "string"
+              },
+              "weeklyLimit": {
+                "enum": [
+                  "infinite",
+                  "infinite_when_featured",
+                  "infinite_after_first_clear",
+                  "once_per_character",
+                  "once_per_account",
+                  "once_ever"
+                ],
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "type": "object"
+        },
+        "sets": {
+          "additionalProperties": {
+            "items": {
+              "$ref": "#/definitions/Loot"
+            },
+            "type": "array"
           },
           "type": "object"
         }
       },
+      "required": [
+        "loot",
+        "pools",
+        "sets"
+      ],
       "type": "object"
     }
   }

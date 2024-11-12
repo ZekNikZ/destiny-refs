@@ -13,9 +13,14 @@ import { makeRouteFromActivity } from "../utils/routes";
 interface Props {
   activityType: ActivityType;
   disableLinks?: boolean;
+  dashboard?: boolean;
 }
 
-function ActivityCardWrapper(props: { activity: Activity; disableLink?: boolean }) {
+function ActivityCardWrapper(props: {
+  activity: Activity;
+  disableLink?: boolean;
+  forceState?: boolean;
+}) {
   const availability = useRotation(props.activity);
   const link = makeRouteFromActivity(props.activity);
 
@@ -24,7 +29,7 @@ function ActivityCardWrapper(props: { activity: Activity; disableLink?: boolean 
       key={props.activity.id}
       activity={props.activity}
       availability={availability}
-      forceState="summary"
+      forceState={props.forceState ? "summary" : false}
       style={{ height: "100%" }}
     />
   );
@@ -54,7 +59,7 @@ export default function ActivityListPage(props: Props) {
       <Box
         display="grid"
         style={{
-          gridTemplateColumns: `repeat(auto-fit, ${isLargeScreen ? "minmax(450px, 1fr)" : "1fr"})`,
+          gridTemplateColumns: `repeat(auto-fit, ${isLargeScreen ? `minmax(${props.dashboard ? "600px" : "450px"}, 1fr)` : "1fr"})`,
           gap: "var(--mantine-spacing-md)",
         }}
       >
@@ -63,6 +68,7 @@ export default function ActivityListPage(props: Props) {
             key={activity.id}
             activity={activity}
             disableLink={props.disableLinks}
+            forceState={!props.dashboard}
           />
         ))}
       </Box>
