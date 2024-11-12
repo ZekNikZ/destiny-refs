@@ -3,10 +3,68 @@
   "activity": {
     "id": "dungeon-shattered-throne",
     "type": "dungeon",
-    "name": "Shattered Throne",
-    "description": "TODO",
+    "name": "The Shattered Throne",
+    "description": "Strike back at the curse that plagues the Dreaming City.",
     "backgroundImage": "/images/dungeons/shattered-throne/banner.avif",
-    "triumphs": [],
-    "encounters": []
+    "loot": [
+      {
+        "type": "pool",
+        "notes": ["Obtained by completing the \"Hunters' Remembrance\" quest."],
+        "quantity": "all",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 814876684
+          }
+        ]
+      }
+    ],
+    "triumphs": [
+      {
+        "bungieRecordHash": 3899996566
+      }
+    ],
+    "encounters": [
+      {
+        "id": "dungeon-shattered-throne-encounter-1",
+        "name": "Erebus Labyrinth",
+        "type": "encounter",
+        "description": "Search for Safe Passage",
+        "backgroundImage": "/images/dungeons/shattered-throne/encounter-1.avif",
+        "loot": [
+          {
+            "type": "ref-loot-pool",
+            "key": "dungeon-shattered-throne-loot"
+          }
+        ]
+      },
+      {
+        "id": "dungeon-shattered-throne-encounter-2",
+        "name": "Vorgeth, the Boundless Hunger",
+        "type": "encounter",
+        "description": "Overcome the Keeper of Petitions",
+        "backgroundImage": "/images/dungeons/shattered-throne/encounter-2.avif",
+        "loot": [
+          {
+            "type": "ref-loot-pool",
+            "key": "dungeon-shattered-throne-loot"
+          }
+        ]
+      },
+      {
+        "id": "dungeon-shattered-throne-encounter-3",
+        "name": "Dûl Incaru, the Eternal Return",
+        "type": "encounter",
+        "description": "Face Dûl Incaru",
+        "backgroundImage": "/images/dungeons/shattered-throne/encounter-3.avif",
+        "loot": [
+          {
+            "type": "ref-loot-pool",
+            "key": "dungeon-shattered-throne-loot",
+            "pinnacleWhen": "activity_is_featured"
+          }
+        ]
+      }
+    ]
   }
 }

@@ -2088,6 +2088,143 @@
             ]
           }
         ]
+      },
+
+      "dungeon-shattered-throne-loot": {
+        "type": "pool",
+        "quantity": 1,
+        "weeklyLimit": "infinite_when_featured",
+        "showInLootSummary": true,
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 355922321
+          },
+          {
+            "type": "item",
+            "itemHash": 1874424704
+          },
+          {
+            "type": "item",
+            "itemHash": 250721843
+          },
+          {
+            "type": "item",
+            "itemHash": 871900124
+          },
+          {
+            "type": "item",
+            "itemHash": 2140635451
+          },
+          {
+            "type": "item",
+            "itemHash": 3723679465
+          },
+          {
+            "type": "item",
+            "itemHash": 2465372924
+          },
+          {
+            "type": "group",
+            "name": "Helmet (Class-Specific)",
+            "groupType": "Armor",
+            "displayStaticIcon": "helmet",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 2813078109
+              },
+              {
+                "type": "item",
+                "itemHash": 1496857121
+              },
+              {
+                "type": "item",
+                "itemHash": 1721938300
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "name": "Gauntlets (Class-Specific)",
+            "groupType": "Armor",
+            "displayStaticIcon": "gauntlets",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 1699964364
+              },
+              {
+                "type": "item",
+                "itemHash": 2293199928
+              },
+              {
+                "type": "item",
+                "itemHash": 3118392309
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "name": "Chest Armor (Class-Specific)",
+            "groupType": "Armor",
+            "displayStaticIcon": "chest-armor",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 175015316
+              },
+              {
+                "type": "item",
+                "itemHash": 3434445392
+              },
+              {
+                "type": "item",
+                "itemHash": 4235863403
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "name": "Leg Armor (Class-Specific)",
+            "groupType": "Armor",
+            "displayStaticIcon": "leg-armor",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 2345799798
+              },
+              {
+                "type": "item",
+                "itemHash": 328467570
+              },
+              {
+                "type": "item",
+                "itemHash": 399547095
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "name": "Class Item (Class-Specific)",
+            "groupType": "Armor",
+            "displayStaticIcon": "class-item",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 1343302889
+              },
+              {
+                "type": "item",
+                "itemHash": 2786161293
+              },
+              {
+                "type": "item",
+                "itemHash": 2975563522
+              }
+            ]
+          }
+        ]
       }
     }
   },
