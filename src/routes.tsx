@@ -1,4 +1,4 @@
-import { ArrowClockwise, Calendar, Icon, TreasureChest } from "@phosphor-icons/react";
+import { ArrowClockwise, Calendar, Icon, Info, TreasureChest } from "@phosphor-icons/react";
 import TodayPage from "./pages/TodayPage";
 import { useGlobalData } from "./data/useGlobalData";
 import EncounterBasedActivityPage from "./pages/EncounterBasedActivityPage";
@@ -8,6 +8,7 @@ import RotationsPage from "./pages/RotationsPage";
 import BungiePresentationNodeIcon from "./components/BungiePresentationNodeIcon";
 import LootAndDetailsPage from "./pages/LootAndDetailsPage";
 import { ActivityType } from "./data/types";
+import ContactPage from "./pages/ContactPage";
 
 export interface RouteData {
   path: string;
@@ -116,6 +117,14 @@ const routes: RouteData[] = [
             }))
         : undefined,
     })),
+  },
+  {
+    path: "/contact",
+    title: "Contact",
+    element: <ContactPage />,
+    navbarProperties: {
+      icon: makePhosphorIcon(Info),
+    },
   },
 ];
 
