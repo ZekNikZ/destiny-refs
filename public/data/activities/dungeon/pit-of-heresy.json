@@ -4,9 +4,69 @@
     "id": "dungeon-pit-of-heresy",
     "type": "dungeon",
     "name": "Pit of Heresy",
-    "description": "TODO",
+    "description": "Deep beneath Sorrow's Harbor, the Hive keep their darkest secrets.",
     "backgroundImage": "/images/dungeons/pit-of-heresy/banner.avif",
-    "triumphs": [],
-    "encounters": []
+    "loot": [
+      {
+        "type": "pool",
+        "notes": ["Obtained by completing the \"The Journey\" quest."],
+        "quantity": "all",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 1395261499
+          }
+        ]
+      }
+    ],
+    "triumphs": [
+      {
+        "bungieRecordHash": 243544347
+      },
+      {
+        "bungieRecordHash": 3950599483
+      }
+    ],
+    "encounters": [
+      {
+        "id": "dungeon-pit-of-heresy-encounter-1",
+        "name": "Necropolis",
+        "type": "encounter",
+        "description": "Necropolis",
+        "backgroundImage": "/images/dungeons/pit-of-heresy/encounter-1.avif",
+        "loot": [
+          {
+            "type": "ref-loot-pool",
+            "key": "dungeon-pit-of-heresy-loot"
+          }
+        ]
+      },
+      {
+        "id": "dungeon-pit-of-heresy-encounter-2",
+        "name": "Chamber of Suffering",
+        "type": "encounter",
+        "description": "Chamber of Suffering",
+        "backgroundImage": "/images/dungeons/pit-of-heresy/encounter-2.avif",
+        "loot": [
+          {
+            "type": "ref-loot-pool",
+            "key": "dungeon-pit-of-heresy-loot"
+          }
+        ]
+      },
+      {
+        "id": "dungeon-pit-of-heresy-encounter-3",
+        "name": "Zulmak, Instrument of Torment",
+        "type": "encounter",
+        "description": "Defeat Zulmak, Instrument of Torment",
+        "backgroundImage": "/images/dungeons/pit-of-heresy/encounter-3.avif",
+        "loot": [
+          {
+            "type": "ref-loot-pool",
+            "key": "dungeon-pit-of-heresy-loot-final"
+          }
+        ]
+      }
+    ]
   }
 }

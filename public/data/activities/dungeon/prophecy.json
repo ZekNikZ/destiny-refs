@@ -92,6 +92,7 @@
             "quantity": 1,
             "showInLootSummary": true,
             "weeklyLimit": "infinite_when_featured",
+            "pinnacleWhen": "activity_is_featured",
             "notes": [
               "The **Moonfang-X7** armor set is only available from this pool after unlocking the corresponding pieces from the Kell Echo encounter."
             ],
