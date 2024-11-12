@@ -14,13 +14,18 @@ interface Props {
 }
 
 function ActivityCardWrapper(props: { activity: Activity; disableLink?: boolean }) {
-  const availability = useRotation(props.activity);
+  const [availability, loot] = useRotation(props.activity);
   const link = makeRouteFromActivity(props.activity);
 
   const card = (
     <ActivityCard
       key={props.activity.id}
-      activity={props.activity}
+      activity={{
+        ...props.activity,
+        loot: loot
+          ? [{ type: "pool", quantity: 1, showInLootSummary: true, loot }]
+          : props.activity.loot,
+      }}
       availability={availability}
       forceState="summary"
       style={{ height: "100%" }}

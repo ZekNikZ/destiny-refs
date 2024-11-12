@@ -10,7 +10,7 @@ interface Props {
 }
 
 export default function EncounterBasedActivityPage(props: Props) {
-  const availability = useRotation(props.activity);
+  const [availability] = useRotation(props.activity);
 
   const isLargeScreen = useMediaQuery("(min-width: 1000px)");
 

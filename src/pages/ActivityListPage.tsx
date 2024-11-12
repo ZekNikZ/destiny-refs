@@ -22,7 +22,7 @@ function ActivityCardWrapper(props: {
   forceState?: boolean;
   dashboard?: boolean;
 }) {
-  const availability = useRotation(props.activity);
+  const [availability] = useRotation(props.activity);
   const link = makeRouteFromActivity(props.activity);
 
   const card = (

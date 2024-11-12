@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { Activity, ActivityAvailability } from "./types";
+import { Activity, ActivityAvailability, Loot } from "./types";
 import { useGlobalData } from "./useGlobalData";
 import { useMemo } from "react";
 
@@ -13,9 +13,10 @@ export default function useRotation(activity: Activity) {
     state.loot.doubleLootOverrides.includes(activity.id)
   );
 
-  const availability = useMemo(() => {
+  const result = useMemo(() => {
     // Get featured state
     let featured: ActivityAvailability["featured"] = false;
+    let loot: Loot[] | undefined;
     for (const rotation of featuredRotations) {
       if (rotation.type === "newest" && rotation.activityId === activity.id) {
         featured = "newest";
@@ -37,6 +38,11 @@ export default function useRotation(activity: Activity) {
 
         if (rotation.rotation[index]?.includes(activity.id)) {
           featured = "active";
+
+          // Get loot rotation
+          if (rotation.lootRotation) {
+            loot = rotation.lootRotation[index];
+          }
         }
 
         break;
@@ -54,14 +60,16 @@ export default function useRotation(activity: Activity) {
       activeChallenges.push(rotation.rotation[index]);
     }
 
-    return {
+    const availabilityResult = {
       featured,
       masterAvailable: !!(activity.hasMasterMode && featured),
       allChallengesActive: activity.type === "raid" && featured === "active",
       activeChallenges,
       doubleLootActive,
     } as ActivityAvailability;
+
+    return [availabilityResult, loot] as const;
   }, [activity.id, featuredRotations, challengeRotations, doubleLootActive, date]);
 
-  return availability;
+  return result;
 }
