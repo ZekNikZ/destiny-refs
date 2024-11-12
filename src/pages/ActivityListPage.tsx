@@ -20,6 +20,7 @@ function ActivityCardWrapper(props: {
   activity: Activity;
   disableLink?: boolean;
   forceState?: boolean;
+  dashboard?: boolean;
 }) {
   const availability = useRotation(props.activity);
   const link = makeRouteFromActivity(props.activity);
@@ -30,12 +31,12 @@ function ActivityCardWrapper(props: {
       activity={props.activity}
       availability={availability}
       forceState={props.forceState ? "summary" : false}
-      style={{ height: "100%" }}
+      style={props.forceState ? { height: "100%" } : undefined}
     />
   );
 
   return props.disableLink ? (
-    card
+    <div>{card}</div>
   ) : (
     <Link to={link} className={classes.activityLink}>
       {card}

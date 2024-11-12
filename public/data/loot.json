@@ -2356,6 +2356,81 @@
             "key": "exotic_mission-node-ovrd-avalon-armor"
           }
         ]
+      },
+
+      "exotic_mission-presage-exotic": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-exotic",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 2188764214,
+            "deepsight": "guaranteed-deepsight"
+          }
+        ]
+      },
+      "exotic_mission-presage-intrinsics": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-intrinsics",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 1319823571
+          },
+          {
+            "type": "item",
+            "itemHash": 1064669307
+          },
+          {
+            "type": "item",
+            "itemHash": 1064669306
+          },
+          {
+            "type": "item",
+            "itemHash": 1064669309
+          }
+        ]
+      },
+      "exotic_mission-presage-catalysts": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-catalysts",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 1301843770
+          }
+        ]
+      },
+      "exotic_mission-presage-loot": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-loot",
+        "loot": [
+          {
+            "type": "ref-loot-set",
+            "key": "exotic_mission-presage-weapons"
+          }
+        ]
+      },
+      "exotic_mission-presage-deepsight-weapons": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-deepsight-weapons",
+        "loot": [
+          {
+            "type": "ref-loot-set",
+            "key": "exotic_mission-presage-deepsight-weapons",
+            "deepsight": "guaranteed-deepsight"
+          }
+        ]
+      },
+      "exotic_mission-presage-armor": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-armor",
+        "loot": [
+          {
+            "type": "ref-loot-set",
+            "key": "exotic_mission-presage-armor"
+          }
+        ]
       }
     },
     "sets": {
@@ -2490,6 +2565,158 @@
             {
               "type": "item",
               "itemHash": 1159113819
+            }
+          ]
+        }
+      ],
+
+      "exotic_mission-presage-weapons": [
+        {
+          "type": "ref-loot-set",
+          "key": "exotic_mission-presage-deepsight-weapons",
+          "deepsight": "craftable"
+        }
+      ],
+      "exotic_mission-presage-deepsight-weapons": [
+        {
+          "type": "item",
+          "itemHash": 3055790362
+        },
+        {
+          "type": "item",
+          "itemHash": 3107853529
+        },
+        {
+          "type": "item",
+          "itemHash": 1959650777
+        },
+        {
+          "type": "item",
+          "itemHash": 2490988246
+        },
+        {
+          "type": "item",
+          "itemHash": 502356570
+        },
+        {
+          "type": "item",
+          "itemHash": 2778013407
+        },
+        {
+          "type": "item",
+          "itemHash": 2323544076
+        },
+        {
+          "type": "item",
+          "itemHash": 254636484
+        },
+        {
+          "type": "item",
+          "itemHash": 1366394399
+        },
+        {
+          "type": "item",
+          "itemHash": 1478986057
+        }
+      ],
+      "exotic_mission-presage-armor": [
+        {
+          "type": "group",
+          "name": "Helmet (Class-Specific)",
+          "groupType": "Armor",
+          "displayStaticIcon": "helmet",
+          "children": [
+            {
+              "type": "item",
+              "itemHash": 527342912
+            },
+            {
+              "type": "item",
+              "itemHash": 1285042454
+            },
+            {
+              "type": "item",
+              "itemHash": 217647949
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Gauntlets (Class-Specific)",
+          "groupType": "Armor",
+          "displayStaticIcon": "gauntlets",
+          "children": [
+            {
+              "type": "item",
+              "itemHash": 2388383505
+            },
+            {
+              "type": "item",
+              "itemHash": 2489136103
+            },
+            {
+              "type": "item",
+              "itemHash": 870313788
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Chest Armor (Class-Specific)",
+          "groupType": "Armor",
+          "displayStaticIcon": "chest-armor",
+          "children": [
+            {
+              "type": "item",
+              "itemHash": 2288543943
+            },
+            {
+              "type": "item",
+              "itemHash": 29154321
+            },
+            {
+              "type": "item",
+              "itemHash": 1972851364
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Leg Armor (Class-Specific)",
+          "groupType": "Armor",
+          "displayStaticIcon": "leg-armor",
+          "children": [
+            {
+              "type": "item",
+              "itemHash": 1795075811
+            },
+            {
+              "type": "item",
+              "itemHash": 1241941801
+            },
+            {
+              "type": "item",
+              "itemHash": 256122438
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Class Item (Class-Specific)",
+          "groupType": "Armor",
+          "displayStaticIcon": "class-item",
+          "children": [
+            {
+              "type": "item",
+              "itemHash": 3004041686
+            },
+            {
+              "type": "item",
+              "itemHash": 2224584236
+            },
+            {
+              "type": "item",
+              "itemHash": 2716681465
             }
           ]
         }
