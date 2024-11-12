@@ -3,12 +3,16 @@ import { ActivityRotation } from "../../data/types";
 import RotationEntry from "./RotationEntry";
 import dayjs from "dayjs";
 import { rotateArray } from "../../utils/arrays";
+import { activityTypes } from "../../routes";
 
 interface Props {
   rotation: ActivityRotation;
 }
 
 export default function ActivityRotationDisplay(props: Props) {
+  const noLinks = !!activityTypes.find((type) => type.type === props.rotation.activityType)
+    ?.disableLinks;
+
   switch (props.rotation.type) {
     case "weekly":
     case "daily":
@@ -43,6 +47,7 @@ export default function ActivityRotationDisplay(props: Props) {
                   date={startDate.add(index + startIndex, "weeks")}
                   activityIds={activities}
                   loot={lootRotation ? lootRotation[index % lootRotation.length] : undefined}
+                  noLink={noLinks}
                 />
               );
             })}

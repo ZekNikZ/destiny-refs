@@ -27,7 +27,7 @@ export default function LootListing(props: Props) {
   const itemType = type === "item" ? item?.itemTypeDisplayName : props.loot.groupType;
 
   return (
-    <Group gap="xs" w={!props.noIcon && !props.fullWidth ? 300 : undefined} wrap="nowrap">
+    <Group gap="xs" w={!props.fullWidth ? (props.noIcon ? 200 : 300) : undefined} wrap="nowrap">
       {!props.noIcon && (
         <LootIcon
           loot={props.loot}

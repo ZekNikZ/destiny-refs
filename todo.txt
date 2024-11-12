@@ -22,6 +22,9 @@
   - warlord
   - vesper
 - Begin "Today" page
+- on mobile the noIcon hovers are infinite width
+- node ovrd avalon title not wrapping, causing hortizontal scroll on mobile
+- Rotation entries are still clickable on mobile - should not be. redirect to dashboard page instead
 
 - Add rest of raids
   - ron
@@ -30,6 +33,3 @@
   - crota
 - Implement exotic missions
 - Raid and dungeon secret chests & puzzles
-- Rotation entries are still clickable on mobile - should not be. redirect to dashboard page instead
-- on mobile the noIcon hovers are infinite width
-- node ovrd avalon title not wrapping, causing hortizontal scroll on mobile

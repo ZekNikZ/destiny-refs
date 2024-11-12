@@ -1,5 +1,7 @@
 .darkOverlay {
   position: relative;
+  flex-grow: 1;
+  flex-basis: 150px;
 
   & * {
     position: relative;
@@ -20,7 +22,7 @@
     background: rgba(0, 0, 0, 0.5);
   }
 
-  &:hover {
+  .link &:hover {
     cursor: pointer;
   }
 }

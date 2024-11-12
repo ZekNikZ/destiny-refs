@@ -14,6 +14,7 @@ interface Props {
   activityIds: string[];
   big?: boolean;
   loot?: Loot[];
+  noLink?: boolean;
 }
 
 export default function RotationEntry(props: Props) {
@@ -39,8 +40,8 @@ export default function RotationEntry(props: Props) {
       <Group gap={0} style={{ flexGrow: 1, flexBasis: "150px" }}>
         {activities
           .filter((a) => !!a)
-          .map((activity) => (
-            <Link to={makeRouteFromActivity(activity)} key={activity.id} className={classes.link}>
+          .map((activity) => {
+            const inside = (
               <Stack
                 key={activity.id}
                 miw={240}
@@ -59,8 +60,15 @@ export default function RotationEntry(props: Props) {
                   {activity.name}
                 </Title>
               </Stack>
-            </Link>
-          ))}
+            );
+            return props.noLink ? (
+              inside
+            ) : (
+              <Link to={makeRouteFromActivity(activity)} key={activity.id} className={classes.link}>
+                {inside}
+              </Link>
+            );
+          })}
       </Group>
 
       {props.loot && (
