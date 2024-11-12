@@ -40,7 +40,7 @@ export default function Layout() {
               aria-label="Refresh data"
               size="lg"
               style={{ justifySelf: "end" }}
-              visibleFrom="sm"
+              //   visibleFrom="sm"
               component="a"
               href="https://github.com/ZekNikZ/destiny-refs"
               target="_blank"
