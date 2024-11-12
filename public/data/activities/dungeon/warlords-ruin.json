@@ -46,9 +46,9 @@
     "encounters": [
       {
         "id": "dungeon-warlords-ruin-encounter-1",
-        "name": "Vesper Station",
+        "name": "Rathil, First Broken Knight of Fikrul",
         "type": "encounter",
-        "description": "Activation",
+        "description": "Mysterious Challenger",
         "backgroundImage": "/images/dungeons/warlords-ruin/encounter-1.avif",
         "loot": [
           {
@@ -121,9 +121,9 @@
       },
       {
         "id": "dungeon-warlords-ruin-encounter-2",
-        "name": "Raneiks Unified",
+        "name": "Locus of Wailing Grief",
         "type": "encounter",
-        "description": "Dismemberment",
+        "description": "Wailing Tempest",
         "backgroundImage": "/images/dungeons/warlords-ruin/encounter-2.avif",
         "loot": [
           {
@@ -196,9 +196,9 @@
       },
       {
         "id": "dungeon-warlords-ruin-encounter-3",
-        "name": "The Corrupted Puppeteer",
+        "name": "Hefnd's Vengeance, Blighted Chimaera",
         "type": "encounter",
-        "description": "Shutdown",
+        "description": "Quell the Corruption",
         "backgroundImage": "/images/dungeons/warlords-ruin/encounter-3.avif",
         "loot": [
           {
