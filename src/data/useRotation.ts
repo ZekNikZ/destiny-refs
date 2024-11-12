@@ -57,7 +57,7 @@ export default function useRotation(activity: Activity) {
     return {
       featured,
       masterAvailable: !!(activity.hasMasterMode && featured),
-      allChallengesActive: featured === "active",
+      allChallengesActive: activity.type === "raid" && featured === "active",
       activeChallenges,
       doubleLootActive,
     } as ActivityAvailability;

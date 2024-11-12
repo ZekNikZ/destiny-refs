@@ -4,9 +4,294 @@
     "id": "dungeon-duality",
     "type": "dungeon",
     "name": "Duality",
-    "description": "TODO",
+    "description": "Dive into the depths of the exiled emporer's mind in search of dark secrets.",
     "backgroundImage": "/images/dungeons/duality/banner.avif",
-    "triumphs": [],
-    "encounters": []
+    "hasMasterMode": true,
+    "loot": [
+      {
+        "type": "pool",
+        "notes": ["Obtained by completing the catalyst puzzle."],
+        "quantity": "all",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 3072857252
+          }
+        ]
+      }
+    ],
+    "triumphs": [
+      {
+        "bungieRecordHash": 1350388308
+      },
+      {
+        "bungieRecordHash": 1506696941
+      },
+      {
+        "bungieRecordHash": 755549938
+      },
+      {
+        "bungieRecordHash": 4126703847
+      },
+      {
+        "bungieRecordHash": 196842574
+      },
+      {
+        "bungieRecordHash": 911294620
+      }
+    ],
+    "encounters": [
+      {
+        "id": "dungeon-duality-encounter-1",
+        "name": "Nightmare of Gahlran, Sorrow Bearer",
+        "type": "encounter",
+        "description": "Defeat the Nightmare of Gahlran",
+        "backgroundImage": "/images/dungeons/duality/encounter-1.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "normal",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 2026087437
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 2263839058,
+                        "deepsight": "craftable"
+                      },
+                      { "type": "ref-loot", "key": "dungeon-duality-head" },
+                      { "type": "ref-loot", "key": "dungeon-duality-arms" },
+                      { "type": "ref-loot", "key": "dungeon-duality-legs" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "mode": "master",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 2026087437
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 2263839058,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-duality-head",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-duality-arms",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-duality-legs",
+                        "artiface": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dungeon-duality-encounter-2",
+        "name": "The Vault",
+        "type": "encounter",
+        "description": "Unlock the Vault",
+        "backgroundImage": "/images/dungeons/duality/encounter-2.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "normal",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 3000847393
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3652506829
+                      },
+                      { "type": "ref-loot", "key": "dungeon-duality-arms" },
+                      { "type": "ref-loot", "key": "dungeon-duality-chest" },
+                      { "type": "ref-loot", "key": "dungeon-duality-class" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "mode": "master",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 3000847393
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3652506829
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-duality-arms",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-duality-chest",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-duality-class",
+                        "artiface": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dungeon-duality-encounter-3",
+        "name": "Nightmare of Caiatl, Princess-Imperial",
+        "type": "encounter",
+        "description": "Defeat the Nightmare of Princess Caiatl",
+        "backgroundImage": "/images/dungeons/duality/encounter-3.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "normal",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "dungeon-duality-exotic"
+                  },
+                  {
+                    "type": "pool",
+                    "quantity": 2,
+                    "showInLootSummary": true,
+                    "pinnacleWhen": "activity_is_featured",
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 1780464822
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 2194955522,
+                        "deepsight": "craftable"
+                      },
+                      { "type": "ref-loot", "key": "dungeon-duality-head" },
+                      { "type": "ref-loot", "key": "dungeon-duality-arms" },
+                      { "type": "ref-loot", "key": "dungeon-duality-chest" },
+                      { "type": "ref-loot", "key": "dungeon-duality-legs" },
+                      { "type": "ref-loot", "key": "dungeon-duality-class" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "mode": "master",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "dungeon-duality-exotic"
+                  },
+                  {
+                    "type": "pool",
+                    "quantity": 2,
+                    "pinnacleWhen": "activity_is_featured",
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 1780464822
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 2194955522,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-duality-head",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-duality-arms",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-duality-chest",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-duality-legs",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-duality-class",
+                        "artiface": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 }

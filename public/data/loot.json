@@ -907,6 +907,107 @@
             "itemHash": 1961182320
           }
         ]
+      },
+
+      "dungeon-duality-head": {
+        "type": "group",
+        "name": "Helmet (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "helmet",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 2610749098
+          },
+          {
+            "type": "item",
+            "itemHash": 3262689948
+          },
+          {
+            "type": "item",
+            "itemHash": 630469185
+          }
+        ]
+      },
+      "dungeon-duality-arms": {
+        "type": "group",
+        "name": "Gauntlets (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "gauntlets",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 2616310259
+          },
+          {
+            "type": "item",
+            "itemHash": 322599957
+          },
+          {
+            "type": "item",
+            "itemHash": 1468388696
+          }
+        ]
+      },
+      "dungeon-duality-chest": {
+        "type": "group",
+        "name": "Chest Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "chest-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 3570529565
+          },
+          {
+            "type": "item",
+            "itemHash": 4289018379
+          },
+          {
+            "type": "item",
+            "itemHash": 561897072
+          }
+        ]
+      },
+      "dungeon-duality-legs": {
+        "type": "group",
+        "name": "Leg Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "leg-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 2351264197
+          },
+          {
+            "type": "item",
+            "itemHash": 2364756343
+          },
+          {
+            "type": "item",
+            "itemHash": 3798520466
+          }
+        ]
+      },
+      "dungeon-duality-class": {
+        "type": "group",
+        "name": "Class Item (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "class-item",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 737550160
+          },
+          {
+            "type": "item",
+            "itemHash": 3070295330
+          },
+          {
+            "type": "item",
+            "itemHash": 3742442925
+          }
+        ]
       }
     },
     "pools": {
@@ -1245,6 +1346,18 @@
           {
             "type": "item",
             "itemHash": 1441805468
+          }
+        ]
+      },
+      "dungeon-duality-exotic": {
+        "type": "pool",
+        "quantity": "chance",
+        "showInLootSummary": true,
+        "weeklyLimit": "infinite_when_featured",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 3664831848
           }
         ]
       }

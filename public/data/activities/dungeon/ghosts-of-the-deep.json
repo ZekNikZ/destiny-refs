@@ -6,6 +6,7 @@
     "name": "Ghosts of the Deep",
     "description": "Drown in the deep, or rise from it.",
     "backgroundImage": "/images/dungeons/ghosts-of-the-deep/banner.avif",
+    "hasMasterMode": true,
     "loot": [
       {
         "type": "pool",
