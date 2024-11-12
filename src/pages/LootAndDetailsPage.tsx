@@ -5,18 +5,16 @@ import { activityTypes } from "../routes";
 
 function LinkCard(props: { title: string; link: string; backgroundImage: string }) {
   return (
-    <Link to={props.link} style={{ textDecoration: "none", flexGrow: 1 }}>
+    <Link to={props.link} style={{ textDecoration: "none", flexGrow: 1, flexBasis: "500px" }}>
       <Card shadow="sm" padding="sm" radius="sm" withBorder>
         <Card.Section
           className={classes.darkOverlay}
           mih={120}
-          miw={350}
           p="sm"
           style={{
             backgroundImage: `url('${props.backgroundImage}')`,
             backgroundSize: "cover",
             backgroundPosition: "50% 50%",
-            flexGrow: 1,
             justifyContent: "center",
             alignItems: "center",
           }}
