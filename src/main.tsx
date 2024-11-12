@@ -8,11 +8,12 @@ import "@mantine/dates/styles.css";
 import "@fontsource/bebas-neue";
 
 import { createTheme, MantineProvider } from "@mantine/core";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryCache, QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import dayjs from "dayjs";
 import duration from "dayjs/plugin/duration";
 import utc from "dayjs/plugin/utc";
+import { useGlobalData } from "./data/useGlobalData";
 
 const theme = createTheme({});
 
@@ -29,15 +30,34 @@ const queryClient = new QueryClient({
           headers["X-API-Key"] = import.meta.env.VITE_BUNGIE_API_KEY;
         }
 
+        if ((url as string).includes("Manifest")) {
+          useGlobalData.setState({
+            bungieApiLoading: true,
+          });
+        }
+
         const data = await (
           await fetch(`${url}`, {
             headers,
           })
         ).json();
+
+        if ((url as string).includes("Manifest")) {
+          useGlobalData.setState({
+            bungieApiLoading: false,
+          });
+        }
+
         return data;
       },
     },
   },
+  queryCache: new QueryCache({
+    onError: (error) => {
+      console.error(error);
+      useGlobalData.setState({ bungieApiError: true, bungieApiLoading: false });
+    },
+  }),
 });
 
 createRoot(document.getElementById("root")!).render(
