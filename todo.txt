@@ -30,3 +30,6 @@
   - crota
 - Implement exotic missions
 - Raid and dungeon secret chests & puzzles
+- Rotation entries are still clickable on mobile - should not be. redirect to dashboard page instead
+- on mobile the noIcon hovers are infinite width
+- node ovrd avalon title not wrapping, causing hortizontal scroll on mobile
