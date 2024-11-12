@@ -4,9 +4,281 @@
     "id": "dungeon-grasp-of-avarice",
     "type": "dungeon",
     "name": "Grasp of Avarice",
-    "description": "TODO",
+    "description": "A cautionary tale for adventurers willing to trade their humanity for riches.",
     "backgroundImage": "/images/dungeons/grasp-of-avarice/banner.avif",
-    "triumphs": [],
-    "encounters": []
+    "hasMasterMode": true,
+    "loot": [
+      {
+        "type": "pool",
+        "notes": ["Obtained by completing the \"And Out Fly The Wolves\" quest."],
+        "quantity": "all",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 1363886209
+          }
+        ]
+      },
+      {
+        "type": "pool",
+        "notes": [
+          "Obtained by completing the catalyst puzzle.",
+          "Requires \"Gjallarhorn\" to drop."
+        ],
+        "quantity": "all",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 2526801077
+          }
+        ]
+      }
+    ],
+    "triumphs": [
+      {
+        "bungieRecordHash": 4001408878
+      },
+      {
+        "bungieRecordHash": 2693589427
+      },
+      {
+        "bungieRecordHash": 3718971745
+      },
+      {
+        "bungieRecordHash": 2411018844
+      },
+      {
+        "bungieRecordHash": 1770021330
+      }
+    ],
+    "encounters": [
+      {
+        "id": "dungeon-grasp-of-avarice-encounter-1",
+        "name": "Phry'zhia the Insatiable",
+        "type": "encounter",
+        "description": "Defeat Phry'zhia the Insatiable",
+        "backgroundImage": "/images/dungeons/grasp-of-avarice/encounter-1.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "normal",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 2563012876
+                      },
+                      { "type": "ref-loot", "key": "dungeon-grasp-of-avarice-legs" },
+                      { "type": "ref-loot", "key": "dungeon-grasp-of-avarice-class" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "mode": "master",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 2563012876
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-grasp-of-avarice-legs",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-grasp-of-avarice-class",
+                        "artiface": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dungeon-grasp-of-avarice-encounter-2",
+        "name": "Fallen Shield",
+        "type": "encounter",
+        "description": "Destroy the Shield",
+        "backgroundImage": "/images/dungeons/grasp-of-avarice/encounter-2.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "normal",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 2139640995
+                      },
+                      { "type": "ref-loot", "key": "dungeon-grasp-of-avarice-arms" },
+                      { "type": "ref-loot", "key": "dungeon-grasp-of-avarice-chest" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "mode": "master",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 2139640995
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-grasp-of-avarice-arms",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-grasp-of-avarice-chest",
+                        "artiface": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dungeon-grasp-of-avarice-encounter-3",
+        "name": "Captain Avarokk the Covetous",
+        "type": "encounter",
+        "description": "Defeat Avarokk the Covetous",
+        "backgroundImage": "/images/dungeons/grasp-of-avarice/encounter-3.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "normal",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 2,
+                    "showInLootSummary": true,
+                    "pinnacleWhen": "activity_is_featured",
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 2563012876
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 2139640995
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 235827225
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 4164201232
+                      },
+                      { "type": "ref-loot", "key": "dungeon-grasp-of-avarice-head" },
+                      { "type": "ref-loot", "key": "dungeon-grasp-of-avarice-arms" },
+                      { "type": "ref-loot", "key": "dungeon-grasp-of-avarice-chest" },
+                      { "type": "ref-loot", "key": "dungeon-grasp-of-avarice-legs" },
+                      { "type": "ref-loot", "key": "dungeon-grasp-of-avarice-class" }
+                    ]
+                  }
+                ]
+              },
+              {
+                "mode": "master",
+                "bungieActivityHash": 0,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 2,
+                    "pinnacleWhen": "activity_is_featured",
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 2563012876
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 2139640995
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 235827225
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 4164201232
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-grasp-of-avarice-head",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-grasp-of-avarice-arms",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-grasp-of-avarice-chest",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-grasp-of-avarice-legs",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-grasp-of-avarice-class",
+                        "artiface": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 }

@@ -33,13 +33,7 @@ function ActivityCardWrapper(props: { activity: Activity; disableLink?: boolean 
     card
   ) : (
     <Link to={link} className={classes.activityLink}>
-      <ActivityCard
-        key={props.activity.id}
-        activity={props.activity}
-        availability={availability}
-        forceState="summary"
-        style={{ height: "100%" }}
-      />
+      {card}
     </Link>
   );
 }

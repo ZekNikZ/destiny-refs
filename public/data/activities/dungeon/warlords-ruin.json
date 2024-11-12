@@ -11,7 +11,8 @@
       {
         "type": "pool",
         "notes": [
-          "Obtained by completing the \"In the Shadow of the Mountain\" quest and subsequently completing the catalyst puzzle."
+          "Obtained by completing the \"In the Shadow of the Mountain\" quest and subsequently completing the catalyst puzzle.",
+          "Requires \"Buried Bloodline\" to drop."
         ],
         "quantity": "all",
         "loot": [

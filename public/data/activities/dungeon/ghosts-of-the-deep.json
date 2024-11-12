@@ -10,7 +10,10 @@
     "loot": [
       {
         "type": "pool",
-        "notes": ["Obtained by completing the catalyst puzzle."],
+        "notes": [
+          "Obtained by completing the catalyst puzzle.",
+          "Requires \"The Navigator\" to drop."
+        ],
         "quantity": "all",
         "loot": [
           {

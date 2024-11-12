@@ -1109,6 +1109,107 @@
             "itemHash": 3780604323
           }
         ]
+      },
+
+      "dungeon-grasp-of-avarice-head": {
+        "type": "group",
+        "name": "Helmet (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "helmet",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 3473581026
+          },
+          {
+            "type": "item",
+            "itemHash": 2744480004
+          },
+          {
+            "type": "item",
+            "itemHash": 1832715465
+          }
+        ]
+      },
+      "dungeon-grasp-of-avarice-arms": {
+        "type": "group",
+        "name": "Gauntlets (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "gauntlets",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 2771648715
+          },
+          {
+            "type": "item",
+            "itemHash": 2308793821
+          },
+          {
+            "type": "item",
+            "itemHash": 3536211008
+          }
+        ]
+      },
+      "dungeon-grasp-of-avarice-chest": {
+        "type": "group",
+        "name": "Chest Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "chest-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 549825413
+          },
+          {
+            "type": "item",
+            "itemHash": 3587911011
+          },
+          {
+            "type": "item",
+            "itemHash": 2515293448
+          }
+        ]
+      },
+      "dungeon-grasp-of-avarice-legs": {
+        "type": "group",
+        "name": "Leg Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "leg-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 4287863773
+          },
+          {
+            "type": "item",
+            "itemHash": 337875583
+          },
+          {
+            "type": "item",
+            "itemHash": 2231150714
+          }
+        ]
+      },
+      "dungeon-grasp-of-avarice-class": {
+        "type": "group",
+        "name": "Class Item (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "class-item",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 3500810712
+          },
+          {
+            "type": "item",
+            "itemHash": 2486733914
+          },
+          {
+            "type": "item",
+            "itemHash": 4217390949
+          }
+        ]
       }
     },
     "pools": {

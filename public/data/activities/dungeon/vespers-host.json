@@ -22,7 +22,8 @@
       {
         "type": "pool",
         "notes": [
-          "Obtained by completing the \"Rogue Network\" quest and subsequently completing the catalyst puzzle."
+          "Obtained by completing the \"Rogue Network\" quest and subsequently completing the catalyst puzzle.",
+          "Requires \"Ice Breaker\" to drop."
         ],
         "quantity": "all",
         "loot": [
