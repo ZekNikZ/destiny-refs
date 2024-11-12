@@ -41,31 +41,33 @@ function ActivityCardWrapper(props: { activity: Activity; disableLink?: boolean 
   );
 }
 
-export default function RotationEntry(props: Props) {
+export default function TodayPageDisplay(props: Props) {
   const { activities } = useGlobalData();
 
-  const activeActivities: Activity[] = props.rotations.flatMap((rotation) => {
-    switch (rotation.type) {
-      case "weekly":
-      case "daily":
-        let index: number = -1;
-        const startDate = dayjs(rotation.startDate);
-        switch (rotation.type) {
-          case "daily":
-            index = dayjs().diff(startDate, "day") % rotation.rotation.length;
-            break;
-          case "weekly":
-            index = dayjs().diff(startDate, "week") % rotation.rotation.length;
-            break;
-        }
-        return rotation.rotation[index].map(
-          (activityId) => activities.find((x) => x.id === activityId)!
-        );
-      default:
-      case "newest":
-        return activities.find((x) => x.id === rotation.activityId)!;
-    }
-  });
+  const activeActivities: Activity[] = props.rotations
+    .flatMap((rotation) => {
+      switch (rotation.type) {
+        case "weekly":
+        case "daily":
+          let index: number = -1;
+          const startDate = dayjs(rotation.startDate);
+          switch (rotation.type) {
+            case "daily":
+              index = dayjs().diff(startDate, "day") % rotation.rotation.length;
+              break;
+            case "weekly":
+              index = dayjs().diff(startDate, "week") % rotation.rotation.length;
+              break;
+          }
+          return rotation.rotation[index].map((activityId) =>
+            activities.find((x) => x.id === activityId)
+          );
+        default:
+        case "newest":
+          return activities.find((x) => x.id === rotation.activityId);
+      }
+    })
+    .filter((x) => !!x);
 
   return (
     <Stack mt="md">
