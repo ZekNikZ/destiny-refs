@@ -12,13 +12,26 @@ import { makeRouteFromActivity } from "../utils/routes";
 
 interface Props {
   activityType: ActivityType;
+  disableLinks?: boolean;
 }
 
-function ActivityCardWrapper(props: { activity: Activity }) {
+function ActivityCardWrapper(props: { activity: Activity; disableLink?: boolean }) {
   const availability = useRotation(props.activity);
   const link = makeRouteFromActivity(props.activity);
 
-  return (
+  const card = (
+    <ActivityCard
+      key={props.activity.id}
+      activity={props.activity}
+      availability={availability}
+      forceState="summary"
+      style={{ height: "100%" }}
+    />
+  );
+
+  return props.disableLink ? (
+    card
+  ) : (
     <Link to={link} className={classes.activityLink}>
       <ActivityCard
         key={props.activity.id}
@@ -52,7 +65,11 @@ export default function ActivityListPage(props: Props) {
         }}
       >
         {filteredActivities?.map((activity) => (
-          <ActivityCardWrapper key={activity.id} activity={activity} />
+          <ActivityCardWrapper
+            key={activity.id}
+            activity={activity}
+            disableLink={props.disableLinks}
+          />
         ))}
       </Box>
     </Stack>

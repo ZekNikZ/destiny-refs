@@ -115,7 +115,10 @@ export default function ActivityCard(props: Props) {
                 {props.activity.name}
               </Text>
             )}
-            {props.activity.description && <Text lh="xs">{props.activity.description}</Text>}
+            <Text lh="xs">
+              {props.activity.location ? `(${props.activity.location}) ` : ""}
+              {props.activity.description}
+            </Text>
           </Stack>
 
           {/* Button */}

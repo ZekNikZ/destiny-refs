@@ -80,9 +80,25 @@ const routes: RouteData[] = [
           })),
       },
       {
+        path: "/info/exotic_missions",
+        title: "Exotic Missions",
+        element: <ActivityListPage activityType="exotic_mission" disableLinks />,
+        navbarProperties: {
+          icon: <BungiePresentationNodeIcon hash={2916787939} />,
+        },
+        children: useGlobalData
+          .getState()
+          .activities.filter((activity) => activity.type === "exotic_mission")
+          .map((activity) => ({
+            path: makeRouteFromActivity(activity),
+            title: activity.name,
+            element: <EncounterBasedActivityPage activity={activity} />,
+          })),
+      },
+      {
         path: "/info/nightfalls",
         title: "Nightfalls",
-        element: <ActivityListPage activityType="nightfall" />,
+        element: <ActivityListPage activityType="nightfall" disableLinks />,
         navbarProperties: {
           icon: <BungiePresentationNodeIcon hash={1507864044} />,
         },
@@ -98,7 +114,7 @@ const routes: RouteData[] = [
       {
         path: "/info/lost_sectors",
         title: "Lost Sectors",
-        element: <ActivityListPage activityType="lost_sector" />,
+        element: <ActivityListPage activityType="lost_sector" disableLinks />,
         navbarProperties: {
           icon: <BungiePresentationNodeIcon hash={4111930674} />,
         },
