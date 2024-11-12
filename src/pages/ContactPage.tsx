@@ -14,7 +14,7 @@ export default function ContactPage() {
           </Text>
         </Group>
         <Text>
-          This website was created and is maintained by ZekNikZ. You can find him at the following:
+          This website is created and maintained by ZekNikZ. You can find him at the following:
           <List>
             <List.Item>
               <Group align="center" gap="xs">
@@ -44,6 +44,11 @@ export default function ContactPage() {
           <a href="https://github.com/ZekNikZ/destiny-refs/issues/new"> issue on GitHub</a> or
           contact <Code>@zeknikz</Code> on Discord. If describing an inaccuracy, please provide
           screenshots/videos to support your claim where possible.
+        </Text>
+        <Text>
+          If you are a developer and would like to contribute, feel free to{" "}
+          <a href="https://github.com/ZekNikZ/destiny-refs/pulls"> open a pull request</a>. I'll
+          gladly accept the help!
         </Text>
       </Stack>
     </Container>
