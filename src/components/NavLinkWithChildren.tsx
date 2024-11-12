@@ -55,6 +55,7 @@ const NavLinkWithChildren = (props: Props) => {
                 key={subroute.path}
                 route={subroute}
                 level={(props.level ?? 1) + 1}
+                onClick={props.onClick}
               />
             );
           })}

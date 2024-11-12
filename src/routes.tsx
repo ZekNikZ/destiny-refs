@@ -105,14 +105,16 @@ const routes: RouteData[] = [
       navbarProperties: {
         icon: <BungiePresentationNodeIcon hash={activityType.presentationNodeHash} />,
       },
-      children: useGlobalData
-        .getState()
-        .activities.filter((activity) => activity.type === activityType.type)
-        .map((activity) => ({
-          path: makeRouteFromActivity(activity),
-          title: activity.name,
-          element: <EncounterBasedActivityPage activity={activity} />,
-        })),
+      children: !activityType.disableLinks
+        ? useGlobalData
+            .getState()
+            .activities.filter((activity) => activity.type === activityType.type)
+            .map((activity) => ({
+              path: makeRouteFromActivity(activity),
+              title: activity.name,
+              element: <EncounterBasedActivityPage activity={activity} />,
+            }))
+        : undefined,
     })),
   },
 ];
