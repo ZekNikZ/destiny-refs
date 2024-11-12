@@ -1210,6 +1210,207 @@
             "itemHash": 4217390949
           }
         ]
+      },
+
+      "dungeon-prophecy-nine-head": {
+        "type": "group",
+        "name": "CODA Helmet (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "helmet",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 3976073347
+          },
+          {
+            "type": "item",
+            "itemHash": 3075372781
+          },
+          {
+            "type": "item",
+            "itemHash": 2602907742
+          }
+        ]
+      },
+      "dungeon-prophecy-nine-arms": {
+        "type": "group",
+        "name": "CODA Gauntlets (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "gauntlets",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 818644818
+          },
+          {
+            "type": "item",
+            "itemHash": 4194072668
+          },
+          {
+            "type": "item",
+            "itemHash": 1406846351
+          }
+        ]
+      },
+      "dungeon-prophecy-nine-chest": {
+        "type": "group",
+        "name": "CODA Chest Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "chest-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 2570653206
+          },
+          {
+            "type": "item",
+            "itemHash": 508076356
+          },
+          {
+            "type": "item",
+            "itemHash": 1652467433
+          }
+        ]
+      },
+      "dungeon-prophecy-nine-legs": {
+        "type": "group",
+        "name": "CODA Leg Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "leg-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 1219883244
+          },
+          {
+            "type": "item",
+            "itemHash": 3155320806
+          },
+          {
+            "type": "item",
+            "itemHash": 2022923313
+          }
+        ]
+      },
+      "dungeon-prophecy-nine-class": {
+        "type": "group",
+        "name": "CODA Class Item (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "class-item",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 1900280383
+          },
+          {
+            "type": "item",
+            "itemHash": 1717940633
+          },
+          {
+            "type": "item",
+            "itemHash": 2966633380
+          }
+        ]
+      },
+      "dungeon-prophecy-moonfang-head": {
+        "type": "group",
+        "name": "Moonfang-X7 Helmet (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "helmet",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 2234240008
+          },
+          {
+            "type": "item",
+            "itemHash": 2623956730
+          },
+          {
+            "type": "item",
+            "itemHash": 2288398391
+          }
+        ]
+      },
+      "dungeon-prophecy-moonfang-arms": {
+        "type": "group",
+        "name": "Moonfang-X7 Gauntlets (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "gauntlets",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 1581574297
+          },
+          {
+            "type": "item",
+            "itemHash": 100226755
+          },
+          {
+            "type": "item",
+            "itemHash": 1361912510
+          }
+        ]
+      },
+      "dungeon-prophecy-moonfang-chest": {
+        "type": "group",
+        "name": "Moonfang-X7 Chest Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "chest-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 1571337215
+          },
+          {
+            "type": "item",
+            "itemHash": 4121885325
+          },
+          {
+            "type": "item",
+            "itemHash": 1658294130
+          }
+        ]
+      },
+      "dungeon-prophecy-moonfang-legs": {
+        "type": "group",
+        "name": "Moonfang-X7 Leg Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "leg-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 178689419
+          },
+          {
+            "type": "item",
+            "itemHash": 2487240821
+          },
+          {
+            "type": "item",
+            "itemHash": 1781294872
+          }
+        ]
+      },
+      "dungeon-prophecy-moonfang-class": {
+        "type": "group",
+        "name": "Moonfang-X7 Class Item (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "class-item",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 3242850062
+          },
+          {
+            "type": "item",
+            "itemHash": 2701727616
+          },
+          {
+            "type": "item",
+            "itemHash": 2295111683
+          }
+        ]
       }
     },
     "pools": {

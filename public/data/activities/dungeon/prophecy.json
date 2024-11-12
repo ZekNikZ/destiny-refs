@@ -4,9 +4,129 @@
     "id": "dungeon-prophecy",
     "type": "dungeon",
     "name": "Prophecy",
-    "description": "TODO",
+    "description": "Enter the realm of the Nine and ask the question: \"What is the nature of the Darkness?\"",
     "backgroundImage": "/images/dungeons/prophecy/banner.avif",
-    "triumphs": [],
-    "encounters": []
+    "triumphs": [
+      {
+        "bungieRecordHash": 2010041484
+      },
+      {
+        "bungieRecordHash": 3002642730
+      },
+      {
+        "bungieRecordHash": 3191784400
+      }
+    ],
+    "encounters": [
+      {
+        "id": "dungeon-prophecy-encounter-1",
+        "name": "Phalanx Echo",
+        "type": "encounter",
+        "description": "Defeat the Phalanx Echo",
+        "backgroundImage": "/images/dungeons/prophecy/encounter-1.avif",
+        "loot": [
+          {
+            "type": "pool",
+            "quantity": 1,
+            "showInLootSummary": true,
+            "weeklyLimit": "infinite_when_featured",
+            "notes": [
+              "The **Moonfang-X7** armor set is only available from this pool after unlocking the corresponding pieces from the Kell Echo encounter."
+            ],
+            "loot": [
+              {
+                "type": "item",
+                "itemHash": 435821041
+              },
+              {
+                "type": "item",
+                "itemHash": 3483591058
+              },
+              { "type": "ref-loot", "key": "dungeon-prophecy-nine-legs" },
+              { "type": "ref-loot", "key": "dungeon-prophecy-moonfang-legs" },
+              { "type": "ref-loot", "key": "dungeon-prophecy-nine-class" },
+              { "type": "ref-loot", "key": "dungeon-prophecy-moonfang-class" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dungeon-prophecy-encounter-2",
+        "name": "Hexahedron",
+        "type": "encounter",
+        "description": "Escape",
+        "backgroundImage": "/images/dungeons/prophecy/encounter-2.avif",
+        "loot": [
+          {
+            "type": "pool",
+            "quantity": 1,
+            "showInLootSummary": true,
+            "weeklyLimit": "infinite_when_featured",
+            "notes": [
+              "The **Moonfang-X7** armor set is only available from this pool after unlocking the corresponding pieces from the Kell Echo encounter."
+            ],
+            "loot": [
+              {
+                "type": "item",
+                "itemHash": 4097972038
+              },
+              {
+                "type": "item",
+                "itemHash": 1013434963
+              },
+              { "type": "ref-loot", "key": "dungeon-prophecy-nine-arms" },
+              { "type": "ref-loot", "key": "dungeon-prophecy-moonfang-arms" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dungeon-prophecy-encounter-3",
+        "name": "Kell Echo",
+        "type": "encounter",
+        "description": "Defeat the Kell Echo",
+        "backgroundImage": "/images/dungeons/prophecy/encounter-3.avif",
+        "loot": [
+          {
+            "type": "pool",
+            "quantity": 1,
+            "showInLootSummary": true,
+            "weeklyLimit": "infinite_when_featured",
+            "notes": [
+              "The **Moonfang-X7** armor set is only available from this pool after unlocking the corresponding pieces from the Kell Echo encounter."
+            ],
+            "loot": [
+              {
+                "type": "item",
+                "itemHash": 2969415423
+              },
+              {
+                "type": "item",
+                "itemHash": 435821040
+              },
+              { "type": "ref-loot", "key": "dungeon-prophecy-nine-head" },
+              { "type": "ref-loot", "key": "dungeon-prophecy-moonfang-head" },
+              { "type": "ref-loot", "key": "dungeon-prophecy-nine-chest" },
+              { "type": "ref-loot", "key": "dungeon-prophecy-moonfang-chest" },
+              { "type": "ref-loot", "key": "dungeon-prophecy-nine-class" },
+              { "type": "ref-loot", "key": "dungeon-prophecy-moonfang-class" }
+            ]
+          },
+          {
+            "type": "pool",
+            "quantity": 1,
+            "showInLootSummary": true,
+            "weeklyLimit": "infinite_when_featured",
+            "loot": [
+              { "type": "ref-loot", "key": "dungeon-prophecy-moonfang-head" },
+              { "type": "ref-loot", "key": "dungeon-prophecy-moonfang-arms" },
+              { "type": "ref-loot", "key": "dungeon-prophecy-moonfang-chest" },
+              { "type": "ref-loot", "key": "dungeon-prophecy-moonfang-legs" },
+              { "type": "ref-loot", "key": "dungeon-prophecy-moonfang-class" }
+            ]
+          }
+        ]
+      }
+    ]
   }
 }

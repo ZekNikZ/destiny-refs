@@ -27,6 +27,7 @@ export default function LootGroupIcon(props: Props) {
               width: props.size,
               height: props.size,
               position: "relative",
+              flexShrink: 0,
             }}
           >
             <Image src={`/icons/loot/${props.loot.displayStaticIcon ?? "legendary-engram"}.png`} />

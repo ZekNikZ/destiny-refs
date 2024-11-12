@@ -23,7 +23,7 @@ import { Activity, ActivityAvailability } from "../../data/types";
 
 import classes from "./ActivityCard.module.scss";
 import React, { useMemo, useState } from "react";
-import { anyLootIsPinnacle, getLootKey, summarizeLootPool } from "../../utils/loot";
+import { anyLootIsPinnacle, dedupeLoot, getLootKey, summarizeLootPool } from "../../utils/loot";
 import LootIcon from "../loot/LootIcon";
 import LootTable from "../loot/LootTable";
 import Markdown from "react-markdown";
@@ -52,7 +52,7 @@ export default function ActivityCard(props: Props) {
   const isLargeScreen = useMediaQuery("(min-width: 1000px)");
 
   const lootSummary = useMemo(
-    () => props.activity.loot?.flatMap(summarizeLootPool) ?? [],
+    () => dedupeLoot(props.activity.loot?.flatMap(summarizeLootPool) ?? []),
     [props.activity.loot]
   );
 

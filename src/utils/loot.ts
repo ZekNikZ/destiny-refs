@@ -1,5 +1,20 @@
 import { Loot, LootPool } from "../data/types";
 
+export function dedupeLoot(loot: Loot[]): Loot[] {
+  return loot.filter(
+    (item, index) =>
+      loot.findIndex((otherItem) => {
+        if (item.type === "item" && otherItem.type === "item") {
+          return item.itemHash === otherItem.itemHash;
+        } else if (item.type === "group" && otherItem.type === "group") {
+          return item.name === otherItem.name;
+        } else {
+          return false;
+        }
+      }) === index
+  );
+}
+
 export function summarizeLootPool(pool: LootPool): Loot[] {
   let loot: Loot[];
 
@@ -14,18 +29,7 @@ export function summarizeLootPool(pool: LootPool): Loot[] {
       throw new Error("Cannot summarize a reference loot pool");
   }
 
-  return loot.filter(
-    (item, index) =>
-      loot.findIndex((otherItem) => {
-        if (item.type === "item" && otherItem.type === "item") {
-          return item.itemHash === otherItem.itemHash;
-        } else if (item.type === "group" && otherItem.type === "group") {
-          return item.name === otherItem.name;
-        } else {
-          return false;
-        }
-      }) === index
-  );
+  return dedupeLoot(loot);
 }
 
 export function anyLootIsPinnacle(pools: LootPool[], activityIsFeatured?: boolean): boolean {
