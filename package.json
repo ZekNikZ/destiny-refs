@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "gen-json-schema:win": "./gen-schemas.bat",
     "gen-json-schema:unix": "./gen-schemas.sh",
-    "serve": "serve -s dist"
+    "serve": "serve -s dist",
+    "tsc": "tsc --build"
   },
   "dependencies": {
     "@fontsource/bebas-neue": "^5.1.0",
@@ -47,6 +48,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
+    "husky": "^9.1.6",
     "postcss": "^8.4.47",
     "postcss-preset-mantine": "^1.17.0",
     "postcss-simple-vars": "^7.0.1",

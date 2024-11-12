@@ -13,7 +13,7 @@ interface Props {
 export default function LootListing(props: Props) {
   const type = props.loot.type;
 
-  if (type === "ref-loot") {
+  if (type === "ref-loot" || type === "ref-loot-set") {
     throw new Error("Cannot use a reference loot pool");
   }
 
