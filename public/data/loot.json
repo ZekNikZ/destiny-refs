@@ -2518,6 +2518,172 @@
             "key": "exotic_mission-starcrossed-armor"
           }
         ]
+      },
+
+      "exotic_mission-vox-obscura-exotic": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-exotic",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 46125926,
+            "deepsight": "guaranteed-deepsight"
+          }
+        ]
+      },
+      "exotic_mission-vox-obscura-intrinsics": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-intrinsics",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 4133742355
+          },
+          {
+            "type": "item",
+            "itemHash": 4133742354
+          },
+          {
+            "type": "item",
+            "itemHash": 4133742357
+          }
+        ]
+      },
+      "exotic_mission-vox-obscura-catalysts": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-catalysts",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 2726471870
+          },
+          {
+            "type": "item",
+            "itemHash": 3108830275
+          },
+          {
+            "type": "item",
+            "itemHash": 3523296417
+          }
+        ]
+      },
+      "exotic_mission-vox-obscura-loot": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-loot",
+        "loot": [
+          {
+            "type": "ref-loot-set",
+            "key": "exotic_mission-vox-obscura-weapons"
+          }
+        ]
+      },
+      "exotic_mission-vox-obscura-deepsight-weapons": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-deepsight-weapons",
+        "loot": [
+          {
+            "type": "ref-loot-set",
+            "key": "exotic_mission-vox-obscura-deepsight-weapons",
+            "deepsight": "guaranteed-deepsight"
+          }
+        ]
+      },
+      "exotic_mission-vox-obscura-armor": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-armor",
+        "loot": [
+          {
+            "type": "ref-loot-set",
+            "key": "exotic_mission-vox-obscura-armor"
+          }
+        ]
+      },
+
+      "exotic_mission-operation-seraph-shield-exotic": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-exotic",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 1473821207,
+            "deepsight": "guaranteed-deepsight"
+          }
+        ]
+      },
+      "exotic_mission-operation-seraph-shield-intrinsics": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-intrinsics",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 3834106778
+          },
+          {
+            "type": "item",
+            "itemHash": 891750166
+          },
+          {
+            "type": "item",
+            "itemHash": 891750167
+          },
+          {
+            "type": "item",
+            "itemHash": 891750160
+          }
+        ]
+      },
+      "exotic_mission-operation-seraph-shield-catalysts": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-catalysts",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 1266037484
+          },
+          {
+            "type": "item",
+            "itemHash": 1266037485
+          },
+          {
+            "type": "item",
+            "itemHash": 1266037486
+          },
+          {
+            "type": "item",
+            "itemHash": 1266037487
+          }
+        ]
+      },
+      "exotic_mission-operation-seraph-shield-loot": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-loot",
+        "loot": [
+          {
+            "type": "ref-loot-set",
+            "key": "exotic_mission-operation-seraph-shield-weapons"
+          }
+        ]
+      },
+      "exotic_mission-operation-seraph-shield-deepsight-weapons": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-deepsight-weapons",
+        "loot": [
+          {
+            "type": "ref-loot-set",
+            "key": "exotic_mission-operation-seraph-shield-deepsight-weapons",
+            "deepsight": "guaranteed-deepsight"
+          }
+        ]
+      },
+      "exotic_mission-operation-seraph-shield-armor": {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-rotator-armor",
+        "loot": [
+          {
+            "type": "ref-loot-set",
+            "key": "exotic_mission-operation-seraph-shield-armor"
+          }
+        ]
       }
     },
     "sets": {
@@ -2851,6 +3017,294 @@
         }
       ],
       "exotic_mission-starcrossed-armor": [
+        {
+          "type": "group",
+          "name": "Helmet (Class-Specific)",
+          "groupType": "Armor",
+          "displayStaticIcon": "helmet",
+          "children": [
+            {
+              "type": "item",
+              "itemHash": 469031127
+            },
+            {
+              "type": "item",
+              "itemHash": 713622571
+            },
+            {
+              "type": "item",
+              "itemHash": 4196904014
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Gauntlets (Class-Specific)",
+          "groupType": "Armor",
+          "displayStaticIcon": "gauntlets",
+          "children": [
+            {
+              "type": "item",
+              "itemHash": 3837409374
+            },
+            {
+              "type": "item",
+              "itemHash": 3289270298
+            },
+            {
+              "type": "item",
+              "itemHash": 927140159
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Chest Armor (Class-Specific)",
+          "groupType": "Armor",
+          "displayStaticIcon": "chest-armor",
+          "children": [
+            {
+              "type": "item",
+              "itemHash": 3005056146
+            },
+            {
+              "type": "item",
+              "itemHash": 3013248110
+            },
+            {
+              "type": "item",
+              "itemHash": 3400974073
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Leg Armor (Class-Specific)",
+          "groupType": "Armor",
+          "displayStaticIcon": "leg-armor",
+          "children": [
+            {
+              "type": "item",
+              "itemHash": 386385208
+            },
+            {
+              "type": "item",
+              "itemHash": 716705876
+            },
+            {
+              "type": "item",
+              "itemHash": 4143357569
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Class Item (Class-Specific)",
+          "groupType": "Armor",
+          "displayStaticIcon": "class-item",
+          "children": [
+            {
+              "type": "item",
+              "itemHash": 3600297123
+            },
+            {
+              "type": "item",
+              "itemHash": 3755696951
+            },
+            {
+              "type": "item",
+              "itemHash": 844733364
+            }
+          ]
+        }
+      ],
+
+      "exotic_mission-vox-obscura-weapons": [
+        {
+          "type": "ref-loot-set",
+          "key": "exotic_mission-vox-obscura-deepsight-weapons",
+          "deepsight": "craftable"
+        }
+      ],
+      "exotic_mission-vox-obscura-deepsight-weapons": [
+        {
+          "type": "item",
+          "itemHash": 2993554824
+        },
+        {
+          "type": "item",
+          "itemHash": 2045811635
+        },
+        {
+          "type": "item",
+          "itemHash": 2817683783
+        },
+        {
+          "type": "item",
+          "itemHash": 1447836603
+        },
+        {
+          "type": "item",
+          "itemHash": 1501688142
+        },
+        {
+          "type": "item",
+          "itemHash": 3710082365
+        },
+        {
+          "type": "item",
+          "itemHash": 2558925366
+        },
+        {
+          "type": "item",
+          "itemHash": 92459755
+        }
+      ],
+      "exotic_mission-vox-obscura-armor": [
+        {
+          "type": "group",
+          "name": "Helmet (Class-Specific)",
+          "groupType": "Armor",
+          "displayStaticIcon": "helmet",
+          "children": [
+            {
+              "type": "item",
+              "itemHash": 469031127
+            },
+            {
+              "type": "item",
+              "itemHash": 713622571
+            },
+            {
+              "type": "item",
+              "itemHash": 4196904014
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Gauntlets (Class-Specific)",
+          "groupType": "Armor",
+          "displayStaticIcon": "gauntlets",
+          "children": [
+            {
+              "type": "item",
+              "itemHash": 3837409374
+            },
+            {
+              "type": "item",
+              "itemHash": 3289270298
+            },
+            {
+              "type": "item",
+              "itemHash": 927140159
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Chest Armor (Class-Specific)",
+          "groupType": "Armor",
+          "displayStaticIcon": "chest-armor",
+          "children": [
+            {
+              "type": "item",
+              "itemHash": 3005056146
+            },
+            {
+              "type": "item",
+              "itemHash": 3013248110
+            },
+            {
+              "type": "item",
+              "itemHash": 3400974073
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Leg Armor (Class-Specific)",
+          "groupType": "Armor",
+          "displayStaticIcon": "leg-armor",
+          "children": [
+            {
+              "type": "item",
+              "itemHash": 386385208
+            },
+            {
+              "type": "item",
+              "itemHash": 716705876
+            },
+            {
+              "type": "item",
+              "itemHash": 4143357569
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "Class Item (Class-Specific)",
+          "groupType": "Armor",
+          "displayStaticIcon": "class-item",
+          "children": [
+            {
+              "type": "item",
+              "itemHash": 3600297123
+            },
+            {
+              "type": "item",
+              "itemHash": 3755696951
+            },
+            {
+              "type": "item",
+              "itemHash": 844733364
+            }
+          ]
+        }
+      ],
+
+      "exotic_mission-operation-seraph-shield-weapons": [
+        {
+          "type": "ref-loot-set",
+          "key": "exotic_mission-operation-seraph-shield-deepsight-weapons",
+          "deepsight": "craftable"
+        }
+      ],
+      "exotic_mission-operation-seraph-shield-deepsight-weapons": [
+        {
+          "type": "item",
+          "itemHash": 2993554824
+        },
+        {
+          "type": "item",
+          "itemHash": 2045811635
+        },
+        {
+          "type": "item",
+          "itemHash": 2817683783
+        },
+        {
+          "type": "item",
+          "itemHash": 1447836603
+        },
+        {
+          "type": "item",
+          "itemHash": 1501688142
+        },
+        {
+          "type": "item",
+          "itemHash": 3710082365
+        },
+        {
+          "type": "item",
+          "itemHash": 2558925366
+        },
+        {
+          "type": "item",
+          "itemHash": 92459755
+        }
+      ],
+      "exotic_mission-operation-seraph-shield-armor": [
         {
           "type": "group",
           "name": "Helmet (Class-Specific)",

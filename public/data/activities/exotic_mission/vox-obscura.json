@@ -1,0 +1,82 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "exotic_mission-vox-obscura",
+    "type": "exotic_mission",
+    "name": "Vox Obscura",
+    "description": "Despite the Vanguard's recent victories, a dissident Psion faction continues to release Darkness-inspired propaganda. Return to Mars and learn how far the conspiracy goes.",
+    "backgroundImage": "/images/exotic_missions/vox-obscura.avif",
+    "loot": [
+      {
+        "type": "mode_specific",
+        "modes": [
+          {
+            "mode": "Normal",
+            "bungieActivityHash": 0,
+            "children": [
+              { "type": "ref-loot-pool", "key": "exotic_mission-vox-obscura-exotic" },
+              { "type": "ref-loot-pool", "key": "exotic_mission-vox-obscura-loot" },
+              {
+                "type": "ref-loot-pool",
+                "key": "exotic_mission-vox-obscura-deepsight-weapons"
+              },
+              {
+                "type": "ref-loot-pool",
+                "key": "exotic_mission-vox-obscura-armor"
+              },
+              {
+                "type": "ref-loot-pool",
+                "key": "exotic_mission-vox-obscura-intrinsics"
+              }
+            ]
+          },
+          {
+            "mode": "Expert",
+            "bungieActivityHash": 0,
+            "children": [
+              { "type": "ref-loot-pool", "key": "exotic_mission-vox-obscura-exotic" },
+              { "type": "ref-loot-pool", "key": "exotic_mission-vox-obscura-loot" },
+              {
+                "type": "ref-loot-pool",
+                "key": "exotic_mission-vox-obscura-deepsight-weapons"
+              },
+              {
+                "type": "ref-loot-pool",
+                "key": "exotic_mission-vox-obscura-armor"
+              },
+              {
+                "type": "ref-loot-pool",
+                "key": "exotic_mission-vox-obscura-intrinsics"
+              },
+              {
+                "type": "ref-loot-pool",
+                "key": "exotic_mission-vox-obscura-catalysts"
+              }
+            ]
+          },
+          {
+            "mode": "Weekly Challenge Completion: 2 Clears Regardless of",
+            "bungieActivityHash": 0,
+            "children": [
+              {
+                "type": "ref-loot-pool",
+                "key": "exotic_mission-rotator-challenge",
+                "loot": [
+                  {
+                    "type": "ref-loot-set",
+                    "key": "exotic_mission-vox-obscura-deepsight-weapons",
+                    "deepsight": "guaranteed-deepsight"
+                  },
+                  {
+                    "type": "ref-loot-set",
+                    "key": "exotic_mission-vox-obscura-armor"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
