@@ -1,0 +1,87 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "exotic_mission-zero-hour",
+    "type": "exotic_mission",
+    "name": "Zero Hour",
+    "description": "Race against the clock to stop House Salvation agents from stealing a dangerous weapon from the Old Tower.",
+    "backgroundImage": "/images/exotic_missions/zero-hour.avif",
+    "triumphs": [
+      {
+        "bungieRecordHash": 2820906305
+      }
+    ],
+    "loot": [
+      {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-static-exotic",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 3824673936,
+            "deepsight": "guaranteed-deepsight"
+          }
+        ]
+      },
+      {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-static-catalyst",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 3352275956
+          }
+        ]
+      },
+      {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-static-intrinsics",
+        "notes": ["Exotic intrinsic upgrades.", "Unlocked by completing vault puzzles."],
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 4208418110
+          },
+          {
+            "type": "item",
+            "itemHash": 3639389650
+          },
+          {
+            "type": "item",
+            "itemHash": 3639389651
+          },
+          {
+            "type": "item",
+            "itemHash": 3639389652
+          }
+        ]
+      },
+      {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-static-perks",
+        "notes": [
+          "Exotic craftble perk upgrades.",
+          "Earned by completing the \"Outbreak Refined\" quests."
+        ],
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 1168162263
+          },
+          {
+            "type": "item",
+            "itemHash": 2578928835
+          },
+          {
+            "type": "item",
+            "itemHash": 2578928832
+          },
+          {
+            "type": "item",
+            "itemHash": 2578928833
+          }
+        ]
+      }
+    ]
+  }
+}

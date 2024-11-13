@@ -1,0 +1,90 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "exotic_mission-the-whisper",
+    "type": "exotic_mission",
+    "name": "The Whisper",
+    "description": "Investigate a Taken anomaly deep beneath the surface of Io.",
+    "backgroundImage": "/images/exotic_missions/the-whisper.avif",
+    "triumphs": [
+      {
+        "bungieRecordHash": 1256460944
+      }
+    ],
+    "loot": [
+      {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-static-exotic",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 1983149589,
+            "deepsight": "guaranteed-deepsight"
+          }
+        ]
+      },
+      {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-static-catalyst",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 2732814938
+          }
+        ]
+      },
+      {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-static-intrinsics",
+        "notes": [
+          "Exotic intrinsic upgrades.",
+          "Unlocked by destroying Oracles hidden throughout the mission."
+        ],
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 281315705
+          },
+          {
+            "type": "item",
+            "itemHash": 4285971293
+          },
+          {
+            "type": "item",
+            "itemHash": 4285971292
+          },
+          {
+            "type": "item",
+            "itemHash": 4285971291
+          }
+        ]
+      },
+      {
+        "type": "ref-loot-pool",
+        "key": "exotic_mission-static-perks",
+        "notes": [
+          "Exotic craftable perk upgrades.",
+          "Earned by completing the \"Whispers of the Taken\" quests."
+        ],
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 777589559
+          },
+          {
+            "type": "item",
+            "itemHash": 777589556
+          },
+          {
+            "type": "item",
+            "itemHash": 777589557
+          },
+          {
+            "type": "item",
+            "itemHash": 3337692349
+          }
+        ]
+      }
+    ]
+  }
+}

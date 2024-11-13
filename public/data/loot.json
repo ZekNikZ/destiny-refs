@@ -2270,9 +2270,34 @@
       "exotic_mission-rotator-challenge": {
         "type": "pool",
         "quantity": 1,
+        "pinnacleWhen": "activity_is_featured",
         "notes": [
           "Will drop a Deepsight weapon that has not yet had its pattern unlocked. If all patterns are unlocked, will drop an armor piece that has not yet been unlocked in collections for the current class. If all armor pieces are unlocked, a random world drop will be dropped instead."
         ]
+      },
+
+      "exotic_mission-static-exotic": {
+        "type": "pool",
+        "quantity": "all",
+        "showInLootSummary": true,
+        "notes": [
+          "Available once per character each week. Normal and Expert modes have separate weekly reward lockouts.",
+          "First ever drop will be Deepsight."
+        ]
+      },
+      "exotic_mission-static-catalyst": {
+        "type": "pool",
+        "quantity": "all",
+        "weeklyLimit": "once_ever",
+        "notes": ["Obtained by completing **Expert** mode."]
+      },
+      "exotic_mission-static-intrinsics": {
+        "type": "pool",
+        "quantity": "all"
+      },
+      "exotic_mission-static-perks": {
+        "type": "pool",
+        "quantity": "all"
       },
 
       "exotic_mission-node-ovrd-avalon-exotic": {
