@@ -1,0 +1,82 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "exotic_mission-starcrossed",
+    "type": "exotic_mission",
+    "name": "Starcrossed",
+    "description": "Within the Black Garden, the Sol Divisive toil endlessly, systematically shutting down potential futures. With Riven's blessing, it's time to shut them down.",
+    "backgroundImage": "/images/exotic_missions/starcrossed.avif",
+    "loot": [
+      {
+        "type": "mode_specific",
+        "modes": [
+          {
+            "mode": "Normal",
+            "bungieActivityHash": 0,
+            "children": [
+              { "type": "ref-loot-pool", "key": "exotic_mission-starcrossed-exotic" },
+              { "type": "ref-loot-pool", "key": "exotic_mission-starcrossed-loot" },
+              {
+                "type": "ref-loot-pool",
+                "key": "exotic_mission-starcrossed-deepsight-weapons"
+              },
+              {
+                "type": "ref-loot-pool",
+                "key": "exotic_mission-starcrossed-armor"
+              },
+              {
+                "type": "ref-loot-pool",
+                "key": "exotic_mission-starcrossed-intrinsics"
+              }
+            ]
+          },
+          {
+            "mode": "Expert",
+            "bungieActivityHash": 0,
+            "children": [
+              { "type": "ref-loot-pool", "key": "exotic_mission-starcrossed-exotic" },
+              { "type": "ref-loot-pool", "key": "exotic_mission-starcrossed-loot" },
+              {
+                "type": "ref-loot-pool",
+                "key": "exotic_mission-starcrossed-deepsight-weapons"
+              },
+              {
+                "type": "ref-loot-pool",
+                "key": "exotic_mission-starcrossed-armor"
+              },
+              {
+                "type": "ref-loot-pool",
+                "key": "exotic_mission-starcrossed-intrinsics"
+              },
+              {
+                "type": "ref-loot-pool",
+                "key": "exotic_mission-starcrossed-catalysts"
+              }
+            ]
+          },
+          {
+            "mode": "Weekly Challenge Completion: 2 Clears Regardless of",
+            "bungieActivityHash": 0,
+            "children": [
+              {
+                "type": "ref-loot-pool",
+                "key": "exotic_mission-rotator-challenge",
+                "loot": [
+                  {
+                    "type": "ref-loot-set",
+                    "key": "exotic_mission-starcrossed-deepsight-weapons",
+                    "deepsight": "guaranteed-deepsight"
+                  },
+                  {
+                    "type": "ref-loot-set",
+                    "key": "exotic_mission-starcrossed-armor"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
