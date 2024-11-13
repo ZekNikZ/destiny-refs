@@ -3129,35 +3129,27 @@
       "exotic_mission-vox-obscura-deepsight-weapons": [
         {
           "type": "item",
-          "itemHash": 2993554824
+          "itemHash": 4096943616
         },
         {
           "type": "item",
-          "itemHash": 2045811635
+          "itemHash": 2097055732
         },
         {
           "type": "item",
-          "itemHash": 2817683783
+          "itemHash": 1572896086
         },
         {
           "type": "item",
-          "itemHash": 1447836603
+          "itemHash": 1248372789
         },
         {
           "type": "item",
-          "itemHash": 1501688142
+          "itemHash": 4067556514
         },
         {
           "type": "item",
-          "itemHash": 3710082365
-        },
-        {
-          "type": "item",
-          "itemHash": 2558925366
-        },
-        {
-          "type": "item",
-          "itemHash": 92459755
+          "itemHash": 232928045
         }
       ],
       "exotic_mission-vox-obscura-armor": [
@@ -3169,15 +3161,15 @@
           "children": [
             {
               "type": "item",
-              "itemHash": 469031127
+              "itemHash": 2240729575
             },
             {
               "type": "item",
-              "itemHash": 713622571
+              "itemHash": 2516879931
             },
             {
               "type": "item",
-              "itemHash": 4196904014
+              "itemHash": 849255710
             }
           ]
         },
@@ -3189,15 +3181,15 @@
           "children": [
             {
               "type": "item",
-              "itemHash": 3837409374
+              "itemHash": 187431790
             },
             {
               "type": "item",
-              "itemHash": 3289270298
+              "itemHash": 4017738218
             },
             {
               "type": "item",
-              "itemHash": 927140159
+              "itemHash": 119228495
             }
           ]
         },
@@ -3209,15 +3201,15 @@
           "children": [
             {
               "type": "item",
-              "itemHash": 3005056146
+              "itemHash": 438108034
             },
             {
               "type": "item",
-              "itemHash": 3013248110
+              "itemHash": 4144240158
             },
             {
               "type": "item",
-              "itemHash": 3400974073
+              "itemHash": 3465627817
             }
           ]
         },
@@ -3229,15 +3221,15 @@
           "children": [
             {
               "type": "item",
-              "itemHash": 386385208
+              "itemHash": 2270509928
             },
             {
               "type": "item",
-              "itemHash": 716705876
+              "itemHash": 3056950148
             },
             {
               "type": "item",
-              "itemHash": 4143357569
+              "itemHash": 693728753
             }
           ]
         },
@@ -3249,15 +3241,15 @@
           "children": [
             {
               "type": "item",
-              "itemHash": 3600297123
+              "itemHash": 3957071315
             },
             {
               "type": "item",
-              "itemHash": 3755696951
+              "itemHash": 3473867303
             },
             {
               "type": "item",
-              "itemHash": 844733364
+              "itemHash": 950963812
             }
           ]
         }
@@ -3273,35 +3265,43 @@
       "exotic_mission-operation-seraph-shield-deepsight-weapons": [
         {
           "type": "item",
-          "itemHash": 2993554824
+          "itemHash": 1731355324
         },
         {
           "type": "item",
-          "itemHash": 2045811635
+          "itemHash": 1168625549
         },
         {
           "type": "item",
-          "itemHash": 2817683783
+          "itemHash": 2302346155
         },
         {
           "type": "item",
-          "itemHash": 1447836603
+          "itemHash": 2149683300
         },
         {
           "type": "item",
-          "itemHash": 1501688142
+          "itemHash": 1751893422
         },
         {
           "type": "item",
-          "itemHash": 3710082365
+          "itemHash": 2272041093
         },
         {
           "type": "item",
-          "itemHash": 2558925366
+          "itemHash": 2978226043
         },
         {
           "type": "item",
-          "itemHash": 92459755
+          "itemHash": 2827764482
+        },
+        {
+          "type": "item",
+          "itemHash": 3103325054
+        },
+        {
+          "type": "item",
+          "itemHash": 3849444474
         }
       ],
       "exotic_mission-operation-seraph-shield-armor": [
@@ -3313,15 +3313,15 @@
           "children": [
             {
               "type": "item",
-              "itemHash": 469031127
+              "itemHash": 1059446290
             },
             {
               "type": "item",
-              "itemHash": 713622571
+              "itemHash": 648266032
             },
             {
               "type": "item",
-              "itemHash": 4196904014
+              "itemHash": 2974824815
             }
           ]
         },
@@ -3333,15 +3333,15 @@
           "children": [
             {
               "type": "item",
-              "itemHash": 3837409374
+              "itemHash": 1525902715
             },
             {
               "type": "item",
-              "itemHash": 3289270298
+              "itemHash": 446049665
             },
             {
               "type": "item",
-              "itemHash": 927140159
+              "itemHash": 1259550198
             }
           ]
         },
@@ -3353,15 +3353,15 @@
           "children": [
             {
               "type": "item",
-              "itemHash": 3005056146
+              "itemHash": 839296981
             },
             {
               "type": "item",
-              "itemHash": 3013248110
+              "itemHash": 4116381015
             },
             {
               "type": "item",
-              "itemHash": 3400974073
+              "itemHash": 2710316218
             }
           ]
         },
@@ -3373,15 +3373,15 @@
           "children": [
             {
               "type": "item",
-              "itemHash": 386385208
+              "itemHash": 4270910189
             },
             {
               "type": "item",
-              "itemHash": 716705876
+              "itemHash": 1940895219
             },
             {
               "type": "item",
-              "itemHash": 4143357569
+              "itemHash": 2471829328
             }
           ]
         },
@@ -3393,15 +3393,15 @@
           "children": [
             {
               "type": "item",
-              "itemHash": 3600297123
+              "itemHash": 4256213288
             },
             {
               "type": "item",
-              "itemHash": 3755696951
+              "itemHash": 1949733158
             },
             {
               "type": "item",
-              "itemHash": 844733364
+              "itemHash": 1934312075
             }
           ]
         }

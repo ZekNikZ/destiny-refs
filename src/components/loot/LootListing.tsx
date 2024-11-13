@@ -82,12 +82,19 @@ export default function LootListing(props: Props) {
                 <Image
                   src={`https://bungie.net/${staticData?.damageTypes[damageType]?.icon}`}
                   h={16}
+                  w="auto"
                 />
               )}
               {ammoType && ammoType !== 0 && (
-                <Image src={`https://bungie.net/${staticData?.ammoTypes[ammoType]?.icon}`} h={12} />
+                <Image
+                  src={`https://bungie.net/${staticData?.ammoTypes[ammoType]?.icon}`}
+                  h={12}
+                  w="auto"
+                />
               )}
-              {props.loot.artiface && <Image src="/icons/attributes/artiface.png" h={16} />}
+              {props.loot.artiface && (
+                <Image src="/icons/attributes/artiface.png" h={16} w="auto" />
+              )}
               <Text>
                 {props.loot.artiface && "Artiface"}{" "}
                 {classType !== undefined && classType !== 3 && staticData?.classes[classType].name}{" "}
