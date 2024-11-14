@@ -4,9 +4,554 @@
     "id": "raid-vault-of-glass",
     "type": "raid",
     "name": "Vault of Glass",
-    "description": "TODO",
+    "description": "Beneath Venus, evil stirs...",
     "backgroundImage": "/images/raids/vault-of-glass/banner.avif",
-    "triumphs": [],
-    "encounters": []
+    "hasMasterMode": true,
+    "loot": [
+      {
+        "type": "pool",
+        "quantity": "all",
+        "notes": [
+          "Obtained by completing the catalyst puzzle.",
+          "Requires \"Vex Mythoclast\" to drop."
+        ],
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 838219733
+          }
+        ]
+      }
+    ],
+    "triumphs": [
+      {
+        "bungieRecordHash": 3114569402
+      },
+      {
+        "bungieRecordHash": 3890225317
+      },
+      {
+        "bungieRecordHash": 2750088202
+      },
+      {
+        "bungieRecordHash": 932039090
+      },
+      {
+        "bungieRecordHash": 3790077074
+      }
+    ],
+    "encounters": [
+      {
+        "id": "raid-vault-of-glass-encounter-1",
+        "type": "encounter",
+        "name": "Confluxes",
+        "description": "Defend all three Confluxes",
+        "backgroundImage": "/images/raids/vault-of-glass/encounter-1.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "doubleLootWhen": "challenge_completion_repeatable",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 3186018373,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3197270240,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 471518543,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vault-of-glass-arms"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vault-of-glass-class"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-vogvow"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vault-of-glass-arms-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vault-of-glass-class-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-vault-of-glass-adept",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 690668916
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-vogvow"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 4170123161
+          },
+          {
+            "bungieRecordHash": 706596766,
+            "guide": "Wyverns can only be killed after they begin sacrificing.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-vault-of-glass-encounter-2",
+        "type": "encounter",
+        "name": "Oracles",
+        "description": "Destroy the Oracles",
+        "backgroundImage": "/images/raids/vault-of-glass/encounter-2.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "doubleLootWhen": "challenge_completion_repeatable",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 3186018373,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3197270240,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3653573172,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vault-of-glass-arms"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vault-of-glass-legs"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-vogvow"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vault-of-glass-arms-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vault-of-glass-legs-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-vault-of-glass-adept",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 1987769101
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-vogvow"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 787552349
+          },
+          {
+            "bungieRecordHash": 1888851130,
+            "guide": "Throughout the encounter, each guardian can destroy each Oracle only once.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-vault-of-glass-encounter-3",
+        "type": "encounter",
+        "name": "Templar",
+        "description": "Defeat the Templar",
+        "backgroundImage": "/images/raids/vault-of-glass/encounter-3.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "doubleLootWhen": "challenge_completion_repeatable",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 2171478765,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3186018373,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 471518543,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vault-of-glass-arms"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vault-of-glass-chest"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-vogvow"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vault-of-glass-arms-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vault-of-glass-chest-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-vault-of-glass-adept",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 1216319404
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-vogvow"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 3903615031
+          },
+          {
+            "bungieRecordHash": 154213552,
+            "guide": "Do not allow Templar to teleport.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-vault-of-glass-encounter-4",
+        "type": "encounter",
+        "name": "Gatekeepers",
+        "description": "Awaken the Glass Throne",
+        "backgroundImage": "/images/raids/vault-of-glass/encounter-4.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "doubleLootWhen": "challenge_completion_repeatable",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 2171478765,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3197270240,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 4050645223,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vault-of-glass-head"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vault-of-glass-legs"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-vogvow"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vault-of-glass-head-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vault-of-glass-legs-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-vault-of-glass-adept",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 1921159786
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-vogvow"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 3106039192
+          },
+          {
+            "bungieRecordHash": 2464700601,
+            "guide": "Wyverns and Minotaurs must be defeated within 5 seconds of each other.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-vault-of-glass-encounter-5",
+        "type": "encounter",
+        "name": "Atheon",
+        "description": "Destroy Atheon",
+        "backgroundImage": "/images/raids/vault-of-glass/encounter-5.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-vault-of-glass-exotic"
+                  },
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "doubleLootWhen": "challenge_completion_repeatable",
+                    "pinnacleWhen": "activity_is_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 3653573172,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 4050645223,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 471518543,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vault-of-glass-head"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vault-of-glass-chest"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-vogvow"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "pinnacleWhen": "activity_is_featured",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vault-of-glass-head-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-vault-of-glass-chest-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-vault-of-glass-adept",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 3796510434
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-vogvow"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 1024875083
+          },
+          {
+            "bungieRecordHash": 1129667036,
+            "guide": "During each triplet of Oracles, each Oracle must be destroyed by a different guardian.",
+            "isChallenge": true
+          }
+        ]
+      }
+    ]
   }
 }

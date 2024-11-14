@@ -667,6 +667,107 @@
         ]
       },
 
+      "raid-vault-of-glass-head": {
+        "type": "ref-loot",
+        "key": "armor-head",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-vault-of-glass-head"
+          }
+        ]
+      },
+      "raid-vault-of-glass-head-focused": {
+        "type": "ref-loot",
+        "key": "armor-head-focused",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-vault-of-glass-head"
+          }
+        ]
+      },
+      "raid-vault-of-glass-arms": {
+        "type": "ref-loot",
+        "key": "armor-arms",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-vault-of-glass-arms"
+          }
+        ]
+      },
+      "raid-vault-of-glass-arms-focused": {
+        "type": "ref-loot",
+        "key": "armor-arms-focused",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-vault-of-glass-arms"
+          }
+        ]
+      },
+      "raid-vault-of-glass-chest": {
+        "type": "ref-loot",
+        "key": "armor-chest",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-vault-of-glass-chest"
+          }
+        ]
+      },
+      "raid-vault-of-glass-chest-focused": {
+        "type": "ref-loot",
+        "key": "armor-chest-focused",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-vault-of-glass-chest"
+          }
+        ]
+      },
+      "raid-vault-of-glass-legs": {
+        "type": "ref-loot",
+        "key": "armor-legs",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-vault-of-glass-legs"
+          }
+        ]
+      },
+      "raid-vault-of-glass-legs-focused": {
+        "type": "ref-loot",
+        "key": "armor-legs-focused",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-vault-of-glass-legs"
+          }
+        ]
+      },
+      "raid-vault-of-glass-class": {
+        "type": "ref-loot",
+        "key": "armor-class",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-vault-of-glass-class"
+          }
+        ]
+      },
+      "raid-vault-of-glass-class-focused": {
+        "type": "ref-loot",
+        "key": "armor-class-focused",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-vault-of-glass-class"
+          }
+        ]
+      },
+
       "raid-root-of-nightmares-head": {
         "type": "ref-loot",
         "key": "armor-head",
@@ -2055,6 +2156,27 @@
           {
             "type": "item",
             "itemHash": 1554192272
+          }
+        ]
+      },
+
+      "raid-vault-of-glass-adept": {
+        "type": "pool",
+        "quantity": "all",
+        "pinnacleWhen": "never",
+        "availableWhen": "challenge_completion"
+      },
+      "raid-vault-of-glass-exotic": {
+        "type": "pool",
+        "quantity": "chance",
+        "showInLootSummary": true,
+        "pinnacleWhen": "never",
+        "weeklyLimit": "infinite_when_featured",
+        "availableWhen": "always",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 4289226715
           }
         ]
       },
@@ -4206,6 +4328,80 @@
         {
           "type": "item",
           "itemHash": 2130010697
+        }
+      ],
+
+      "raid-vault-of-glass-head": [
+        {
+          "type": "item",
+          "itemHash": 4029224226
+        },
+        {
+          "type": "item",
+          "itemHash": 586128500
+        },
+
+        {
+          "type": "item",
+          "itemHash": 673599343
+        }
+      ],
+      "raid-vault-of-glass-arms": [
+        {
+          "type": "item",
+          "itemHash": 3368765451
+        },
+        {
+          "type": "item",
+          "itemHash": 3753500813
+        },
+
+        {
+          "type": "item",
+          "itemHash": 3253292022
+        }
+      ],
+      "raid-vault-of-glass-chest": [
+        {
+          "type": "item",
+          "itemHash": 3890978501
+        },
+        {
+          "type": "item",
+          "itemHash": 1133961267
+        },
+
+        {
+          "type": "item",
+          "itemHash": 3029386938
+        }
+      ],
+      "raid-vault-of-glass-legs": [
+        {
+          "type": "item",
+          "itemHash": 123979037
+        },
+        {
+          "type": "item",
+          "itemHash": 129332559
+        },
+        {
+          "type": "item",
+          "itemHash": 170603856
+        }
+      ],
+      "raid-vault-of-glass-class": [
+        {
+          "type": "item",
+          "itemHash": 3012927512
+        },
+        {
+          "type": "item",
+          "itemHash": 3339387242
+        },
+        {
+          "type": "item",
+          "itemHash": 2253382795
         }
       ]
     }

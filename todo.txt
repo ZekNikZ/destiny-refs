@@ -10,6 +10,7 @@
   - kf
   - ron
   - crota
+  - vog
 - Implement "Rotations" page
 - Be able to mark weapons as deepsight
 - Implement nightfalls
@@ -29,7 +30,6 @@
 - node ovrd avalon title not wrapping, causing hortizontal scroll on mobile
 - Rotation entries are still clickable on mobile - should not be. redirect to dashboard page instead
 - Implement exotic missions
-
 - Add rest of raids
-  - vog
+
 - Raid and dungeon secret chests & puzzles
