@@ -159,11 +159,11 @@
         ],
         "triumphs": [
           {
-            "bungieRecordHash": 1673084356
+            "bungieRecordHash": 3984168074
           },
           {
-            "bungieRecordHash": 1682546621,
-            "guide": "Each phase, kill all three Unstoppable Abominations within 3 seconds.",
+            "bungieRecordHash": 1937728407,
+            "guide": "Each guardian cannot acquire the same brand twice in a row.",
             "isChallenge": true
           }
         ]
@@ -257,11 +257,11 @@
         ],
         "triumphs": [
           {
-            "bungieRecordHash": 1673084356
+            "bungieRecordHash": 3293215595
           },
           {
-            "bungieRecordHash": 1682546621,
-            "guide": "Each phase, kill all three Unstoppable Abominations within 3 seconds.",
+            "bungieRecordHash": 3455875964,
+            "guide": "Guardians must take the brand within 5 seconds of acquiring the \"Brand Claimer\" buff.",
             "isChallenge": true
           }
         ]
@@ -352,11 +352,11 @@
         ],
         "triumphs": [
           {
-            "bungieRecordHash": 1673084356
+            "bungieRecordHash": 292491321
           },
           {
-            "bungieRecordHash": 1682546621,
-            "guide": "Each phase, kill all three Unstoppable Abominations within 3 seconds.",
+            "bungieRecordHash": 2840536766,
+            "guide": "Each gaze-holder must stand in the pool of reclaimed light before their timer runs out or Golgoroth's gaze is taken.",
             "isChallenge": true
           }
         ]
@@ -447,11 +447,11 @@
         ],
         "triumphs": [
           {
-            "bungieRecordHash": 1673084356
+            "bungieRecordHash": 2341906351
           },
           {
-            "bungieRecordHash": 1682546621,
-            "guide": "Each phase, kill all three Unstoppable Abominations within 3 seconds.",
+            "bungieRecordHash": 4104207016,
+            "guide": "Each guardian can only step on each plate once per phase (i.e., resets after each damage phase).",
             "isChallenge": true
           }
         ]
@@ -567,11 +567,11 @@
         ],
         "triumphs": [
           {
-            "bungieRecordHash": 1673084356
+            "bungieRecordHash": 3685101448
           },
           {
-            "bungieRecordHash": 1682546621,
-            "guide": "Each phase, kill all three Unstoppable Abominations within 3 seconds.",
+            "bungieRecordHash": 3191912777,
+            "guide": "Throughout the entire encounter, each Ogre and Knight can only be killed by the same guardian once.",
             "isChallenge": true
           }
         ]

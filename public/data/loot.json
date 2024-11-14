@@ -566,6 +566,107 @@
         ]
       },
 
+      "raid-root-of-nightmares-head": {
+        "type": "ref-loot",
+        "key": "armor-head",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-root-of-nightmares-head"
+          }
+        ]
+      },
+      "raid-root-of-nightmares-head-focused": {
+        "type": "ref-loot",
+        "key": "armor-head-focused",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-root-of-nightmares-head"
+          }
+        ]
+      },
+      "raid-root-of-nightmares-arms": {
+        "type": "ref-loot",
+        "key": "armor-arms",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-root-of-nightmares-arms"
+          }
+        ]
+      },
+      "raid-root-of-nightmares-arms-focused": {
+        "type": "ref-loot",
+        "key": "armor-arms-focused",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-root-of-nightmares-arms"
+          }
+        ]
+      },
+      "raid-root-of-nightmares-chest": {
+        "type": "ref-loot",
+        "key": "armor-chest",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-root-of-nightmares-chest"
+          }
+        ]
+      },
+      "raid-root-of-nightmares-chest-focused": {
+        "type": "ref-loot",
+        "key": "armor-chest-focused",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-root-of-nightmares-chest"
+          }
+        ]
+      },
+      "raid-root-of-nightmares-legs": {
+        "type": "ref-loot",
+        "key": "armor-legs",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-root-of-nightmares-legs"
+          }
+        ]
+      },
+      "raid-root-of-nightmares-legs-focused": {
+        "type": "ref-loot",
+        "key": "armor-legs-focused",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-root-of-nightmares-legs"
+          }
+        ]
+      },
+      "raid-root-of-nightmares-class": {
+        "type": "ref-loot",
+        "key": "armor-class",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-root-of-nightmares-class"
+          }
+        ]
+      },
+      "raid-root-of-nightmares-class-focused": {
+        "type": "ref-loot",
+        "key": "armor-class-focused",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-root-of-nightmares-class"
+          }
+        ]
+      },
+
       "raid-deep-stone-crypt-head": {
         "type": "group",
         "name": "Helmet (Class-Specific)",
@@ -1651,27 +1752,33 @@
         "loot": [
           {
             "type": "item",
-            "itemHash": 3951511045
+            "itemHash": 3951511045,
+            "adept": true
           },
           {
             "type": "item",
-            "itemHash": 172461430
+            "itemHash": 172461430,
+            "adept": true
           },
           {
             "type": "item",
-            "itemHash": 1039915310
+            "itemHash": 1039915310,
+            "adept": true
           },
           {
             "type": "item",
-            "itemHash": 3123651616
+            "itemHash": 3123651616,
+            "adept": true
           },
           {
             "type": "item",
-            "itemHash": 892183998
+            "itemHash": 892183998,
+            "adept": true
           },
           {
             "type": "item",
-            "itemHash": 2001697739
+            "itemHash": 2001697739,
+            "adept": true
           }
         ]
       },
@@ -1699,27 +1806,33 @@
         "loot": [
           {
             "type": "item",
-            "itemHash": 2943293195
+            "itemHash": 2943293195,
+            "adept": true
           },
           {
             "type": "item",
-            "itemHash": 1941816543
+            "itemHash": 1941816543,
+            "adept": true
           },
           {
             "type": "item",
-            "itemHash": 1466006054
+            "itemHash": 1466006054,
+            "adept": true
           },
           {
             "type": "item",
-            "itemHash": 4038592169
+            "itemHash": 4038592169,
+            "adept": true
           },
           {
             "type": "item",
-            "itemHash": 786352912
+            "itemHash": 786352912,
+            "adept": true
           },
           {
             "type": "item",
-            "itemHash": 2886339027
+            "itemHash": 2886339027,
+            "adept": true
           }
         ]
       },
@@ -1782,6 +1895,60 @@
           {
             "type": "item",
             "itemHash": 1802135586
+          }
+        ]
+      },
+
+      "raid-root-of-nightmares-adepts": {
+        "type": "pool",
+        "quantity": 1,
+        "pinnacleWhen": "never",
+        "availableWhen": "challenge_completion",
+        "knockout": true,
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 342514437,
+            "adept": true
+          },
+          {
+            "type": "item",
+            "itemHash": 1986287028,
+            "adept": true
+          },
+          {
+            "type": "item",
+            "itemHash": 522366885,
+            "adept": true
+          },
+          {
+            "type": "item",
+            "itemHash": 3493494807,
+            "adept": true
+          },
+          {
+            "type": "item",
+            "itemHash": 495442100,
+            "adept": true
+          },
+          {
+            "type": "item",
+            "itemHash": 2890082420,
+            "adept": true
+          }
+        ]
+      },
+      "raid-root-of-nightmares-exotic": {
+        "type": "pool",
+        "quantity": "chance",
+        "showInLootSummary": true,
+        "pinnacleWhen": "never",
+        "weeklyLimit": "infinite_when_featured",
+        "availableWhen": "always",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 3371017761
           }
         ]
       },
@@ -3731,6 +3898,80 @@
         {
           "type": "item",
           "itemHash": 766618550
+        }
+      ],
+
+      "raid-root-of-nightmares-head": [
+        {
+          "type": "item",
+          "itemHash": 3475635982
+        },
+        {
+          "type": "item",
+          "itemHash": 3810243376
+        },
+
+        {
+          "type": "item",
+          "itemHash": 4123705451
+        }
+      ],
+      "raid-root-of-nightmares-arms": [
+        {
+          "type": "item",
+          "itemHash": 630432767
+        },
+        {
+          "type": "item",
+          "itemHash": 3608027009
+        },
+
+        {
+          "type": "item",
+          "itemHash": 2445962586
+        }
+      ],
+      "raid-root-of-nightmares-chest": [
+        {
+          "type": "item",
+          "itemHash": 824228793
+        },
+        {
+          "type": "item",
+          "itemHash": 2787963735
+        },
+
+        {
+          "type": "item",
+          "itemHash": 2597227950
+        }
+      ],
+      "raid-root-of-nightmares-legs": [
+        {
+          "type": "item",
+          "itemHash": 3846650177
+        },
+        {
+          "type": "item",
+          "itemHash": 807905267
+        },
+        {
+          "type": "item",
+          "itemHash": 3702434452
+        }
+      ],
+      "raid-root-of-nightmares-class": [
+        {
+          "type": "item",
+          "itemHash": 2138394740
+        },
+        {
+          "type": "item",
+          "itemHash": 621315878
+        },
+        {
+          "type": "item",
+          "itemHash": 2915322487
         }
       ]
     }

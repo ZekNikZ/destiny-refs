@@ -4,9 +4,473 @@
     "id": "raid-root-of-nightmares",
     "type": "raid",
     "name": "Root of Nightmares",
-    "description": "TODO",
+    "description": "A sinister threat has taken root.",
     "backgroundImage": "/images/raids/root-of-nightmares/banner.avif",
-    "triumphs": [],
-    "encounters": []
+    "hasMasterMode": true,
+    "triumphs": [
+      {
+        "bungieRecordHash": 4270724598
+      },
+      {
+        "bungieRecordHash": 391307104
+      },
+      {
+        "bungieRecordHash": 397062446
+      },
+      {
+        "bungieRecordHash": 1982000933
+      },
+      {
+        "bungieRecordHash": 1160810407
+      },
+      {
+        "bungieRecordHash": 921507736
+      },
+      {
+        "bungieRecordHash": 4149006431
+      },
+      {
+        "bungieRecordHash": 86267802
+      }
+    ],
+    "encounters": [
+      {
+        "id": "raid-root-of-nightmares-encounter-1",
+        "type": "encounter",
+        "name": "Cataclysm",
+        "description": "Survive the Onslaught",
+        "backgroundImage": "/images/raids/root-of-nightmares/encounter-1.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "doubleLootWhen": "challenge_completion_repeatable",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 135029084,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 2972949637,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1491665733,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-head"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-arms"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-chest"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-head-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-arms-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-chest-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-root-of-nightmares-adepts"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 1470555531
+          },
+          {
+            "bungieRecordHash": 2084487708,
+            "guide": "Only players with the \"Field of Light\" buff can kill Tormentors.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-root-of-nightmares-encounter-2",
+        "type": "encounter",
+        "name": "Scission",
+        "description": "Enter the Root",
+        "backgroundImage": "/images/raids/root-of-nightmares/encounter-2.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "doubleLootWhen": "challenge_completion_repeatable",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 231031173,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 135029084,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1471212226,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 2972949637,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-arms"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-chest"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-legs"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-arms-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-chest-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-legs-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-root-of-nightmares-adepts"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 2764233436
+          },
+          {
+            "bungieRecordHash": 2778920213,
+            "guide": "Launchers must be activated by a guardian on the other side of the chasm.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-root-of-nightmares-encounter-3",
+        "type": "encounter",
+        "name": "Macrocosm",
+        "description": "Defeat the Explicator",
+        "backgroundImage": "/images/raids/root-of-nightmares/encounter-3.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "doubleLootWhen": "challenge_completion_repeatable",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 484515708,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 231031173,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1471212226,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 2972949637,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-chest"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-legs"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-class"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-chest-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-legs-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-class-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-root-of-nightmares-adepts"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 499953236
+          },
+          {
+            "bungieRecordHash": 1247482413,
+            "guide": "Move all dark planets to the left and all light planets to the right.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-root-of-nightmares-encounter-4",
+        "type": "encounter",
+        "name": "Nezarec, Final God of Pain",
+        "description": "Defeat Nezarec",
+        "backgroundImage": "/images/raids/root-of-nightmares/encounter-4.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "doubleLootWhen": "challenge_completion_repeatable",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 484515708,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 231031173,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 135029084,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1471212226,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 2972949637,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1491665733,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-head"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-legs"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-class"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-head-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-legs-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-root-of-nightmares-class-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-root-of-nightmares-adepts"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 3778413954
+          },
+          {
+            "bungieRecordHash": 210713679,
+            "guide": "Each damage phase, every guardian must activate one node in both the light and dark chains.",
+            "isChallenge": true
+          }
+        ]
+      }
+    ]
   }
 }

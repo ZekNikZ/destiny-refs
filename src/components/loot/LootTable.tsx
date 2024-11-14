@@ -112,7 +112,7 @@ export default function LootTable(props: Props) {
                   }}
                 >
                   {pool.loot.map((loot) => (
-                    <LootListing key={getLootKey(loot)} loot={loot} />
+                    <LootListing key={getLootKey(loot)} loot={loot} fullWidth />
                   ))}
                 </Box>
 

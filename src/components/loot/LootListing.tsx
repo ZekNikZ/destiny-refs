@@ -49,12 +49,12 @@ export default function LootListing(props: Props) {
           </Text>
         ) : (
           <>
-            <Group gap={6}>
+            <Group gap={6} wrap="nowrap">
               <Text fw="bold">{name}</Text>
               {props.loot.adept && (
                 <Tooltip label="Adept weapon: higher stats and access to adept mods">
                   <Group gap={2}>
-                    <Image src="/icons/attributes/enhanced.svg" h={14} />
+                    <Image src="/icons/attributes/enhanced.svg" h={14} w="auto" />
                   </Group>
                 </Tooltip>
               )}
@@ -67,7 +67,7 @@ export default function LootListing(props: Props) {
                   }
                 >
                   <Group gap={2}>
-                    <Image src="/icons/attributes/shaped.svg" h={14} />
+                    <Image src="/icons/attributes/shaped.svg" h={14} w="auto" />
                     {/* {props.loot.deepsight === "craftable" ? (
                       <Percent size={16} color="#d25336" weight="bold" />
                     ) : (
