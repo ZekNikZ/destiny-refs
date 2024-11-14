@@ -1,4 +1,11 @@
-import { ArrowClockwise, Calendar, Icon, Info, TreasureChest } from "@phosphor-icons/react";
+import {
+  ArrowClockwise,
+  Calendar,
+  Icon,
+  Info,
+  Toolbox,
+  TreasureChest,
+} from "@phosphor-icons/react";
 import TodayPage from "./pages/TodayPage";
 import { useGlobalData } from "./data/useGlobalData";
 import EncounterBasedActivityPage from "./pages/EncounterBasedActivityPage";
@@ -17,6 +24,7 @@ export interface RouteData {
   navbarProperties?: {
     label?: string;
     icon?: React.ReactNode;
+    hidden?: boolean;
   };
   children?: RouteData[];
 }
@@ -117,6 +125,32 @@ const routes: RouteData[] = [
             }))
         : undefined,
     })),
+  },
+  {
+    path: "/tools",
+    title: "Tools",
+    element: <TodayPage />,
+    navbarProperties: {
+      icon: makePhosphorIcon(Toolbox),
+      hidden: true,
+    },
+    children: [
+      {
+        path: "/tools/vow-chest",
+        title: "VOTD Deepsight Puzzle",
+        element: <TodayPage />,
+      },
+      {
+        path: "/tools/kf-chest",
+        title: "KF Deepsight Puzzle",
+        element: <TodayPage />,
+      },
+      {
+        path: "/tools/se-verity",
+        title: "SE Verity Helper",
+        element: <TodayPage />,
+      },
+    ],
   },
   {
     path: "/contact",

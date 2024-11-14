@@ -49,16 +49,18 @@ const NavLinkWithChildren = (props: Props) => {
           in={routeOrSubrouteSelected}
           pl={12 * (props.level ?? 1)}
         >
-          {props.route.children.map((subroute) => {
-            return (
-              <NavLinkWithChildren
-                key={subroute.path}
-                route={subroute}
-                level={(props.level ?? 1) + 1}
-                onClick={props.onClick}
-              />
-            );
-          })}
+          {props.route.children
+            .filter((subroute) => !subroute.navbarProperties?.hidden)
+            .map((subroute) => {
+              return (
+                <NavLinkWithChildren
+                  key={subroute.path}
+                  route={subroute}
+                  level={(props.level ?? 1) + 1}
+                  onClick={props.onClick}
+                />
+              );
+            })}
         </Collapse>
       )}
     </>

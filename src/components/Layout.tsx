@@ -52,15 +52,17 @@ export default function Layout() {
 
       <AppShell.Navbar p="sm">
         <ScrollArea type="never">
-          {routes.map((route) => (
-            <NavLinkWithChildren
-              route={route}
-              key={route.path}
-              onClick={(route) => {
-                if (!route.children) close();
-              }}
-            />
-          ))}
+          {routes
+            .filter((route) => !route.navbarProperties?.hidden)
+            .map((route) => (
+              <NavLinkWithChildren
+                route={route}
+                key={route.path}
+                onClick={(route) => {
+                  if (!route.children) close();
+                }}
+              />
+            ))}
         </ScrollArea>
       </AppShell.Navbar>
 
