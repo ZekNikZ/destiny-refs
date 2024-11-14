@@ -4,7 +4,8 @@ export type ActivityType =
   | "nightfall"
   | "exotic_mission"
   | "lost_sector"
-  | "encounter";
+  | "encounter"
+  | "opening-encounter";
 
 export type ActivityTag =
   | "featured-newest"
@@ -74,10 +75,12 @@ export type Loot = {
   | {
       type: "ref-loot";
       key: string;
+      children?: Loot[];
     }
   | {
       type: "ref-loot-set";
       key: string;
+      children?: Loot[];
     }
 );
 

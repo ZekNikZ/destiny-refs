@@ -14,6 +14,10 @@ export default function EncounterBasedActivityPage(props: Props) {
 
   const isLargeScreen = useMediaQuery("(min-width: 1000px)");
 
+  const numOpeningEncounters =
+    props.activity.encounters?.filter((encounter) => encounter.type === "opening-encounter")
+      .length ?? 0;
+
   return (
     <Stack>
       <SmartBreadcrumbs />
@@ -29,9 +33,17 @@ export default function EncounterBasedActivityPage(props: Props) {
           <ActivityCard
             encounter
             key={encounter.name}
-            titlePrefix={`Encounter ${index + 1}: `}
+            titlePrefix={
+              index >= numOpeningEncounters
+                ? `Encounter ${index + 1 - numOpeningEncounters}: `
+                : undefined
+            }
             activity={encounter}
-            availability={availability}
+            availability={{
+              ...availability,
+              allChallengesActive:
+                index >= numOpeningEncounters ? availability.allChallengesActive : false,
+            }}
           />
         ))}
       </Box>

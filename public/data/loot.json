@@ -2,6 +2,67 @@
   "$schema": "./schema/loot.json",
   "sharedLoot": {
     "loot": {
+      "armor-head": {
+        "type": "group",
+        "name": "Helmet (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "helmet"
+      },
+      "armor-head-focused": {
+        "type": "group",
+        "name": "Helmet (Class-Specific)",
+        "groupType": "Stat-Focused Armor",
+        "displayStaticIcon": "helmet"
+      },
+      "armor-arms": {
+        "type": "group",
+        "name": "Gauntlets (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "gauntlets"
+      },
+      "armor-arms-focused": {
+        "type": "group",
+        "name": "Gauntlets (Class-Specific)",
+        "groupType": "Stat-Focused Armor",
+        "displayStaticIcon": "gauntlets"
+      },
+      "armor-chest": {
+        "type": "group",
+        "name": "Chest Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "chest-armor"
+      },
+      "armor-chest-focused": {
+        "type": "group",
+        "name": "Chest Armor (Class-Specific)",
+        "groupType": "Stat-Focused Armor",
+        "displayStaticIcon": "chest-armor"
+      },
+      "armor-legs": {
+        "type": "group",
+        "name": "Leg Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "leg-armor"
+      },
+      "armor-legs-focused": {
+        "type": "group",
+        "name": "Leg Armor (Class-Specific)",
+        "groupType": "Stat-Focused Armor",
+        "displayStaticIcon": "leg-armor"
+      },
+      "armor-class": {
+        "type": "group",
+        "name": "Class Item (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "class-item"
+      },
+      "armor-class-focused": {
+        "type": "group",
+        "name": "Class Item (Class-Specific)",
+        "groupType": "Stat-Focused Armor",
+        "displayStaticIcon": "class-item"
+      },
+
       "raid-salvations-edge-head": {
         "type": "group",
         "name": "Helmet (Class-Specific)",
@@ -400,6 +461,107 @@
           {
             "type": "item",
             "itemHash": 2422261368
+          }
+        ]
+      },
+
+      "raid-kings-fall-head": {
+        "type": "ref-loot",
+        "key": "armor-head",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-kings-fall-head"
+          }
+        ]
+      },
+      "raid-kings-fall-head-focused": {
+        "type": "ref-loot",
+        "key": "armor-head-focused",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-kings-fall-head"
+          }
+        ]
+      },
+      "raid-kings-fall-arms": {
+        "type": "ref-loot",
+        "key": "armor-arms",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-kings-fall-arms"
+          }
+        ]
+      },
+      "raid-kings-fall-arms-focused": {
+        "type": "ref-loot",
+        "key": "armor-arms-focused",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-kings-fall-arms"
+          }
+        ]
+      },
+      "raid-kings-fall-chest": {
+        "type": "ref-loot",
+        "key": "armor-chest",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-kings-fall-chest"
+          }
+        ]
+      },
+      "raid-kings-fall-chest-focused": {
+        "type": "ref-loot",
+        "key": "armor-chest-focused",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-kings-fall-chest"
+          }
+        ]
+      },
+      "raid-kings-fall-legs": {
+        "type": "ref-loot",
+        "key": "armor-legs",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-kings-fall-legs"
+          }
+        ]
+      },
+      "raid-kings-fall-legs-focused": {
+        "type": "ref-loot",
+        "key": "armor-legs-focused",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-kings-fall-legs"
+          }
+        ]
+      },
+      "raid-kings-fall-class": {
+        "type": "ref-loot",
+        "key": "armor-class",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-kings-fall-class"
+          }
+        ]
+      },
+      "raid-kings-fall-class-focused": {
+        "type": "ref-loot",
+        "key": "armor-class-focused",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-kings-fall-class"
           }
         ]
       },
@@ -1457,6 +1619,27 @@
           }
         ]
       },
+      "raid-spoils-modern": {
+        "type": "pool",
+        "quantity": "all",
+        "pinnacleWhen": "never",
+        "weeklyLimit": "infinite_after_first_clear",
+        "doubleLootWhen": "challenge_completion",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 3702027555,
+            "quantity": 5
+          }
+        ]
+      },
+
+      "raid-loot-modern": {
+        "type": "pool",
+        "quantity": 1,
+        "weeklyLimit": "infinite_when_featured",
+        "doubleLootWhen": "challenge_completion_repeatable"
+      },
 
       "raid-salvations-edge-adepts": {
         "type": "pool",
@@ -1551,6 +1734,54 @@
           {
             "type": "item",
             "itemHash": 3505113722
+          }
+        ]
+      },
+
+      "raid-kings-fall-adepts": {
+        "type": "pool",
+        "quantity": 1,
+        "pinnacleWhen": "never",
+        "availableWhen": "challenge_completion",
+        "knockout": true,
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 3407395594
+          },
+          {
+            "type": "item",
+            "itemHash": 3503019618
+          },
+          {
+            "type": "item",
+            "itemHash": 3904516037
+          },
+          {
+            "type": "item",
+            "itemHash": 291092617
+          },
+          {
+            "type": "item",
+            "itemHash": 1184692845
+          },
+          {
+            "type": "item",
+            "itemHash": 3248429089
+          }
+        ]
+      },
+      "raid-kings-fall-exotic": {
+        "type": "pool",
+        "quantity": "chance",
+        "showInLootSummary": true,
+        "pinnacleWhen": "never",
+        "weeklyLimit": "infinite_when_featured",
+        "availableWhen": "always",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 1802135586
           }
         ]
       },
@@ -3429,6 +3660,77 @@
               "itemHash": 1934312075
             }
           ]
+        }
+      ],
+
+      "raid-kings-fall-head": [
+        {
+          "type": "item",
+          "itemHash": 26254737
+        },
+        {
+          "type": "item",
+          "itemHash": 1656833637
+        },
+        {
+          "type": "item",
+          "itemHash": 1537426592
+        }
+      ],
+      "raid-kings-fall-arms": [
+        {
+          "type": "item",
+          "itemHash": 2937773672
+        },
+        {
+          "type": "item",
+          "itemHash": 2437510452
+        },
+        {
+          "type": "item",
+          "itemHash": 3398467185
+        }
+      ],
+      "raid-kings-fall-chest": [
+        {
+          "type": "item",
+          "itemHash": 1066132704
+        },
+        {
+          "type": "item",
+          "itemHash": 169689932
+        },
+        {
+          "type": "item",
+          "itemHash": 3921733799
+        }
+      ],
+      "raid-kings-fall-legs": [
+        {
+          "type": "item",
+          "itemHash": 4039112898
+        },
+        {
+          "type": "item",
+          "itemHash": 2725249086
+        },
+        {
+          "type": "item",
+          "itemHash": 3229616835
+        }
+      ],
+      "raid-kings-fall-class": [
+        {
+          "type": "item",
+          "itemHash": 376168733
+        },
+        {
+          "type": "item",
+          "itemHash": 2868448385
+        },
+        {
+          "type": "item",
+          "itemHash": 766618550
         }
       ]
     }

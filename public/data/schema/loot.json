@@ -113,6 +113,12 @@
             "artiface": {
               "type": "boolean"
             },
+            "children": {
+              "items": {
+                "$ref": "#/definitions/Loot"
+              },
+              "type": "array"
+            },
             "deepsight": {
               "enum": [
                 "craftable",
@@ -148,6 +154,12 @@
             },
             "artiface": {
               "type": "boolean"
+            },
+            "children": {
+              "items": {
+                "$ref": "#/definitions/Loot"
+              },
+              "type": "array"
             },
             "deepsight": {
               "enum": [

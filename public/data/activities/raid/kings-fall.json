@@ -4,9 +4,578 @@
     "id": "raid-kings-fall",
     "type": "raid",
     "name": "King's Fall",
-    "description": "TODO",
+    "description": "Long live the King...",
     "backgroundImage": "/images/raids/kings-fall/banner.avif",
-    "triumphs": [],
-    "encounters": []
+    "hasMasterMode": true,
+    "loot": [
+      {
+        "type": "pool",
+        "quantity": "all",
+        "notes": [
+          "Obtained by completing the catalyst puzzle.",
+          "Requires \"Touch of Malice\" to drop."
+        ],
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 1557274655
+          }
+        ]
+      }
+    ],
+    "triumphs": [
+      {
+        "bungieRecordHash": 3047702042
+      },
+      {
+        "bungieRecordHash": 3388215749
+      },
+      {
+        "bungieRecordHash": 1360511082
+      },
+      {
+        "bungieRecordHash": 1594888684
+      },
+      {
+        "bungieRecordHash": 2120297138
+      },
+      {
+        "bungieRecordHash": 2297765454
+      }
+    ],
+    "encounters": [
+      {
+        "id": "raid-kings-fall-encounter-0",
+        "type": "opening-encounter",
+        "name": "Hall of Souls",
+        "description": "Open the Portal",
+        "backgroundImage": "/images/raids/kings-fall/encounter-0.avif",
+        "loot": [
+          {
+            "type": "pool",
+            "quantity": 1,
+            "showInLootSummary": true,
+            "weeklyLimit": "infinite_when_featured",
+            "loot": [
+              {
+                "type": "item",
+                "itemHash": 1937552980,
+                "deepsight": "craftable"
+              },
+              {
+                "type": "ref-loot",
+                "key": "raid-kings-fall-class"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "raid-kings-fall-encounter-1",
+        "type": "encounter",
+        "name": "Basilica (Totems)",
+        "description": "Power the Glyph",
+        "backgroundImage": "/images/raids/kings-fall/encounter-1.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "doubleLootWhen": "challenge_completion_repeatable",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 1937552980,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1321506184,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-chest"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-legs"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-class"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-chest-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-legs-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-class-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-kings-fall-adepts"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 1673084356
+          },
+          {
+            "bungieRecordHash": 1682546621,
+            "guide": "Each phase, kill all three Unstoppable Abominations within 3 seconds.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-kings-fall-encounter-2",
+        "type": "encounter",
+        "name": "Warpriest",
+        "description": "Defeat the Warpriest",
+        "backgroundImage": "/images/raids/kings-fall/encounter-2.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "doubleLootWhen": "challenge_completion_repeatable",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 2221264583,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3228096719,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-arms"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-chest"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-legs"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-arms-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-chest-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-legs-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-kings-fall-adepts"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 1673084356
+          },
+          {
+            "bungieRecordHash": 1682546621,
+            "guide": "Each phase, kill all three Unstoppable Abominations within 3 seconds.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-kings-fall-encounter-3",
+        "type": "encounter",
+        "name": "Golgoroth's Cellar",
+        "description": "Defeat Golgoroth",
+        "backgroundImage": "/images/raids/kings-fall/encounter-3.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "doubleLootWhen": "challenge_completion_repeatable",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 1937552980,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1321506184,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3969066556,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-head"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-legs"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-head-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-legs-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-kings-fall-adepts"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 1673084356
+          },
+          {
+            "bungieRecordHash": 1682546621,
+            "guide": "Each phase, kill all three Unstoppable Abominations within 3 seconds.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-kings-fall-encounter-4",
+        "type": "encounter",
+        "name": "Daughters of Oryx",
+        "description": "Defeat the Daughters of Oryx",
+        "backgroundImage": "/images/raids/kings-fall/encounter-4.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "doubleLootWhen": "challenge_completion_repeatable",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 2221264583,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3228096719,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 431721920,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-arms"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-chest"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-arms-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-chest-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-kings-fall-adepts"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 1673084356
+          },
+          {
+            "bungieRecordHash": 1682546621,
+            "guide": "Each phase, kill all three Unstoppable Abominations within 3 seconds.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-kings-fall-encounter-5",
+        "type": "encounter",
+        "name": "Oryx, the Taken King",
+        "description": "Defeat Oryx, the Taken King",
+        "backgroundImage": "/images/raids/kings-fall/encounter-5.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-kings-fall-exotic"
+                  },
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "doubleLootWhen": "challenge_completion_repeatable",
+                    "pinnacleWhen": "activity_is_featured",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 2221264583,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3228096719,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3969066556,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 431721920,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1937552980,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1321506184,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-head"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-arms"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-kings-fall-exotic"
+                  },
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "pinnacleWhen": "activity_is_featured",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-head-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-kings-fall-arms-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-kings-fall-adepts"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 1673084356
+          },
+          {
+            "bungieRecordHash": 1682546621,
+            "guide": "Each phase, kill all three Unstoppable Abominations within 3 seconds.",
+            "isChallenge": true
+          }
+        ]
+      }
+    ]
   }
 }

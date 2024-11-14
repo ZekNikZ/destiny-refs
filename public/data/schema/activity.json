@@ -108,7 +108,8 @@
         "nightfall",
         "exotic_mission",
         "lost_sector",
-        "encounter"
+        "encounter",
+        "opening-encounter"
       ],
       "type": "string"
     },
@@ -246,6 +247,12 @@
             "artiface": {
               "type": "boolean"
             },
+            "children": {
+              "items": {
+                "$ref": "#/definitions/Loot"
+              },
+              "type": "array"
+            },
             "deepsight": {
               "enum": [
                 "craftable",
@@ -281,6 +288,12 @@
             },
             "artiface": {
               "type": "boolean"
+            },
+            "children": {
+              "items": {
+                "$ref": "#/definitions/Loot"
+              },
+              "type": "array"
             },
             "deepsight": {
               "enum": [
