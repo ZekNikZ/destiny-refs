@@ -158,60 +158,28 @@
       ],
       "lootRotation": [
         [
-          {
-            "type": "group",
-            "name": "Random World Drop",
-            "groupType": "Legendary Weapon",
-            "displayStaticIcon": "weapon",
-            "children": [
-              { "type": "item", "itemHash": 4200122994 },
-              { "type": "item", "itemHash": 3959549446 },
-              { "type": "item", "itemHash": 447296102 },
-              { "type": "item", "itemHash": 3583275737 }
-            ]
-          }
+          { "type": "item", "itemHash": 4200122994 },
+          { "type": "item", "itemHash": 3959549446 },
+          { "type": "item", "itemHash": 447296102 },
+          { "type": "item", "itemHash": 3583275737 }
         ],
         [
-          {
-            "type": "group",
-            "name": "Random World Drop",
-            "groupType": "Legendary Weapon",
-            "displayStaticIcon": "weapon",
-            "children": [
-              { "type": "item", "itemHash": 3612142623 },
-              { "type": "item", "itemHash": 499245245 },
-              { "type": "item", "itemHash": 1890332078 },
-              { "type": "item", "itemHash": 4233375372 }
-            ]
-          }
+          { "type": "item", "itemHash": 3612142623 },
+          { "type": "item", "itemHash": 499245245 },
+          { "type": "item", "itemHash": 1890332078 },
+          { "type": "item", "itemHash": 4233375372 }
         ],
         [
-          {
-            "type": "group",
-            "name": "Random World Drop",
-            "groupType": "Legendary Weapon",
-            "displayStaticIcon": "weapon",
-            "children": [
-              { "type": "item", "itemHash": 3753063346 },
-              { "type": "item", "itemHash": 1246793994 },
-              { "type": "item", "itemHash": 423343404 },
-              { "type": "item", "itemHash": 1719687748 }
-            ]
-          }
+          { "type": "item", "itemHash": 3753063346 },
+          { "type": "item", "itemHash": 1246793994 },
+          { "type": "item", "itemHash": 423343404 },
+          { "type": "item", "itemHash": 1719687748 }
         ],
         [
-          {
-            "type": "group",
-            "name": "Random World Drop",
-            "groupType": "Legendary Weapon",
-            "displayStaticIcon": "weapon",
-            "children": [
-              { "type": "item", "itemHash": 2848549302 },
-              { "type": "item", "itemHash": 3615421669 },
-              { "type": "item", "itemHash": 2800870005 },
-              { "type": "item", "itemHash": 3926811686 }
-            ]
-          }
+          { "type": "item", "itemHash": 2848549302 },
+          { "type": "item", "itemHash": 3615421669 },
+          { "type": "item", "itemHash": 2800870005 },
+          { "type": "item", "itemHash": 3926811686 }
         ]
       ]
     },
