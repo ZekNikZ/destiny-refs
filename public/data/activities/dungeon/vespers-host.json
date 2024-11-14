@@ -4,7 +4,7 @@
     "id": "dungeon-vespers-host",
     "type": "dungeon",
     "name": "Vesper's Host",
-    "description": "Defy the algorith. Cut through its web.",
+    "description": "Defy the algorithm. Cut through its web.",
     "backgroundImage": "/images/dungeons/vespers-host/banner.avif",
     "hasMasterMode": true,
     "loot": [
