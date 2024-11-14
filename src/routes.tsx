@@ -150,6 +150,11 @@ const routes: RouteData[] = [
         title: "SE Verity Helper",
         element: <TodayPage />,
       },
+      {
+        path: "/tools/raid-summary",
+        title: "Fireteam Raid Summary",
+        element: <TodayPage />,
+      },
     ],
   },
   {
