@@ -9,6 +9,7 @@
   - se
   - kf
   - ron
+  - crota
 - Implement "Rotations" page
 - Be able to mark weapons as deepsight
 - Implement nightfalls
@@ -31,5 +32,4 @@
 
 - Add rest of raids
   - vog
-  - crota
 - Raid and dungeon secret chests & puzzles

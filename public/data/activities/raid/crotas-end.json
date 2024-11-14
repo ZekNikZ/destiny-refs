@@ -4,9 +4,560 @@
     "id": "raid-crotas-end",
     "type": "raid",
     "name": "Crota's End",
-    "description": "TODO",
+    "description": "He waits in the dark below.",
     "backgroundImage": "/images/raids/crotas-end/banner.avif",
-    "triumphs": [],
-    "encounters": []
+    "hasMasterMode": true,
+    "loot": [
+      {
+        "type": "pool",
+        "quantity": "all",
+        "notes": ["Obtained by completing the \"Bottomless Pit\" quest."],
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 1034055198
+          }
+        ]
+      },
+      {
+        "type": "pool",
+        "quantity": "all",
+        "notes": [
+          "Obtained by completing the catalyst puzzle.",
+          "Requires \"Necrochasm\" to drop."
+        ],
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 1931066670
+          }
+        ]
+      }
+    ],
+    "triumphs": [
+      {
+        "bungieRecordHash": 2045739672
+      },
+      {
+        "bungieRecordHash": 1732432755
+      },
+      {
+        "bungieRecordHash": 2572383496
+      },
+      {
+        "bungieRecordHash": 942933865
+      },
+      {
+        "bungieRecordHash": 710681626
+      },
+      {
+        "bungieRecordHash": 295018272
+      },
+      {
+        "bungieRecordHash": 1018843056
+      }
+    ],
+    "encounters": [
+      {
+        "id": "raid-crotas-end-encounter-1",
+        "type": "encounter",
+        "name": "The Abyss",
+        "description": "Traverse the Abyss",
+        "backgroundImage": "/images/raids/crotas-end/encounter-1.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "doubleLootWhen": "challenge_completion_repeatable",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 1432682459,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 833898322,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 2828278545,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-head"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-arms"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-chest"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-crotas-end-oversoul"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-head-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-arms-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-chest-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-crotas-end-adepts"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-crotas-end-oversoul"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 1447905713
+          },
+          {
+            "bungieRecordHash": 3702810582,
+            "guide": "Alternate between depositing the Chalice of Light in a podium and Enlightening a lamp.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-crotas-end-encounter-2",
+        "type": "encounter",
+        "name": "The Oversoul Throne Bridge",
+        "description": "Cross the Bridge",
+        "backgroundImage": "/images/raids/crotas-end/encounter-2.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "doubleLootWhen": "challenge_completion_repeatable",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 1432682459,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 3163900678,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1098171824,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-arms"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-chest"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-legs"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-crotas-end-oversoul"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-arms-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-chest-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-legs-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-crotas-end-adepts"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-crotas-end-oversoul"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 4259447007
+          },
+          {
+            "bungieRecordHash": 1334890488,
+            "guide": "Guardians cannot step on the bridge while it is fully built (i.e., neither middle plate can be stood on while crossing the bridge).",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-crotas-end-encounter-3",
+        "type": "encounter",
+        "name": "Ir Yût, the Deathsinger",
+        "description": "Reach the Summoning Crystal",
+        "backgroundImage": "/images/raids/crotas-end/encounter-3.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "doubleLootWhen": "challenge_completion_repeatable",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 120706239,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 1098171824,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 2828278545,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-chest"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-legs"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-class"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-crotas-end-oversoul"
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-chest-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-legs-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-class-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-crotas-end-adepts"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-crotas-end-oversoul"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 2237801267
+          },
+          {
+            "bungieRecordHash": 680822308,
+            "guide": "Each guardian must have held the Chalice of Light before it can be claimed by the same guardian again.",
+            "isChallenge": true
+          }
+        ]
+      },
+      {
+        "id": "raid-crotas-end-encounter-4",
+        "type": "encounter",
+        "name": "Crota, Son of Oryx",
+        "description": "Defeat Crota",
+        "backgroundImage": "/images/raids/crotas-end/encounter-4.avif",
+        "loot": [
+          {
+            "type": "mode_specific",
+            "modes": [
+              {
+                "mode": "Normal",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "showInLootSummary": true,
+                    "weeklyLimit": "infinite_when_featured",
+                    "doubleLootWhen": "challenge_completion_repeatable",
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 3163900678,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 833898322,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "item",
+                        "itemHash": 120706239,
+                        "deepsight": "craftable"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-head"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-legs"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-class"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-crotas-end-oversoul",
+                    "notes": ["First completion per week grants a guaranteed drop."]
+                  },
+                  {
+                    "type": "pool",
+                    "quantity": "all",
+                    "showInLootSummary": true,
+                    "notes": ["One guaranteed drop if completing a fresh run."],
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 1554192272
+                      }
+                    ]
+                  },
+                  {
+                    "type": "pool",
+                    "quantity": "chance",
+                    "showInLootSummary": true,
+                    "notes": [
+                      "Small chance to earn enough Essense of the Oversoul to immediately complete \"Bottomless Pit\" quest and Necrochasm catalyst."
+                    ],
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 1554192272,
+                        "quantity": 35
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "mode": "Master",
+                "bungieActivityHash": -1,
+                "children": [
+                  {
+                    "type": "pool",
+                    "quantity": 1,
+                    "weeklyLimit": "infinite_when_featured",
+                    "loot": [
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-head-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-legs-focused"
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "raid-crotas-end-class-focused"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-crotas-end-adepts"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-spoils-modern"
+                  },
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-crotas-end-oversoul",
+                    "notes": ["First completion per week grants a guaranteed drop."]
+                  },
+                  {
+                    "type": "pool",
+                    "quantity": "all",
+                    "showInLootSummary": true,
+                    "notes": ["One guaranteed drop if completing a fresh run."],
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 1554192272
+                      }
+                    ]
+                  },
+                  {
+                    "type": "pool",
+                    "quantity": "chance",
+                    "showInLootSummary": true,
+                    "notes": [
+                      "Small chance to earn enough Essense of the Oversoul to immediately complete \"Bottomless Pit\" quest and Necrochasm catalyst."
+                    ],
+                    "loot": [
+                      {
+                        "type": "item",
+                        "itemHash": 1554192272,
+                        "quantity": 35
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "triumphs": [
+          {
+            "bungieRecordHash": 1896685129
+          },
+          {
+            "bungieRecordHash": 752641838,
+            "guide": "Each phase, Crota's overshield must be fully destroyed within 3 seconds.",
+            "isChallenge": true
+          }
+        ]
+      }
+    ]
   }
 }

@@ -566,6 +566,107 @@
         ]
       },
 
+      "raid-crotas-end-head": {
+        "type": "ref-loot",
+        "key": "armor-head",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-crotas-end-head"
+          }
+        ]
+      },
+      "raid-crotas-end-head-focused": {
+        "type": "ref-loot",
+        "key": "armor-head-focused",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-crotas-end-head"
+          }
+        ]
+      },
+      "raid-crotas-end-arms": {
+        "type": "ref-loot",
+        "key": "armor-arms",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-crotas-end-arms"
+          }
+        ]
+      },
+      "raid-crotas-end-arms-focused": {
+        "type": "ref-loot",
+        "key": "armor-arms-focused",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-crotas-end-arms"
+          }
+        ]
+      },
+      "raid-crotas-end-chest": {
+        "type": "ref-loot",
+        "key": "armor-chest",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-crotas-end-chest"
+          }
+        ]
+      },
+      "raid-crotas-end-chest-focused": {
+        "type": "ref-loot",
+        "key": "armor-chest-focused",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-crotas-end-chest"
+          }
+        ]
+      },
+      "raid-crotas-end-legs": {
+        "type": "ref-loot",
+        "key": "armor-legs",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-crotas-end-legs"
+          }
+        ]
+      },
+      "raid-crotas-end-legs-focused": {
+        "type": "ref-loot",
+        "key": "armor-legs-focused",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-crotas-end-legs"
+          }
+        ]
+      },
+      "raid-crotas-end-class": {
+        "type": "ref-loot",
+        "key": "armor-class",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-crotas-end-class"
+          }
+        ]
+      },
+      "raid-crotas-end-class-focused": {
+        "type": "ref-loot",
+        "key": "armor-class-focused",
+        "children": [
+          {
+            "type": "ref-loot-set",
+            "key": "raid-crotas-end-class"
+          }
+        ]
+      },
+
       "raid-root-of-nightmares-head": {
         "type": "ref-loot",
         "key": "armor-head",
@@ -1895,6 +1996,65 @@
           {
             "type": "item",
             "itemHash": 1802135586
+          }
+        ]
+      },
+
+      "raid-crotas-end-adepts": {
+        "type": "pool",
+        "quantity": 1,
+        "pinnacleWhen": "never",
+        "availableWhen": "challenge_completion",
+        "knockout": true,
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 128782990
+          },
+          {
+            "type": "item",
+            "itemHash": 1239700299
+          },
+          {
+            "type": "item",
+            "itemHash": 3782662983
+          },
+          {
+            "type": "item",
+            "itemHash": 3926103986
+          },
+          {
+            "type": "item",
+            "itemHash": 578105049
+          },
+          {
+            "type": "item",
+            "itemHash": 407511664
+          }
+        ]
+      },
+      "raid-crotas-end-exotic": {
+        "type": "pool",
+        "quantity": "chance",
+        "showInLootSummary": true,
+        "pinnacleWhen": "never",
+        "weeklyLimit": "infinite_when_featured",
+        "availableWhen": "always",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 1034055198
+          }
+        ]
+      },
+      "raid-crotas-end-oversoul": {
+        "type": "pool",
+        "quantity": "chance",
+        "showInLootSummary": true,
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 1554192272
           }
         ]
       },
@@ -3972,6 +4132,80 @@
         {
           "type": "item",
           "itemHash": 2915322487
+        }
+      ],
+
+      "raid-crotas-end-head": [
+        {
+          "type": "item",
+          "itemHash": 1328334240
+        },
+        {
+          "type": "item",
+          "itemHash": 859929450
+        },
+
+        {
+          "type": "item",
+          "itemHash": 1964816829
+        }
+      ],
+      "raid-crotas-end-arms": [
+        {
+          "type": "item",
+          "itemHash": 3189374833
+        },
+        {
+          "type": "item",
+          "itemHash": 441033139
+        },
+
+        {
+          "type": "item",
+          "itemHash": 427348780
+        }
+      ],
+      "raid-crotas-end-chest": [
+        {
+          "type": "item",
+          "itemHash": 1261894567
+        },
+        {
+          "type": "item",
+          "itemHash": 3714937821
+        },
+
+        {
+          "type": "item",
+          "itemHash": 1386180724
+        }
+      ],
+      "raid-crotas-end-legs": [
+        {
+          "type": "item",
+          "itemHash": 3020524483
+        },
+        {
+          "type": "item",
+          "itemHash": 175883909
+        },
+        {
+          "type": "item",
+          "itemHash": 1497538390
+        }
+      ],
+      "raid-crotas-end-class": [
+        {
+          "type": "item",
+          "itemHash": 2401746614
+        },
+        {
+          "type": "item",
+          "itemHash": 1306415888
+        },
+        {
+          "type": "item",
+          "itemHash": 2130010697
         }
       ]
     }
