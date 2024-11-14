@@ -64,18 +64,15 @@
                     "loot": [
                       {
                         "type": "item",
-                        "itemHash": 3186018373,
-                        "deepsight": "craftable"
+                        "itemHash": 3186018373
                       },
                       {
                         "type": "item",
-                        "itemHash": 3197270240,
-                        "deepsight": "craftable"
+                        "itemHash": 3197270240
                       },
                       {
                         "type": "item",
-                        "itemHash": 471518543,
-                        "deepsight": "craftable"
+                        "itemHash": 471518543
                       },
                       {
                         "type": "ref-loot",
@@ -165,18 +162,15 @@
                     "loot": [
                       {
                         "type": "item",
-                        "itemHash": 3186018373,
-                        "deepsight": "craftable"
+                        "itemHash": 3186018373
                       },
                       {
                         "type": "item",
-                        "itemHash": 3197270240,
-                        "deepsight": "craftable"
+                        "itemHash": 3197270240
                       },
                       {
                         "type": "item",
-                        "itemHash": 3653573172,
-                        "deepsight": "craftable"
+                        "itemHash": 3653573172
                       },
                       {
                         "type": "ref-loot",
@@ -266,18 +260,15 @@
                     "loot": [
                       {
                         "type": "item",
-                        "itemHash": 2171478765,
-                        "deepsight": "craftable"
+                        "itemHash": 2171478765
                       },
                       {
                         "type": "item",
-                        "itemHash": 3186018373,
-                        "deepsight": "craftable"
+                        "itemHash": 3186018373
                       },
                       {
                         "type": "item",
-                        "itemHash": 471518543,
-                        "deepsight": "craftable"
+                        "itemHash": 471518543
                       },
                       {
                         "type": "ref-loot",
@@ -367,18 +358,15 @@
                     "loot": [
                       {
                         "type": "item",
-                        "itemHash": 2171478765,
-                        "deepsight": "craftable"
+                        "itemHash": 2171478765
                       },
                       {
                         "type": "item",
-                        "itemHash": 3197270240,
-                        "deepsight": "craftable"
+                        "itemHash": 3197270240
                       },
                       {
                         "type": "item",
-                        "itemHash": 4050645223,
-                        "deepsight": "craftable"
+                        "itemHash": 4050645223
                       },
                       {
                         "type": "ref-loot",
@@ -473,18 +461,15 @@
                     "loot": [
                       {
                         "type": "item",
-                        "itemHash": 3653573172,
-                        "deepsight": "craftable"
+                        "itemHash": 3653573172
                       },
                       {
                         "type": "item",
-                        "itemHash": 4050645223,
-                        "deepsight": "craftable"
+                        "itemHash": 4050645223
                       },
                       {
                         "type": "item",
-                        "itemHash": 471518543,
-                        "deepsight": "craftable"
+                        "itemHash": 471518543
                       },
                       {
                         "type": "ref-loot",

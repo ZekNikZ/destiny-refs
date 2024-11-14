@@ -2164,7 +2164,8 @@
         "type": "pool",
         "quantity": "all",
         "pinnacleWhen": "never",
-        "availableWhen": "challenge_completion"
+        "availableWhen": "challenge_completion",
+        "showInLootSummary": true
       },
       "raid-vault-of-glass-exotic": {
         "type": "pool",
