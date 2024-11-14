@@ -31,7 +31,12 @@ export default function ContactPage() {
             </List.Item>
             <List.Item>
               <Group align="center" gap="xs">
-                <Image src="/images/logos/destiny.svg" width={16} height={16} />
+                <Image
+                  src="/images/logos/destiny.svg"
+                  width={16}
+                  height={16}
+                  style={{ width: "16px" }}
+                />
                 Bungie:
                 <Code>ZekNikZ#3085</Code>
               </Group>
