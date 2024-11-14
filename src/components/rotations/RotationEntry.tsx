@@ -69,15 +69,14 @@ export default function RotationEntry(props: Props) {
               </Link>
             );
           })}
+        {props.loot && (
+          <Group gap={4} wrap="nowrap" p={4}>
+            {props.loot.map((loot) => (
+              <LootIcon key={getLootKey(loot)} loot={loot} size={30} />
+            ))}
+          </Group>
+        )}
       </Group>
-
-      {props.loot && (
-        <Group className={classes.loot} gap={4}>
-          {props.loot.map((loot) => (
-            <LootIcon key={getLootKey(loot)} loot={loot} size={30} />
-          ))}
-        </Group>
-      )}
     </Group>
   );
 }
