@@ -322,8 +322,12 @@ export default function FireteamRaidReport() {
                     : "N/A"}
                 </Table.Td>
                 <Table.Td>
-                  {row.activityHistory[selectedRaid]?.normal?.fastestFullClearSeconds ||
-                  row.activityHistory[selectedRaid]?.master?.fastestFullClearSeconds
+                  {isFinite(
+                    row.activityHistory[selectedRaid]?.normal?.fastestFullClearSeconds ?? Infinity
+                  ) ||
+                  isFinite(
+                    row.activityHistory[selectedRaid]?.master?.fastestFullClearSeconds ?? Infinity
+                  )
                     ? `${dayjs
                         .duration(
                           Math.min(
