@@ -18,6 +18,8 @@ jobs:
         run: yarn install --immutable
       - name: Build
         run: yarn build
+        env:
+          VITE_BUNGIE_API_KEY: ${{ secrets.VITE_BUNGIE_API_KEY }}
       - name: Publish
         uses: cloudflare/pages-action@v1
         with:
