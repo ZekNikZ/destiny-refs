@@ -7,6 +7,8 @@
     "description": "A sinister threat has taken root.",
     "backgroundImage": "/images/raids/root-of-nightmares/banner.avif",
     "hasMasterMode": true,
+    "bungieActivityHashes": [2381413764],
+    "bungieMasterActivityHashes": [2918919505],
     "triumphs": [
       {
         "bungieRecordHash": 4270724598

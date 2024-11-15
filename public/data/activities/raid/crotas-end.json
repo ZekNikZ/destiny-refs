@@ -7,6 +7,8 @@
     "description": "He waits in the dark below.",
     "backgroundImage": "/images/raids/crotas-end/banner.avif",
     "hasMasterMode": true,
+    "bungieActivityHashes": [107319834, 4179289725, 1566480315],
+    "bungieMasterActivityHashes": [1507509200, 156253568],
     "loot": [
       {
         "type": "pool",

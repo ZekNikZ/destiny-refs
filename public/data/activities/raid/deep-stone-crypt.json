@@ -6,6 +6,7 @@
     "name": "Deep Stone Crypt",
     "description": "The chains of legacy must be broken.",
     "backgroundImage": "/images/raids/deep-stone-crypt/banner.avif",
+    "bungieActivityHashes": [910380154, 3976949817],
     "triumphs": [
       {
         "bungieRecordHash": 3185876102

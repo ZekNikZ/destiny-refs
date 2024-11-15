@@ -8,6 +8,18 @@
         "backgroundImage": {
           "type": "string"
         },
+        "bungieActivityHashes": {
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "bungieMasterActivityHashes": {
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
         "description": {
           "type": "string"
         },

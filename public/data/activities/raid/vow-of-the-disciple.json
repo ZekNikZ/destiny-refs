@@ -7,6 +7,8 @@
     "description": "The disciple beckons...",
     "backgroundImage": "/images/raids/vow-of-the-disciple/banner.avif",
     "hasMasterMode": true,
+    "bungieActivityHashes": [1441982566, 2906950631],
+    "bungieMasterActivityHashes": [3889634515, 4156879541, 4217492330],
     "triumphs": [
       {
         "bungieRecordHash": 2168422218

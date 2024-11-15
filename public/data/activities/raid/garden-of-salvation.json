@@ -6,6 +6,7 @@
     "name": "Garden of Salvation",
     "description": "\"The garden calls out to you.\"",
     "backgroundImage": "/images/raids/garden-of-salvation/banner.avif",
+    "bungieActivityHashes": [1042180643, 3458480158, 2497200493, 2659723068, 3845997235],
     "loot": [
       {
         "type": "pool",

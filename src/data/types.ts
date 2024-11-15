@@ -26,6 +26,9 @@ export interface Activity {
   tagOverrides?: ActivityTag[];
   hasMasterMode?: boolean;
 
+  bungieActivityHashes?: number[];
+  bungieMasterActivityHashes?: number[];
+
   loot?: LootPool[];
   triumphs?: Triumph[];
   guide?: string;

@@ -7,6 +7,8 @@
     "description": "Beneath Venus, evil stirs...",
     "backgroundImage": "/images/raids/vault-of-glass/banner.avif",
     "hasMasterMode": true,
+    "bungieActivityHashes": [3881495763, 1485585878, 3711931140],
+    "bungieMasterActivityHashes": [3022541210, 1681562271],
     "loot": [
       {
         "type": "pool",

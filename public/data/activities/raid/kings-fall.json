@@ -7,6 +7,8 @@
     "description": "Long live the King...",
     "backgroundImage": "/images/raids/kings-fall/banner.avif",
     "hasMasterMode": true,
+    "bungieActivityHashes": [1374392663, 2897223272],
+    "bungieMasterActivityHashes": [3257594522, 1063970578, 2964135793],
     "loot": [
       {
         "type": "pool",

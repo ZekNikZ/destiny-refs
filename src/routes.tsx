@@ -16,6 +16,7 @@ import BungiePresentationNodeIcon from "./components/BungiePresentationNodeIcon"
 import LootAndDetailsPage from "./pages/LootAndDetailsPage";
 import { ActivityType } from "./data/types";
 import ContactPage from "./pages/ContactPage";
+import FireteamRaidReport from "./pages/tools/FireteamRaidReport";
 
 export interface RouteData {
   path: string;
@@ -132,28 +133,36 @@ const routes: RouteData[] = [
     element: <TodayPage />,
     navbarProperties: {
       icon: makePhosphorIcon(Toolbox),
-      hidden: true,
     },
     children: [
       {
         path: "/tools/vow-chest",
         title: "VOTD Deepsight Puzzle",
         element: <TodayPage />,
+        navbarProperties: {
+          hidden: true,
+        },
       },
       {
         path: "/tools/kf-chest",
         title: "KF Deepsight Puzzle",
         element: <TodayPage />,
+        navbarProperties: {
+          hidden: true,
+        },
       },
       {
         path: "/tools/se-verity",
         title: "SE Verity Helper",
         element: <TodayPage />,
+        navbarProperties: {
+          hidden: true,
+        },
       },
       {
         path: "/tools/raid-summary",
         title: "Fireteam Raid Summary",
-        element: <TodayPage />,
+        element: <FireteamRaidReport />,
       },
     ],
   },

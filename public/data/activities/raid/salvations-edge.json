@@ -7,6 +7,8 @@
     "description": "Free the Light.",
     "backgroundImage": "/images/raids/salvations-edge/banner.avif",
     "hasMasterMode": true,
+    "bungieActivityHashes": [1541433876, 940375169, 2192826039],
+    "bungieMasterActivityHashes": [4129614942],
     "triumphs": [
       {
         "bungieRecordHash": 2487240675
