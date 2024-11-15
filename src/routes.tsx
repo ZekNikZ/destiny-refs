@@ -26,6 +26,7 @@ export interface RouteData {
     label?: string;
     icon?: React.ReactNode;
     hidden?: boolean;
+    beta?: boolean;
   };
   children?: RouteData[];
 }
@@ -163,6 +164,9 @@ const routes: RouteData[] = [
         path: "/tools/raid-summary",
         title: "Fireteam Raid Summary",
         element: <FireteamRaidReport />,
+        navbarProperties: {
+          beta: true,
+        },
       },
     ],
   },

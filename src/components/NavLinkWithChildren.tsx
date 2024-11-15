@@ -1,7 +1,7 @@
 import { generatePath, matchPath, useLocation, useNavigate } from "react-router-dom";
 import { RouteData } from "../routes";
 import { CaretDown, CaretRight } from "@phosphor-icons/react";
-import { Collapse, NavLink } from "@mantine/core";
+import { Badge, Box, Collapse, NavLink } from "@mantine/core";
 
 interface Props {
   route: RouteData;
@@ -20,7 +20,25 @@ const NavLinkWithChildren = (props: Props) => {
     <>
       <NavLink
         key={props.route.path}
-        label={props.route.navbarProperties?.label ?? props.route.title}
+        label={
+          <Box>
+            {props.route.navbarProperties?.label ?? props.route.title}&nbsp;&nbsp;
+            {props.route.navbarProperties?.beta && (
+              <Badge
+                color="red"
+                radius="xs"
+                display="inline-block"
+                style={{
+                  paddingLeft: 2,
+                  paddingRight: 2,
+                  verticalAlign: "top",
+                }}
+              >
+                Beta
+              </Badge>
+            )}
+          </Box>
+        }
         pl={12}
         leftSection={props.route.navbarProperties?.icon}
         rightSection={
