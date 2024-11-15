@@ -29,6 +29,38 @@ export async function bungieSearchForUser(
   return (await response.json()).Response[0];
 }
 
+export interface BungieMembershipSearchResult {
+  primaryMembershipId: string;
+  destinyMemberships: {
+    membershipId: string;
+    membershipType: number;
+  }[];
+}
+
+export async function bungieGetMembershipTypes(
+  membershipId: number | string
+): Promise<BungieMembershipSearchResult | null> {
+  const response = await fetch(
+    `https://www.bungie.net/Platform/User/GetMembershipsById/${membershipId}/-1`,
+    {
+      headers: {
+        "X-API-Key": import.meta.env.VITE_BUNGIE_API_KEY ?? "",
+      },
+    }
+  );
+  if (!response.ok) {
+    return null;
+  }
+
+  const res: BungieMembershipSearchResult = (await response.json()).Response;
+
+  if (res.destinyMemberships.length === 1) {
+    res.primaryMembershipId = res.destinyMemberships[0].membershipId;
+  }
+
+  return res;
+}
+
 export interface BungieUserProfile {
   profile: {
     data: {

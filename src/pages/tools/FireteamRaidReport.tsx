@@ -15,6 +15,7 @@ import { useLocalStorage } from "@mantine/hooks";
 import { ArrowRight } from "@phosphor-icons/react";
 import { useState } from "react";
 import {
+  bungieGetMembershipTypes,
   bungieGetUserProfile,
   bungieSearchForUser,
   getRRProxyData,
@@ -101,6 +102,7 @@ export default function FireteamRaidReport() {
           )[0].emblemHash,
         },
       ];
+      console.log(fireteam);
 
       // Query fireteam activity history
       const fireteamActivityHistory = await Promise.all(
@@ -108,7 +110,13 @@ export default function FireteamRaidReport() {
           const userProfile =
             member.membershipId === membershipId
               ? mainUserProfile
-              : await bungieGetUserProfile(membershipType, member.membershipId);
+              : await bungieGetMembershipTypes(member.membershipId).then((res) =>
+                  bungieGetUserProfile(
+                    res?.destinyMemberships.find((m) => m.membershipId === res.primaryMembershipId)
+                      ?.membershipType!,
+                    member.membershipId
+                  )
+                );
 
           if (!userProfile) {
             setError("Failed to fetch some fireteam members.");
