@@ -5,6 +5,7 @@
     "type": "lost_sector",
     "name": "Chamber of Starlight",
     "location": "Dreaming City",
-    "backgroundImage": "/images/lost_sectors/chamber-of-starlight.avif"
+    "backgroundImage": "/images/lost_sectors/chamber-of-starlight.avif",
+    "championTypes": ["overload", "unstoppable"]
   }
 }

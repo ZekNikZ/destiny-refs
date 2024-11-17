@@ -11,6 +11,7 @@ import {
   Title,
   TypographyStylesProvider,
   Box,
+  Image,
 } from "@mantine/core";
 import {
   ArrowsInSimple,
@@ -116,6 +117,27 @@ export default function ActivityCard(props: Props) {
               </Text>
             )}
             <Text lh="xs">
+              {props.activity.championTypes && (
+                <Group
+                  p={0}
+                  gap={2}
+                  display="inline-flex"
+                  style={{
+                    verticalAlign: "bottom",
+                  }}
+                  mr={4}
+                >
+                  {props.activity.championTypes?.map((type) => (
+                    <Image
+                      key={type}
+                      src={`/icons/attributes/${type}.svg`}
+                      alt={type}
+                      h={20}
+                      w={20}
+                    />
+                  ))}
+                </Group>
+              )}
               {props.activity.location ? `(${props.activity.location}) ` : ""}
               {props.activity.description}
             </Text>

@@ -5,6 +5,7 @@
     "type": "lost_sector",
     "name": "The Broken Deep",
     "location": "Pale Heart",
-    "backgroundImage": "/images/lost_sectors/the-broken-deep.avif"
+    "backgroundImage": "/images/lost_sectors/the-broken-deep.avif",
+    "championTypes": ["overload", "unstoppable"]
   }
 }

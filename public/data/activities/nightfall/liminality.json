@@ -4,6 +4,7 @@
     "id": "nightfall-liminality",
     "type": "nightfall",
     "name": "Liminality",
-    "backgroundImage": "/images/nightfalls/liminality.avif"
+    "backgroundImage": "/images/nightfalls/liminality.avif",
+    "championTypes": ["barrier", "unstoppable"]
   }
 }

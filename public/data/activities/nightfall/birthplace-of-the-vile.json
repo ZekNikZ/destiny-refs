@@ -4,6 +4,7 @@
     "id": "nightfall-birthplace-of-the-vile",
     "type": "nightfall",
     "name": "Birthplace of the Vile",
-    "backgroundImage": "/images/nightfalls/birthplace-of-the-vile.avif"
+    "backgroundImage": "/images/nightfalls/birthplace-of-the-vile.avif",
+    "championTypes": ["overload", "unstoppable"]
   }
 }

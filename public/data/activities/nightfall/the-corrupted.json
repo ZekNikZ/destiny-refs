@@ -4,6 +4,7 @@
     "id": "nightfall-the-corrupted",
     "type": "nightfall",
     "name": "The Corrupted",
-    "backgroundImage": "/images/nightfalls/the-corrupted.avif"
+    "backgroundImage": "/images/nightfalls/the-corrupted.avif",
+    "championTypes": ["overload", "unstoppable"]
   }
 }

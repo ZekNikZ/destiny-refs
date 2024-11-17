@@ -4,6 +4,7 @@
     "id": "nightfall-the-lightblade",
     "type": "nightfall",
     "name": "The Lightblade",
-    "backgroundImage": "/images/nightfalls/the-lightblade.avif"
+    "backgroundImage": "/images/nightfalls/the-lightblade.avif",
+    "championTypes": ["barrier", "unstoppable"]
   }
 }

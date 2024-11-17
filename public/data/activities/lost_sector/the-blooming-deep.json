@@ -5,6 +5,7 @@
     "type": "lost_sector",
     "name": "The Blooming Deep",
     "location": "Pale Heart",
-    "backgroundImage": "/images/lost_sectors/the-blooming-deep.avif"
+    "backgroundImage": "/images/lost_sectors/the-blooming-deep.avif",
+    "championTypes": ["overload", "unstoppable"]
   }
 }

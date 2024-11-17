@@ -5,6 +5,7 @@
     "type": "lost_sector",
     "name": "Bay of Drowned Wishes",
     "location": "Dreaming City",
-    "backgroundImage": "/images/lost_sectors/bay-of-drowned-wishes.avif"
+    "backgroundImage": "/images/lost_sectors/bay-of-drowned-wishes.avif",
+    "championTypes": ["overload", "unstoppable"]
   }
 }

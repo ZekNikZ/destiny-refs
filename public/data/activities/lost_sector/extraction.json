@@ -5,6 +5,7 @@
     "type": "lost_sector",
     "name": "Extraction",
     "location": "Savathun's Throne World",
-    "backgroundImage": "/images/lost_sectors/extraction.avif"
+    "backgroundImage": "/images/lost_sectors/extraction.avif",
+    "championTypes": ["overload", "unstoppable"]
   }
 }

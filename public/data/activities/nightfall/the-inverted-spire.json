@@ -4,6 +4,7 @@
     "id": "nightfall-the-inverted-spire",
     "type": "nightfall",
     "name": "The Inverted Spire",
-    "backgroundImage": "/images/nightfalls/the-inverted-spire.avif"
+    "backgroundImage": "/images/nightfalls/the-inverted-spire.avif",
+    "championTypes": ["barrier", "unstoppable"]
   }
 }

@@ -5,6 +5,7 @@
     "type": "lost_sector",
     "name": "Metamorphosis",
     "location": "Savathun's Throne World",
-    "backgroundImage": "/images/lost_sectors/metamorphosis.avif"
+    "backgroundImage": "/images/lost_sectors/metamorphosis.avif",
+    "championTypes": ["overload", "unstoppable"]
   }
 }

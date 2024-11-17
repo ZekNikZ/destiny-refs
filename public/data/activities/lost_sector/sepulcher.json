@@ -5,6 +5,7 @@
     "type": "lost_sector",
     "name": "Sepulcher",
     "location": "Savathun's Throne World",
-    "backgroundImage": "/images/lost_sectors/sepulcher.avif"
+    "backgroundImage": "/images/lost_sectors/sepulcher.avif",
+    "championTypes": ["barrier", "unstoppable"]
   }
 }

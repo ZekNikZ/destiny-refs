@@ -1,4 +1,4 @@
-import { Group, Stack, Title, Text } from "@mantine/core";
+import { Group, Title, Text, Image } from "@mantine/core";
 import { useGlobalData } from "../../data/useGlobalData";
 import classes from "./RotationEntry.module.scss";
 import { Link } from "react-router-dom";
@@ -42,10 +42,10 @@ export default function RotationEntry(props: Props) {
           .filter((a) => !!a)
           .map((activity) => {
             const inside = (
-              <Stack
+              <Group
                 key={activity.id}
                 miw={240}
-                h={props.big ? 80 : 40}
+                mih={props.big ? 80 : 40}
                 className={classes.darkOverlay}
                 style={{
                   backgroundImage: `url('${activity.backgroundImage}')`,
@@ -53,13 +53,27 @@ export default function RotationEntry(props: Props) {
                   backgroundPosition: "50% 50%",
                 }}
                 display="flex"
-                p="sm"
-                justify="center"
+                pl="sm"
+                pr="sm"
+                pt={4}
+                pb={4}
+                align="center"
+                gap={4}
               >
                 <Title order={3} size={props.big ? "h3" : "h4"} c="white">
                   {activity.name}
                 </Title>
-              </Stack>
+
+                {activity.championTypes?.map((type) => (
+                  <Image
+                    key={type}
+                    src={`/icons/attributes/${type}.svg`}
+                    alt={type}
+                    h={20}
+                    w={20}
+                  />
+                ))}
+              </Group>
             );
             return props.noLink ? (
               inside

@@ -5,6 +5,7 @@
     "type": "lost_sector",
     "name": "The Quarry",
     "location": "EDZ",
-    "backgroundImage": "/images/lost_sectors/the-quarry.avif"
+    "backgroundImage": "/images/lost_sectors/the-quarry.avif",
+    "championTypes": ["barrier", "unstoppable"]
   }
 }

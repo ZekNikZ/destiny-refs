@@ -4,6 +4,7 @@
     "id": "nightfall-battleground-behemoth",
     "type": "nightfall",
     "name": "Battleground: Behemoth",
-    "backgroundImage": "/images/nightfalls/battleground-behemoth.avif"
+    "backgroundImage": "/images/nightfalls/battleground-behemoth.avif",
+    "championTypes": ["barrier", "unstoppable"]
   }
 }

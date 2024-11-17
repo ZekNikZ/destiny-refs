@@ -5,6 +5,7 @@
     "type": "lost_sector",
     "name": "K1 Revelation",
     "location": "Moon",
-    "backgroundImage": "/images/lost_sectors/k1-revelation.avif"
+    "backgroundImage": "/images/lost_sectors/k1-revelation.avif",
+    "championTypes": ["barrier", "unstoppable"]
   }
 }

@@ -5,6 +5,7 @@
     "type": "lost_sector",
     "name": "The Forgotten Deep",
     "location": "Pale Heart",
-    "backgroundImage": "/images/lost_sectors/the-forgotten-deep.avif"
+    "backgroundImage": "/images/lost_sectors/the-forgotten-deep.avif",
+    "championTypes": ["barrier", "unstoppable"]
   }
 }

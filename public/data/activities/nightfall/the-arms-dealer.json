@@ -4,6 +4,7 @@
     "id": "nightfall-the-arms-dealer",
     "type": "nightfall",
     "name": "The Arms Dealer",
-    "backgroundImage": "/images/nightfalls/the-arms-dealer.avif"
+    "backgroundImage": "/images/nightfalls/the-arms-dealer.avif",
+    "championTypes": ["barrier", "unstoppable"]
   }
 }

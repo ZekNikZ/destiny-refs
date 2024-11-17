@@ -20,6 +20,12 @@
           },
           "type": "array"
         },
+        "championTypes": {
+          "items": {
+            "$ref": "#/definitions/ChampionType"
+          },
+          "type": "array"
+        },
         "description": {
           "type": "string"
         },
@@ -122,6 +128,14 @@
         "lost_sector",
         "encounter",
         "opening-encounter"
+      ],
+      "type": "string"
+    },
+    "ChampionType": {
+      "enum": [
+        "barrier",
+        "overload",
+        "unstoppable"
       ],
       "type": "string"
     },

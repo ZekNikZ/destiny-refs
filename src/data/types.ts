@@ -16,6 +16,10 @@ export type ActivityTag =
   | "double-loot-active"
   | "not-available-rotating";
 
+export type ChampionType = "barrier" | "overload" | "unstoppable";
+
+export type DamageType = "kinetic" | "arc" | "solar" | "void" | "stasis" | "strand";
+
 export interface Activity {
   id: string;
   type: ActivityType;
@@ -25,6 +29,7 @@ export interface Activity {
   location?: string;
   tagOverrides?: ActivityTag[];
   hasMasterMode?: boolean;
+  championTypes?: ChampionType[];
 
   bungieActivityHashes?: number[];
   bungieMasterActivityHashes?: number[];
