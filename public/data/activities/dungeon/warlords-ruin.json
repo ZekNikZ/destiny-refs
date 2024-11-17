@@ -221,10 +221,6 @@
                     "loot": [
                       {
                         "type": "item",
-                        "itemHash": 839344841
-                      },
-                      {
-                        "type": "item",
                         "itemHash": 3381450498
                       },
                       {

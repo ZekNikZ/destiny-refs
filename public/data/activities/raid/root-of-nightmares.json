@@ -370,6 +370,10 @@
                 "bungieActivityHash": -1,
                 "children": [
                   {
+                    "type": "ref-loot-pool",
+                    "key": "raid-root-of-nightmares-exotic"
+                  },
+                  {
                     "type": "pool",
                     "quantity": 1,
                     "showInLootSummary": true,
@@ -377,34 +381,40 @@
                     "doubleLootWhen": "challenge_completion_repeatable",
                     "loot": [
                       {
-                        "type": "item",
-                        "itemHash": 484515708,
-                        "deepsight": "craftable"
-                      },
-                      {
-                        "type": "item",
-                        "itemHash": 231031173,
-                        "deepsight": "craftable"
-                      },
-                      {
-                        "type": "item",
-                        "itemHash": 135029084,
-                        "deepsight": "craftable"
-                      },
-                      {
-                        "type": "item",
-                        "itemHash": 1471212226,
-                        "deepsight": "craftable"
-                      },
-                      {
-                        "type": "item",
-                        "itemHash": 2972949637,
-                        "deepsight": "craftable"
-                      },
-                      {
-                        "type": "item",
-                        "itemHash": 1491665733,
-                        "deepsight": "craftable"
+                        "type": "ref-loot",
+                        "key": "any-weapon",
+                        "children": [
+                          {
+                            "type": "item",
+                            "itemHash": 484515708,
+                            "deepsight": "craftable"
+                          },
+                          {
+                            "type": "item",
+                            "itemHash": 231031173,
+                            "deepsight": "craftable"
+                          },
+                          {
+                            "type": "item",
+                            "itemHash": 135029084,
+                            "deepsight": "craftable"
+                          },
+                          {
+                            "type": "item",
+                            "itemHash": 1471212226,
+                            "deepsight": "craftable"
+                          },
+                          {
+                            "type": "item",
+                            "itemHash": 2972949637,
+                            "deepsight": "craftable"
+                          },
+                          {
+                            "type": "item",
+                            "itemHash": 1491665733,
+                            "deepsight": "craftable"
+                          }
+                        ]
                       },
                       {
                         "type": "ref-loot",
@@ -430,6 +440,10 @@
                 "mode": "Master",
                 "bungieActivityHash": -1,
                 "children": [
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-root-of-nightmares-exotic"
+                  },
                   {
                     "type": "pool",
                     "quantity": 1,

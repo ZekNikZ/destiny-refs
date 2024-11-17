@@ -62,6 +62,12 @@
         "groupType": "Stat-Focused Armor",
         "displayStaticIcon": "class-item"
       },
+      "any-weapon": {
+        "type": "group",
+        "name": "Any Weapon",
+        "groupType": "Weapon",
+        "displayStaticIcon": "weapon"
+      },
 
       "raid-salvations-edge-head": {
         "type": "group",
@@ -1928,6 +1934,7 @@
         "pinnacleWhen": "never",
         "weeklyLimit": "infinite_after_first_clear",
         "doubleLootWhen": "challenge_completion",
+        "showInLootSummary": true,
         "loot": [
           {
             "type": "item",
@@ -2138,13 +2145,13 @@
         "type": "pool",
         "quantity": "chance",
         "showInLootSummary": true,
-        "pinnacleWhen": "never",
-        "weeklyLimit": "infinite_when_featured",
+        "weeklyLimit": "once_ever",
         "availableWhen": "always",
+        "notes": ["Quest to unlock Nechrochasm. Available on first completion."],
         "loot": [
           {
             "type": "item",
-            "itemHash": 1034055198
+            "itemHash": 4284902391
           }
         ]
       },
@@ -2243,44 +2250,50 @@
         "showInLootSummary": true,
         "loot": [
           {
-            "type": "item",
-            "itemHash": 3591141932,
-            "deepsight": "craftable"
-          },
-          {
-            "type": "item",
-            "itemHash": 501329015,
-            "deepsight": "craftable"
-          },
-          {
-            "type": "item",
-            "itemHash": 3885259140,
-            "deepsight": "craftable"
-          },
-          {
-            "type": "item",
-            "itemHash": 2884596447,
-            "deepsight": "craftable"
-          },
-          {
-            "type": "item",
-            "itemHash": 424291879,
-            "deepsight": "craftable"
-          },
-          {
-            "type": "item",
-            "itemHash": 3388655311,
-            "deepsight": "craftable"
-          },
-          {
-            "type": "item",
-            "itemHash": 70083888,
-            "deepsight": "craftable"
-          },
-          {
-            "type": "item",
-            "itemHash": 1851777734,
-            "deepsight": "craftable"
+            "type": "ref-loot",
+            "key": "any-weapon",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 3591141932,
+                "deepsight": "craftable"
+              },
+              {
+                "type": "item",
+                "itemHash": 501329015,
+                "deepsight": "craftable"
+              },
+              {
+                "type": "item",
+                "itemHash": 3885259140,
+                "deepsight": "craftable"
+              },
+              {
+                "type": "item",
+                "itemHash": 2884596447,
+                "deepsight": "craftable"
+              },
+              {
+                "type": "item",
+                "itemHash": 424291879,
+                "deepsight": "craftable"
+              },
+              {
+                "type": "item",
+                "itemHash": 3388655311,
+                "deepsight": "craftable"
+              },
+              {
+                "type": "item",
+                "itemHash": 70083888,
+                "deepsight": "craftable"
+              },
+              {
+                "type": "item",
+                "itemHash": 1851777734,
+                "deepsight": "craftable"
+              }
+            ]
           },
           {
             "type": "group",
@@ -2468,44 +2481,50 @@
         ],
         "loot": [
           {
-            "type": "item",
-            "itemHash": 3325778512
-          },
-          {
-            "type": "item",
-            "itemHash": 2723909519
-          },
-          {
-            "type": "item",
-            "itemHash": 2931957300
-          },
-          {
-            "type": "item",
-            "itemHash": 4277547616
-          },
-          {
-            "type": "item",
-            "itemHash": 3924212056
-          },
-          {
-            "type": "item",
-            "itemHash": 3690523502
-          },
-          {
-            "type": "item",
-            "itemHash": 3870811754
-          },
-          {
-            "type": "item",
-            "itemHash": 1016668089
-          },
-          {
-            "type": "item",
-            "itemHash": 208088207
-          },
-          {
-            "type": "item",
-            "itemHash": 1645386487
+            "type": "ref-loot",
+            "key": "any-weapon",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 3325778512
+              },
+              {
+                "type": "item",
+                "itemHash": 2723909519
+              },
+              {
+                "type": "item",
+                "itemHash": 2931957300
+              },
+              {
+                "type": "item",
+                "itemHash": 4277547616
+              },
+              {
+                "type": "item",
+                "itemHash": 3924212056
+              },
+              {
+                "type": "item",
+                "itemHash": 3690523502
+              },
+              {
+                "type": "item",
+                "itemHash": 3870811754
+              },
+              {
+                "type": "item",
+                "itemHash": 1016668089
+              },
+              {
+                "type": "item",
+                "itemHash": 208088207
+              },
+              {
+                "type": "item",
+                "itemHash": 1645386487
+              }
+            ]
           },
           {
             "type": "item",
@@ -2629,44 +2648,50 @@
         "pinnacleWhen": "activity_is_featured",
         "loot": [
           {
-            "type": "item",
-            "itemHash": 3325778512
-          },
-          {
-            "type": "item",
-            "itemHash": 2723909519
-          },
-          {
-            "type": "item",
-            "itemHash": 2931957300
-          },
-          {
-            "type": "item",
-            "itemHash": 4277547616
-          },
-          {
-            "type": "item",
-            "itemHash": 3924212056
-          },
-          {
-            "type": "item",
-            "itemHash": 3690523502
-          },
-          {
-            "type": "item",
-            "itemHash": 3870811754
-          },
-          {
-            "type": "item",
-            "itemHash": 1016668089
-          },
-          {
-            "type": "item",
-            "itemHash": 208088207
-          },
-          {
-            "type": "item",
-            "itemHash": 1645386487
+            "type": "ref-loot",
+            "key": "any-weapon",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 3325778512
+              },
+              {
+                "type": "item",
+                "itemHash": 2723909519
+              },
+              {
+                "type": "item",
+                "itemHash": 2931957300
+              },
+              {
+                "type": "item",
+                "itemHash": 4277547616
+              },
+              {
+                "type": "item",
+                "itemHash": 3924212056
+              },
+              {
+                "type": "item",
+                "itemHash": 3690523502
+              },
+              {
+                "type": "item",
+                "itemHash": 3870811754
+              },
+              {
+                "type": "item",
+                "itemHash": 1016668089
+              },
+              {
+                "type": "item",
+                "itemHash": 208088207
+              },
+              {
+                "type": "item",
+                "itemHash": 1645386487
+              }
+            ]
           },
           {
             "type": "group",
@@ -2778,32 +2803,38 @@
         "showInLootSummary": true,
         "loot": [
           {
-            "type": "item",
-            "itemHash": 355922321
-          },
-          {
-            "type": "item",
-            "itemHash": 1874424704
-          },
-          {
-            "type": "item",
-            "itemHash": 250721843
-          },
-          {
-            "type": "item",
-            "itemHash": 871900124
-          },
-          {
-            "type": "item",
-            "itemHash": 2140635451
-          },
-          {
-            "type": "item",
-            "itemHash": 3723679465
-          },
-          {
-            "type": "item",
-            "itemHash": 2465372924
+            "type": "ref-loot",
+            "key": "any-weapon",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 355922321
+              },
+              {
+                "type": "item",
+                "itemHash": 1874424704
+              },
+              {
+                "type": "item",
+                "itemHash": 250721843
+              },
+              {
+                "type": "item",
+                "itemHash": 871900124
+              },
+              {
+                "type": "item",
+                "itemHash": 2140635451
+              },
+              {
+                "type": "item",
+                "itemHash": 3723679465
+              },
+              {
+                "type": "item",
+                "itemHash": 2465372924
+              }
+            ]
           },
           {
             "type": "group",

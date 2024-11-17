@@ -259,28 +259,34 @@
                     "weeklyLimit": "infinite_when_featured",
                     "loot": [
                       {
-                        "type": "item",
-                        "itemHash": 3138208275
-                      },
-                      {
-                        "type": "item",
-                        "itemHash": 2306182339
-                      },
-                      {
-                        "type": "item",
-                        "itemHash": 8293111
-                      },
-                      {
-                        "type": "item",
-                        "itemHash": 4070357005
-                      },
-                      {
-                        "type": "item",
-                        "itemHash": 1555959830
-                      },
-                      {
-                        "type": "item",
-                        "itemHash": 487205709
+                        "type": "ref-loot",
+                        "key": "any-weapon",
+                        "children": [
+                          {
+                            "type": "item",
+                            "itemHash": 3138208275
+                          },
+                          {
+                            "type": "item",
+                            "itemHash": 2306182339
+                          },
+                          {
+                            "type": "item",
+                            "itemHash": 8293111
+                          },
+                          {
+                            "type": "item",
+                            "itemHash": 4070357005
+                          },
+                          {
+                            "type": "item",
+                            "itemHash": 1555959830
+                          },
+                          {
+                            "type": "item",
+                            "itemHash": 487205709
+                          }
+                        ]
                       },
                       {
                         "type": "ref-loot",

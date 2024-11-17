@@ -485,34 +485,40 @@
                     "pinnacleWhen": "activity_is_featured",
                     "loot": [
                       {
-                        "type": "item",
-                        "itemHash": 2221264583,
-                        "deepsight": "craftable"
-                      },
-                      {
-                        "type": "item",
-                        "itemHash": 3228096719,
-                        "deepsight": "craftable"
-                      },
-                      {
-                        "type": "item",
-                        "itemHash": 3969066556,
-                        "deepsight": "craftable"
-                      },
-                      {
-                        "type": "item",
-                        "itemHash": 431721920,
-                        "deepsight": "craftable"
-                      },
-                      {
-                        "type": "item",
-                        "itemHash": 1937552980,
-                        "deepsight": "craftable"
-                      },
-                      {
-                        "type": "item",
-                        "itemHash": 1321506184,
-                        "deepsight": "craftable"
+                        "type": "ref-loot",
+                        "key": "any-weapon",
+                        "children": [
+                          {
+                            "type": "item",
+                            "itemHash": 2221264583,
+                            "deepsight": "craftable"
+                          },
+                          {
+                            "type": "item",
+                            "itemHash": 3228096719,
+                            "deepsight": "craftable"
+                          },
+                          {
+                            "type": "item",
+                            "itemHash": 3969066556,
+                            "deepsight": "craftable"
+                          },
+                          {
+                            "type": "item",
+                            "itemHash": 431721920,
+                            "deepsight": "craftable"
+                          },
+                          {
+                            "type": "item",
+                            "itemHash": 1937552980,
+                            "deepsight": "craftable"
+                          },
+                          {
+                            "type": "item",
+                            "itemHash": 1321506184,
+                            "deepsight": "craftable"
+                          }
+                        ]
                       },
                       {
                         "type": "ref-loot",

@@ -66,7 +66,7 @@ export default function LootGroupIcon(props: Props) {
       </HoverCard.Target>
       {props.loot.children.length > 0 && (
         <HoverCard.Dropdown p="sm">
-          <Stack gap="xs">
+          <Stack gap="xs" mah={320} style={{ overflowY: "auto", overflowX: "hidden" }}>
             {getUsableLoots(props.loot.children).map((loot) => (
               <LootListing
                 loot={{

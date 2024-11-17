@@ -401,6 +401,10 @@
         "backgroundImage": "/images/raids/crotas-end/encounter-4.avif",
         "loot": [
           {
+            "type": "ref-loot-pool",
+            "key": "raid-crotas-end-exotic"
+          },
+          {
             "type": "mode_specific",
             "modes": [
               {
@@ -485,6 +489,10 @@
                 "mode": "Master",
                 "bungieActivityHash": -1,
                 "children": [
+                  {
+                    "type": "ref-loot-pool",
+                    "key": "raid-crotas-end-exotic"
+                  },
                   {
                     "type": "pool",
                     "quantity": 1,

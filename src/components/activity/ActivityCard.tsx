@@ -197,7 +197,9 @@ export default function ActivityCard(props: Props) {
             {/* Loot */}
             {props.activity.loot && (
               <Accordion.Item key="Loot" value="Loot">
-                <Accordion.Control icon={<TreasureChest />}>Loot</Accordion.Control>
+                <Accordion.Control icon={<TreasureChest />}>
+                  {props.activity.encounters ? "Quest / Non-Encounter Loot" : "Loot"}
+                </Accordion.Control>
                 <Accordion.Panel>
                   <LootTable
                     lootPools={props.activity.loot}
