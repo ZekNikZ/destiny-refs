@@ -1,35 +1,8 @@
-- Implement guides
-- Implement rotations
-- Implement triumphs
-- Add additional raids for testing:
-  - vow
-  - lw
-  - dsc
-  - gos
-  - se
-  - kf
-  - ron
-  - crota
-  - vog
-- Implement "Rotations" page
-- Be able to mark weapons as deepsight
-- Implement nightfalls
-- Implement lost sectors
-- Implement dungeons
-  - st
-  - pit
-  - prophecy
-  - goa
-  - duality
-  - spire
-  - ghosts
-  - warlord
-  - vesper
-- Begin "Today" page
-- on mobile the noIcon hovers are infinite width
-- node ovrd avalon title not wrapping, causing hortizontal scroll on mobile
-- Rotation entries are still clickable on mobile - should not be. redirect to dashboard page instead
-- Implement exotic missions
-- Add rest of raids
-
-- Raid and dungeon secret chests & puzzles
+- Raid and dungeon secret chests & puzzles rewards
+- Raid and dungeon guide links
+- Improve discord embeds (vite plugin to auto generate?)
+- HTML title
+- clicking on weapon should link to foundry or light gg
+- crucible rotators
+- zero hour map rotation
+- threats, shields, overcharges for GMs and lost sectors

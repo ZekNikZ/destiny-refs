@@ -16,7 +16,7 @@ export default function ActivityRotationDisplay(props: Props) {
     case "weekly":
     case "daily":
       const startDate = dayjs(props.rotation.startDate);
-      const startIndex = dayjs().diff(startDate, "week");
+      const startIndex = dayjs().diff(startDate, props.rotation.type === "weekly" ? "week" : "day");
 
       let rotation: string[][];
       switch (props.rotation.rotationLimit) {
@@ -43,7 +43,10 @@ export default function ActivityRotationDisplay(props: Props) {
               return (
                 <RotationEntry
                   key={activities.join("|") + index}
-                  date={startDate.add(index + startIndex, "weeks")}
+                  date={startDate.add(
+                    index + startIndex,
+                    props.rotation.type === "weekly" ? "weeks" : "days"
+                  )}
                   activityIds={activities}
                   loot={lootRotation ? lootRotation[index % lootRotation.length] : undefined}
                   //   noLink={noLinks}
