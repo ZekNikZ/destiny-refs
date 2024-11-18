@@ -36,9 +36,7 @@ export interface Activity {
 
   loot?: LootPool[];
   triumphs?: Triumph[];
-  guide?: string;
-  secretChests?: SecretChest[];
-  extraPuzzles?: ExtraPuzzle[];
+  extraSections?: Section[];
 
   encounters?: Activity[];
 }
@@ -167,6 +165,35 @@ export interface ExtraPuzzle {
   loot: LootPool[];
 }
 
+export interface Section {
+  id: string;
+  name: string;
+  phosphorIconName?: string;
+  hidden?: boolean;
+  content: ContentBlock[];
+}
+
+export type ContentBlock =
+  | {
+      type: "text";
+      text: string;
+    }
+  | {
+      type: "image";
+      url: string;
+    }
+  | {
+      type: "loot";
+      url: string;
+    }
+  | {
+      type: "video";
+      url: string;
+    }
+  | {
+      type: "special-zero-hour-map";
+    };
+
 export interface SharedLootPools {
   loot: Record<string, Partial<Loot>>;
   pools: Record<string, Partial<LootPool>>;
@@ -190,6 +217,14 @@ export type ActivityRotation =
       type: "newest";
       activityType: ActivityType;
       activityId: string;
+    }
+  | {
+      id: string;
+      name: string;
+      type: "special";
+      activityType: ActivityType;
+      activityId: string;
+      rotation: string[][];
     };
 
 export type ChallengeRotation = {

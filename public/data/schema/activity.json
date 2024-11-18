@@ -35,14 +35,11 @@
           },
           "type": "array"
         },
-        "extraPuzzles": {
+        "extraSections": {
           "items": {
-            "$ref": "#/definitions/ExtraPuzzle"
+            "$ref": "#/definitions/Section"
           },
           "type": "array"
-        },
-        "guide": {
-          "type": "string"
         },
         "hasMasterMode": {
           "type": "boolean"
@@ -61,12 +58,6 @@
         },
         "name": {
           "type": "string"
-        },
-        "secretChests": {
-          "items": {
-            "$ref": "#/definitions/SecretChest"
-          },
-          "type": "array"
         },
         "tagOverrides": {
           "items": {
@@ -139,28 +130,90 @@
       ],
       "type": "string"
     },
-    "ExtraPuzzle": {
-      "additionalProperties": false,
-      "properties": {
-        "description": {
-          "type": "string"
-        },
-        "loot": {
-          "items": {
-            "$ref": "#/definitions/LootPool"
+    "ContentBlock": {
+      "anyOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "type": {
+              "const": "text",
+              "type": "string"
+            }
           },
-          "type": "array"
+          "required": [
+            "type",
+            "text"
+          ],
+          "type": "object"
         },
-        "name": {
-          "type": "string"
+        {
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "const": "image",
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "url"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "const": "loot",
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "url"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "const": "video",
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "url"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "const": "special-zero-hour-map",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "type": "object"
         }
-      },
-      "required": [
-        "name",
-        "description",
-        "loot"
-      ],
-      "type": "object"
+      ]
     },
     "Loot": {
       "anyOf": [
@@ -548,30 +601,32 @@
         }
       ]
     },
-    "SecretChest": {
+    "Section": {
       "additionalProperties": false,
       "properties": {
-        "backgroundImage": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        },
-        "loot": {
+        "content": {
           "items": {
-            "$ref": "#/definitions/LootPool"
+            "$ref": "#/definitions/ContentBlock"
           },
           "type": "array"
         },
+        "hidden": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "string"
+        },
         "name": {
+          "type": "string"
+        },
+        "phosphorIconName": {
           "type": "string"
         }
       },
       "required": [
+        "id",
         "name",
-        "description",
-        "backgroundImage",
-        "loot"
+        "content"
       ],
       "type": "object"
     },

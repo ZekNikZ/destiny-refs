@@ -91,6 +91,45 @@
             "activityId"
           ],
           "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "activityId": {
+              "type": "string"
+            },
+            "activityType": {
+              "$ref": "#/definitions/ActivityType"
+            },
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "rotation": {
+              "items": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "type": {
+              "const": "special",
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "name",
+            "type",
+            "activityType",
+            "activityId",
+            "rotation"
+          ],
+          "type": "object"
         }
       ]
     },

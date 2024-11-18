@@ -9,7 +9,6 @@ import {
   useMantineTheme,
   Text,
   Title,
-  TypographyStylesProvider,
   Box,
   Image,
 } from "@mantine/core";
@@ -21,15 +20,15 @@ import {
   Question,
 } from "@phosphor-icons/react";
 import { Activity, ActivityAvailability } from "../../data/types";
-
 import classes from "./ActivityCard.module.scss";
 import React, { useMemo, useState } from "react";
 import { anyLootIsPinnacle, dedupeLoot, getLootKey, summarizeLootPool } from "../../utils/loot";
 import LootIcon from "../loot/LootIcon";
 import LootTable from "../loot/LootTable";
-import Markdown from "react-markdown";
 import TriumphDisplay from "../TriumphDisplay";
 import { useMediaQuery } from "@mantine/hooks";
+import ContentBlockDisplay from "../sections/ContentBlock";
+import * as Icons from "@phosphor-icons/react";
 
 interface Props {
   activity: Activity;
@@ -92,10 +91,7 @@ export default function ActivityCard(props: Props) {
           borderBottom: (
             collapseOpen === "summary"
               ? lootSummary.length > 0
-              : props.activity.loot ||
-                props.activity.triumphs ||
-                props.activity.guide ||
-                props.activity.extraPuzzles
+              : props.activity.loot || props.activity.triumphs || props.activity.extraSections
           )
             ? `1px solid ${theme.colors.dark[4]}`
             : undefined,
@@ -256,33 +252,30 @@ export default function ActivityCard(props: Props) {
               </Accordion.Item>
             )}
 
-            {/* Guides */}
-            {props.activity.guide && (
-              <Accordion.Item key="Guide" value="Guide">
-                <Accordion.Control icon={<Question />}>Guide</Accordion.Control>
-                <Accordion.Panel>
-                  <TypographyStylesProvider>
-                    <Markdown>{props.activity.guide}</Markdown>
-                  </TypographyStylesProvider>
-                </Accordion.Panel>
-              </Accordion.Item>
-            )}
-
-            {/* TODO: Secret Chests */}
-            {props.activity.secretChests && (
-              <Accordion.Item key="Guides" value="Guides">
-                <Accordion.Control icon={<Question />}>Guides</Accordion.Control>
-                <Accordion.Panel>Secret Chests!</Accordion.Panel>
-              </Accordion.Item>
-            )}
-
-            {/* TODO: Extra Puzzles */}
-            {props.activity.extraPuzzles && (
-              <Accordion.Item key="Guides" value="Guides">
-                <Accordion.Control icon={<Question />}>Guides</Accordion.Control>
-                <Accordion.Panel>Extra Puzzles!</Accordion.Panel>
-              </Accordion.Item>
-            )}
+            {/* Extra Sections */}
+            {props.activity.extraSections
+              ?.filter((s) => !s.hidden)
+              .map((section) => {
+                // @ts-ignore-next-line
+                const Icon = Icons[section.phosphorIconName] ?? Question;
+                return (
+                  <Accordion.Item key={section.id} value={section.name}>
+                    <Accordion.Control icon={<Icon />}>{section.name}</Accordion.Control>
+                    <Accordion.Panel>
+                      <Stack>
+                        {section.content.map((contentBlock, i) => (
+                          <ContentBlockDisplay
+                            key={i}
+                            activity={props.activity}
+                            activityAvailability={props.availability}
+                            contentBlock={contentBlock}
+                          />
+                        ))}
+                      </Stack>
+                    </Accordion.Panel>
+                  </Accordion.Item>
+                );
+              })}
           </Accordion>
         </Collapse>
       </Card.Section>

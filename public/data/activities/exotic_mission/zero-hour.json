@@ -11,6 +11,19 @@
         "bungieRecordHash": 2820906305
       }
     ],
+    "extraSections": [
+      {
+        "id": "maps",
+        "name": "Burning Floor Maps",
+        "phosphorIconName": "MapTrifold",
+        "hidden": true,
+        "content": [
+          {
+            "type": "special-zero-hour-map"
+          }
+        ]
+      }
+    ],
     "loot": [
       {
         "type": "ref-loot-pool",
