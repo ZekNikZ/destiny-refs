@@ -4438,5 +4438,5 @@
       ]
     }
   },
-  "doubleLootOverrides": []
+  "doubleLootOverrides": ["dungeon-vespers-host"]
 }
