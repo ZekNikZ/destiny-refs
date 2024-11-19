@@ -4,7 +4,12 @@ import Layout from "./Layout";
 
 function routeDataToRoute(routeData: RouteData): RouteObject {
   const { path, element, children, title } = routeData;
-  return { path, element, children: children?.map(routeDataToRoute), handle: title };
+  return {
+    path,
+    element,
+    children: children?.map(routeDataToRoute),
+    handle: title,
+  };
 }
 
 function flattenRoutes(route: RouteObject): RouteObject[] {

@@ -1,13 +1,27 @@
 import { ActionIcon, AppShell, Box, Burger, Group, ScrollArea, Text } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
-import { Outlet, useNavigate } from "react-router-dom";
-import routes from "../routes";
+import { useDisclosure, useDocumentTitle } from "@mantine/hooks";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { GithubLogo } from "@phosphor-icons/react";
 import NavLinkWithChildren from "./NavLinkWithChildren";
+import { flattenedRoutes } from "./Router";
+import routes from "../routes";
+import { useMemo } from "react";
 
 export default function Layout() {
   const [opened, { toggle, close }] = useDisclosure();
   const navigate = useNavigate();
+
+  const { pathname } = useLocation();
+
+  const title = useMemo(
+    () =>
+      flattenedRoutes
+        .filter((route) => route.path && route.path !== "/" && pathname.startsWith(route.path))
+        .sort((a, b) => b.path!.length - a.path!.length)[0]?.handle,
+    [pathname]
+  );
+
+  useDocumentTitle(title ? `${title} | Destiny Refs` : "Destiny Refs");
 
   return (
     <AppShell

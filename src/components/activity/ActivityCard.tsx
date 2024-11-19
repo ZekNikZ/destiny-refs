@@ -115,6 +115,7 @@ export default function ActivityCard(props: Props) {
             <Text lh="xs">
               {props.activity.championTypes && (
                 <Group
+                  component="span"
                   p={0}
                   gap={2}
                   display="inline-flex"
