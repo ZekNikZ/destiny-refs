@@ -8,12 +8,14 @@ import "@mantine/dates/styles.css";
 import "@fontsource/bebas-neue";
 
 import { createTheme, MantineProvider } from "@mantine/core";
-import { QueryCache, QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryCache, QueryClient } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import dayjs from "dayjs";
 import duration from "dayjs/plugin/duration";
 import utc from "dayjs/plugin/utc";
 import { useGlobalData } from "./data/useGlobalData";
+import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persister";
+import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
 
 const theme = createTheme({});
 
@@ -23,6 +25,7 @@ dayjs.extend(utc);
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
+      gcTime: 1000 * 60 * 60 * 24,
       queryFn: async ({ queryKey: [url], meta }) => {
         const headers: HeadersInit = {};
 
@@ -60,13 +63,17 @@ const queryClient = new QueryClient({
   }),
 });
 
+const persister = createSyncStoragePersister({
+  storage: window.localStorage,
+});
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <QueryClientProvider client={queryClient}>
+    <PersistQueryClientProvider client={queryClient} persistOptions={{ persister }}>
       <MantineProvider theme={theme} defaultColorScheme="dark">
         <App />
       </MantineProvider>
       <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
+    </PersistQueryClientProvider>
   </StrictMode>
 );

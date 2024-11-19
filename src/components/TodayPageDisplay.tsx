@@ -1,6 +1,6 @@
 import { Stack, Title } from "@mantine/core";
 import ActivityCard from "./activity/ActivityCard";
-import { Activity, ActivityRotation } from "../data/types";
+import { Activity, ActivityRotation, LootPool } from "../data/types";
 import dayjs from "dayjs";
 import { useGlobalData } from "../data/useGlobalData";
 import useRotation from "../data/useRotation";
@@ -49,25 +49,34 @@ export default function TodayPageDisplay(props: Props) {
       switch (rotation.type) {
         case "weekly":
         case "daily":
-          let index: number = -1;
           const startDate = dayjs(rotation.startDate);
-          switch (rotation.type) {
-            case "daily":
-              index = dayjs().diff(startDate, "day") % rotation.rotation.length;
-              break;
-            case "weekly":
-              index = dayjs().diff(startDate, "week") % rotation.rotation.length;
-              break;
-          }
-          return rotation.rotation[index].map((activityId) =>
+          const index = dayjs().diff(startDate, rotation.type === "weekly" ? "week" : "day");
+
+          const result = rotation.rotation[index % rotation.rotation.length].map((activityId) =>
             activities.find((x) => x.id === activityId)
           );
+          const lootRotation = rotation.lootRotation?.[index % rotation.lootRotation.length];
+
+          return result.map((activity) => {
+            if (activity && lootRotation) {
+              return {
+                ...activity,
+                loot: [
+                  { type: "pool", quantity: 1, showInLootSummary: true, loot: lootRotation },
+                ] as LootPool[],
+              };
+            } else {
+              return activity;
+            }
+          });
         default:
         case "newest":
           return activities.find((x) => x.id === rotation.activityId);
       }
     })
     .filter((x) => !!x);
+
+  console.log(activeActivities);
 
   return (
     <Stack mt="md">
