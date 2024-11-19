@@ -379,6 +379,7 @@
                     "showInLootSummary": true,
                     "weeklyLimit": "infinite_when_featured",
                     "doubleLootWhen": "challenge_completion_repeatable",
+                    "pinnacleWhen": "activity_is_featured",
                     "loot": [
                       {
                         "type": "ref-loot",
@@ -448,6 +449,7 @@
                     "type": "pool",
                     "quantity": 1,
                     "weeklyLimit": "infinite_when_featured",
+                    "pinnacleWhen": "activity_is_featured",
                     "loot": [
                       {
                         "type": "ref-loot",
