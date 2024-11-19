@@ -77,7 +77,7 @@ export default function LootListing(props: Props) {
                 </Tooltip>
               )}
             </Group>
-            <Group gap={4}>
+            <Group gap={6}>
               {damageType && damageType !== 0 && (
                 <Image
                   src={`https://bungie.net/${staticData?.damageTypes[damageType]?.icon}`}

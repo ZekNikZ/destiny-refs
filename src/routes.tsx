@@ -1,6 +1,7 @@
 import {
   ArrowClockwise,
   Calendar,
+  Gear,
   Icon,
   Info,
   Toolbox,
@@ -17,6 +18,7 @@ import LootAndDetailsPage from "./pages/LootAndDetailsPage";
 import { ActivityType } from "./data/types";
 import ContactPage from "./pages/ContactPage";
 import FireteamRaidReport from "./pages/tools/FireteamRaidReport";
+import SettingsPage from "./pages/SettingsPage";
 
 export interface RouteData {
   path: string;
@@ -131,7 +133,6 @@ const routes: RouteData[] = [
   {
     path: "/tools",
     title: "Tools",
-    element: <TodayPage />,
     navbarProperties: {
       icon: makePhosphorIcon(Toolbox),
     },
@@ -176,6 +177,14 @@ const routes: RouteData[] = [
     element: <ContactPage />,
     navbarProperties: {
       icon: makePhosphorIcon(Info),
+    },
+  },
+  {
+    path: "/settings",
+    title: "Settings",
+    element: <SettingsPage />,
+    navbarProperties: {
+      icon: makePhosphorIcon(Gear),
     },
   },
 ];

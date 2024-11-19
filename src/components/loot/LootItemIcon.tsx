@@ -4,6 +4,8 @@ import { Loot } from "../../data/types";
 import LootListing from "./LootListing";
 import clsx from "clsx";
 import classes from "./LootItemIcon.module.scss";
+import { Link } from "react-router-dom";
+import { useLocalStorage } from "@mantine/hooks";
 
 interface Props {
   loot: Extract<Loot, { type: "item" }>;
@@ -16,8 +18,14 @@ interface Props {
 export default function LootItemIcon(props: Props) {
   const { data: item, isSuccess } = useBungieItemDetails(props.loot.itemHash);
 
+  const [perkWebsite] = useLocalStorage({
+    key: "perk-website",
+  });
+
   const img = (
-    <div
+    <Link
+      to={`${perkWebsite}${props.loot.itemHash}`}
+      target="_blank"
       style={{
         width: props.size,
         height: props.size,
@@ -68,7 +76,7 @@ export default function LootItemIcon(props: Props) {
           {props.loot.quantity}
         </div>
       )}
-    </div>
+    </Link>
   );
 
   return props.disableHover ? (
