@@ -20,6 +20,7 @@ export default function LootItemIcon(props: Props) {
 
   const [perkWebsite] = useLocalStorage({
     key: "perk-website",
+    defaultValue: "https://d2foundry.gg/w/",
   });
 
   const img = (
