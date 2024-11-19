@@ -133,6 +133,7 @@ const routes: RouteData[] = [
   {
     path: "/tools",
     title: "Tools",
+    element: <TodayPage />,
     navbarProperties: {
       icon: makePhosphorIcon(Toolbox),
     },
