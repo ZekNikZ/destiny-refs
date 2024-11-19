@@ -16,7 +16,6 @@
         "id": "maps",
         "name": "Burning Floor Maps",
         "phosphorIconName": "MapTrifold",
-        "hidden": true,
         "content": [
           {
             "type": "special-zero-hour-map"
