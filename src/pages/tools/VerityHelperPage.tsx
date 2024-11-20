@@ -36,6 +36,10 @@ export default function VerityHelperPage() {
     key: "verity-tool-show-ornaments",
     defaultValue: true,
   });
+  const [speedrunMethod, setSpeedrunMethod] = useLocalStorage({
+    key: "verity-tool-speedrun-method",
+    defaultValue: false,
+  });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [data, setData] = useState<PlayerData[]>([]);
@@ -153,11 +157,18 @@ export default function VerityHelperPage() {
           </Button>
         </Box>
       </Group>
-      <Switch
-        label="Show ornaments"
-        checked={showOrnaments}
-        onChange={(event) => setShowOrnaments(event.target.checked)}
-      />
+      <Group>
+        <Switch
+          label="Show ornaments"
+          checked={showOrnaments}
+          onChange={(event) => setShowOrnaments(event.target.checked)}
+        />
+        <Switch
+          label="Inside: min swaps method"
+          checked={speedrunMethod}
+          onChange={(event) => setSpeedrunMethod(event.target.checked)}
+        />
+      </Group>
       <Text c="red">{error}</Text>
       {data.length > 0 && (
         <Group wrap="nowrap">
