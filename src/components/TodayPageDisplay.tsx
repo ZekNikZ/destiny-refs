@@ -76,8 +76,6 @@ export default function TodayPageDisplay(props: Props) {
     })
     .filter((x) => !!x);
 
-  console.log(activeActivities);
-
   return (
     <Stack mt="md">
       <Title order={2} size="h2">

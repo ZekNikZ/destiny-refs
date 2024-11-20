@@ -88,6 +88,19 @@ export interface BungieUserProfile {
         characterId: string;
         dateLastPlayed: string;
         emblemHash: number;
+        classType: number;
+      };
+    };
+  };
+  characterEquipment: {
+    data: {
+      [key: string]: {
+        items: {
+          bucketHash: number;
+          itemHash: number;
+          overrideStyleItemHash?: number;
+          state: number;
+        }[];
       };
     };
   };

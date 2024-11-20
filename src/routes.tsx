@@ -19,6 +19,7 @@ import { ActivityType } from "./data/types";
 import ContactPage from "./pages/ContactPage";
 import FireteamRaidReport from "./pages/tools/FireteamRaidReport";
 import SettingsPage from "./pages/SettingsPage";
+import VerityHelperPage from "./pages/tools/VerityHelperPage";
 
 export interface RouteData {
   path: string;
@@ -157,10 +158,7 @@ const routes: RouteData[] = [
       {
         path: "/tools/se-verity",
         title: "SE Verity Helper",
-        element: <TodayPage />,
-        navbarProperties: {
-          hidden: true,
-        },
+        element: <VerityHelperPage />,
       },
       {
         path: "/tools/raid-summary",
