@@ -1,7 +1,7 @@
 import { Box, Button, Group, Input, LoadingOverlay, Stack, Switch, Text } from "@mantine/core";
 import { useLocalStorage } from "@mantine/hooks";
 import { ArrowRight } from "@phosphor-icons/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   bungieGetMembershipTypes,
   bungieGetUserProfile,
@@ -9,6 +9,7 @@ import {
 } from "../../utils/bungie-api/tool-queries";
 import dayjs from "dayjs";
 import LootIcon from "../../components/loot/LootIcon";
+import { useAsideComponentContext } from "../../components/AsideComponentContext";
 
 interface PlayerData {
   membershipId: string;
@@ -28,6 +29,8 @@ const armorBucketHashes = [
 ];
 
 export default function VerityHelperPage() {
+  const { setAsideComponent } = useAsideComponentContext();
+
   const [username, setUsername] = useLocalStorage({
     key: "verity-tool-username",
     defaultValue: "",
@@ -36,6 +39,14 @@ export default function VerityHelperPage() {
     key: "verity-tool-show-ornaments",
     defaultValue: true,
   });
+  // TODO: remove
+  // @ts-ignore
+  const [showCalculator, setShowCalculator] = useLocalStorage({
+    key: "verity-tool-show-calculator",
+    defaultValue: false,
+  });
+  // TODO: remove
+  // @ts-ignore
   const [speedrunMethod, setSpeedrunMethod] = useLocalStorage({
     key: "verity-tool-speedrun-method",
     defaultValue: false,
@@ -43,6 +54,16 @@ export default function VerityHelperPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [data, setData] = useState<PlayerData[]>([]);
+
+  useEffect(() => {
+    if (showCalculator) {
+      setAsideComponent(<div>Hello</div>);
+    }
+
+    return () => {
+      setAsideComponent(undefined);
+    };
+  }, [showCalculator]);
 
   async function handleLoad() {
     if (username.trim() === "") return;
@@ -163,11 +184,16 @@ export default function VerityHelperPage() {
           checked={showOrnaments}
           onChange={(event) => setShowOrnaments(event.target.checked)}
         />
+        {/* <Switch
+          label="Show calculator"
+          checked={showCalculator}
+          onChange={(event) => setShowCalculator(event.target.checked)}
+        />
         <Switch
           label="Inside: min swaps method"
           checked={speedrunMethod}
           onChange={(event) => setSpeedrunMethod(event.target.checked)}
-        />
+        /> */}
       </Group>
       <Text c="red">{error}</Text>
       {data.length > 0 && (

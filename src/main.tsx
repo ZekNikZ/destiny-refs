@@ -16,6 +16,7 @@ import utc from "dayjs/plugin/utc";
 import { useGlobalData } from "./data/useGlobalData";
 import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persister";
 import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
+import { AsideComponentProvider } from "./components/AsideComponentContext";
 
 const theme = createTheme({});
 
@@ -71,7 +72,9 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <PersistQueryClientProvider client={queryClient} persistOptions={{ persister }}>
       <MantineProvider theme={theme} defaultColorScheme="dark">
-        <App />
+        <AsideComponentProvider>
+          <App />
+        </AsideComponentProvider>
       </MantineProvider>
       <ReactQueryDevtools initialIsOpen={false} />
     </PersistQueryClientProvider>

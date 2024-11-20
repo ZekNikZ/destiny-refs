@@ -6,12 +6,15 @@ import NavLinkWithChildren from "./NavLinkWithChildren";
 import { flattenedRoutes } from "./Router";
 import routes from "../routes";
 import { useMemo } from "react";
+import { useAsideComponentContext } from "./AsideComponentContext";
 
 export default function Layout() {
   const [opened, { toggle, close }] = useDisclosure();
   const navigate = useNavigate();
 
   const { pathname } = useLocation();
+
+  const { asideComponent } = useAsideComponentContext();
 
   const title = useMemo(
     () =>
@@ -83,6 +86,8 @@ export default function Layout() {
       <AppShell.Main pos="relative">
         <Outlet />
       </AppShell.Main>
+
+      {asideComponent && <AppShell.Aside>{asideComponent}</AppShell.Aside>}
     </AppShell>
   );
 }
