@@ -10,6 +10,7 @@ import {
 import dayjs from "dayjs";
 import LootIcon from "../../components/loot/LootIcon";
 import { useAsideComponentContext } from "../../components/AsideComponentContext";
+import VerityCalculator from "../page-components/VerityCalculator";
 
 interface PlayerData {
   membershipId: string;
@@ -39,16 +40,8 @@ export default function VerityHelperPage() {
     key: "verity-tool-show-ornaments",
     defaultValue: true,
   });
-  // TODO: remove
-  // @ts-ignore
   const [showCalculator, setShowCalculator] = useLocalStorage({
     key: "verity-tool-show-calculator",
-    defaultValue: false,
-  });
-  // TODO: remove
-  // @ts-ignore
-  const [speedrunMethod, setSpeedrunMethod] = useLocalStorage({
-    key: "verity-tool-speedrun-method",
     defaultValue: false,
   });
   const [loading, setLoading] = useState(false);
@@ -57,7 +50,7 @@ export default function VerityHelperPage() {
 
   useEffect(() => {
     if (showCalculator) {
-      setAsideComponent(<div>Hello</div>);
+      setAsideComponent(<VerityCalculator />);
     }
 
     return () => {
@@ -184,16 +177,11 @@ export default function VerityHelperPage() {
           checked={showOrnaments}
           onChange={(event) => setShowOrnaments(event.target.checked)}
         />
-        {/* <Switch
+        <Switch
           label="Show calculator"
           checked={showCalculator}
           onChange={(event) => setShowCalculator(event.target.checked)}
         />
-        <Switch
-          label="Inside: min swaps method"
-          checked={speedrunMethod}
-          onChange={(event) => setSpeedrunMethod(event.target.checked)}
-        /> */}
       </Group>
       <Text c="red">{error}</Text>
       {data.length > 0 && (

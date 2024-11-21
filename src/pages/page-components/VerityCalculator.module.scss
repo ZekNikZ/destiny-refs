@@ -1,0 +1,13 @@
+.calloutSection {
+  flex: 1 1;
+
+  border-top: 1px solid var(--mantine-color-dark-4);
+  border-bottom: 1px solid var(--mantine-color-dark-4);
+
+  gap: var(--mantine-spacing-xs);
+  align-items: center;
+  text-align: center;
+
+  padding-top: var(--mantine-spacing-xs);
+  padding-bottom: var(--mantine-spacing-xs);
+}
