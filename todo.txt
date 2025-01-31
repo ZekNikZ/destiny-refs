@@ -1,4 +1,4 @@
-- threats, shields, overcharges for GMs and lost sectors
+- threats, shields, overcharges, special modifiers for GMs and lost sectors
 
 - Raid and dungeon secret chests & puzzles rewards
 - Raid and dungeon guide links
