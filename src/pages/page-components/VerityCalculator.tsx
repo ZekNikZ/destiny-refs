@@ -1,6 +1,6 @@
-import { Accordion, Group, Stack, Switch, Title, Text, ActionIcon } from "@mantine/core";
+import { Accordion, Group, Stack, Switch, Title, ActionIcon } from "@mantine/core";
 import { useLocalStorage } from "@mantine/hooks";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import classes from "./VerityCalculator.module.scss";
 import { Trash } from "@phosphor-icons/react";
 
@@ -17,10 +17,10 @@ function Callout(props: {
   onChangeInside: React.Dispatch<React.SetStateAction<Shape[]>>;
   onChangeOutside?: React.Dispatch<React.SetStateAction<ShapePair[]>>;
 }) {
-  const [shapeIcons] = useLocalStorage({
-    key: "verity-tool-shape-icons",
-    defaultValue: true,
-  });
+  //   const [shapeIcons] = useLocalStorage({
+  //     key: "verity-tool-shape-icons",
+  //     defaultValue: true,
+  //   });
 
   function setInside(slot: number, value: Shape) {
     props.onChangeInside((inside) => {
@@ -108,7 +108,7 @@ function Callout(props: {
             </ActionIcon>
           </Group>
           <Group align="center" gap={0}>
-            {sides.map((side, i) => (
+            {sides.map((side) => (
               <Stack className={classes.calloutSection} align="center" pt="xs" pb="xs" gap="xs">
                 <Title order={5}>{side}</Title>
                 <Group gap={2}>
