@@ -6,6 +6,7 @@ import { useGlobalData } from "../data/useGlobalData";
 import useRotation from "../data/useRotation";
 import { Link } from "react-router-dom";
 import { makeRouteFromActivity } from "../utils/routes";
+import { isBetween } from "../utils/dates";
 
 interface Props {
   title: string;
@@ -52,10 +53,20 @@ export default function TodayPageDisplay(props: Props) {
           const startDate = dayjs(rotation.startDate);
           const index = dayjs().diff(startDate, rotation.type === "weekly" ? "week" : "day");
 
-          const result = rotation.rotation[index % rotation.rotation.length].map((activityId) =>
+          let result = rotation.rotation[index % rotation.rotation.length].map((activityId) =>
             activities.find((x) => x.id === activityId)
           );
           const lootRotation = rotation.lootRotation?.[index % rotation.lootRotation.length];
+
+          // Check for overrides
+          if (rotation.overrides) {
+            for (const { startDate, endDate, override } of rotation.overrides) {
+              if (isBetween(dayjs(startDate), dayjs(), dayjs(endDate))) {
+                result = override.map((activityId) => activities.find((x) => x.id === activityId));
+                break;
+              }
+            }
+          }
 
           return result.map((activity) => {
             if (activity && lootRotation) {

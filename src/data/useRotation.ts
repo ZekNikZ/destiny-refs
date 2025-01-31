@@ -2,6 +2,7 @@ import dayjs from "dayjs";
 import { Activity, ActivityAvailability, Loot } from "./types";
 import { useGlobalData } from "./useGlobalData";
 import { useMemo } from "react";
+import { isBetween } from "../utils/dates";
 
 export default function useRotation(activity: Activity) {
   const featuredRotations = useGlobalData((state) => state.rotations.activityRotations);
@@ -36,7 +37,23 @@ export default function useRotation(activity: Activity) {
             break;
         }
 
-        if (rotation.rotation[index]?.includes(activity.id)) {
+        // Check for override
+        let isOverridden = false;
+        let isOverridenToThis = false;
+        if (rotation.overrides) {
+          for (const { startDate, endDate, override } of rotation.overrides) {
+            if (isBetween(dayjs(startDate), dayjs(), dayjs(endDate))) {
+              isOverridden = true;
+              isOverridenToThis = override.includes(activity.id);
+              break;
+            }
+          }
+        }
+
+        if (
+          (!isOverridden && rotation.rotation[index]?.includes(activity.id)) ||
+          isOverridenToThis
+        ) {
           featured = "active";
 
           // Get loot rotation

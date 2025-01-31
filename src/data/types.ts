@@ -200,16 +200,23 @@ export interface SharedLootPools {
   sets: Record<string, Loot[]>;
 }
 
+export interface RotationOverride {
+  startDate: string;
+  endDate: string;
+  override: string[];
+}
+
 export type ActivityRotation =
   | {
       id: string;
       name: string;
       type: "weekly" | "daily";
-      rotationLimit: "infinite" | "limited";
       activityType: ActivityType;
       startDate: string;
+      endDate?: string;
       rotation: string[][];
       lootRotation?: Loot[][];
+      overrides?: RotationOverride[];
     }
   | {
       id: string;
@@ -233,4 +240,5 @@ export type ChallengeRotation = {
   parentActivityId: string;
   startDate: string;
   rotation: string[];
+  overrides?: RotationOverride[];
 };

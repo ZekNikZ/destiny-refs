@@ -10,6 +10,9 @@
             "activityType": {
               "$ref": "#/definitions/ActivityType"
             },
+            "endDate": {
+              "type": "string"
+            },
             "id": {
               "type": "string"
             },
@@ -25,6 +28,12 @@
             "name": {
               "type": "string"
             },
+            "overrides": {
+              "items": {
+                "$ref": "#/definitions/RotationOverride"
+              },
+              "type": "array"
+            },
             "rotation": {
               "items": {
                 "items": {
@@ -33,13 +42,6 @@
                 "type": "array"
               },
               "type": "array"
-            },
-            "rotationLimit": {
-              "enum": [
-                "infinite",
-                "limited"
-              ],
-              "type": "string"
             },
             "startDate": {
               "type": "string"
@@ -56,7 +58,6 @@
             "id",
             "name",
             "type",
-            "rotationLimit",
             "activityType",
             "startDate",
             "rotation"
@@ -153,6 +154,12 @@
         },
         "id": {
           "type": "string"
+        },
+        "overrides": {
+          "items": {
+            "$ref": "#/definitions/RotationOverride"
+          },
+          "type": "array"
         },
         "parentActivityId": {
           "type": "string"
@@ -363,6 +370,29 @@
           "type": "object"
         }
       ]
+    },
+    "RotationOverride": {
+      "additionalProperties": false,
+      "properties": {
+        "endDate": {
+          "type": "string"
+        },
+        "override": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "startDate": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "startDate",
+        "endDate",
+        "override"
+      ],
+      "type": "object"
     },
     "RotationsJson": {
       "additionalProperties": false,

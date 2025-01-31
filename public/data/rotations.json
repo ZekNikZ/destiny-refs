@@ -19,7 +19,6 @@
       "id": "raids",
       "name": "Raids",
       "type": "weekly",
-      "rotationLimit": "infinite",
       "activityType": "raid",
       "startDate": "2024-10-08T16:00:00Z",
       "rotation": [
@@ -33,7 +32,6 @@
       "id": "dungeons",
       "name": "Dungeons",
       "type": "weekly",
-      "rotationLimit": "infinite",
       "activityType": "dungeon",
       "startDate": "2024-10-08T16:00:00Z",
       "rotation": [
@@ -47,9 +45,9 @@
       "id": "nightfalls",
       "name": "Nightfalls",
       "type": "weekly",
-      "rotationLimit": "limited",
       "activityType": "nightfall",
       "startDate": "2024-10-08T16:00:00Z",
+      "endDate": "2025-02-04T16:00:00Z",
       "rotation": [
         ["nightfall-the-lightblade"],
         ["nightfall-proving-grounds"],
@@ -72,8 +70,7 @@
         ["nightfall-battleground-behemoth"],
 
         ["nightfall-liminality"],
-        ["nightfall-the-corrupted"],
-        ["nightfall-battleground-behemoth"]
+        ["nightfall-the-corrupted"]
       ],
       "lootRotation": [
         [
@@ -161,6 +158,13 @@
             "itemHash": 1354727549
           }
         ]
+      ],
+      "overrides": [
+        {
+          "startDate": "2025-01-28T16:00:00Z",
+          "endDate": "2025-02-04T16:00:00Z",
+          "override": ["nightfall-birthplace-of-the-vile"]
+        }
       ]
     },
     {
@@ -168,8 +172,8 @@
       "type": "daily",
       "activityType": "lost_sector",
       "name": "Lost Sectors",
-      "rotationLimit": "infinite",
       "startDate": "2024-11-11T16:00:00Z",
+      "endDate": "2025-02-04T16:00:00Z",
       "rotation": [
         ["lost_sector-sepulcher"],
         ["lost_sector-metamorphosis"],
@@ -215,7 +219,6 @@
       "type": "weekly",
       "activityType": "exotic_mission",
       "name": "Exotic Missions",
-      "rotationLimit": "infinite",
       "startDate": "2024-10-08T16:00:00Z",
       "rotation": [
         ["exotic_mission-starcrossed"],
