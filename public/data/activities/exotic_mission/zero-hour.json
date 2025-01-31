@@ -4,6 +4,7 @@
     "id": "exotic_mission-zero-hour",
     "type": "exotic_mission",
     "name": "Zero Hour",
+    "category": "Always Available",
     "description": "Race against the clock to stop House Salvation agents from stealing a dangerous weapon from the Old Tower.",
     "backgroundImage": "/images/exotic_missions/zero-hour.avif",
     "triumphs": [

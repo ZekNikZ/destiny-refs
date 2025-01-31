@@ -12,3 +12,5 @@
   - vow
   - kf
   - verity
+- add seasonal exotic missions
+- add icon to activities showing which season/expansion they are from

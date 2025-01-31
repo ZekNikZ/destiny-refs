@@ -4,6 +4,7 @@
     "id": "lost_sector-the-forgotten-deep",
     "type": "lost_sector",
     "name": "The Forgotten Deep",
+    "category": "Episode: Revenant",
     "location": "Pale Heart",
     "backgroundImage": "/images/lost_sectors/the-forgotten-deep.avif",
     "championTypes": ["barrier", "unstoppable"]

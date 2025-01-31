@@ -4,6 +4,7 @@
     "id": "exotic_mission-vox-obscura",
     "type": "exotic_mission",
     "name": "Vox Obscura",
+    "category": "Rotator",
     "description": "Despite the Vanguard's recent victories, a dissident Psion faction continues to release Darkness-inspired propaganda. Return to Mars and learn how far the conspiracy goes.",
     "backgroundImage": "/images/exotic_missions/vox-obscura.avif",
     "loot": [

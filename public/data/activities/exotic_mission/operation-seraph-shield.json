@@ -4,6 +4,7 @@
     "id": "exotic_mission-operation-seraph-shield",
     "type": "exotic_mission",
     "name": "Operation Seraph Shield",
+    "category": "Rotator",
     "description": "Infiltrate Seraph Station in Earth's orbit to plant a virus in the Warsat network.",
     "backgroundImage": "/images/exotic_missions/operation-seraph-shield.avif",
     "loot": [

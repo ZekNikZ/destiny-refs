@@ -4,6 +4,7 @@
     "id": "nightfall-proving-grounds",
     "type": "nightfall",
     "name": "Proving Grounds",
+    "category": "Episode: Revenant // Act 1",
     "backgroundImage": "/images/nightfalls/proving-grounds.avif",
     "championTypes": ["barrier", "unstoppable"]
   }

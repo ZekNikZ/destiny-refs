@@ -4,6 +4,7 @@
     "id": "nightfall-the-lightblade",
     "type": "nightfall",
     "name": "The Lightblade",
+    "category": "Episode: Revenant // Act 1",
     "backgroundImage": "/images/nightfalls/the-lightblade.avif",
     "championTypes": ["barrier", "unstoppable"]
   }

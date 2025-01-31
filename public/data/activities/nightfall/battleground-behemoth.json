@@ -4,6 +4,7 @@
     "id": "nightfall-battleground-behemoth",
     "type": "nightfall",
     "name": "Battleground: Behemoth",
+    "category": "Episode: Revenant // Act 3",
     "backgroundImage": "/images/nightfalls/battleground-behemoth.avif",
     "championTypes": ["barrier", "unstoppable"]
   }

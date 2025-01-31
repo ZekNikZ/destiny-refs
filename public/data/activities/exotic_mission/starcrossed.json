@@ -4,6 +4,7 @@
     "id": "exotic_mission-starcrossed",
     "type": "exotic_mission",
     "name": "Starcrossed",
+    "category": "Rotator",
     "description": "Within the Black Garden, the Sol Divisive toil endlessly, systematically shutting down potential futures. With Riven's blessing, it's time to shut them down.",
     "backgroundImage": "/images/exotic_missions/starcrossed.avif",
     "loot": [

@@ -4,6 +4,7 @@
     "id": "lost_sector-sepulcher",
     "type": "lost_sector",
     "name": "Sepulcher",
+    "category": "Episode: Revenant",
     "location": "Savathun's Throne World",
     "backgroundImage": "/images/lost_sectors/sepulcher.avif",
     "championTypes": ["barrier", "unstoppable"]

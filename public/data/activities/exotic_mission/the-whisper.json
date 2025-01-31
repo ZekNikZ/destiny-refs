@@ -4,6 +4,7 @@
     "id": "exotic_mission-the-whisper",
     "type": "exotic_mission",
     "name": "The Whisper",
+    "category": "Always Available",
     "description": "Investigate a Taken anomaly deep beneath the surface of Io.",
     "backgroundImage": "/images/exotic_missions/the-whisper.avif",
     "triumphs": [

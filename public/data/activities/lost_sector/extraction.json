@@ -4,6 +4,7 @@
     "id": "lost_sector-extraction",
     "type": "lost_sector",
     "name": "Extraction",
+    "category": "Episode: Revenant",
     "location": "Savathun's Throne World",
     "backgroundImage": "/images/lost_sectors/extraction.avif",
     "championTypes": ["overload", "unstoppable"]

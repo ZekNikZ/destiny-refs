@@ -4,6 +4,7 @@
     "id": "nightfall-liminality",
     "type": "nightfall",
     "name": "Liminality",
+    "category": "Episode: Revenant // Act 3",
     "backgroundImage": "/images/nightfalls/liminality.avif",
     "championTypes": ["barrier", "unstoppable"]
   }

@@ -4,6 +4,7 @@
     "id": "lost_sector-excavation-site-xii",
     "type": "lost_sector",
     "name": "Excavation Site XII",
+    "category": "Episode: Revenant",
     "location": "EDZ",
     "backgroundImage": "/images/lost_sectors/excavation-site-xii.avif",
     "championTypes": ["barrier", "unstoppable"]

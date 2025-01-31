@@ -4,6 +4,7 @@
     "id": "exotic_mission-node-ovrd-avalon",
     "type": "exotic_mission",
     "name": "//NODE.OVRD.​AVALON//",
+    "category": "Rotator",
     "description": "Investigate a Vex network node in the EDZ that has been overwritten with a single word: AVALON.",
     "backgroundImage": "/images/exotic_missions/node-ovrd-avalon.avif",
     "loot": [

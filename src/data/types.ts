@@ -25,6 +25,7 @@ export interface Activity {
   type: ActivityType;
   name: string;
   description?: string;
+  category?: string;
   backgroundImage: string;
   location?: string;
   tagOverrides?: ActivityTag[];

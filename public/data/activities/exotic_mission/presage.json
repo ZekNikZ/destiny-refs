@@ -4,6 +4,7 @@
     "id": "exotic_mission-presage",
     "type": "exotic_mission",
     "name": "Presage",
+    "category": "Rotator",
     "description": "Jump coordinates matching an errant distress signal.",
     "backgroundImage": "/images/exotic_missions/presage.avif",
     "loot": [

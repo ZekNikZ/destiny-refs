@@ -20,6 +20,9 @@
           },
           "type": "array"
         },
+        "category": {
+          "type": "string"
+        },
         "championTypes": {
           "items": {
             "$ref": "#/definitions/ChampionType"
