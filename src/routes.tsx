@@ -159,6 +159,9 @@ const routes: RouteData[] = [
         path: "/tools/se-verity",
         title: "SE Verity Helper",
         element: <VerityHelperPage />,
+        navbarProperties: {
+          hidden: true,
+        },
       },
       {
         path: "/tools/raid-summary",

@@ -33,7 +33,7 @@ export default function RotationEntry(props: Props) {
       })}
     >
       {props.date && (
-        <Text w={120} ta="center">
+        <Text w={120} ta="center" fw="bold">
           {props.date.format("MMMM D")}
         </Text>
       )}
