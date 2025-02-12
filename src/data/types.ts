@@ -1,3 +1,5 @@
+import { Dayjs } from "dayjs";
+
 export type ActivityType =
   | "raid"
   | "dungeon"
@@ -243,3 +245,8 @@ export type ChallengeRotation = {
   rotation: string[];
   overrides?: RotationOverride[];
 };
+
+export interface Countdown {
+  title: string;
+  date: Dayjs;
+}

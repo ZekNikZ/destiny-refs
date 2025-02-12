@@ -56,7 +56,7 @@ export const activityTypes: {
     type: "dungeon",
     title: "Dungeons",
     presentationNodeHash: 2196753074,
-    backgroundImage: "/images/dungeons/vespers-host/banner.avif",
+    backgroundImage: "/images/dungeons/sundered-doctrine/banner.avif",
   },
   {
     type: "exotic_mission",

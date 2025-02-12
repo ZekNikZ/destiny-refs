@@ -21,3 +21,11 @@ export interface ActivityJson {
   $schema?: string;
   activity: Activity;
 }
+
+export interface CountdownsJson {
+  $schema?: string;
+  countdowns: {
+    title: string;
+    date: string;
+  }[];
+}

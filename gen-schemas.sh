@@ -4,3 +4,4 @@ yarn run ts-json-schema-generator --path src/data/*types.ts --type ActivitiesJso
 yarn run ts-json-schema-generator --path src/data/*types.ts --type RotationsJson --tsconfig tsconfig.json -o public/data/schema/rotations.json
 yarn run ts-json-schema-generator --path src/data/*types.ts --type LootJson --tsconfig tsconfig.json -o public/data/schema/loot.json
 yarn run ts-json-schema-generator --path src/data/*types.ts --type ActivityJson --tsconfig tsconfig.json -o public/data/schema/activity.json
+yarn run ts-json-schema-generator --path src/data/*types.ts --type CountdownsJson --tsconfig tsconfig.json -o public/data/schema/countdowns.json

@@ -4,66 +4,63 @@
     "id": "dungeon-sundered-doctrine",
     "type": "dungeon",
     "name": "Sundered Doctrine",
-    "description": "Defy the algorithm. Cut through its web.",
+    "description": "Power lies in the deepest vault.",
     "backgroundImage": "/images/dungeons/sundered-doctrine/banner.avif",
     "hasMasterMode": true,
     "loot": [
       {
         "type": "pool",
-        "notes": ["Obtained by completing the \"Rogue Network\" quest."],
+        "notes": ["Obtained by completing the \"The Drowning Labyrinth\" quest."],
         "quantity": "all",
         "loot": [
           {
             "type": "ref-loot",
-            "key": "dungeon-vespers-host-class"
+            "key": "dungeon-sundered-doctrine-class"
           }
         ]
       },
       {
         "type": "pool",
         "notes": [
-          "Obtained by completing the \"Rogue Network\" quest and subsequently completing the catalyst puzzle.",
-          "Requires \"Ice Breaker\" to drop."
+          "Obtained by completing the \"The Drowning Labyrinth\" quest and subsequently completing the catalyst puzzle.",
+          "Requires \"Finality's Auger\" to drop."
         ],
         "quantity": "all",
         "loot": [
           {
             "type": "item",
-            "itemHash": 4045752130
+            "itemHash": 818149482
           }
         ]
       }
     ],
     "triumphs": [
       {
-        "bungieRecordHash": 2944960648
+        "bungieRecordHash": 1052417987
       },
       {
-        "bungieRecordHash": 1141690897
+        "bungieRecordHash": 2384937912
       },
       {
-        "bungieRecordHash": 591040974
+        "bungieRecordHash": 2236876295
       },
       {
-        "bungieRecordHash": 1553599507
+        "bungieRecordHash": 28261116
       },
       {
-        "bungieRecordHash": 4009562
+        "bungieRecordHash": 1425479229
       },
       {
-        "bungieRecordHash": 4146803854
-      },
-      {
-        "bungieRecordHash": 694978627
+        "bungieRecordHash": 538596919
       }
     ],
     "encounters": [
       {
-        "id": "dungeon-vespers-host-encounter-1",
-        "name": "Vesper Station",
+        "id": "dungeon-sundered-doctrine-encounter-1",
+        "name": "Solve the Riddle",
         "type": "encounter",
-        "description": "Activation",
-        "backgroundImage": "/images/dungeons/vespers-host/encounter-1.avif",
+        "description": "Solve the Riddle",
+        "backgroundImage": "/images/dungeons/sundered-doctrine/encounter-1.avif",
         "loot": [
           {
             "type": "mode_specific",
@@ -81,19 +78,19 @@
                     "loot": [
                       {
                         "type": "item",
-                        "itemHash": 93061497
+                        "itemHash": 2485881870
                       },
                       {
                         "type": "item",
-                        "itemHash": 1762785663
+                        "itemHash": 1303313141
                       },
                       {
                         "type": "item",
-                        "itemHash": 1762785662
+                        "itemHash": 2226158470
                       },
-                      { "type": "ref-loot", "key": "dungeon-vespers-host-arms" },
-                      { "type": "ref-loot", "key": "dungeon-vespers-host-chest" },
-                      { "type": "ref-loot", "key": "dungeon-vespers-host-legs" }
+                      { "type": "ref-loot", "key": "dungeon-sundered-doctrine-head" },
+                      { "type": "ref-loot", "key": "dungeon-sundered-doctrine-arms" },
+                      { "type": "ref-loot", "key": "dungeon-sundered-doctrine-legs" }
                     ]
                   }
                 ]
@@ -110,19 +107,31 @@
                     "loot": [
                       {
                         "type": "item",
-                        "itemHash": 93061497
+                        "itemHash": 2485881870
                       },
                       {
                         "type": "item",
-                        "itemHash": 1762785663
+                        "itemHash": 1303313141
                       },
                       {
                         "type": "item",
-                        "itemHash": 1762785662
+                        "itemHash": 2226158470
                       },
-                      { "type": "ref-loot", "key": "dungeon-vespers-host-arms", "artiface": true },
-                      { "type": "ref-loot", "key": "dungeon-vespers-host-chest", "artiface": true },
-                      { "type": "ref-loot", "key": "dungeon-vespers-host-legs", "artiface": true }
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-sundered-doctrine-head",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-sundered-doctrine-arms",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-sundered-doctrine-legs",
+                        "artiface": true
+                      }
                     ]
                   }
                 ]
@@ -132,11 +141,11 @@
         ]
       },
       {
-        "id": "dungeon-vespers-host-encounter-2",
-        "name": "Raneiks Unified",
+        "id": "dungeon-sundered-doctrine-encounter-2",
+        "name": "Zoetic Lockset",
         "type": "encounter",
-        "description": "Dismemberment",
-        "backgroundImage": "/images/dungeons/vespers-host/encounter-2.avif",
+        "description": "Open the Locks",
+        "backgroundImage": "/images/dungeons/sundered-doctrine/encounter-2.avif",
         "loot": [
           {
             "type": "mode_specific",
@@ -154,19 +163,19 @@
                     "loot": [
                       {
                         "type": "item",
-                        "itemHash": 4232480042
+                        "itemHash": 1303313141
                       },
                       {
                         "type": "item",
-                        "itemHash": 93061497
+                        "itemHash": 3360937899
                       },
                       {
                         "type": "item",
-                        "itemHash": 1762785662
+                        "itemHash": 2226158470
                       },
-                      { "type": "ref-loot", "key": "dungeon-vespers-host-head" },
-                      { "type": "ref-loot", "key": "dungeon-vespers-host-arms" },
-                      { "type": "ref-loot", "key": "dungeon-vespers-host-legs" }
+                      { "type": "ref-loot", "key": "dungeon-sundered-doctrine-head" },
+                      { "type": "ref-loot", "key": "dungeon-sundered-doctrine-arms" },
+                      { "type": "ref-loot", "key": "dungeon-sundered-doctrine-legs" }
                     ]
                   }
                 ]
@@ -183,19 +192,31 @@
                     "loot": [
                       {
                         "type": "item",
-                        "itemHash": 4232480042
+                        "itemHash": 1303313141
                       },
                       {
                         "type": "item",
-                        "itemHash": 93061497
+                        "itemHash": 3360937899
                       },
                       {
                         "type": "item",
-                        "itemHash": 1762785662
+                        "itemHash": 2226158470
                       },
-                      { "type": "ref-loot", "key": "dungeon-vespers-host-head", "artiface": true },
-                      { "type": "ref-loot", "key": "dungeon-vespers-host-arms", "artiface": true },
-                      { "type": "ref-loot", "key": "dungeon-vespers-host-legs", "artiface": true }
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-sundered-doctrine-head",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-sundered-doctrine-arms",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-sundered-doctrine-legs",
+                        "artiface": true
+                      }
                     ]
                   }
                 ]
@@ -205,11 +226,11 @@
         ]
       },
       {
-        "id": "dungeon-vespers-host-encounter-3",
-        "name": "The Corrupted Puppeteer",
+        "id": "dungeon-sundered-doctrine-encounter-3",
+        "name": "Kerrev, the Erased",
         "type": "encounter",
-        "description": "Shutdown",
-        "backgroundImage": "/images/dungeons/vespers-host/encounter-3.avif",
+        "description": "Defeat Kerrev, the Erased",
+        "backgroundImage": "/images/dungeons/sundered-doctrine/encounter-3.avif",
         "loot": [
           {
             "type": "mode_specific",
@@ -220,7 +241,7 @@
                 "children": [
                   {
                     "type": "ref-loot-pool",
-                    "key": "dungeon-vespers-host-exotic"
+                    "key": "dungeon-sundered-doctrine-exotic"
                   },
                   {
                     "type": "pool",
@@ -231,19 +252,24 @@
                     "loot": [
                       {
                         "type": "item",
-                        "itemHash": 4232480042
+                        "itemHash": 2485881870
                       },
                       {
                         "type": "item",
-                        "itemHash": 93061497
+                        "itemHash": 1303313141
                       },
                       {
                         "type": "item",
-                        "itemHash": 1762785663
+                        "itemHash": 3360937899
                       },
-                      { "type": "ref-loot", "key": "dungeon-vespers-host-head" },
-                      { "type": "ref-loot", "key": "dungeon-vespers-host-chest" },
-                      { "type": "ref-loot", "key": "dungeon-vespers-host-legs" }
+                      {
+                        "type": "item",
+                        "itemHash": 2226158470
+                      },
+                      { "type": "ref-loot", "key": "dungeon-sundered-doctrine-head" },
+                      { "type": "ref-loot", "key": "dungeon-sundered-doctrine-arms" },
+                      { "type": "ref-loot", "key": "dungeon-sundered-doctrine-chest" },
+                      { "type": "ref-loot", "key": "dungeon-sundered-doctrine-legs" }
                     ]
                   }
                 ]
@@ -254,7 +280,7 @@
                 "children": [
                   {
                     "type": "ref-loot-pool",
-                    "key": "dungeon-vespers-host-exotic"
+                    "key": "dungeon-sundered-doctrine-exotic"
                   },
                   {
                     "type": "pool",
@@ -264,19 +290,40 @@
                     "loot": [
                       {
                         "type": "item",
-                        "itemHash": 4232480042
+                        "itemHash": 2485881870
                       },
                       {
                         "type": "item",
-                        "itemHash": 93061497
+                        "itemHash": 1303313141
                       },
                       {
                         "type": "item",
-                        "itemHash": 1762785663
+                        "itemHash": 3360937899
                       },
-                      { "type": "ref-loot", "key": "dungeon-vespers-host-head", "artiface": true },
-                      { "type": "ref-loot", "key": "dungeon-vespers-host-chest", "artiface": true },
-                      { "type": "ref-loot", "key": "dungeon-vespers-host-legs", "artiface": true }
+                      {
+                        "type": "item",
+                        "itemHash": 2226158470
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-sundered-doctrine-head",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-sundered-doctrine-arms",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-sundered-doctrine-chest",
+                        "artiface": true
+                      },
+                      {
+                        "type": "ref-loot",
+                        "key": "dungeon-sundered-doctrine-legs",
+                        "artiface": true
+                      }
                     ]
                   }
                 ]

@@ -1178,6 +1178,107 @@
         ]
       },
 
+      "dungeon-sundered-doctrine-head": {
+        "type": "group",
+        "name": "Helmet (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "helmet",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 3781388955
+          },
+          {
+            "type": "item",
+            "itemHash": 2146870895
+          },
+          {
+            "type": "item",
+            "itemHash": 2549679488
+          }
+        ]
+      },
+      "dungeon-sundered-doctrine-arms": {
+        "type": "group",
+        "name": "Gauntlets (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "gauntlets",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 945703242
+          },
+          {
+            "type": "item",
+            "itemHash": 431596278
+          },
+          {
+            "type": "item",
+            "itemHash": 115752785
+          }
+        ]
+      },
+      "dungeon-sundered-doctrine-chest": {
+        "type": "group",
+        "name": "Chest Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "chest-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 380371582
+          },
+          {
+            "type": "item",
+            "itemHash": 4052335546
+          },
+          {
+            "type": "item",
+            "itemHash": 3300886791
+          }
+        ]
+      },
+      "dungeon-sundered-doctrine-legs": {
+        "type": "group",
+        "name": "Leg Armor (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "leg-armor",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 3897001828
+          },
+          {
+            "type": "item",
+            "itemHash": 1643875408
+          },
+          {
+            "type": "item",
+            "itemHash": 4241869859
+          }
+        ]
+      },
+      "dungeon-sundered-doctrine-class": {
+        "type": "group",
+        "name": "Class Item (Class-Specific)",
+        "groupType": "Armor",
+        "displayStaticIcon": "class-item",
+        "children": [
+          {
+            "type": "item",
+            "itemHash": 4004965895
+          },
+          {
+            "type": "item",
+            "itemHash": 3276331403
+          },
+          {
+            "type": "item",
+            "itemHash": 187348246
+          }
+        ]
+      },
+
       "dungeon-warlords-ruin-head": {
         "type": "group",
         "name": "Helmet (Class-Specific)",
@@ -2410,11 +2511,23 @@
         ]
       },
 
-      "dungeon-vespers-host-exotic": {
+      "dungeon-sundered-doctrine-exotic": {
         "type": "pool",
         "quantity": "chance",
         "showInLootSummary": true,
         "weeklyLimit": "once_per_character",
+        "loot": [
+          {
+            "type": "item",
+            "itemHash": 331231237
+          }
+        ]
+      },
+      "dungeon-vespers-host-exotic": {
+        "type": "pool",
+        "quantity": "chance",
+        "showInLootSummary": true,
+        "weeklyLimit": "infinite_when_featured",
         "loot": [
           {
             "type": "item",
@@ -4438,5 +4551,5 @@
       ]
     }
   },
-  "doubleLootOverrides": ["dungeon-vespers-host"]
+  "doubleLootOverrides": []
 }

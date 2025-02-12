@@ -1,0 +1,9 @@
+{
+  "$schema": "./schema/countdowns.json",
+  "countdowns": [
+    {
+      "title": "Heresy: Act 2",
+      "date": "2025-03-11T16:00:00Z"
+    }
+  ]
+}

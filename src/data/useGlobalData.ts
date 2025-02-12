@@ -1,9 +1,16 @@
 import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
 import type {} from "@redux-devtools/extension"; // required for devtools typing
-import { ActivitiesJson, ActivityJson, LootJson, RotationsJson } from "./json-types";
-import { Activity } from "./types";
+import {
+  ActivitiesJson,
+  ActivityJson,
+  CountdownsJson,
+  LootJson,
+  RotationsJson,
+} from "./json-types";
+import { Activity, Countdown } from "./types";
 import { applyLootRefs } from "./data-helpers";
+import dayjs from "dayjs";
 
 interface GlobalState {
   bungieApiError: boolean;
@@ -11,6 +18,7 @@ interface GlobalState {
   activities: Activity[];
   rotations: RotationsJson;
   loot: LootJson;
+  countdowns: Countdown[];
 }
 
 export const useGlobalData = create<GlobalState>()(
@@ -22,6 +30,7 @@ export const useGlobalData = create<GlobalState>()(
         activities: [],
         rotations: { activityRotations: [], challengeRotations: [] },
         loot: { sharedLoot: { loot: {}, sets: {}, pools: {} }, doubleLootOverrides: [] },
+        countdowns: [],
       }),
       {
         name: "global-data",
@@ -31,10 +40,11 @@ export const useGlobalData = create<GlobalState>()(
 );
 
 // Fetch data
-const [rotations, loot, activitiesJson] = await Promise.all([
+const [rotations, loot, activitiesJson, countdowns] = await Promise.all([
   fetch("/data/rotations.json").then((res) => res.json() as Promise<RotationsJson>),
   fetch("/data/loot.json").then((res) => res.json() as Promise<LootJson>),
   fetch("/data/activities.json").then((res) => res.json() as Promise<ActivitiesJson>),
+  fetch("/data/countdowns.json").then((res) => res.json() as Promise<CountdownsJson>),
 ]);
 
 const activities = await Promise.all(
@@ -51,4 +61,5 @@ useGlobalData.setState({
   activities,
   rotations,
   loot,
+  countdowns: countdowns.countdowns.map(({ title, date }) => ({ title, date: dayjs(date) })),
 });

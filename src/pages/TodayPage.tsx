@@ -7,7 +7,7 @@ import dayjs from "dayjs";
 import Countdown from "../components/Countdown";
 
 export default function TodayPage() {
-  const { rotations } = useGlobalData();
+  const { rotations, countdowns } = useGlobalData();
 
   const now = dayjs();
 
@@ -24,8 +24,11 @@ export default function TodayPage() {
   return (
     <Stack>
       <Group justify="center">
-        <Countdown title="Weekly Reset" to={nextWeeklyReset} />{" "}
+        <Countdown title="Weekly Reset" to={nextWeeklyReset} />
         <Countdown title="Daily Reset" to={nextDailyReset} />
+        {countdowns.map(({ title, date }) => (
+          <Countdown key={title} title={title} to={date} />
+        ))}
       </Group>
       <ResponsiveMasonry columnsCountBreakPoints={{ 300: 1, 1100: 2, 1600: 3 }}>
         <Masonry columnsCount={2} gutter="16px">

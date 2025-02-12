@@ -1,0 +1,37 @@
+{
+  "$ref": "#/definitions/CountdownsJson",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "CountdownsJson": {
+      "additionalProperties": false,
+      "properties": {
+        "$schema": {
+          "type": "string"
+        },
+        "countdowns": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "date": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "title",
+              "date"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "countdowns"
+      ],
+      "type": "object"
+    }
+  }
+}
