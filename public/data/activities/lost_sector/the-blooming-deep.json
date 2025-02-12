@@ -4,7 +4,7 @@
     "id": "lost_sector-the-blooming-deep",
     "type": "lost_sector",
     "name": "The Blooming Deep",
-    "category": "Episode: Revenant",
+    "category": "Episode: Heresy",
     "location": "Pale Heart",
     "backgroundImage": "/images/lost_sectors/the-blooming-deep.avif",
     "championTypes": ["overload", "unstoppable"]

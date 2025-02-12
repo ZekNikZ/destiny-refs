@@ -4,7 +4,6 @@
     "id": "lost_sector-the-quarry",
     "type": "lost_sector",
     "name": "The Quarry",
-    "category": "Episode: Revenant",
     "location": "EDZ",
     "backgroundImage": "/images/lost_sectors/the-quarry.avif",
     "championTypes": ["barrier", "unstoppable"]

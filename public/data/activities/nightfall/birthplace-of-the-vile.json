@@ -4,7 +4,6 @@
     "id": "nightfall-birthplace-of-the-vile",
     "type": "nightfall",
     "name": "Birthplace of the Vile",
-    "category": "Episode: Revenant // Act 2",
     "backgroundImage": "/images/nightfalls/birthplace-of-the-vile.avif",
     "championTypes": ["overload", "unstoppable"]
   }

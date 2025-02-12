@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "lost_sector-classified",
+    "type": "lost_sector",
+    "name": "// Classified //",
+    "category": "Episode: Heresy",
+    "backgroundImage": "/images/lost_sectors/classified.avif"
+  }
+}

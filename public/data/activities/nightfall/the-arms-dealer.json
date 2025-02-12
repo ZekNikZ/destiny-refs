@@ -4,7 +4,6 @@
     "id": "nightfall-the-arms-dealer",
     "type": "nightfall",
     "name": "The Arms Dealer",
-    "category": "Episode: Revenant // Act 2",
     "backgroundImage": "/images/nightfalls/the-arms-dealer.avif",
     "championTypes": ["barrier", "unstoppable"]
   }

@@ -4,7 +4,6 @@
     "id": "nightfall-heist-battleground-moon",
     "type": "nightfall",
     "name": "Heist Battleground: Moon",
-    "category": "Episode: Revenant // Act 1",
     "backgroundImage": "/images/nightfalls/heist-battleground-moon.avif",
     "championTypes": ["barrier", "unstoppable"]
   }

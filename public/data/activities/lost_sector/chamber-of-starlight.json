@@ -4,7 +4,7 @@
     "id": "lost_sector-chamber-of-starlight",
     "type": "lost_sector",
     "name": "Chamber of Starlight",
-    "category": "Episode: Revenant",
+    "category": "Episode: Heresy",
     "location": "Dreaming City",
     "backgroundImage": "/images/lost_sectors/chamber-of-starlight.avif",
     "championTypes": ["overload", "unstoppable"]

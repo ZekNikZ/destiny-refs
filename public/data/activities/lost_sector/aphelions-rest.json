@@ -1,12 +1,12 @@
 {
   "$schema": "../../schema/activity.json",
   "activity": {
-    "id": "lost_sector-the-broken-deep",
+    "id": "lost_sector-aphelions-rest",
     "type": "lost_sector",
-    "name": "The Broken Deep",
+    "name": "Aphelion's Rest",
     "category": "Episode: Heresy",
-    "location": "Pale Heart",
-    "backgroundImage": "/images/lost_sectors/the-broken-deep.avif",
+    "location": "Dreaming City",
+    "backgroundImage": "/images/lost_sectors/aphelions-rest.avif",
     "championTypes": ["overload", "unstoppable"]
   }
 }

@@ -83,7 +83,7 @@ export default function RotationEntry(props: Props) {
               </Link>
             );
           })}
-        {props.loot && (
+        {props.loot && props.loot.length > 0 && (
           <Group gap={4} wrap="nowrap" p={4}>
             {props.loot.map((loot) => (
               <LootIcon key={getLootKey(loot)} loot={loot} size={30} />

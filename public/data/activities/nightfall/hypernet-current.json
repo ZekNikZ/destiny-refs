@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "nightfall-hypernet-current",
+    "type": "nightfall",
+    "name": "Hypernet Current",
+    "category": "Episode: Heresy // Act 1",
+    "backgroundImage": "/images/nightfalls/hypernet-current.avif",
+    "championTypes": ["overload", "unstoppable"]
+  }
+}

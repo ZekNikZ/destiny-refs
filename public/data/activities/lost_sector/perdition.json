@@ -1,12 +1,12 @@
 {
   "$schema": "../../schema/activity.json",
   "activity": {
-    "id": "lost_sector-the-broken-deep",
+    "id": "lost_sector-perdition",
     "type": "lost_sector",
-    "name": "The Broken Deep",
+    "name": "Perdition",
     "category": "Episode: Heresy",
-    "location": "Pale Heart",
-    "backgroundImage": "/images/lost_sectors/the-broken-deep.avif",
+    "location": "Europa",
+    "backgroundImage": "/images/lost_sectors/perdition.avif",
     "championTypes": ["overload", "unstoppable"]
   }
 }

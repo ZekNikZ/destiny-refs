@@ -4,7 +4,6 @@
     "id": "nightfall-the-corrupted",
     "type": "nightfall",
     "name": "The Corrupted",
-    "category": "Episode: Revenant // Act 3",
     "backgroundImage": "/images/nightfalls/the-corrupted.avif",
     "championTypes": ["overload", "unstoppable"]
   }

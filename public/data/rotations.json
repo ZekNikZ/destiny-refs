@@ -13,14 +13,14 @@
       "name": "Newest Dungeon",
       "type": "newest",
       "activityType": "dungeon",
-      "activityId": "dungeon-vespers-host"
+      "activityId": "dungeon-sundered-doctrine"
     },
     {
       "id": "raids",
       "name": "Raids",
       "type": "weekly",
       "activityType": "raid",
-      "startDate": "2024-10-08T16:00:00Z",
+      "startDate": "2025-02-04T16:00:00Z",
       "rotation": [
         ["raid-last-wish", "raid-vow-of-the-disciple"],
         ["raid-garden-of-salvation", "raid-kings-fall"],
@@ -33,12 +33,13 @@
       "name": "Dungeons",
       "type": "weekly",
       "activityType": "dungeon",
-      "startDate": "2024-10-08T16:00:00Z",
+      "startDate": "2025-02-04T16:00:00Z",
       "rotation": [
-        ["dungeon-shattered-throne", "dungeon-duality"],
-        ["dungeon-pit-of-heresy", "dungeon-spire-of-the-watcher"],
-        ["dungeon-prophecy", "dungeon-ghosts-of-the-deep"],
-        ["dungeon-grasp-of-avarice", "dungeon-warlords-ruin"]
+        ["dungeon-shattered-throne", "dungeon-spire-of-the-watcher"],
+        ["dungeon-pit-of-heresy", "dungeon-ghosts-of-the-deep"],
+        ["dungeon-prophecy", "dungeon-warlords-ruin"],
+        ["dungeon-grasp-of-avarice", "dungeon-vespers-host"],
+        ["dungeon-duality", "dungeon-shattered-throne"]
       ]
     },
     {
@@ -46,44 +47,26 @@
       "name": "Nightfalls",
       "type": "weekly",
       "activityType": "nightfall",
-      "startDate": "2024-10-08T16:00:00Z",
-      "endDate": "2025-02-04T16:00:00Z",
+      "startDate": "2025-02-04T16:00:00Z",
+      "endDate": "2025-07-15T16:00:00Z",
       "rotation": [
-        ["nightfall-the-lightblade"],
-        ["nightfall-proving-grounds"],
-        ["nightfall-heist-battleground-moon"],
+        ["nightfall-hypernet-current"],
+        ["nightfall-heist-battleground-mars"],
+        ["nightfall-psiops-battleground-cosmodrome"],
 
-        ["nightfall-the-lightblade"],
-        ["nightfall-proving-grounds"],
-        ["nightfall-heist-battleground-moon"],
+        ["nightfall-hypernet-current"],
+        ["nightfall-heist-battleground-mars"],
+        ["nightfall-psiops-battleground-cosmodrome"],
 
-        ["nightfall-birthplace-of-the-vile"],
-        ["nightfall-the-arms-dealer"],
-        ["nightfall-the-inverted-spire"],
+        ["nightfall-lake-of-shadows"],
+        ["nightfall-psiops-battleground-moon"],
+        ["nightfall-the-scarlet-keep"],
 
-        ["nightfall-birthplace-of-the-vile"],
-        ["nightfall-the-arms-dealer"],
-        ["nightfall-the-inverted-spire"],
-
-        ["nightfall-liminality"],
-        ["nightfall-the-corrupted"],
-        ["nightfall-battleground-behemoth"],
-
-        ["nightfall-liminality"],
-        ["nightfall-the-corrupted"]
+        ["nightfall-the-insight-terminus"],
+        ["nightfall-warden-of-nothing"],
+        ["nightfall-classified"]
       ],
       "lootRotation": [
-        [
-          {
-            "type": "item",
-            "itemHash": 3686538757
-          },
-          {
-            "type": "item",
-            "adept": true,
-            "itemHash": 817909300
-          }
-        ],
         [
           {
             "type": "item",
@@ -98,17 +81,6 @@
         [
           {
             "type": "item",
-            "itemHash": 42874240
-          },
-          {
-            "type": "item",
-            "adept": true,
-            "itemHash": 3610521673
-          }
-        ],
-        [
-          {
-            "type": "item",
             "itemHash": 2298039571
           },
           {
@@ -117,54 +89,12 @@
             "itemHash": 3997086838
           }
         ],
-        [
-          {
-            "type": "item",
-            "itemHash": 2322926844
-          },
-          {
-            "type": "item",
-            "adept": true,
-            "itemHash": 1056103557
-          }
-        ],
-        [
-          {
-            "type": "item",
-            "itemHash": 3293524502
-          },
-          {
-            "type": "item",
-            "itemHash": 3106557243
-          }
-        ],
-        [
-          {
-            "type": "item",
-            "itemHash": 1332123064
-          },
-          {
-            "type": "item",
-            "itemHash": 959037361
-          }
-        ],
-        [
-          {
-            "type": "item",
-            "itemHash": 2889501828
-          },
-          {
-            "type": "item",
-            "itemHash": 1354727549
-          }
-        ]
-      ],
-      "overrides": [
-        {
-          "startDate": "2025-01-28T16:00:00Z",
-          "endDate": "2025-02-04T16:00:00Z",
-          "override": ["nightfall-birthplace-of-the-vile"]
-        }
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
       ]
     },
     {
@@ -172,45 +102,93 @@
       "type": "daily",
       "activityType": "lost_sector",
       "name": "Lost Sectors",
-      "startDate": "2024-11-11T16:00:00Z",
-      "endDate": "2025-02-04T16:00:00Z",
+      "startDate": "2025-02-04T16:00:00Z",
+      "endDate": "2025-07-15T16:00:00Z",
       "rotation": [
-        ["lost_sector-sepulcher"],
-        ["lost_sector-metamorphosis"],
-        ["lost_sector-k1-revelation"],
-        ["lost_sector-bay-of-drowned-wishes"],
+        ["lost_sector-aphelions-rest"],
         ["lost_sector-chamber-of-starlight"],
-        ["lost_sector-the-quarry"],
-        ["lost_sector-excavation-site-xii"],
+        ["lost_sector-hydroponics-delta"],
+        ["lost_sector-gilded-precept"],
+        ["lost_sector-thrilladrome"],
         ["lost_sector-the-broken-deep"],
         ["lost_sector-the-blooming-deep"],
-        ["lost_sector-the-forgotten-deep"],
-        ["lost_sector-extraction"]
+        ["lost_sector-bunker-e15"],
+        ["lost_sector-perdition"],
+        ["lost_sector-classified"],
+        ["lost_sector-classified"]
       ],
       "lootRotation": [
         [
-          { "type": "item", "itemHash": 4200122994 },
-          { "type": "item", "itemHash": 3959549446 },
-          { "type": "item", "itemHash": 447296102 },
-          { "type": "item", "itemHash": 3583275737 }
+          {
+            "type": "item",
+            "itemHash": 3776430252
+          },
+          {
+            "type": "item",
+            "itemHash": 447296102
+          },
+          {
+            "type": "item",
+            "itemHash": 4200122994
+          },
+          {
+            "type": "item",
+            "itemHash": 3959549446
+          }
         ],
         [
-          { "type": "item", "itemHash": 3612142623 },
-          { "type": "item", "itemHash": 499245245 },
-          { "type": "item", "itemHash": 1890332078 },
-          { "type": "item", "itemHash": 4233375372 }
+          {
+            "type": "item",
+            "itemHash": 1890332078
+          },
+          {
+            "type": "item",
+            "itemHash": 891996636
+          },
+          {
+            "type": "item",
+            "itemHash": 499245245
+          },
+          {
+            "type": "item",
+            "itemHash": 3612142623
+          }
         ],
         [
-          { "type": "item", "itemHash": 3753063346 },
-          { "type": "item", "itemHash": 1246793994 },
-          { "type": "item", "itemHash": 423343404 },
-          { "type": "item", "itemHash": 1719687748 }
+          {
+            "type": "item",
+            "itemHash": 423343404
+          },
+          {
+            "type": "item",
+            "itemHash": 3753063346
+          },
+          {
+            "type": "item",
+            "itemHash": 1246793994
+          },
+          {
+            "type": "item",
+            "itemHash": 751880654
+          }
         ],
         [
-          { "type": "item", "itemHash": 2848549302 },
-          { "type": "item", "itemHash": 3615421669 },
-          { "type": "item", "itemHash": 2800870005 },
-          { "type": "item", "itemHash": 3926811686 }
+          {
+            "type": "item",
+            "itemHash": 32287609
+          },
+          {
+            "type": "item",
+            "itemHash": 2848549302
+          },
+          {
+            "type": "item",
+            "itemHash": 3615421669
+          },
+          {
+            "type": "item",
+            "itemHash": 2800870005
+          }
         ]
       ]
     },

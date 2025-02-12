@@ -4,7 +4,6 @@
     "id": "lost_sector-metamorphosis",
     "type": "lost_sector",
     "name": "Metamorphosis",
-    "category": "Episode: Revenant",
     "location": "Savathun's Throne World",
     "backgroundImage": "/images/lost_sectors/metamorphosis.avif",
     "championTypes": ["overload", "unstoppable"]

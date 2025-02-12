@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "nightfall-heist-battleground-mars",
+    "type": "nightfall",
+    "name": "Heist Battleground: Mars",
+    "category": "Episode: Heresy // Act 1",
+    "backgroundImage": "/images/nightfalls/heist-battleground-mars.avif",
+    "championTypes": ["barrier", "unstoppable"]
+  }
+}

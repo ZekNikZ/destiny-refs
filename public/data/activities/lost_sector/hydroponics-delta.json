@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "lost_sector-hydroponics-delta",
+    "type": "lost_sector",
+    "name": "Hydroponics Delta",
+    "category": "Episode: Heresy",
+    "location": "Neomuna",
+    "backgroundImage": "/images/lost_sectors/hydroponics-delta.avif",
+    "championTypes": ["barrier", "unstoppable"]
+  }
+}

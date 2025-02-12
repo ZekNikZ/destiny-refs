@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "nightfall-psiops-battleground-moon",
+    "type": "nightfall",
+    "name": "PsiOps Battleground: Moon",
+    "category": "Episode: Heresy // Act 2",
+    "backgroundImage": "/images/nightfalls/psiops-battleground-moon.avif",
+    "championTypes": ["barrier", "unstoppable"]
+  }
+}

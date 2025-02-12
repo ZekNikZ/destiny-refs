@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "nightfall-classified",
+    "type": "nightfall",
+    "name": "// Classified // ",
+    "category": "Episode: Heresy // Act 3",
+    "backgroundImage": "/images/nightfalls/classified.avif"
+  }
+}

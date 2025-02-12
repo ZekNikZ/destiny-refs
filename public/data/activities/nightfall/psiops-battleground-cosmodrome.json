@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "nightfall-psiops-battleground-cosmodrome",
+    "type": "nightfall",
+    "name": "PsiOps Battleground: Cosmodrome",
+    "category": "Episode: Heresy // Act 1",
+    "backgroundImage": "/images/nightfalls/psiops-battleground-cosmodrome.avif",
+    "championTypes": ["barrier", "unstoppable"]
+  }
+}

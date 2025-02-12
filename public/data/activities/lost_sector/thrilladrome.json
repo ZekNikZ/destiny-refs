@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "lost_sector-thrilladrome",
+    "type": "lost_sector",
+    "name": "Thrilladrome",
+    "category": "Episode: Heresy",
+    "location": "Neomuna",
+    "backgroundImage": "/images/lost_sectors/thrilladrome.avif",
+    "championTypes": ["barrier", "overload"]
+  }
+}

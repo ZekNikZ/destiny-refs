@@ -4,7 +4,6 @@
     "id": "nightfall-the-inverted-spire",
     "type": "nightfall",
     "name": "The Inverted Spire",
-    "category": "Episode: Revenant // Act 2",
     "backgroundImage": "/images/nightfalls/the-inverted-spire.avif",
     "championTypes": ["barrier", "unstoppable"]
   }

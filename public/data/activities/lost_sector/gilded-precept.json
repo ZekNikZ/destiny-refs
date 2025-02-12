@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "lost_sector-gilded-precept",
+    "type": "lost_sector",
+    "name": "Gilded Precept",
+    "category": "Episode: Heresy",
+    "location": "Neomuna",
+    "backgroundImage": "/images/lost_sectors/gilded-precept.avif",
+    "championTypes": ["barrier", "unstoppable"]
+  }
+}

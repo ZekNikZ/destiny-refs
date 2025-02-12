@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "lost_sector-bunker-e15",
+    "type": "lost_sector",
+    "name": "Bunker E15",
+    "category": "Episode: Heresy",
+    "location": "Europa",
+    "backgroundImage": "/images/lost_sectors/bunker-e15.avif",
+    "championTypes": ["barrier", "overload"]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "nightfall-warden-of-nothing",
+    "type": "nightfall",
+    "name": "Warden of Nothing",
+    "category": "Episode: Heresy // Act 3",
+    "backgroundImage": "/images/nightfalls/warden-of-nothing.avif",
+    "championTypes": ["barrier", "overload", "unstoppable"]
+  }
+}
