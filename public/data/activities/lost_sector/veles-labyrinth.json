@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "lost_sector-veles-labyrinth",
+    "type": "lost_sector",
+    "name": "Veles Labyrinth",
+    "location": "Cosmodrome",
+    "backgroundImage": "/images/lost_sectors/veles-labyrinth.avif",
+    "championTypes": ["barrier", "unstoppable"]
+  }
+}
