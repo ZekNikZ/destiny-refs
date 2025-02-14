@@ -4,6 +4,7 @@
     "id": "raid-kings-fall",
     "type": "raid",
     "name": "King's Fall",
+    "abbreviation": "KF",
     "description": "Long live the King...",
     "backgroundImage": "/images/raids/kings-fall/banner.avif",
     "hasMasterMode": true,

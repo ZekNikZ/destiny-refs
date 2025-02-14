@@ -4,6 +4,7 @@
     "id": "raid-last-wish",
     "type": "raid",
     "name": "Last Wish",
+    "abbreviation": "LW",
     "description": "\"The opportunity of a lifetime.\"",
     "backgroundImage": "/images/raids/last-wish/banner.avif",
     "bungieActivityHashes": [2122313384, 1661734046, 2214608156, 2214608157],

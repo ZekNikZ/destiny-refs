@@ -4,6 +4,7 @@
     "id": "raid-vault-of-glass",
     "type": "raid",
     "name": "Vault of Glass",
+    "abbreviation": "VOG",
     "description": "Beneath Venus, evil stirs...",
     "backgroundImage": "/images/raids/vault-of-glass/banner.avif",
     "hasMasterMode": true,

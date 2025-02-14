@@ -5,6 +5,9 @@
     "Activity": {
       "additionalProperties": false,
       "properties": {
+        "abbreviation": {
+          "type": "string"
+        },
         "backgroundImage": {
           "type": "string"
         },

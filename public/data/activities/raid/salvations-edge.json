@@ -4,6 +4,7 @@
     "id": "raid-salvations-edge",
     "type": "raid",
     "name": "Salvation's Edge",
+    "abbreviation": "SE",
     "description": "Free the Light.",
     "backgroundImage": "/images/raids/salvations-edge/banner.avif",
     "hasMasterMode": true,

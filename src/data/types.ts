@@ -26,6 +26,7 @@ export interface Activity {
   id: string;
   type: ActivityType;
   name: string;
+  abbreviation?: string;
   description?: string;
   category?: string;
   backgroundImage: string;

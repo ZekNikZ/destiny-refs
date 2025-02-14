@@ -4,6 +4,7 @@
     "id": "raid-deep-stone-crypt",
     "type": "raid",
     "name": "Deep Stone Crypt",
+    "abbreviation": "DSC",
     "description": "The chains of legacy must be broken.",
     "backgroundImage": "/images/raids/deep-stone-crypt/banner.avif",
     "bungieActivityHashes": [910380154, 3976949817],

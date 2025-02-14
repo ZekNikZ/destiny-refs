@@ -4,6 +4,7 @@
     "id": "raid-crotas-end",
     "type": "raid",
     "name": "Crota's End",
+    "abbreviation": "CE",
     "description": "He waits in the dark below.",
     "backgroundImage": "/images/raids/crotas-end/banner.avif",
     "hasMasterMode": true,

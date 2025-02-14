@@ -4,6 +4,7 @@
     "id": "raid-vow-of-the-disciple",
     "type": "raid",
     "name": "Vow of the Disciple",
+    "abbreviation": "VOTD",
     "description": "The disciple beckons...",
     "backgroundImage": "/images/raids/vow-of-the-disciple/banner.avif",
     "hasMasterMode": true,

@@ -2,6 +2,7 @@ import { Stack } from "@mantine/core";
 import { useGlobalData } from "../data/useGlobalData";
 import ActivityRotationDisplay from "../components/rotations/ActivityRotationDisplay";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import RaidChallengeRotationDisplay from "../components/rotations/RaidChallengeRotationDisplay";
 
 export default function RotationsPage() {
   const { rotations } = useGlobalData();
@@ -13,6 +14,7 @@ export default function RotationsPage() {
           {rotations.activityRotations.map((rotation) => (
             <ActivityRotationDisplay key={rotation.id} rotation={rotation} />
           ))}
+          <RaidChallengeRotationDisplay />
         </Masonry>
       </ResponsiveMasonry>
     </Stack>

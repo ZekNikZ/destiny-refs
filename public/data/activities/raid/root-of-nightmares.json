@@ -4,6 +4,7 @@
     "id": "raid-root-of-nightmares",
     "type": "raid",
     "name": "Root of Nightmares",
+    "abbreviation": "RON",
     "description": "A sinister threat has taken root.",
     "backgroundImage": "/images/raids/root-of-nightmares/banner.avif",
     "hasMasterMode": true,
