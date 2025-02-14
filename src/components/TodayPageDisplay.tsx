@@ -80,6 +80,15 @@ export default function TodayPageDisplay(props: Props) {
               return activity;
             }
           });
+        case "event":
+          return rotation.activityIds.map((activityId, i) => ({
+            ...activities.find((activity) => activity.id === activityId)!,
+            loot: rotation.loot
+              ? ([
+                  { type: "pool", quantity: 1, showInLootSummary: true, loot: rotation.loot[i] },
+                ] as LootPool[])
+              : [],
+          }));
         default:
         case "newest":
           return activities.find((x) => x.id === rotation.activityId);

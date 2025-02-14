@@ -42,6 +42,16 @@ export default function TodayPage() {
               disableLinks={activityType.disableLinks}
             />
           ))}
+          {rotations.activityRotations
+            .filter((rotation) => rotation.type === "event")
+            .map((rotation) => (
+              <TodayPageDisplay
+                key={rotation.id}
+                title={rotation.name}
+                rotations={[rotation]}
+                disableLinks
+              />
+            ))}
         </Masonry>
       </ResponsiveMasonry>
     </Stack>

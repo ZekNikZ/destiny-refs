@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "crucible_map-the-burnout",
+    "type": "crucible_map",
+    "name": "The Burnout",
+    "location": "Infinite Forest, Mercury",
+    "backgroundImage": "/images/crucible_map/the-burnout.avif"
+  }
+}

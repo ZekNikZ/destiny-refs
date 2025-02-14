@@ -115,7 +115,7 @@
         ["lost_sector-bunker-e15"],
         ["lost_sector-perdition"],
         ["lost_sector-veles-labyrinth"],
-        ["lost_sector-classified"]
+        ["lost_sector-exodus-garden-2a"]
       ],
       "lootRotation": [
         [
@@ -204,6 +204,27 @@
         ["exotic_mission-vox-obscura"],
         ["exotic_mission-operation-seraph-shield"],
         ["exotic_mission-node-ovrd-avalon"]
+      ]
+    },
+    {
+      "id": "trials",
+      "type": "event",
+      "name": "Trials of Osiris",
+      "activityType": "crucible_map",
+      "startDate": "2025-02-14T16:00:00Z",
+      "endDate": "2025-02-18T16:00:00Z",
+      "activityIds": ["crucible_map-the-burnout"],
+      "loot": [
+        [
+          {
+            "type": "item",
+            "itemHash": 3436626079
+          },
+          {
+            "type": "item",
+            "itemHash": 1201528146
+          }
+        ]
       ]
     }
   ],

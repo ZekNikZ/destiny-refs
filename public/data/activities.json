@@ -45,8 +45,8 @@
     "lost_sector/bay-of-drowned-wishes",
     "lost_sector/bunker-e15",
     "lost_sector/chamber-of-starlight",
-    "lost_sector/classified",
     "lost_sector/excavation-site-xii",
+    "lost_sector/exodus-garden-2a",
     "lost_sector/extraction",
     "lost_sector/gilded-precept",
     "lost_sector/hydroponics-delta",
@@ -67,6 +67,8 @@
     "exotic_mission/node-ovrd-avalon",
     "exotic_mission/presage",
     "exotic_mission/vox-obscura",
-    "exotic_mission/operation-seraph-shield"
+    "exotic_mission/operation-seraph-shield",
+
+    "crucible_map/the-burnout"
   ]
 }

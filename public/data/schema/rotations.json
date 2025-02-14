@@ -131,6 +131,55 @@
             "rotation"
           ],
           "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "activityIds": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "activityType": {
+              "$ref": "#/definitions/ActivityType"
+            },
+            "endDate": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "loot": {
+              "items": {
+                "items": {
+                  "$ref": "#/definitions/Loot"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "name": {
+              "type": "string"
+            },
+            "startDate": {
+              "type": "string"
+            },
+            "type": {
+              "const": "event",
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "name",
+            "type",
+            "activityType",
+            "startDate",
+            "endDate",
+            "activityIds"
+          ],
+          "type": "object"
         }
       ]
     },
@@ -142,7 +191,8 @@
         "exotic_mission",
         "lost_sector",
         "encounter",
-        "opening-encounter"
+        "opening-encounter",
+        "crucible_map"
       ],
       "type": "string"
     },

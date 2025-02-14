@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "lost_sector-exodus-garden-2a",
+    "type": "lost_sector",
+    "name": "Exodus Garden 2A",
+    "category": "Episode: Heresy",
+    "location": "Cosmodrome",
+    "backgroundImage": "/images/lost_sectors/exodus-garden-2a.avif",
+    "championTypes": ["barrier", "overload"]
+  }
+}

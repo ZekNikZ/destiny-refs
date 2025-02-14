@@ -7,7 +7,8 @@ export type ActivityType =
   | "exotic_mission"
   | "lost_sector"
   | "encounter"
-  | "opening-encounter";
+  | "opening-encounter"
+  | "crucible_map";
 
 export type ActivityTag =
   | "featured-newest"
@@ -236,6 +237,16 @@ export type ActivityRotation =
       activityType: ActivityType;
       activityId: string;
       rotation: string[][];
+    }
+  | {
+      id: string;
+      name: string;
+      type: "event";
+      activityType: ActivityType;
+      startDate: string;
+      endDate: string;
+      activityIds: string[];
+      loot?: Loot[][];
     };
 
 export type ChallengeRotation = {
