@@ -56,7 +56,6 @@ export default function TodayPageDisplay(props: Props) {
           let result = rotation.rotation[index % rotation.rotation.length].map((activityId) =>
             activities.find((x) => x.id === activityId)
           );
-          const lootRotation = rotation.lootRotation?.[index % rotation.lootRotation.length];
 
           // Check for overrides
           if (rotation.overrides) {
@@ -68,18 +67,7 @@ export default function TodayPageDisplay(props: Props) {
             }
           }
 
-          return result.map((activity) => {
-            if (activity && lootRotation) {
-              return {
-                ...activity,
-                loot: [
-                  { type: "pool", quantity: 1, showInLootSummary: true, loot: lootRotation },
-                ] as LootPool[],
-              };
-            } else {
-              return activity;
-            }
-          });
+          return result;
         case "event":
           return rotation.activityIds.map((activityId, i) => ({
             ...activities.find((activity) => activity.id === activityId)!,

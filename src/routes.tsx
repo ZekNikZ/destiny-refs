@@ -20,6 +20,7 @@ import ContactPage from "./pages/ContactPage";
 import FireteamRaidReport from "./pages/tools/FireteamRaidReport";
 import SettingsPage from "./pages/SettingsPage";
 import VerityHelperPage from "./pages/tools/VerityHelperPage";
+import WheelOfMisfortune from "./pages/tools/WheelOfMisfortune";
 
 export interface RouteData {
   path: string;
@@ -169,6 +170,14 @@ const routes: RouteData[] = [
         element: <FireteamRaidReport />,
         navbarProperties: {
           beta: true,
+        },
+      },
+      {
+        path: "/tools/wheel-of-misfortune",
+        title: "Wheel of Misfortune",
+        element: <WheelOfMisfortune />,
+        navbarProperties: {
+          hidden: true,
         },
       },
     ],

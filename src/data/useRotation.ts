@@ -30,10 +30,10 @@ export default function useRotation(activity: Activity) {
         const startDate = dayjs(rotation.startDate);
         switch (rotation.type) {
           case "daily":
-            index = dayjs().diff(startDate, "day") % rotation.rotation.length;
+            index = dayjs().diff(startDate, "day");
             break;
           case "weekly":
-            index = dayjs().diff(startDate, "week") % rotation.rotation.length;
+            index = dayjs().diff(startDate, "week");
             break;
         }
 
@@ -51,14 +51,15 @@ export default function useRotation(activity: Activity) {
         }
 
         if (
-          (!isOverridden && rotation.rotation[index]?.includes(activity.id)) ||
+          (!isOverridden &&
+            rotation.rotation[index % rotation.rotation.length]?.includes(activity.id)) ||
           isOverridenToThis
         ) {
           featured = "active";
 
           // Get loot rotation
           if (rotation.lootRotation) {
-            loot = rotation.lootRotation[index];
+            loot = rotation.lootRotation[index % rotation.lootRotation.length];
           }
         }
 
