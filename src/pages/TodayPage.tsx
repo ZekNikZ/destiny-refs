@@ -5,6 +5,7 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import { Group, Stack } from "@mantine/core";
 import dayjs from "dayjs";
 import Countdown from "../components/Countdown";
+import { isBetween } from "../utils/dates";
 
 export default function TodayPage() {
   const { rotations, countdowns } = useGlobalData();
@@ -44,6 +45,9 @@ export default function TodayPage() {
           ))}
           {rotations.activityRotations
             .filter((rotation) => rotation.type === "event")
+            .filter((rotation) =>
+              isBetween(dayjs(rotation.startDate), now, dayjs(rotation.endDate))
+            )
             .map((rotation) => (
               <TodayPageDisplay
                 key={rotation.id}
