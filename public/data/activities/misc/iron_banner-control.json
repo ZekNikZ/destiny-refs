@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "iron_banner-control",
+    "type": "misc",
+    "name": "Control",
+    "description": "Capture zones to increase points for every kill.",
+    "backgroundImage": "/images/crucible_map/disjunction.avif"
+  }
+}

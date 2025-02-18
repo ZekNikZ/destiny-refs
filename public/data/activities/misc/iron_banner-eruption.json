@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "iron_banner-eruption",
+    "type": "misc",
+    "name": "Eruption",
+    "description": "Get kill streaks to increase ability regen and gain points.",
+    "backgroundImage": "/images/crucible_map/multiplex.avif"
+  }
+}

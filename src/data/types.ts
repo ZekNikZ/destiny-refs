@@ -8,7 +8,8 @@ export type ActivityType =
   | "lost_sector"
   | "encounter"
   | "opening-encounter"
-  | "crucible_map";
+  | "crucible_map"
+  | "misc";
 
 export type ActivityTag =
   | "featured-newest"

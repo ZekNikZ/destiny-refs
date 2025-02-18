@@ -192,7 +192,8 @@
         "lost_sector",
         "encounter",
         "opening-encounter",
-        "crucible_map"
+        "crucible_map",
+        "misc"
       ],
       "type": "string"
     },

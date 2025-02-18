@@ -89,7 +89,16 @@
             "itemHash": 3997086838
           }
         ],
-        [],
+        [
+          {
+            "type": "item",
+            "itemHash": 2322926844
+          },
+          {
+            "type": "item",
+            "itemHash": 1056103557
+          }
+        ],
         [],
         [],
         [],
@@ -223,6 +232,261 @@
           {
             "type": "item",
             "itemHash": 1201528146
+          }
+        ]
+      ]
+    },
+    {
+      "id": "iron-banner",
+      "type": "event",
+      "name": "Iron Banner",
+      "activityType": "crucible_map",
+      "startDate": "2025-02-18T16:00:00Z",
+      "endDate": "2025-03-04T16:00:00Z",
+      "activityIds": ["iron_banner-control", "iron_banner-eruption"],
+      "loot": [
+        [
+          {
+            "type": "item",
+            "itemHash": 1968711238
+          },
+          {
+            "type": "item",
+            "itemHash": 3437370193
+          },
+          {
+            "type": "item",
+            "itemHash": 480368036
+          },
+          {
+            "type": "item",
+            "itemHash": 2896109856
+          },
+          {
+            "type": "item",
+            "itemHash": 198854575
+          },
+          {
+            "type": "item",
+            "itemHash": 1505862304
+          },
+          {
+            "type": "item",
+            "itemHash": 1218113510
+          },
+          {
+            "type": "item",
+            "itemHash": 3211624072
+          },
+          {
+            "type": "item",
+            "itemHash": 3992231375
+          },
+          {
+            "type": "group",
+            "name": "Titan Armor",
+            "groupType": "Titan Armor",
+            "displayStaticIcon": "helmet",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 546003581
+              },
+              {
+                "type": "item",
+                "itemHash": 3303502828
+              },
+              {
+                "type": "item",
+                "itemHash": 2651216180
+              },
+              {
+                "type": "item",
+                "itemHash": 3949234966
+              },
+              {
+                "type": "item",
+                "itemHash": 3860977161
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "name": "Hunter Armor",
+            "groupType": "Hunter Armor",
+            "displayStaticIcon": "helmet",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 144007143
+              },
+              {
+                "type": "item",
+                "itemHash": 2385676654
+              },
+              {
+                "type": "item",
+                "itemHash": 1567525250
+              },
+              {
+                "type": "item",
+                "itemHash": 173787496
+              },
+              {
+                "type": "item",
+                "itemHash": 791521235
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "name": "Warlock Armor",
+            "groupType": "Warlock Armor",
+            "displayStaticIcon": "helmet",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 2117889178
+              },
+              {
+                "type": "item",
+                "itemHash": 60193507
+              },
+              {
+                "type": "item",
+                "itemHash": 2576944173
+              },
+              {
+                "type": "item",
+                "itemHash": 1981173269
+              },
+              {
+                "type": "item",
+                "itemHash": 690855456
+              }
+            ]
+          }
+        ],
+        [
+          {
+            "type": "item",
+            "itemHash": 1968711238
+          },
+          {
+            "type": "item",
+            "itemHash": 3437370193
+          },
+          {
+            "type": "item",
+            "itemHash": 480368036
+          },
+          {
+            "type": "item",
+            "itemHash": 2896109856
+          },
+          {
+            "type": "item",
+            "itemHash": 198854575
+          },
+          {
+            "type": "item",
+            "itemHash": 1505862304
+          },
+          {
+            "type": "item",
+            "itemHash": 1218113510
+          },
+          {
+            "type": "item",
+            "itemHash": 3211624072
+          },
+          {
+            "type": "item",
+            "itemHash": 3992231375
+          },
+          {
+            "type": "group",
+            "name": "Titan Armor",
+            "groupType": "Titan Armor",
+            "displayStaticIcon": "helmet",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 546003581
+              },
+              {
+                "type": "item",
+                "itemHash": 3303502828
+              },
+              {
+                "type": "item",
+                "itemHash": 2651216180
+              },
+              {
+                "type": "item",
+                "itemHash": 3949234966
+              },
+              {
+                "type": "item",
+                "itemHash": 3860977161
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "name": "Hunter Armor",
+            "groupType": "Hunter Armor",
+            "displayStaticIcon": "helmet",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 144007143
+              },
+              {
+                "type": "item",
+                "itemHash": 2385676654
+              },
+              {
+                "type": "item",
+                "itemHash": 1567525250
+              },
+              {
+                "type": "item",
+                "itemHash": 173787496
+              },
+              {
+                "type": "item",
+                "itemHash": 791521235
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "name": "Warlock Armor",
+            "groupType": "Warlock Armor",
+            "displayStaticIcon": "helmet",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 2117889178
+              },
+              {
+                "type": "item",
+                "itemHash": 60193507
+              },
+              {
+                "type": "item",
+                "itemHash": 2576944173
+              },
+              {
+                "type": "item",
+                "itemHash": 1981173269
+              },
+              {
+                "type": "item",
+                "itemHash": 690855456
+              }
+            ]
           }
         ]
       ]
