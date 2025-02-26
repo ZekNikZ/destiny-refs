@@ -1,0 +1,244 @@
+{
+  "options": [
+    {
+      "text": "Do a playlist activity"
+    },
+    {
+      "text": "Call your mom"
+    },
+    {
+      "text": "Drink some water"
+    },
+    {
+      "text": "Take a shot"
+    },
+    {
+      "text": "Go make a sandwich"
+    },
+    {
+      "text": "Dismantle random weapon"
+    },
+    {
+      "text": "Go touch grass"
+    },
+    {
+      "text": "Listen to \"Chug Jug With You\" on repeat",
+      "link": "https://www.youtube.com/watch?v=QqRLVFRe9AU"
+    },
+    {
+      "text": "Listen to asmr full blast"
+    },
+    {
+      "text": "Be really toxic to a random teammate"
+    },
+    {
+      "text": "Throw until called out"
+    },
+    {
+      "text": "Bot walk only"
+    },
+    {
+      "text": "Fish callouts only"
+    },
+    {
+      "text": "Talk in ASMR"
+    },
+    {
+      "text": "Change characters"
+    },
+    {
+      "text": "Only yell callouts"
+    },
+    {
+      "text": "Dauntless (play another game while in encounter)"
+    },
+    {
+      "text": "Mute yourself"
+    },
+    {
+      "text": "No HUD"
+    },
+    {
+      "text": "Cannot repeat callout"
+    },
+    {
+      "text": "Put callouts in random Twitch chat"
+    },
+    {
+      "text": "Opposite callouts only"
+    },
+    {
+      "text": "Can only do each role one time"
+    },
+    {
+      "text": "Sword movement only"
+    },
+    {
+      "text": "Swap mouse & keyboard hands"
+    },
+    {
+      "text": "Freaky callouts 🐱🐶"
+    },
+    {
+      "text": "Turn off / cover your monitor"
+    },
+    {
+      "text": "Fighting Lion",
+      "weapon": 3549153978
+    },
+    {
+      "text": "Rat King",
+      "weapon": 2362471601
+    },
+    {
+      "text": "Wish-Ender",
+      "weapon": 814876684
+    },
+    {
+      "text": "Last Word",
+      "weapon": 1364093401
+    },
+    {
+      "text": "D.A.R.C.I. DPS next boss",
+      "weapon": 3141979346
+    },
+    {
+      "text": "The Fourth Horseman",
+      "weapon": 1665952087
+    },
+    {
+      "text": "No kinetic",
+      "icon": "kinetic"
+    },
+    {
+      "text": "No energy",
+      "icon": "energy"
+    },
+    {
+      "text": "No heavy",
+      "icon": "heavy"
+    },
+    {
+      "text": "Double primary",
+      "icon": "primary"
+    },
+    {
+      "text": "Double special",
+      "icon": "special"
+    },
+    {
+      "text": "Triple trace rifles",
+      "icon": "trace_rifle"
+    },
+    {
+      "text": "Triple glaives",
+      "icon": "glaive"
+    },
+    {
+      "text": "Triple bows",
+      "icon": "bow"
+    },
+    {
+      "text": "Triple strand",
+      "icon": "strand"
+    },
+    {
+      "text": "Triple stasis",
+      "icon": "stasis"
+    },
+    {
+      "text": "Triple Häkke weapons"
+    },
+    {
+      "text": "Triple Omolon weapons"
+    },
+    {
+      "text": "Triple SUROS weapons"
+    },
+    {
+      "text": "Triple VEIST weapons"
+    },
+    {
+      "text": "Adept weapons only"
+    },
+    {
+      "text": "Touch of Malice & no manual reloading"
+    },
+    {
+      "text": "Random loadout"
+    },
+    {
+      "text": "Kinetic exotic"
+    },
+    {
+      "text": "Energy exotic"
+    },
+    {
+      "text": "Heavy exotic"
+    },
+    {
+      "text": "Vault everything"
+    },
+    {
+      "text": "All blues"
+    },
+    {
+      "text": "All grays"
+    },
+    {
+      "text": "Someone else chooses exotic"
+    },
+    {
+      "text": "Melee only"
+    },
+    {
+      "text": "No abilities"
+    },
+    {
+      "text": "Only abilities"
+    },
+    {
+      "text": "Blink Jump"
+    },
+    {
+      "text": "No manual reloading"
+    },
+    {
+      "text": "No armor mods"
+    },
+    {
+      "text": "All 6 damage types (kinetic, energy, heavy, super, grenade, melee)"
+    },
+    {
+      "text": "No DIM / loadouts for rest of raid"
+    },
+    {
+      "text": "No artifact mods for rest of raid"
+    },
+    {
+      "weight": 2,
+      "text": "2x spin",
+      "extraSpins": 2
+    },
+    {
+      "text": "3x spin",
+      "extraSpins": 3
+    },
+    {
+      "text": "Take someone else's punishment"
+    },
+    {
+      "text": "Copy EVERYONE else's punishment"
+    },
+    {
+      "text": "Give someone your punishment"
+    },
+    {
+      "text": "Reroll 6 times and choose who gets what (can choose the same player more than once)",
+      "extraSpins": 6
+    },
+    {
+      "text": "Team: each player different subclass"
+    }
+  ]
+}

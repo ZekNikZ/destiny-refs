@@ -177,7 +177,7 @@ const routes: RouteData[] = [
         title: "Wheel of Misfortune",
         element: <WheelOfMisfortune />,
         navbarProperties: {
-          hidden: true,
+          beta: true,
         },
       },
     ],
