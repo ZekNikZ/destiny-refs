@@ -221,6 +221,20 @@ export default function WheelOfMisfortune() {
     );
   }
 
+  function addPunishment(member: FireteamMember) {
+    const punishments = getRandomPunishments(
+      1,
+      fireteamMembers.flatMap((m) => m.punishments ?? [])
+    );
+
+    // Add the punishment to the member
+    setFireteamMembers((members) =>
+      members.map((m) =>
+        m === member ? { ...m, punishments: [...(m.punishments ?? []), ...punishments[0]] } : m
+      )
+    );
+  }
+
   return (
     <Stack gap="sm">
       <Title>Wheel of Misfortune</Title>
@@ -278,7 +292,7 @@ export default function WheelOfMisfortune() {
           <Table.Tr>
             <Table.Th w={300}>Fireteam Member</Table.Th>
             <Table.Th>Punishment(s)</Table.Th>
-            <Table.Th w={200}></Table.Th>
+            <Table.Th w={300}></Table.Th>
           </Table.Tr>
         </Table.Thead>
         <Table.Tbody>
@@ -310,6 +324,9 @@ export default function WheelOfMisfortune() {
               </Table.Td>
               <Table.Td>
                 <Group>
+                  <Button variant="subtle" onClick={() => addPunishment(member)} color="green">
+                    Add
+                  </Button>
                   <Button variant="subtle" onClick={() => rerollFireteamMember(member)}>
                     Reroll
                   </Button>
