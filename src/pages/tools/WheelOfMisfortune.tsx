@@ -21,33 +21,8 @@ import {
 } from "../../utils/bungie-api/tool-queries";
 import LootIcon from "../../components/loot/LootIcon";
 
-import DEFAULT_LIST_RAW from "./wheel-of-misfortune.json";
-
-interface PunishmentEntry {
-  text: string;
-  weight?: number;
-  extraSpins?: 2;
-  tags?: string[];
-  children?: PunishmentEntry[];
-}
-
-const DEFAULT_LIST = DEFAULT_LIST_RAW.options as PunishmentEntry[];
-const WEIGHTED_DEFAULT_LIST: PunishmentEntry[] = DEFAULT_LIST.flatMap((entry) =>
-  Array(entry.weight ?? 1).fill(entry)
-);
-const NO_EXTRA_SPIN_DEFAULT_LIST: PunishmentEntry[] = WEIGHTED_DEFAULT_LIST.filter(
-  (entry) => !entry.extraSpins
-);
-
-type FireteamMember = (
-  | { source: "manual"; username: string; membershipId?: undefined; emblemHash?: number }
-  | {
-      source: "fireteam";
-      username: string;
-      membershipId: string;
-      emblemHash: number;
-    }
-) & { punishments?: PunishmentEntry[] };
+import { WOMFireteamMember } from "../../data/wom/wom-types";
+import { useWOMData } from "../../data/wom/useWOMData";
 
 export default function WheelOfMisfortune() {
   const [username, setUsername] = useLocalStorage({
@@ -58,84 +33,17 @@ export default function WheelOfMisfortune() {
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [fireteamMembers, setFireteamMembers] = useState<FireteamMember[]>([]);
 
-  function getRandomPunishment(
-    otherOwnPunishments: PunishmentEntry[] = [],
-    otherTeamPunishments: PunishmentEntry[] = []
-  ): PunishmentEntry {
-    // Determine blacklists
-    const punishmentTextBlacklist = [
-      ...flattenPunishments(otherOwnPunishments),
-      ...flattenPunishments(otherTeamPunishments),
-    ].map((item) => item.text);
-    const punishmentTagBlacklist = [
-      ...flattenPunishments(otherOwnPunishments),
-      ...flattenPunishments(otherTeamPunishments).filter((item) => item.tags?.includes("team")),
-    ].flatMap((item) => item.tags ?? []);
-
-    // Randomize punishment
-    let punishment: PunishmentEntry;
-    let attempts = 0;
-    do {
-      if (attempts >= 10) {
-        punishment = { text: "Nothing happens" };
-        break;
-      }
-      punishment = {
-        ...WEIGHTED_DEFAULT_LIST[Math.floor(Math.random() * WEIGHTED_DEFAULT_LIST.length)],
-      };
-      attempts++;
-    } while (
-      punishmentTextBlacklist.includes(punishment.text) ||
-      punishmentTagBlacklist.some((tag) => punishment.tags?.includes(tag))
-    );
-
-    // If we got "Nothing happens", return early
-    if (punishment.text === "Nothing happens") {
-      return punishment;
-    }
-
-    // Adjust blacklists
-    punishmentTextBlacklist.push(punishment.text);
-    punishmentTagBlacklist.push(...(punishment.tags ?? []));
-
-    // Get extra spins
-    for (let j = 0; j < (punishment.extraSpins ?? 0); j++) {
-      // Randomize punishment
-      let extraPunishment: PunishmentEntry;
-      attempts = 0;
-      do {
-        if (attempts >= 10) {
-          extraPunishment = { text: "Nothing extra happens" };
-          break;
-        }
-        extraPunishment = {
-          ...NO_EXTRA_SPIN_DEFAULT_LIST[
-            Math.floor(Math.random() * NO_EXTRA_SPIN_DEFAULT_LIST.length)
-          ],
-        };
-        attempts++;
-      } while (
-        punishmentTextBlacklist.includes(extraPunishment.text) ||
-        punishmentTagBlacklist.some((tag) => extraPunishment.tags?.includes(tag))
-      );
-
-      // Add the extra punishment to the main punishment
-      if (!punishment.children) {
-        punishment.children = [];
-      }
-      punishment.children.push(extraPunishment);
-
-      // Adjust blacklists (only if we didn't get "Nothing extra happens")
-      if (extraPunishment.text !== "Nothing extra happens") {
-        punishmentTextBlacklist.push(extraPunishment.text);
-        punishmentTagBlacklist.push(...(extraPunishment.tags ?? []));
-      }
-    }
-
-    return punishment;
-  }
+  const fireteamMembers = useWOMData((state) => state.members);
+  //   const customPunishmentLists = useWOMData((state) => state.customPunishmentLists);
+  const addFireteamMember = useWOMData((state) => state.addFireteamMember);
+  const removeFireteamMember = useWOMData((state) => state.removeFireteamMember);
+  const clearFireteam = useWOMData((state) => state.clearFireteam);
+  const rerollWOMFireteamMember = useWOMData((state) => state.rerollFireteamMember);
+  const addPunishmentToWOMFireteamMember = useWOMData(
+    (state) => state.addPunishmentToFireteamMember
+  );
+  const rerollAllFireteamMembers = useWOMData((state) => state.rerollAllFireteamMembers);
 
   async function handleLoad() {
     if (username.trim() === "") return;
@@ -175,7 +83,7 @@ export default function WheelOfMisfortune() {
       ];
 
       // Query fireteam activity history
-      const fireteamActivityHistory = await Promise.all(
+      const fireteamActivityHistory = await Promise.all<WOMFireteamMember | null>(
         fireteam.map(async (member) => {
           const userProfile =
             member.membershipId === membershipId
@@ -200,14 +108,16 @@ export default function WheelOfMisfortune() {
               dayjs(b.dateLastPlayed).diff(dayjs(a.dateLastPlayed))
             )[0].emblemHash,
             username: userProfile.profile.data.userInfo.bungieGlobalDisplayName,
-          } as FireteamMember;
+            punishments: [],
+          };
         })
       );
 
-      setFireteamMembers((fireteamMembers) => [
-        ...fireteamMembers.filter((m) => m.source === "manual"),
-        ...fireteamActivityHistory.filter((m) => !!m),
-      ]);
+      for (const member of fireteamActivityHistory) {
+        if (!member) continue;
+
+        addFireteamMember(member);
+      }
     } catch (error: any) {
       setError(error.toString());
     } finally {
@@ -220,71 +130,14 @@ export default function WheelOfMisfortune() {
 
     setLoading(true);
 
-    setFireteamMembers((members) => [
-      ...members,
-      { source: "manual", username: manualUser.trim() },
-    ]);
+    addFireteamMember({
+      source: "manual",
+      username: manualUser.trim(),
+      punishments: [],
+    });
     setManualUser("");
 
     setLoading(false);
-  }
-
-  function clearFireteam() {
-    setFireteamMembers([]);
-  }
-
-  function removeFireteamMember(member: FireteamMember) {
-    setFireteamMembers((members) => members.filter((m) => m !== member));
-  }
-
-  function flattenPunishments(punishments: PunishmentEntry[]): PunishmentEntry[] {
-    return punishments.flatMap((punishment) => [
-      punishment,
-      ...(punishment.children ? flattenPunishments(punishment.children) : []),
-    ]);
-  }
-
-  function rerollFireteam() {
-    const teamPunishmentsSoFar: PunishmentEntry[] = [];
-    for (const member of fireteamMembers) {
-      // Get the new punishment
-      const punishment = getRandomPunishment([], teamPunishmentsSoFar);
-
-      teamPunishmentsSoFar.push(punishment);
-
-      // Add the punishment to the member
-      setFireteamMembers((members) =>
-        members.map((m) => (m === member ? { ...m, punishments: [punishment] } : m))
-      );
-    }
-  }
-
-  function rerollFireteamMember(member: FireteamMember) {
-    // Get the new punishment
-    const punishment = getRandomPunishment(
-      [],
-      fireteamMembers.flatMap((m) => m.punishments ?? [])
-    );
-
-    // Add the punishment to the member
-    setFireteamMembers((members) =>
-      members.map((m) => (m === member ? { ...m, punishments: [punishment] } : m))
-    );
-  }
-
-  function addPunishmentToFireteamMember(member: FireteamMember) {
-    // Get the new punishment
-    const punishment = getRandomPunishment(
-      member.punishments ?? [],
-      fireteamMembers.flatMap((m) => m.punishments ?? [])
-    );
-
-    // Add the punishment to the member
-    setFireteamMembers((members) =>
-      members.map((m) =>
-        m === member ? { ...m, punishments: [...(m.punishments ?? []), punishment] } : m
-      )
-    );
   }
 
   return (
@@ -335,7 +188,11 @@ export default function WheelOfMisfortune() {
         <Button onClick={clearFireteam} disabled={fireteamMembers.length === 0} color="red">
           Clear Fireteam
         </Button>
-        <Button onClick={rerollFireteam} disabled={fireteamMembers.length === 0} color="green">
+        <Button
+          onClick={rerollAllFireteamMembers}
+          disabled={fireteamMembers.length === 0}
+          color="green"
+        >
           Reroll All Punishments
         </Button>
       </Group>
@@ -380,15 +237,19 @@ export default function WheelOfMisfortune() {
                 <Group>
                   <Button
                     variant="subtle"
-                    onClick={() => addPunishmentToFireteamMember(member)}
+                    onClick={() => addPunishmentToWOMFireteamMember(member.username)}
                     color="green"
                   >
                     Add
                   </Button>
-                  <Button variant="subtle" onClick={() => rerollFireteamMember(member)}>
+                  <Button variant="subtle" onClick={() => rerollWOMFireteamMember(member.username)}>
                     Reroll
                   </Button>
-                  <Button variant="subtle" color="red" onClick={() => removeFireteamMember(member)}>
+                  <Button
+                    variant="subtle"
+                    color="red"
+                    onClick={() => removeFireteamMember(member.username)}
+                  >
                     Remove
                   </Button>
                 </Group>

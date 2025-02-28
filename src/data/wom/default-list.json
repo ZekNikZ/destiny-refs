@@ -1,5 +1,6 @@
 {
-  "options": [
+  "name": "Default",
+  "punishments": [
     {
       "text": "Do a playlist activity"
     },
