@@ -27,6 +27,8 @@ interface PunishmentEntry {
   text: string;
   weight?: number;
   extraSpins?: 2;
+  tags?: string[];
+  children?: PunishmentEntry[];
 }
 
 const DEFAULT_LIST = DEFAULT_LIST_RAW.options as PunishmentEntry[];
@@ -58,46 +60,81 @@ export default function WheelOfMisfortune() {
   const [error, setError] = useState("");
   const [fireteamMembers, setFireteamMembers] = useState<FireteamMember[]>([]);
 
-  function getRandomPunishments(amount: number, blacklist: PunishmentEntry[] = []) {
-    const result: PunishmentEntry[][] = [];
+  function getRandomPunishment(
+    otherOwnPunishments: PunishmentEntry[] = [],
+    otherTeamPunishments: PunishmentEntry[] = []
+  ): PunishmentEntry {
+    // Determine blacklists
+    const punishmentTextBlacklist = [
+      ...flattenPunishments(otherOwnPunishments),
+      ...flattenPunishments(otherTeamPunishments),
+    ].map((item) => item.text);
+    const punishmentTagBlacklist = [
+      ...flattenPunishments(otherOwnPunishments),
+      ...flattenPunishments(otherTeamPunishments).filter((item) => item.tags?.includes("team")),
+    ].flatMap((item) => item.tags ?? []);
 
-    for (let i = 0; i < amount; i++) {
-      const punishments: PunishmentEntry[] = [];
-
-      // Get main punishment
-      let punishment: PunishmentEntry;
-      do {
-        punishment = {
-          ...WEIGHTED_DEFAULT_LIST[Math.floor(Math.random() * WEIGHTED_DEFAULT_LIST.length)],
-        };
-      } while (
-        blacklist.some((item) => item.text === punishment.text) ||
-        result.some((p) => p.some((item) => item.text === punishment.text))
-      );
-      punishments.push(punishment);
-
-      // Get extra spins
-      for (let j = 0; j < (punishment.extraSpins ?? 0); j++) {
-        let extraPunishment: PunishmentEntry;
-        do {
-          extraPunishment = {
-            ...NO_EXTRA_SPIN_DEFAULT_LIST[
-              Math.floor(Math.random() * NO_EXTRA_SPIN_DEFAULT_LIST.length)
-            ],
-          };
-        } while (
-          blacklist.some((item) => item.text === extraPunishment.text) ||
-          result.some((p) => p.some((item) => item.text === extraPunishment.text)) ||
-          punishments.some((item) => item.text === extraPunishment.text)
-        );
-        punishments.push(extraPunishment);
+    // Randomize punishment
+    let punishment: PunishmentEntry;
+    let attempts = 0;
+    do {
+      if (attempts >= 10) {
+        punishment = { text: "Nothing happens" };
+        break;
       }
+      punishment = {
+        ...WEIGHTED_DEFAULT_LIST[Math.floor(Math.random() * WEIGHTED_DEFAULT_LIST.length)],
+      };
+      attempts++;
+    } while (
+      punishmentTextBlacklist.includes(punishment.text) ||
+      punishmentTagBlacklist.some((tag) => punishment.tags?.includes(tag))
+    );
 
-      // Add the punishments to the result
-      result.push([...punishments]);
+    // If we got "Nothing happens", return early
+    if (punishment.text === "Nothing happens") {
+      return punishment;
     }
 
-    return result;
+    // Adjust blacklists
+    punishmentTextBlacklist.push(punishment.text);
+    punishmentTagBlacklist.push(...(punishment.tags ?? []));
+
+    // Get extra spins
+    for (let j = 0; j < (punishment.extraSpins ?? 0); j++) {
+      // Randomize punishment
+      let extraPunishment: PunishmentEntry;
+      attempts = 0;
+      do {
+        if (attempts >= 10) {
+          extraPunishment = { text: "Nothing extra happens" };
+          break;
+        }
+        extraPunishment = {
+          ...NO_EXTRA_SPIN_DEFAULT_LIST[
+            Math.floor(Math.random() * NO_EXTRA_SPIN_DEFAULT_LIST.length)
+          ],
+        };
+        attempts++;
+      } while (
+        punishmentTextBlacklist.includes(extraPunishment.text) ||
+        punishmentTagBlacklist.some((tag) => extraPunishment.tags?.includes(tag))
+      );
+
+      // Add the extra punishment to the main punishment
+      if (!punishment.children) {
+        punishment.children = [];
+      }
+      punishment.children.push(extraPunishment);
+
+      // Adjust blacklists (only if we didn't get "Nothing extra happens")
+      if (extraPunishment.text !== "Nothing extra happens") {
+        punishmentTextBlacklist.push(extraPunishment.text);
+        punishmentTagBlacklist.push(...(extraPunishment.tags ?? []));
+      }
+    }
+
+    return punishment;
   }
 
   async function handleLoad() {
@@ -200,37 +237,52 @@ export default function WheelOfMisfortune() {
     setFireteamMembers((members) => members.filter((m) => m !== member));
   }
 
+  function flattenPunishments(punishments: PunishmentEntry[]): PunishmentEntry[] {
+    return punishments.flatMap((punishment) => [
+      punishment,
+      ...(punishment.children ? flattenPunishments(punishment.children) : []),
+    ]);
+  }
+
   function rerollFireteam() {
-    const punishments = getRandomPunishments(
-      fireteamMembers.length,
-      fireteamMembers.flatMap((m) => m.punishments?.slice(0, 1) ?? [])
-    );
-    console.log(punishments);
-    setFireteamMembers((members) => members.map((m, i) => ({ ...m, punishments: punishments[i] })));
+    const teamPunishmentsSoFar: PunishmentEntry[] = [];
+    for (const member of fireteamMembers) {
+      // Get the new punishment
+      const punishment = getRandomPunishment([], teamPunishmentsSoFar);
+
+      teamPunishmentsSoFar.push(punishment);
+
+      // Add the punishment to the member
+      setFireteamMembers((members) =>
+        members.map((m) => (m === member ? { ...m, punishments: [punishment] } : m))
+      );
+    }
   }
 
   function rerollFireteamMember(member: FireteamMember) {
-    const punishments = getRandomPunishments(
-      1,
+    // Get the new punishment
+    const punishment = getRandomPunishment(
+      [],
       fireteamMembers.flatMap((m) => m.punishments ?? [])
     );
 
     // Add the punishment to the member
     setFireteamMembers((members) =>
-      members.map((m) => (m === member ? { ...m, punishments: punishments[0] } : m))
+      members.map((m) => (m === member ? { ...m, punishments: [punishment] } : m))
     );
   }
 
-  function addPunishment(member: FireteamMember) {
-    const punishments = getRandomPunishments(
-      1,
+  function addPunishmentToFireteamMember(member: FireteamMember) {
+    // Get the new punishment
+    const punishment = getRandomPunishment(
+      member.punishments ?? [],
       fireteamMembers.flatMap((m) => m.punishments ?? [])
     );
 
     // Add the punishment to the member
     setFireteamMembers((members) =>
       members.map((m) =>
-        m === member ? { ...m, punishments: [...(m.punishments ?? []), ...punishments[0]] } : m
+        m === member ? { ...m, punishments: [...(m.punishments ?? []), punishment] } : m
       )
     );
   }
@@ -310,21 +362,27 @@ export default function WheelOfMisfortune() {
               </Table.Td>
               <Table.Td>
                 <Stack gap={0}>
-                  <Text>{member.punishments?.[0].text}</Text>
-                  {member.punishments && member.punishments?.length > 1 && (
-                    <List>
-                      {member.punishments
-                        ?.slice(1)
-                        .map((punishment) => (
-                          <List.Item key={punishment.text}>{punishment.text}</List.Item>
-                        ))}
-                    </List>
-                  )}
+                  {member.punishments?.map((punishment) => (
+                    <>
+                      <Text>{punishment.text}</Text>
+                      {punishment.children && punishment.children.length > 0 && (
+                        <List>
+                          {punishment.children.map((child) => (
+                            <List.Item key={child.text}>{child.text}</List.Item>
+                          ))}
+                        </List>
+                      )}
+                    </>
+                  ))}
                 </Stack>
               </Table.Td>
               <Table.Td>
                 <Group>
-                  <Button variant="subtle" onClick={() => addPunishment(member)} color="green">
+                  <Button
+                    variant="subtle"
+                    onClick={() => addPunishmentToFireteamMember(member)}
+                    color="green"
+                  >
                     Add
                   </Button>
                   <Button variant="subtle" onClick={() => rerollFireteamMember(member)}>

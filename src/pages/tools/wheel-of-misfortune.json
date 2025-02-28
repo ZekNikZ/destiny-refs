@@ -10,6 +10,9 @@
       "text": "Drink some water"
     },
     {
+      "text": "Consume some caffiene"
+    },
+    {
       "text": "Take a shot"
     },
     {
@@ -23,31 +26,39 @@
     },
     {
       "text": "Listen to \"Chug Jug With You\" on repeat",
-      "link": "https://www.youtube.com/watch?v=QqRLVFRe9AU"
+      "link": "https://www.youtube.com/watch?v=QqRLVFRe9AU",
+      "tags": ["audio"]
     },
     {
-      "text": "Listen to asmr full blast"
+      "text": "Listen to ASMR full blast",
+      "tags": ["audio"]
     },
     {
-      "text": "Be really toxic to a random teammate"
+      "text": "Secret: Be really toxic to a random teammate",
+      "tags": ["secret"]
     },
     {
-      "text": "Throw until called out"
+      "text": "Secret: Throw until called out",
+      "tags": ["secret"]
     },
     {
-      "text": "Bot walk only"
+      "text": "Bot walk only (can't look and move at the same time, no double jumps)",
+      "tags": ["movement"]
     },
     {
-      "text": "Fish callouts only"
+      "text": "Fish callouts only",
+      "tags": ["callouts"]
     },
     {
-      "text": "Talk in ASMR"
+      "text": "Talk in ASMR",
+      "tags": ["voice"]
     },
     {
       "text": "Change characters"
     },
     {
-      "text": "Only yell callouts"
+      "text": "Only yell",
+      "tags": ["voice"]
     },
     {
       "text": "Dauntless (play another game while in encounter)"
@@ -59,146 +70,182 @@
       "text": "No HUD"
     },
     {
-      "text": "Cannot repeat callout"
+      "text": "Cannot repeat callout",
+      "tags": ["callouts"]
     },
     {
-      "text": "Put callouts in random Twitch chat"
+      "text": "Team: put callouts in random Twitch chat",
+      "tags": ["team"]
     },
     {
-      "text": "Opposite callouts only"
+      "text": "Opposite callouts only",
+      "tags": ["callouts"]
     },
     {
       "text": "Can only do each role one time"
     },
     {
-      "text": "Sword movement only"
+      "text": "Sword movement only",
+      "tags": ["movement"]
     },
     {
-      "text": "Swap mouse & keyboard hands"
+      "text": "Swap mouse & keyboard hands",
+      "tags": ["physical"]
     },
     {
-      "text": "Freaky callouts 🐱🐶"
-    },
-    {
-      "text": "Turn off / cover your monitor"
+      "text": "Freaky callouts 🐱🐶",
+      "tags": ["callouts"]
     },
     {
       "text": "Fighting Lion",
-      "weapon": 3549153978
+      "weapon": 3549153978,
+      "tags": ["weapons"]
     },
     {
       "text": "Rat King",
-      "weapon": 2362471601
+      "weapon": 2362471601,
+      "tags": ["weapons"]
     },
     {
       "text": "Wish-Ender",
-      "weapon": 814876684
+      "weapon": 814876684,
+      "tags": ["weapons"]
     },
     {
       "text": "Last Word",
-      "weapon": 1364093401
+      "weapon": 1364093401,
+      "tags": ["weapons"]
     },
     {
       "text": "D.A.R.C.I. DPS next boss",
-      "weapon": 3141979346
+      "weapon": 3141979346,
+      "tags": ["weapons"]
     },
     {
       "text": "The Fourth Horseman",
-      "weapon": 1665952087
+      "weapon": 1665952087,
+      "tags": ["weapons"]
     },
     {
-      "text": "No kinetic",
+      "text": "Any raid exotic",
+      "tags": ["weapons"]
+    },
+    {
+      "text": "Can't use kinetic slot",
       "icon": "kinetic"
     },
     {
-      "text": "No energy",
+      "text": "Can't use energy slot",
       "icon": "energy"
     },
     {
-      "text": "No heavy",
+      "text": "Can't use heavy slot",
       "icon": "heavy"
     },
     {
       "text": "Double primary",
-      "icon": "primary"
+      "icon": "primary",
+      "tags": ["weapons"]
     },
     {
       "text": "Double special",
-      "icon": "special"
+      "icon": "special",
+      "tags": ["weapons"]
     },
     {
       "text": "Triple trace rifles",
-      "icon": "trace_rifle"
+      "icon": "trace_rifle",
+      "tags": ["weapons"]
     },
     {
       "text": "Triple glaives",
-      "icon": "glaive"
+      "icon": "glaive",
+      "tags": ["weapons"]
     },
     {
       "text": "Triple bows",
-      "icon": "bow"
+      "icon": "bow",
+      "tags": ["weapons"]
     },
     {
-      "text": "Triple strand",
-      "icon": "strand"
+      "text": "Triple Strand weapons",
+      "icon": "strand",
+      "tags": ["weapons"]
     },
     {
-      "text": "Triple stasis",
-      "icon": "stasis"
+      "text": "Triple Stasis weapons",
+      "icon": "stasis",
+      "tags": ["weapons"]
     },
     {
-      "text": "Triple Häkke weapons"
+      "text": "Triple Häkke weapons (can't use slots you don't have weapons for)",
+      "tags": ["weapons"]
     },
     {
-      "text": "Triple Omolon weapons"
+      "text": "Triple Omolon weapons (can't use slots you don't have weapons for)",
+      "tags": ["weapons"]
     },
     {
-      "text": "Triple SUROS weapons"
+      "text": "Triple SUROS weapons (can't use slots you don't have weapons for)",
+      "tags": ["weapons"]
     },
     {
-      "text": "Triple VEIST weapons"
+      "text": "Triple VEIST weapons (can't use slots you don't have weapons for)",
+      "tags": ["weapons"]
     },
     {
-      "text": "Adept weapons only"
+      "text": "Adept weapons only (can't use slots you don't have weapons for)",
+      "tags": ["weapons"]
     },
     {
-      "text": "Touch of Malice & no manual reloading"
+      "text": "Touch of Malice & no manual reloading",
+      "tags": ["weapons"]
     },
     {
-      "text": "Random loadout"
+      "text": "Random loadout",
+      "tags": ["weapons", "armor"]
     },
     {
-      "text": "Kinetic exotic"
+      "text": "Kinetic exotic",
+      "tags": ["weapons"]
     },
     {
-      "text": "Energy exotic"
+      "text": "Energy exotic",
+      "tags": ["weapons"]
     },
     {
-      "text": "Heavy exotic"
+      "text": "Heavy exotic",
+      "tags": ["weapons"]
     },
     {
       "text": "Vault everything"
     },
     {
-      "text": "All blues"
+      "text": "Equip all blues (weapons + armor, where applicable)",
+      "tags": ["weapons", "armor"]
     },
     {
-      "text": "All grays"
+      "text": "Equip all grays (weapons + armor, where applicable)",
+      "tags": ["weapons", "armor"]
     },
     {
-      "text": "Someone else chooses exotic"
+      "text": "Someone else chooses your exotic",
+      "tags": ["weapons"]
     },
     {
-      "text": "Melee only"
+      "text": "Melee only",
+      "tags": ["abilities"]
     },
     {
-      "text": "No abilities"
+      "text": "No abilities",
+      "tags": ["abilities"]
     },
     {
-      "text": "Only abilities"
+      "text": "Only abilities",
+      "tags": ["abilities"]
     },
     {
-      "text": "Blink Jump"
+      "text": "Blink jump"
     },
     {
       "text": "No manual reloading"
@@ -207,7 +254,8 @@
       "text": "No armor mods"
     },
     {
-      "text": "All 6 damage types (kinetic, energy, heavy, super, grenade, melee)"
+      "text": "Equip all 6 damage types (kinetic, energy, heavy, super, grenade, melee)",
+      "tags": ["weapons", "abilities"]
     },
     {
       "text": "No DIM / loadouts for rest of raid"
@@ -228,17 +276,74 @@
       "text": "Take someone else's punishment"
     },
     {
-      "text": "Copy EVERYONE else's punishment"
+      "text": "Copy EVERYONE else's punishment (if conflicting, choose one of the conflicting punishments)"
     },
     {
-      "text": "Give someone your punishment"
+      "text": "Give someone your punishment",
+      "extraSpins": 1
     },
     {
       "text": "Reroll 6 times and choose who gets what (can choose the same player more than once)",
       "extraSpins": 6
     },
     {
-      "text": "Team: each player different subclass"
+      "text": "Team: each player different subclass",
+      "tags": ["team", "abilities"]
+    },
+    {
+      "text": "Use only weapons from the activity you are playing",
+      "tags": ["weapons"]
+    },
+    {
+      "text": "Listen to the Byf lore video of the activity (or closest alternative) you are playing and recap it at the end of the encounter/section",
+      "tags": ["audio"]
+    },
+    {
+      "text": "Team: each player must have a unique primary and special weapon type",
+      "tags": ["team"]
+    },
+    {
+      "text": "Team: each player must have a unique heavy weapon type",
+      "tags": ["team"]
+    },
+    {
+      "text": "PVP Loadout",
+      "tags": ["weapons", "abilities"]
+    },
+    {
+      "text": "Nothing, but roll an extra time next encounter/section"
+    },
+    {
+      "text": "Overwrite your first four loadout slots with whatever you are currently using"
+    },
+    {
+      "text": "Write a poem about another fireteam member and read it out loud"
+    },
+    {
+      "text": "Solve today's Wordle"
+    },
+    {
+      "text": "Go buy 10 raid banners, 10 upgrade modules, and a weapon from Banshee"
+    },
+    {
+      "text": "Choose another fireteam member and stay within melee range of them (to the best of your ability) for the rest of the encounter/section"
+    },
+    {
+      "text": "Equip the \"Wheel of Misfortune\" emblem. If you don't have it, roll twice more"
+    },
+    {
+      "text": "Max sensitivity"
+    },
+    {
+      "text": "Acquire a kinetic, energy, and heavy weapon from any source (except Collections) and use them for this encounter/section",
+      "tags": ["weapons"]
+    },
+    {
+      "text": "You are the president of the fireteam. You decide who does each role for this encounter (if applicable). If you die, then the fireteam must wipe"
+    },
+    {
+      "text": "Team: must swap to different weapon (in each slot) for each damage/mechanic phase",
+      "tags": ["team", "weapons"]
     }
   ]
 }
