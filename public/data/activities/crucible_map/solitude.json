@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "crucible_map-solitude",
+    "type": "crucible_map",
+    "name": "Solitude",
+    "location": "Mars",
+    "backgroundImage": "/images/crucible_map/solitude.avif"
+  }
+}
