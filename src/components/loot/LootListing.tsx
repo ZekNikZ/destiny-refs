@@ -92,6 +92,14 @@ export default function LootListing(props: Props) {
                   w="auto"
                 />
               )}
+              {classType !== undefined && classType !== 3 && (
+                <Image
+                  src={`/icons/class/${staticData?.classes[classType].name.toLowerCase()}.svg`}
+                  h={20}
+                  w="auto"
+                  color="white"
+                />
+              )}
               {props.loot.artiface && (
                 <Image src="/icons/attributes/artiface.png" h={16} w="auto" />
               )}

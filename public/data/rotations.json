@@ -241,7 +241,94 @@
           {
             "type": "item",
             "itemHash": 3332125295
-          }
+          },
+          {
+            "type": "group",
+            "name": "Titan Armor",
+            "groupType": "Titan Armor",
+            "displayStaticIcon": "titan",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 511773064
+              },
+              {
+                "type": "item",
+                "itemHash": 4154074649
+              },
+              {
+                "type": "item",
+                "itemHash": 1054377087
+              },
+              {
+                "type": "item",
+                "itemHash": 2751189771
+              },
+              {
+                "type": "item",
+                "itemHash": 2725889934
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "name": "Hunter Armor",
+            "groupType": "Hunter Armor",
+            "displayStaticIcon": "hunter",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 1435559164
+              },
+              {
+                "type": "item",
+                "itemHash": 2832013173
+              },
+              {
+                "type": "item",
+                "itemHash": 2641704939
+              },
+              {
+                "type": "item",
+                "itemHash": 113167959
+              },
+              {
+                "type": "item",
+                "itemHash": 1381405058
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "name": "Warlock Armor",
+            "groupType": "Warlock Armor",
+            "displayStaticIcon": "warlock",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 1479465109
+              },
+              {
+                "type": "item",
+                "itemHash": 155308388
+              },
+              {
+                "type": "item",
+                "itemHash": 792171868
+              },
+              {
+                "type": "item",
+                "itemHash": 1661393678
+              },
+              {
+                "type": "item",
+                "itemHash": 2078005457
+              }
+            ]
+          },
+          { "type": "item", "itemHash": 3803133794 },
+          { "type": "item", "itemHash": 3449261808 },
+          { "type": "item", "itemHash": 33339334 }
         ]
       ]
     },
@@ -295,7 +382,7 @@
             "type": "group",
             "name": "Titan Armor",
             "groupType": "Titan Armor",
-            "displayStaticIcon": "helmet",
+            "displayStaticIcon": "titan",
             "children": [
               {
                 "type": "item",
@@ -323,7 +410,7 @@
             "type": "group",
             "name": "Hunter Armor",
             "groupType": "Hunter Armor",
-            "displayStaticIcon": "helmet",
+            "displayStaticIcon": "hunter",
             "children": [
               {
                 "type": "item",
@@ -351,7 +438,7 @@
             "type": "group",
             "name": "Warlock Armor",
             "groupType": "Warlock Armor",
-            "displayStaticIcon": "helmet",
+            "displayStaticIcon": "warlock",
             "children": [
               {
                 "type": "item",

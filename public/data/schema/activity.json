@@ -297,7 +297,10 @@
                 "legendary-engram",
                 "exotic-engram",
                 "bright-engram",
-                "prime-engram"
+                "prime-engram",
+                "titan",
+                "hunter",
+                "warlock"
               ],
               "type": "string"
             },

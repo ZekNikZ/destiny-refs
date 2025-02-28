@@ -81,7 +81,10 @@ export type Loot = {
         | "legendary-engram"
         | "exotic-engram"
         | "bright-engram"
-        | "prime-engram";
+        | "prime-engram"
+        | "titan"
+        | "hunter"
+        | "warlock";
       children: Loot[];
     }
   | {
