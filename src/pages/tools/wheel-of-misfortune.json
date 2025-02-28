@@ -89,7 +89,7 @@
       "tags": ["movement"]
     },
     {
-      "text": "Swap mouse & keyboard hands",
+      "text": "Swap mouse & keyboard hands (or flip controller upside down)",
       "tags": ["physical"]
     },
     {
@@ -320,7 +320,7 @@
       "text": "Write a poem about another fireteam member and read it out loud"
     },
     {
-      "text": "Solve today's Wordle"
+      "text": "Solve today's Wordle (hard mode)"
     },
     {
       "text": "Go buy 10 raid banners, 10 upgrade modules, and a weapon from Banshee"
@@ -344,6 +344,13 @@
     {
       "text": "Team: must swap to different weapon (in each slot) for each damage/mechanic phase",
       "tags": ["team", "weapons"]
+    },
+    {
+      "text": "Do 20 pushups",
+      "tags": ["physical"]
+    },
+    {
+      "text": "Camera on and do cat dance emote (if no camera or not comfortable showing face, reroll)"
     }
   ]
 }
