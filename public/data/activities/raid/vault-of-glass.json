@@ -67,15 +67,15 @@
                     "loot": [
                       {
                         "type": "item",
-                        "itemHash": 3186018373
+                        "itemHash": 3444688218
                       },
                       {
                         "type": "item",
-                        "itemHash": 3197270240
+                        "itemHash": 694500607
                       },
                       {
                         "type": "item",
-                        "itemHash": 471518543
+                        "itemHash": 3654744298
                       },
                       {
                         "type": "ref-loot",
@@ -118,7 +118,7 @@
                     "loot": [
                       {
                         "type": "item",
-                        "itemHash": 690668916
+                        "itemHash": 337578911
                       }
                     ]
                   },
@@ -165,15 +165,15 @@
                     "loot": [
                       {
                         "type": "item",
-                        "itemHash": 3186018373
+                        "itemHash": 3444688218
                       },
                       {
                         "type": "item",
-                        "itemHash": 3197270240
+                        "itemHash": 694500607
                       },
                       {
                         "type": "item",
-                        "itemHash": 3653573172
+                        "itemHash": 3844610113
                       },
                       {
                         "type": "ref-loot",
@@ -216,7 +216,7 @@
                     "loot": [
                       {
                         "type": "item",
-                        "itemHash": 1987769101
+                        "itemHash": 2362652544
                       }
                     ]
                   },
@@ -267,11 +267,11 @@
                       },
                       {
                         "type": "item",
-                        "itemHash": 3186018373
+                        "itemHash": 3444688218
                       },
                       {
                         "type": "item",
-                        "itemHash": 471518543
+                        "itemHash": 3654744298
                       },
                       {
                         "type": "ref-loot",
@@ -365,11 +365,11 @@
                       },
                       {
                         "type": "item",
-                        "itemHash": 3197270240
+                        "itemHash": 694500607
                       },
                       {
                         "type": "item",
-                        "itemHash": 4050645223
+                        "itemHash": 2265407516
                       },
                       {
                         "type": "ref-loot",
@@ -412,7 +412,7 @@
                     "loot": [
                       {
                         "type": "item",
-                        "itemHash": 1921159786
+                        "itemHash": 3623686757
                       }
                     ]
                   },
@@ -464,15 +464,15 @@
                     "loot": [
                       {
                         "type": "item",
-                        "itemHash": 3653573172
+                        "itemHash": 3844610113
                       },
                       {
                         "type": "item",
-                        "itemHash": 4050645223
+                        "itemHash": 2265407516
                       },
                       {
                         "type": "item",
-                        "itemHash": 471518543
+                        "itemHash": 3654744298
                       },
                       {
                         "type": "ref-loot",
@@ -516,7 +516,7 @@
                     "loot": [
                       {
                         "type": "item",
-                        "itemHash": 3796510434
+                        "itemHash": 2334480463
                       }
                     ]
                   },
