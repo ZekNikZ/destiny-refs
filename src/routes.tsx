@@ -1,5 +1,6 @@
 import {
   ArrowClockwise,
+  Bookmarks,
   Calendar,
   Gear,
   Icon,
@@ -21,6 +22,8 @@ import FireteamRaidReport from "./pages/tools/FireteamRaidReport";
 import SettingsPage from "./pages/SettingsPage";
 import VerityHelperPage from "./pages/tools/VerityHelperPage";
 import WheelOfMisfortune from "./pages/tools/WheelOfMisfortune";
+import ToolsPage from "./pages/ToolsPage";
+import HelpfulLinksPage from "./pages/HelpfulLinksPage";
 
 export interface RouteData {
   path: string;
@@ -31,6 +34,9 @@ export interface RouteData {
     icon?: React.ReactNode;
     hidden?: boolean;
     beta?: boolean;
+  };
+  displayProperties?: {
+    backgroundImage?: string;
   };
   children?: RouteData[];
 }
@@ -134,8 +140,8 @@ const routes: RouteData[] = [
   },
   {
     path: "/tools",
-    title: "Tools",
-    element: <TodayPage />,
+    title: "Tools & Toys",
+    element: <ToolsPage />,
     navbarProperties: {
       icon: makePhosphorIcon(Toolbox),
     },
@@ -171,6 +177,9 @@ const routes: RouteData[] = [
         navbarProperties: {
           beta: true,
         },
+        displayProperties: {
+          backgroundImage: "/images/misc/fireteam.avif",
+        },
       },
       {
         path: "/tools/wheel-of-misfortune",
@@ -179,8 +188,19 @@ const routes: RouteData[] = [
         navbarProperties: {
           beta: true,
         },
+        displayProperties: {
+          backgroundImage: "/images/misc/wheel.avif",
+        },
       },
     ],
+  },
+  {
+    path: "/links",
+    title: "Links & Resources",
+    element: <HelpfulLinksPage />,
+    navbarProperties: {
+      icon: makePhosphorIcon(Bookmarks),
+    },
   },
   {
     path: "/contact",
