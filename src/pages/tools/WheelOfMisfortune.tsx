@@ -144,6 +144,31 @@ export default function WheelOfMisfortune() {
     setLoading(false);
   }
 
+  function copyMarkdown() {
+    // Generate markdown in this format:
+    // ```
+    // Username:
+    //  > Punishment
+    //     > Child Punishment
+    //  > Punishment
+    // Username:
+    //  ...
+
+    const markdown = `\`\`\`
+${fireteamMembers
+  .map((member) => {
+    const punishments = member.punishments.map((punishment) => {
+      const children = punishment.children?.map((child) => `    > ${child.text}`).join("\n");
+      return `  > ${punishment.text}${children ? `\n${children}` : ""}`;
+    });
+
+    return `${member.username}:\n${punishments.join("\n")}`;
+  })
+  .join("\n")}\`\`\``;
+
+    navigator.clipboard.writeText(markdown);
+  }
+
   return (
     <Stack gap="sm">
       <Title>Wheel of Misfortune</Title>
@@ -200,8 +225,9 @@ export default function WheelOfMisfortune() {
           Reroll All Punishments
         </Button>
         <Button onClick={openListModal}>Settings</Button>
+        <Button onClick={copyMarkdown}>Copy Markdown</Button>
       </Group>
-      <Table striped highlightOnHover withTableBorder>
+      <Table striped withTableBorder>
         <Table.Thead>
           <Table.Tr>
             <Table.Th w={300}>Fireteam Member</Table.Th>
