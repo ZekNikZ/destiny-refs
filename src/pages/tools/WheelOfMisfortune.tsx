@@ -23,6 +23,10 @@ import LootIcon from "../../components/loot/LootIcon";
 
 import { WOMFireteamMember } from "../../data/wom/wom-types";
 import { useWOMData } from "../../data/wom/useWOMData";
+import PunishmentSelectorModal from "../../components/wom/PunishmentListSelectorModal";
+import EditPunishmentListModal from "../../components/wom/EditPunishmentListModal";
+
+// TODO: Copy for discord button
 
 export default function WheelOfMisfortune() {
   const [username, setUsername] = useLocalStorage({
@@ -35,7 +39,6 @@ export default function WheelOfMisfortune() {
   const [error, setError] = useState("");
 
   const fireteamMembers = useWOMData((state) => state.members);
-  //   const customPunishmentLists = useWOMData((state) => state.customPunishmentLists);
   const addFireteamMember = useWOMData((state) => state.addFireteamMember);
   const removeFireteamMember = useWOMData((state) => state.removeFireteamMember);
   const clearFireteam = useWOMData((state) => state.clearFireteam);
@@ -44,6 +47,7 @@ export default function WheelOfMisfortune() {
     (state) => state.addPunishmentToFireteamMember
   );
   const rerollAllFireteamMembers = useWOMData((state) => state.rerollAllFireteamMembers);
+  const openListModal = useWOMData((state) => state.openListModal);
 
   async function handleLoad() {
     if (username.trim() === "") return;
@@ -195,6 +199,7 @@ export default function WheelOfMisfortune() {
         >
           Reroll All Punishments
         </Button>
+        <Button onClick={openListModal}>Settings</Button>
       </Group>
       <Table striped highlightOnHover withTableBorder>
         <Table.Thead>
@@ -258,6 +263,9 @@ export default function WheelOfMisfortune() {
           ))}
         </Table.Tbody>
       </Table>
+
+      <PunishmentSelectorModal />
+      <EditPunishmentListModal />
     </Stack>
   );
 }

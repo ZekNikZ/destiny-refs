@@ -96,3 +96,16 @@ export function getRandomPunishment(
 
   return punishment;
 }
+
+export function getValidPunishmentListName(name: string) {
+  const takenNames = useWOMData.getState().customPunishmentLists.map((list) => list.name);
+
+  let proposedName = name;
+  let i = 1;
+  while (proposedName === "Default" || takenNames.includes(proposedName)) {
+    proposedName = `${name} (${i})`;
+    i++;
+  }
+
+  return proposedName;
+}

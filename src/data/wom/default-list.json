@@ -2,7 +2,8 @@
   "name": "Default",
   "punishments": [
     {
-      "text": "Do a playlist activity"
+      "text": "Do a playlist activity",
+      "tags": ["leave"]
     },
     {
       "text": "Call your mom"
@@ -17,13 +18,15 @@
       "text": "Take a shot"
     },
     {
-      "text": "Go make a sandwich"
+      "text": "Go make a sandwich",
+      "tags": ["leave"]
     },
     {
       "text": "Dismantle random weapon"
     },
     {
-      "text": "Go touch grass"
+      "text": "Go touch grass",
+      "tags": ["leave"]
     },
     {
       "text": "Listen to \"Chug Jug With You\" on repeat",
@@ -315,7 +318,7 @@
       "text": "Nothing, but roll an extra time next encounter/section"
     },
     {
-      "text": "Overwrite your first four loadout slots with whatever you are currently using"
+      "text": "Overwrite your first two loadout slots with whatever you are currently using"
     },
     {
       "text": "Write a poem about another fireteam member and read it out loud"
@@ -324,7 +327,8 @@
       "text": "Solve today's Wordle (hard mode)"
     },
     {
-      "text": "Go buy 10 raid banners, 10 upgrade modules, and a weapon from Banshee"
+      "text": "Go buy 10 raid banners, 10 upgrade modules, and a weapon from Banshee",
+      "tags": ["leave"]
     },
     {
       "text": "Choose another fireteam member and stay within melee range of them (to the best of your ability) for the rest of the encounter/section"
@@ -351,7 +355,26 @@
       "tags": ["physical"]
     },
     {
-      "text": "Camera on and do cat dance emote (if no camera or not comfortable showing face, reroll)"
+      "text": "Team: flawless encounter. Any death = wipe",
+      "tags": ["team"]
+    },
+    {
+      "text": "Delete all earnings from encounter"
+    },
+    {
+      "text": "Must equip and use any earnings that you have kept from this activity so far. Reroll if you haven't kept anything"
+    },
+    {
+      "text": "Team: do the encounter triumph",
+      "tags": ["team"]
+    },
+    {
+      "text": "Team: do the encounter challenge",
+      "tags": ["team"]
+    },
+    {
+      "text": "Roll 2, pick 1",
+      "extraSpins": 1
     }
   ]
 }
