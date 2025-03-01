@@ -1,30 +1,77 @@
-import { Button, Group, Input, Modal, NumberInput, Stack, Table, Textarea } from "@mantine/core";
+import { Button, Group, Input, Modal, Stack, Table } from "@mantine/core";
 import { useWOMData } from "../../data/wom/useWOMData";
+import WOMEditorRow from "./WOMEditorRow";
+import { useCallback, useEffect, useState } from "react";
+import { WOMPunishment } from "../../data/wom/wom-types";
+import { v4 as uuidv4 } from "uuid";
 
 export default function EditPunishmentListModal() {
   const openModal = useWOMData((state) => state.openModal);
-  const draftPunishmentList = useWOMData((state) => state.draftPunishmentList);
-  const saveOpenPunishmentList = useWOMData((state) => state.saveOpenPunishmentList);
-  const editDraftName = useWOMData((state) => state.editDraftName);
-  const editDraftEntryWeight = useWOMData((state) => state.editDraftEntryWeight);
-  const editDraftEntryName = useWOMData((state) => state.editDraftEntryName);
-  const editDraftEntryTags = useWOMData((state) => state.editDraftEntryTags);
-  const addDraftEntry = useWOMData((state) => state.addDraftEntry);
-  const removeDraftEntry = useWOMData((state) => state.removeDraftEntry);
+  const openEditor = useWOMData((state) => state.openEditor);
+  const editPunishmentList = useWOMData((state) => state.editPunishmentList);
+
+  const [listName, setListName] = useState("");
+  const [punishmentDrafts, setPunishmentDrafts] = useState<Record<string, WOMPunishment>>({});
+
+  useEffect(() => {
+    const draftPunishmentList = useWOMData
+      .getState()
+      .customPunishmentLists.find((l) => l.id === openEditor);
+    if (!draftPunishmentList) {
+      return;
+    }
+
+    setListName(draftPunishmentList.name);
+    setPunishmentDrafts(
+      Object.fromEntries(
+        draftPunishmentList.punishments.map((punishment) => [punishment.id, punishment])
+      )
+    );
+  }, [openEditor]);
+
+  const onClose = useCallback(() => {
+    editPunishmentList({
+      id: openEditor,
+      name: listName,
+      punishments: Object.values(punishmentDrafts),
+    });
+  }, [listName, punishmentDrafts]);
+
+  const addDraftEntry = () => {
+    const id = uuidv4();
+    setPunishmentDrafts((drafts) => ({
+      ...drafts,
+      [id]: { id, weight: 1, text: "", tags: [], extraSpins: 0 },
+    }));
+  };
+
+  const onChange = (id: string, punishment: WOMPunishment) => {
+    setPunishmentDrafts((drafts) => {
+      drafts[id] = punishment;
+      return drafts;
+    });
+  };
+
+  const onRemove = (id: string) => {
+    setPunishmentDrafts((drafts) => {
+      const { [id]: removed, ...rest } = drafts;
+      return rest;
+    });
+  };
 
   return (
-    <Modal opened={openModal === "edit"} onClose={saveOpenPunishmentList} size="70%" title="Editor">
+    <Modal opened={openModal === "edit"} onClose={onClose} size="70%" title="Editor">
       <Stack>
         <Group>
           <Input
             placeholder="Punishment List Name"
-            value={draftPunishmentList.name}
-            onChange={(event) => editDraftName(event.currentTarget.value)}
+            value={listName}
+            onChange={(event) => setListName(event.currentTarget.value)}
             w={400}
           />
-          <Button onClick={saveOpenPunishmentList}>Save</Button>
+          <Button onClick={onClose}>Save</Button>
         </Group>
-        <Table striped highlightOnHover withTableBorder>
+        <Table striped withTableBorder>
           <Table.Thead>
             <Table.Tr>
               <Table.Th w={80}>Weight</Table.Th>
@@ -35,47 +82,13 @@ export default function EditPunishmentListModal() {
             </Table.Tr>
           </Table.Thead>
           <Table.Tbody>
-            {draftPunishmentList.punishments.map((punishment, index) => (
-              <Table.Tr key={index}>
-                <Table.Td>
-                  <NumberInput
-                    value={punishment.weight ?? 1}
-                    min={1}
-                    onChange={(value) =>
-                      typeof value === "number" ? editDraftEntryWeight(index, value) : null
-                    }
-                  />
-                </Table.Td>
-                <Table.Td>
-                  <Textarea
-                    placeholder="Punishment"
-                    value={punishment.text}
-                    autosize
-                    onChange={(event) => editDraftEntryName(index, event.currentTarget.value)}
-                  />
-                </Table.Td>
-                <Table.Td>
-                  <Input
-                    placeholder="Tags (optional)"
-                    value={punishment.tags?.join(", ") ?? ""}
-                    onChange={(event) => editDraftEntryTags(index, event.currentTarget.value)}
-                  />
-                </Table.Td>
-                <Table.Td>
-                  <NumberInput
-                    value={punishment.extraSpins ?? 0}
-                    min={0}
-                    onChange={(value) =>
-                      typeof value === "number" ? editDraftEntryWeight(index, value) : null
-                    }
-                  />
-                </Table.Td>
-                <Table.Td>
-                  <Button variant="subtle" color="red" onClick={() => removeDraftEntry(index)}>
-                    Remove
-                  </Button>
-                </Table.Td>
-              </Table.Tr>
+            {Object.entries(punishmentDrafts).map(([id, punishment]) => (
+              <WOMEditorRow
+                key={id}
+                punishment={punishment}
+                onChange={(punishment) => onChange(id, punishment)}
+                onRemove={() => onRemove(id)}
+              />
             ))}
           </Table.Tbody>
         </Table>
@@ -83,7 +96,7 @@ export default function EditPunishmentListModal() {
           <Button onClick={addDraftEntry} color="green">
             Add Punishment
           </Button>
-          <Button onClick={saveOpenPunishmentList}>Save</Button>
+          <Button onClick={onClose}>Save</Button>
         </Group>
       </Stack>
     </Modal>

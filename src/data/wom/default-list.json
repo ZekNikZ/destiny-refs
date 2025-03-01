@@ -1,380 +1,709 @@
 {
-  "name": "Default",
+  "id": "f6a7b977-f270-4524-9165-e711298332b3",
+  "name": "Default (1)",
   "punishments": [
     {
       "text": "Do a playlist activity",
-      "tags": ["leave"]
+      "tags": ["leave"],
+      "id": "e276c1d7-9d2a-467e-9079-c9394d86947c",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
-      "text": "Call your mom"
+      "text": "Call your mom",
+      "id": "4db364c8-927d-4abb-907b-55f51d3abff6",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
-      "text": "Drink some water"
+      "text": "Drink some water",
+      "id": "d3ec8b6b-2a10-4d35-abcd-e92616abc0e4",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
-      "text": "Consume some caffiene"
+      "text": "Consume some caffiene",
+      "id": "38e284f9-70ed-496c-9096-dc1d94e1c107",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
-      "text": "Take a shot"
+      "text": "Take a shot",
+      "id": "76aaf7e6-7a1f-41ed-97ad-d60d06f60717",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
       "text": "Go make a sandwich",
-      "tags": ["leave"]
+      "tags": ["leave"],
+      "id": "9e9375e2-dbc8-44fb-b43a-1d158c185080",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
-      "text": "Dismantle random weapon"
+      "text": "Dismantle random weapon",
+      "id": "35d78955-5a8c-495b-a1e7-8a92099db9d4",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
       "text": "Go touch grass",
-      "tags": ["leave"]
+      "tags": ["leave"],
+      "id": "2f512c01-8f16-401d-b458-f37e81e31140",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Listen to \"Chug Jug With You\" on repeat",
       "link": "https://www.youtube.com/watch?v=QqRLVFRe9AU",
-      "tags": ["audio"]
+      "tags": ["audio"],
+      "id": "450dff19-7c74-4c0a-b8be-88407a889858",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Listen to ASMR full blast",
-      "tags": ["audio"]
+      "tags": ["audio"],
+      "id": "7ddb5dd2-29c4-4e74-a8a6-8f3a565e1f6e",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Secret: Be really toxic to a random teammate",
-      "tags": ["secret"]
+      "tags": ["secret"],
+      "id": "3477dde5-db00-4a12-a7b2-bda79ccc93ca",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Secret: Throw until called out",
-      "tags": ["secret"]
+      "tags": ["secret"],
+      "id": "8270922a-43c8-4bd6-a9b2-7a73d1ed6277",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Bot walk only (can't look and move at the same time, no double jumps)",
-      "tags": ["movement"]
+      "tags": ["movement"],
+      "id": "2526d3b9-8db0-413a-850b-a8b8a5c0f316",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Fish callouts only",
-      "tags": ["callouts"]
+      "tags": ["callouts"],
+      "id": "79e3fcf3-5057-4888-bffc-572475ce3674",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Talk in ASMR",
-      "tags": ["voice"]
+      "tags": ["voice"],
+      "id": "620f1ce7-c89c-4924-b71c-8b9d0e4415d4",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
-      "text": "Change characters"
+      "text": "Change characters",
+      "id": "e1f27752-2c0f-4abc-8c34-5fec33ece596",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
       "text": "Only yell",
-      "tags": ["voice"]
+      "tags": ["voice"],
+      "id": "b311cc55-26de-43dc-a3fb-56f1cc86bf45",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
-      "text": "Dauntless (play another game while in encounter)"
+      "text": "Dauntless (play another game while in encounter)",
+      "id": "c2b2341a-6ece-403c-9aa6-96b09d6f22af",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
-      "text": "Mute yourself"
+      "text": "Mute yourself",
+      "id": "bf130ab5-3400-40bb-a861-39b37ade299f",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
-      "text": "No HUD"
+      "text": "No HUD",
+      "id": "53d2c920-958c-4d78-b730-15dc0d8644d6",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
       "text": "Cannot repeat callout",
-      "tags": ["callouts"]
+      "tags": ["callouts"],
+      "id": "3d0bfcc5-7eaa-4e22-9d92-fc8ec42dea98",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Team: put callouts in random Twitch chat",
-      "tags": ["team"]
+      "tags": ["team"],
+      "id": "be98b3e6-6d41-47d3-ae98-97b5b53933ef",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Opposite callouts only",
-      "tags": ["callouts"]
+      "tags": ["callouts"],
+      "id": "8e9ee754-97b3-46e2-9d2b-81f0d9068a40",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
-      "text": "Can only do each role one time"
+      "text": "Can only do each role one time",
+      "id": "67ba255e-2b7b-4793-b617-c7e2515afdb2",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
       "text": "Sword movement only",
-      "tags": ["movement"]
+      "tags": ["movement"],
+      "id": "fa8c00c9-56d1-4427-80ca-053ba65ba867",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Swap mouse & keyboard hands (or flip controller upside down)",
-      "tags": ["physical"]
+      "tags": ["physical"],
+      "id": "a1e394f9-1da6-4d6e-8d4d-fbde88daa28e",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Freaky callouts 🐱🐶",
-      "tags": ["callouts"]
+      "tags": ["callouts"],
+      "id": "8f05db38-372d-43c9-9e57-a86ccba2d0de",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Fighting Lion",
       "weapon": 3549153978,
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "c4a57ab1-4c0c-4d78-a602-fe974d67edc0",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Rat King",
       "weapon": 2362471601,
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "f5e846ae-f76c-4bb1-aadb-933f99ac9c14",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Wish-Ender",
       "weapon": 814876684,
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "483e3466-5ceb-4055-b9c8-9701ab0596e5",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Last Word",
       "weapon": 1364093401,
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "7e12397e-5224-4d02-bc38-a71546e98a9f",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "D.A.R.C.I. DPS next boss",
       "weapon": 3141979346,
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "2ead614b-c897-45de-894c-27c3d6f86820",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "The Fourth Horseman",
       "weapon": 1665952087,
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "883ce37c-c14b-45e7-a0f9-9979972f28f8",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Any raid exotic",
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "19d6e1da-3608-4000-86a6-4da3d7827a34",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Can't use kinetic slot",
-      "icon": "kinetic"
+      "icon": "kinetic",
+      "id": "89c039fe-5f60-4932-a73a-9c17665ca9de",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
       "text": "Can't use energy slot",
-      "icon": "energy"
+      "icon": "energy",
+      "id": "574f1e71-603c-4f5c-94f9-13d037f8219e",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
       "text": "Can't use heavy slot",
-      "icon": "heavy"
+      "icon": "heavy",
+      "id": "ba82ea15-0e3a-4e42-a3ee-8cd46f7c3da4",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
       "text": "Double primary",
       "icon": "primary",
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "33f961d5-f561-414a-ab07-82bd87c5125a",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Double special",
       "icon": "special",
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "34274a72-112d-4436-ac1f-2cb18dec9a03",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Triple trace rifles",
       "icon": "trace_rifle",
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "cfbf437b-d3b3-48a6-b1e6-53e35b95e499",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Triple glaives",
       "icon": "glaive",
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "0527420a-cab3-4094-9168-228fe930db93",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Triple bows",
       "icon": "bow",
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "dcea5933-70d2-4629-9ee3-32be14acaab4",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Triple Strand weapons",
       "icon": "strand",
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "c083b497-7be2-4b2d-b6b9-9b8328d26f43",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Triple Stasis weapons",
       "icon": "stasis",
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "d29a805c-5bf2-4b32-9e21-48add0a2c26c",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Triple Häkke weapons (can't use slots you don't have weapons for)",
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "b88ea38d-0fda-4dfc-bf3d-8205f5b5c9f9",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Triple Omolon weapons (can't use slots you don't have weapons for)",
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "6dc7b5f7-1bf1-43eb-8740-cca207ffa81f",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Triple SUROS weapons (can't use slots you don't have weapons for)",
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "bbe03fad-ecf0-4073-be84-738f2b131e51",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Triple VEIST weapons (can't use slots you don't have weapons for)",
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "2bc95d28-4ff0-4b07-b73d-aa561f54224b",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Adept weapons only (can't use slots you don't have weapons for)",
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "ce2ca4f9-ee03-49b7-bccf-1927d0a76442",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Touch of Malice & no manual reloading",
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "dfca8027-91e0-467d-8728-bf4017c3a7d6",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Random loadout",
-      "tags": ["weapons", "armor"]
+      "tags": ["weapons", "armor"],
+      "id": "bfc8fce4-35dc-45fe-bc48-3c003d0a0760",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Kinetic exotic",
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "4c866f98-c264-4cc9-8016-341e29aa4b7e",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Energy exotic",
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "23da3d32-3eae-41ce-bf26-89042430537a",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Heavy exotic",
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "dd1d579b-922a-4ca3-bc33-5e2b58ffb1b2",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
-      "text": "Vault everything"
+      "text": "Vault everything",
+      "id": "3d1adf95-4193-4038-b081-f00e73f960f5",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
       "text": "Equip all blues (weapons + armor, where applicable)",
-      "tags": ["weapons", "armor"]
+      "tags": ["weapons", "armor"],
+      "id": "d300686d-77a8-4953-ae76-aa842f897893",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Equip all grays (weapons + armor, where applicable)",
-      "tags": ["weapons", "armor"]
+      "tags": ["weapons", "armor"],
+      "id": "01377476-f84f-490d-ae97-8e293aa082e3",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Someone else chooses your exotic",
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "eee75f0b-a635-46fa-bb48-d591c5bad8ee",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Melee only",
-      "tags": ["abilities"]
+      "tags": ["abilities"],
+      "id": "44c16b98-bf00-4be1-9060-d4663defa961",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "No abilities",
-      "tags": ["abilities"]
+      "tags": ["abilities"],
+      "id": "0425a679-8672-4767-9dec-bee1dce8a90d",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Only abilities",
-      "tags": ["abilities"]
+      "tags": ["abilities"],
+      "id": "f8101ece-d1f4-4c12-b563-2538715e8fae",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
-      "text": "Blink jump"
+      "text": "Blink jump",
+      "id": "ec69ac55-4562-4e58-9761-00a39546a775",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
-      "text": "No manual reloading"
+      "text": "No manual reloading",
+      "id": "1445dae3-fa10-479f-9fd1-cc637b35d57d",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
-      "text": "No armor mods"
+      "text": "No armor mods",
+      "id": "98b9afaa-f4b8-4cfe-bc55-6d9fdb58fb57",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
       "text": "Equip all 6 damage types (kinetic, energy, heavy, super, grenade, melee)",
-      "tags": ["weapons", "abilities"]
+      "tags": ["weapons", "abilities"],
+      "id": "8110fa71-1053-4d4e-824f-df214c42eed8",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
-      "text": "No DIM / loadouts for rest of raid"
+      "text": "No DIM / loadouts for rest of raid",
+      "id": "758a0f67-8777-40f1-9437-0d24461341fb",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
-      "text": "No artifact mods for rest of raid"
+      "text": "No artifact mods for rest of raid",
+      "id": "26a8b5d7-530f-4fac-95e1-85d0e7d231f8",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
       "weight": 2,
       "text": "2x spin",
-      "extraSpins": 2
+      "extraSpins": 2,
+      "id": "66a024ba-5c42-47e1-8fcc-331502f919b2",
+      "tags": []
     },
     {
       "text": "3x spin",
-      "extraSpins": 3
+      "extraSpins": 3,
+      "id": "904f559b-cfc9-40f9-9344-2177ea77a4f7",
+      "weight": 1,
+      "tags": []
     },
     {
-      "text": "Take someone else's punishment"
+      "text": "Take someone else's punishment",
+      "id": "241afee4-ed9c-4315-9551-f2b58b130fbe",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
-      "text": "Copy EVERYONE else's punishment (if conflicting, choose one of the conflicting punishments)"
+      "text": "Copy EVERYONE else's punishment (if conflicting, choose one of the conflicting punishments)",
+      "id": "29f8d923-a53e-47db-af73-ea8be36681a9",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
       "text": "Give someone your punishment",
-      "extraSpins": 1
+      "extraSpins": 1,
+      "id": "7bd050b6-db80-447b-a715-4e9259c46b2c",
+      "weight": 1,
+      "tags": []
     },
     {
       "text": "Reroll 6 times and choose who gets what (can choose the same player more than once)",
-      "extraSpins": 6
+      "extraSpins": 6,
+      "id": "1c80e51d-e9cb-4a87-885a-c9f994c2a9f6",
+      "weight": 1,
+      "tags": []
     },
     {
       "text": "Team: each player different subclass",
-      "tags": ["team", "abilities"]
+      "tags": ["team", "abilities"],
+      "id": "55687c8b-2f7c-4905-a2ec-d13dbed71eea",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Use only weapons from the activity you are playing",
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "b42e0d64-d5c6-42b7-acc6-542e3cd76f9b",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Listen to the Byf lore video of the activity (or closest alternative) you are playing and recap it at the end of the encounter/section",
-      "tags": ["audio"]
+      "tags": ["audio"],
+      "id": "ed1247d6-0f62-434e-bd13-7a7109158dd4",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Team: each player must have a unique primary and special weapon type",
-      "tags": ["team"]
+      "tags": ["team"],
+      "id": "26bed2a6-ad79-4940-a625-a6b5073cebfc",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Team: each player must have a unique heavy weapon type",
-      "tags": ["team"]
+      "tags": ["team"],
+      "id": "5c216a98-ca25-4343-9b0c-74e488b32775",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "PVP Loadout",
-      "tags": ["weapons", "abilities"]
+      "tags": ["weapons", "abilities"],
+      "id": "08eb33d9-b167-4429-989f-628d2502aa4e",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
-      "text": "Nothing, but roll an extra time next encounter/section"
+      "text": "Nothing, but roll an extra time next encounter/section",
+      "id": "8a817360-6466-4cfa-91d1-46f4ab42901d",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
-      "text": "Overwrite your first two loadout slots with whatever you are currently using"
+      "text": "Overwrite your first two loadout slots with whatever you are currently using",
+      "id": "f7ba6285-0231-419c-b02a-231481667685",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
-      "text": "Write a poem about another fireteam member and read it out loud"
+      "text": "Write a poem about another fireteam member and read it out loud",
+      "id": "6e94fd40-5e4f-4046-bef2-3f7460d033d1",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
-      "text": "Solve today's Wordle (hard mode)"
+      "text": "Solve today's Wordle (hard mode)",
+      "id": "bba20a39-4ccb-4af9-9714-b322e3b5d3e9",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
       "text": "Go buy 10 raid banners, 10 upgrade modules, and a weapon from Banshee",
-      "tags": ["leave"]
+      "tags": ["leave"],
+      "id": "77b4379d-7650-4b25-9f07-035e26040f3b",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
-      "text": "Choose another fireteam member and stay within melee range of them (to the best of your ability) for the rest of the encounter/section"
+      "text": "Choose another fireteam member and stay within melee range of them (to the best of your ability) for the rest of the encounter/section",
+      "id": "b7d67914-8ab9-40c9-b14f-ba27ed32e900",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
-      "text": "Equip the \"Wheel of Misfortune\" emblem. If you don't have it, roll twice more"
+      "text": "Equip the \"Wheel of Misfortune\" emblem. If you don't have it, roll twice more",
+      "id": "3375e26b-b6a9-49b8-a394-a9ee4038e569",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
-      "text": "Max sensitivity"
+      "text": "Max sensitivity",
+      "id": "48d629c4-197d-4b3c-a0e5-147bd5bb34d7",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
       "text": "Acquire a kinetic, energy, and heavy weapon from any source (except Collections) and use them for this encounter/section",
-      "tags": ["weapons"]
+      "tags": ["weapons"],
+      "id": "2c30b4d9-63b8-4406-b3ce-1474f72efcc2",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
-      "text": "You are the president of the fireteam. You decide who does each role for this encounter (if applicable). If you die, then the fireteam must wipe"
+      "text": "You are the president of the fireteam. You decide who does each role for this encounter (if applicable). If you die, then the fireteam must wipe",
+      "id": "ccf38bfd-a3fe-49b2-88be-6daaa39d6d08",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
       "text": "Team: must swap to different weapon (in each slot) for each damage/mechanic phase",
-      "tags": ["team", "weapons"]
+      "tags": ["team", "weapons"],
+      "id": "732a3808-f121-4c6b-8802-01d85336f5b4",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Do 10 pushups",
-      "tags": ["physical"]
+      "tags": ["physical"],
+      "id": "eae4ed58-1e2a-49f2-89ee-e35d17656a3c",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Team: flawless encounter. Any death = wipe",
-      "tags": ["team"]
+      "tags": ["team"],
+      "id": "8a9144a6-fa17-45ed-b646-0a1ca61502e9",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
-      "text": "Delete all earnings from encounter"
+      "text": "Delete all earnings from encounter",
+      "id": "f7cb608d-b9a7-450d-bddf-cfde42a017c0",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
-      "text": "Must equip and use any earnings that you have kept from this activity so far. Reroll if you haven't kept anything"
+      "text": "Must equip and use any earnings that you have kept from this activity so far. Reroll if you haven't kept anything",
+      "id": "86617c4d-66a0-426f-8148-58a7cfd75dc9",
+      "weight": 1,
+      "extraSpins": 0,
+      "tags": []
     },
     {
       "text": "Team: do the encounter triumph",
-      "tags": ["team"]
+      "tags": ["team"],
+      "id": "c53d09a6-d8ca-4577-9ca3-cb46f595f0c0",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Team: do the encounter challenge",
-      "tags": ["team"]
+      "tags": ["team"],
+      "id": "e3618a68-8d7c-4ee5-9767-ce9dec255fa9",
+      "weight": 1,
+      "extraSpins": 0
     },
     {
       "text": "Roll 2, pick 1",
-      "extraSpins": 1
+      "extraSpins": 2,
+      "id": "4f5c4314-8a8d-4c9a-87d8-91202b33a7d9",
+      "weight": 1,
+      "tags": []
+    },
+    {
+      "text": "Roll 3, pick 2",
+      "extraSpins": 2,
+      "id": "8d1a3b8f-0ca9-49ed-9c23-ebd78a901592",
+      "weight": 1,
+      "tags": []
     }
   ]
 }

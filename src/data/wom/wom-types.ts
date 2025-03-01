@@ -2,10 +2,11 @@ import { z } from "zod";
 
 export interface WOMPunishment {
   // Properties
+  id: string;
   text: string;
-  weight?: number;
-  extraSpins?: number;
-  tags?: string[];
+  weight: number;
+  extraSpins: number;
+  tags: string[];
 
   // TODO: Visuals
   // weapon?: number;
@@ -17,10 +18,11 @@ export interface WOMPunishment {
 export const WOMPunishmentSchema: z.ZodType<WOMPunishment> = z.lazy(() =>
   z.object({
     // Properties
+    id: z.string(),
     text: z.string(),
-    weight: z.number().optional(),
-    extraSpins: z.number().optional(),
-    tags: z.array(z.string()).optional(),
+    weight: z.number(),
+    extraSpins: z.number(),
+    tags: z.array(z.string()),
 
     // TODO: Visuals
     //   weapon: z.number().optional(),
@@ -32,6 +34,7 @@ export const WOMPunishmentSchema: z.ZodType<WOMPunishment> = z.lazy(() =>
 );
 
 export const WOMPunishmentListSchema = z.object({
+  id: z.string(),
   name: z.string(),
   punishments: z.array(WOMPunishmentSchema),
 });

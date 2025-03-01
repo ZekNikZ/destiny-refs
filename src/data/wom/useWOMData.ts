@@ -3,6 +3,7 @@ import { devtools, persist } from "zustand/middleware";
 import type {} from "@redux-devtools/extension"; // required for devtools typing
 import { WOMFireteamMember, WOMPunishment, WOMPunishmentList } from "./wom-types";
 import { getRandomPunishment, getValidPunishmentListName } from "./wom-utils";
+import { v4 as uuidv4 } from "uuid";
 import DEFAULT_LIST from "./default-list.json";
 
 interface WOMState {
@@ -10,9 +11,9 @@ interface WOMState {
   members: WOMFireteamMember[];
   selectedPunishmentList: string;
   customPunishmentLists: WOMPunishmentList[];
+
   openModal?: "list" | "edit";
-  openEditor?: string;
-  draftPunishmentList: WOMPunishmentList;
+  openEditor: string;
 
   // Actions
   addFireteamMember: (member: WOMFireteamMember) => void;
@@ -24,21 +25,16 @@ interface WOMState {
   rerollAllFireteamMembers: () => void;
 
   openListModal: () => void;
-  openEditModal: (name: string) => void;
+  openEditModal: (id: string) => void;
   closeModal: () => void;
 
-  selectPunishmentList: (name: string) => void;
-  duplicatePunishmentList: (name: string) => void;
-  removePunishmentList: (name: string) => void;
-  saveOpenPunishmentList: () => void;
-
-  editDraftName: (name: string) => void;
-  editDraftEntryWeight: (index: number, weight: number) => void;
-  editDraftEntryName: (index: number, name: string) => void;
-  editDraftEntryTags: (index: number, tags: string) => void;
-  editDraftEntryExtraRolls: (index: number, extraRolls: number) => void;
-  addDraftEntry: () => void;
-  removeDraftEntry: (index: number) => void;
+  selectPunishmentList: (id: string) => void;
+  duplicatePunishmentList: (id: string) => void;
+  removePunishmentList: (id: string) => void;
+  importPunishmentList: (list: WOMPunishmentList) => void;
+  exportPunishmentList: (id: string) => void;
+  createEmptyPunishmentList: () => void;
+  editPunishmentList: (list: WOMPunishmentList) => void;
 }
 
 export const useWOMData = create<WOMState>()(
@@ -47,9 +43,10 @@ export const useWOMData = create<WOMState>()(
       (set, get) => ({
         // State
         members: [],
-        selectedPunishmentList: "Default",
+        selectedPunishmentList: "default",
         customPunishmentLists: [],
-        draftPunishmentList: { name: "", punishments: [] },
+        openEditor: "default",
+        draftPunishmentList: { id: 0, name: "", punishments: [] },
 
         // Actions
         addFireteamMember(member) {
@@ -72,7 +69,7 @@ export const useWOMData = create<WOMState>()(
           // Get the new punishment
           const punishment = getRandomPunishment(
             [],
-            get().members.flatMap((m) => m.punishments ?? [])
+            get().members.flatMap((m) => m.punishments)
           );
 
           // Add the punishment to the member
@@ -85,16 +82,14 @@ export const useWOMData = create<WOMState>()(
         addPunishmentToFireteamMember(username) {
           // Get the new punishment
           const punishment = getRandomPunishment(
-            get().members.find((m) => m.username === username)?.punishments ?? [],
-            get().members.flatMap((m) => m.punishments ?? [])
+            get().members.find((m) => m.username === username)?.punishments,
+            get().members.flatMap((m) => m.punishments)
           );
 
           // Add the punishment to the member
           set((state) => ({
             members: state.members.map((m) =>
-              m.username === username
-                ? { ...m, punishments: [...(m.punishments ?? []), punishment] }
-                : m
+              m.username === username ? { ...m, punishments: [...m.punishments, punishment] } : m
             ),
           }));
         },
@@ -115,15 +110,15 @@ export const useWOMData = create<WOMState>()(
         openListModal() {
           set(() => ({ openModal: "list" }));
         },
-        openEditModal(name: string) {
-          const draftPunishmentList = get().customPunishmentLists.find((l) => l.name === name);
+        openEditModal(id) {
+          const draftPunishmentList = get().customPunishmentLists.find((l) => l.id === id);
           if (!draftPunishmentList) {
             return;
           }
 
           set(() => ({
             openModal: "edit",
-            openEditor: name,
+            openEditor: id,
             draftPunishmentList,
           }));
         },
@@ -131,106 +126,72 @@ export const useWOMData = create<WOMState>()(
           set(() => ({ openModal: undefined }));
         },
 
-        selectPunishmentList(name) {
-          set(() => ({ selectedPunishmentList: name }));
+        selectPunishmentList(id) {
+          set(() => ({ selectedPunishmentList: id }));
         },
-        duplicatePunishmentList(name) {
+        duplicatePunishmentList(id) {
+          const listToCopy = get().customPunishmentLists.find((l) => l.id === id);
           set((state) => ({
             customPunishmentLists: [
               ...state.customPunishmentLists,
               {
-                name: getValidPunishmentListName(name),
+                id: uuidv4(),
+                name: getValidPunishmentListName(listToCopy?.name ?? "Default"),
                 punishments:
-                  state.customPunishmentLists.find((l) => l.name === name)?.punishments ??
-                  DEFAULT_LIST.punishments,
+                  listToCopy?.punishments ?? (DEFAULT_LIST as WOMPunishmentList).punishments,
               },
             ],
           }));
         },
-        removePunishmentList(name) {
+        removePunishmentList(id) {
           set((state) => ({
-            customPunishmentLists: state.customPunishmentLists.filter((l) => l.name !== name),
+            customPunishmentLists: state.customPunishmentLists.filter((l) => l.id !== id),
             selectedPunishmentList:
-              state.selectedPunishmentList === name ? "Default" : state.selectedPunishmentList,
+              state.selectedPunishmentList === id ? "default" : state.selectedPunishmentList,
           }));
         },
-        saveOpenPunishmentList() {
+        createEmptyPunishmentList() {
+          set((state) => ({
+            customPunishmentLists: [
+              ...state.customPunishmentLists,
+              {
+                id: uuidv4(),
+                name: getValidPunishmentListName("New List"),
+                punishments: [],
+              },
+            ],
+          }));
+        },
+        importPunishmentList(list) {
+          set((state) => ({
+            customPunishmentLists: [
+              ...state.customPunishmentLists,
+              {
+                ...list,
+                id: uuidv4(),
+              },
+            ],
+          }));
+        },
+        exportPunishmentList(id) {
+          const list =
+            get().customPunishmentLists.find((l) => l.id === id) ??
+            (DEFAULT_LIST as WOMPunishmentList);
+
+          var a = document.createElement("a");
+          var file = new Blob([JSON.stringify(list)], { type: "application/json" });
+          a.href = URL.createObjectURL(file);
+          a.download = `Wheel of Misfortune - ${list.name}.json`;
+          a.click();
+          a.remove();
+        },
+        editPunishmentList(list) {
           set((state) => ({
             customPunishmentLists: state.customPunishmentLists.map((l) =>
-              l.name === state.openEditor ? state.draftPunishmentList : l
+              l.id === list.id ? list : l
             ),
             openEditor: undefined,
             openModal: "list",
-          }));
-        },
-
-        editDraftName(name) {
-          set((state) => ({
-            draftPunishmentList: { ...state.draftPunishmentList, name },
-          }));
-        },
-        editDraftEntryWeight(index, weight) {
-          set((state) => ({
-            draftPunishmentList: {
-              ...state.draftPunishmentList,
-              punishments: state.draftPunishmentList.punishments.map((p, i) =>
-                i === index ? { ...p, weight } : p
-              ),
-            },
-          }));
-        },
-        editDraftEntryName(index, name) {
-          set((state) => ({
-            draftPunishmentList: {
-              ...state.draftPunishmentList,
-              punishments: state.draftPunishmentList.punishments.map((p, i) =>
-                i === index ? { ...p, text: name } : p
-              ),
-            },
-          }));
-        },
-        editDraftEntryTags(index, tags) {
-          set((state) => ({
-            draftPunishmentList: {
-              ...state.draftPunishmentList,
-              punishments: state.draftPunishmentList.punishments.map((p, i) =>
-                i === index
-                  ? {
-                      ...p,
-                      tags: tags
-                        .split(",")
-                        .map((t) => t.trim())
-                        .filter((t) => t.length > 0),
-                    }
-                  : p
-              ),
-            },
-          }));
-        },
-        editDraftEntryExtraRolls(index, extraRolls) {
-          set((state) => ({
-            draftPunishmentList: {
-              ...state.draftPunishmentList,
-              punishments: state.draftPunishmentList.punishments.map((p, i) =>
-                i === index ? { ...p, extraSpins: extraRolls } : p
-              ),
-            },
-          }));
-        },
-        addDraftEntry() {
-          set((state) => ({
-            draftPunishmentList: {
-              ...state.draftPunishmentList,
-              punishments: [...state.draftPunishmentList.punishments, { text: "" }],
-            },
-          }));
-        },
-        removeDraftEntry(index) {
-          set((state) => ({
-            draftPunishmentList: {
-              ...state.draftPunishmentList,
-              punishments: state.draftPunishmentList.punishments.filter((_, i) => i !== index),
-            },
           }));
         },
       }),

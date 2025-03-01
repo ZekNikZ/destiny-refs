@@ -1,6 +1,6 @@
 import { useWOMData } from "./useWOMData";
 import { WOMPunishment, WOMPunishmentList } from "./wom-types";
-
+import { v4 as uuidv4 } from "uuid";
 import DEFAULT_LIST from "./default-list.json";
 
 export function flattenPunishments(punishments: WOMPunishment[]): WOMPunishment[] {
@@ -22,17 +22,17 @@ export function getRandomPunishment(
   const punishmentTagBlacklist = [
     ...flattenPunishments(otherOwnPunishments),
     ...flattenPunishments(otherTeamPunishments).filter((item) => item.tags?.includes("team")),
-  ].flatMap((item) => item.tags ?? []);
+  ].flatMap((item) => item.tags);
 
   // Get punishment lists
   const selectedPunishmentList = useWOMData.getState().selectedPunishmentList;
   const punishmentList =
     useWOMData
       .getState()
-      .customPunishmentLists.find((list) => list.name === selectedPunishmentList) ??
+      .customPunishmentLists.find((list) => list.id === selectedPunishmentList) ??
     (DEFAULT_LIST as WOMPunishmentList);
   const weightedPunishmentList = punishmentList.punishments.flatMap((entry) =>
-    Array<WOMPunishment>(entry.weight ?? 1).fill(entry)
+    Array<WOMPunishment>(entry.weight).fill(entry)
   );
   const noExtraSpinList = weightedPunishmentList.filter((entry) => !entry.extraSpins);
 
@@ -41,7 +41,13 @@ export function getRandomPunishment(
   let attempts = 0;
   do {
     if (attempts >= 10) {
-      punishment = { text: "Nothing happens" };
+      punishment = {
+        id: uuidv4(),
+        text: "Nothing happens",
+        weight: 1,
+        extraSpins: 0,
+        tags: [],
+      };
       break;
     }
     punishment = {
@@ -60,16 +66,22 @@ export function getRandomPunishment(
 
   // Adjust blacklists
   punishmentTextBlacklist.push(punishment.text);
-  punishmentTagBlacklist.push(...(punishment.tags ?? []));
+  punishmentTagBlacklist.push(...punishment.tags);
 
   // Get extra spins
-  for (let j = 0; j < (punishment.extraSpins ?? 0); j++) {
+  for (let j = 0; j < punishment.extraSpins; j++) {
     // Randomize punishment
     let extraPunishment: WOMPunishment;
     attempts = 0;
     do {
       if (attempts >= 10) {
-        extraPunishment = { text: "Nothing extra happens" };
+        extraPunishment = {
+          id: uuidv4(),
+          text: "Nothing extra happens",
+          weight: 1,
+          extraSpins: 0,
+          tags: [],
+        };
         break;
       }
       extraPunishment = {
@@ -90,7 +102,7 @@ export function getRandomPunishment(
     // Adjust blacklists (only if we didn't get "Nothing extra happens")
     if (extraPunishment.text !== "Nothing extra happens") {
       punishmentTextBlacklist.push(extraPunishment.text);
-      punishmentTagBlacklist.push(...(extraPunishment.tags ?? []));
+      punishmentTagBlacklist.push(...extraPunishment.tags);
     }
   }
 
