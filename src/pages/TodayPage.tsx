@@ -1,8 +1,7 @@
 import { activityTypes } from "../routes";
 import TodayPageDisplay from "../components/TodayPageDisplay";
 import { useGlobalData } from "../data/useGlobalData";
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
-import { Group, Stack, Title } from "@mantine/core";
+import { Grid, Group, Stack, Title } from "@mantine/core";
 import dayjs from "dayjs";
 import Countdown from "../components/Countdown";
 import { isBetween } from "../utils/dates";
@@ -33,9 +32,9 @@ export default function TodayPage() {
           <Countdown key={title} title={title} to={date} />
         ))}
       </Group>
-      <ResponsiveMasonry columnsCountBreakPoints={{ 300: 1, 1100: 2, 1600: 3 }}>
-        <Masonry columnsCount={2} gutter="16px">
-          {activityTypes.map((activityType) => (
+      <Grid gutter="md">
+        {activityTypes.map((activityType) => (
+          <Grid.Col span={{ base: 12, md: 6, lg: 4 }}>
             <TodayPageDisplay
               key={activityType.type}
               title={activityType.title}
@@ -44,29 +43,29 @@ export default function TodayPage() {
               )}
               disableLinks={activityType.disableLinks}
             />
-          ))}
-          {rotations.activityRotations
-            .filter((rotation) => rotation.type === "event")
-            .filter((rotation) =>
-              isBetween(dayjs(rotation.startDate), now, dayjs(rotation.endDate))
-            )
-            .map((rotation) => (
+          </Grid.Col>
+        ))}
+        {rotations.activityRotations
+          .filter((rotation) => rotation.type === "event")
+          .filter((rotation) => isBetween(dayjs(rotation.startDate), now, dayjs(rotation.endDate)))
+          .map((rotation) => (
+            <Grid.Col span={{ base: 12, md: 6, lg: 4 }}>
               <TodayPageDisplay
                 key={rotation.id}
-                title={rotation.name}
+                title={`Limited Time: ${rotation.name}`}
                 rotations={[rotation]}
                 disableLinks
               />
-            ))}
-        </Masonry>
-      </ResponsiveMasonry>
+            </Grid.Col>
+          ))}
+      </Grid>
       <Title order={2} size="h2">
         Bluesky Feeds
       </Title>
       <BlueskyConfigProvider width="min(500px, 90vw)" openLinksInNewTab>
         <Group gap="md" align="flex-start" justify="center">
-          <BlueskyAccountFeed userHandle="bungiehelp.bungie.net" postLimit={5} />
-          <BlueskyAccountFeed userHandle="destiny2team.bungie.net" postLimit={5} />
+          <BlueskyAccountFeed userHandle="bungiehelp.bungie.net" postLimit={8} />
+          <BlueskyAccountFeed userHandle="destiny2team.bungie.net" postLimit={6} />
           <BlueskyAccountFeed userHandle="destinythegame.bungie.net" postLimit={2} />
         </Group>
       </BlueskyConfigProvider>
