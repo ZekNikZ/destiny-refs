@@ -6,6 +6,8 @@ import { Group, Stack } from "@mantine/core";
 import dayjs from "dayjs";
 import Countdown from "../components/Countdown";
 import { isBetween } from "../utils/dates";
+import BlueskyAccountFeed from "../components/BlueskyAccountFeed";
+import { BlueskyConfigProvider } from "bluesky-embed-react";
 
 export default function TodayPage() {
   const { rotations, countdowns } = useGlobalData();
@@ -58,6 +60,13 @@ export default function TodayPage() {
             ))}
         </Masonry>
       </ResponsiveMasonry>
+      <BlueskyConfigProvider width="500px" openLinksInNewTab>
+        <Group gap="md" align="flex-start" justify="center" wrap="wrap" mt="md">
+          <BlueskyAccountFeed userHandle="destiny2team.bungie.net" />
+          <BlueskyAccountFeed userHandle="destinythegame.bungie.net" />
+          <BlueskyAccountFeed userHandle="bungiehelp.bungie.net" />
+        </Group>
+      </BlueskyConfigProvider>
     </Stack>
   );
 }

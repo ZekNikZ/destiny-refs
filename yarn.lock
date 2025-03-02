@@ -15,6 +15,64 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atproto/api@npm:^0.13.18":
+  version: 0.13.35
+  resolution: "@atproto/api@npm:0.13.35"
+  dependencies:
+    "@atproto/common-web": "npm:^0.4.0"
+    "@atproto/lexicon": "npm:^0.4.6"
+    "@atproto/syntax": "npm:^0.3.2"
+    "@atproto/xrpc": "npm:^0.6.8"
+    await-lock: "npm:^2.2.2"
+    multiformats: "npm:^9.9.0"
+    tlds: "npm:^1.234.0"
+    zod: "npm:^3.23.8"
+  checksum: 10c0/084c38ee2956fa95499c6b268f4eda8c7129955240fafdcbdaf68341ee46b140c2dde1d483e842885281cf7627beb0fd9060d98c6cfa009b74e5b96de8cf1344
+  languageName: node
+  linkType: hard
+
+"@atproto/common-web@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "@atproto/common-web@npm:0.4.0"
+  dependencies:
+    graphemer: "npm:^1.4.0"
+    multiformats: "npm:^9.9.0"
+    uint8arrays: "npm:3.0.0"
+    zod: "npm:^3.23.8"
+  checksum: 10c0/136c3d7ca600f73261f8ddeec5e0a542ac8affc1afc6c449612b3777f647bd67354c47d3746366f12a9bfefa51e438e661010d99b025b733bee6305898aa491a
+  languageName: node
+  linkType: hard
+
+"@atproto/lexicon@npm:^0.4.6, @atproto/lexicon@npm:^0.4.7":
+  version: 0.4.7
+  resolution: "@atproto/lexicon@npm:0.4.7"
+  dependencies:
+    "@atproto/common-web": "npm:^0.4.0"
+    "@atproto/syntax": "npm:^0.3.3"
+    iso-datestring-validator: "npm:^2.2.2"
+    multiformats: "npm:^9.9.0"
+    zod: "npm:^3.23.8"
+  checksum: 10c0/9c75cb821e2524354f3cd2d5cf6cbcd37ce7b61d267ad205add70f00d08f58ca2e1cf8738974d5fdf52ef0437f3b4ab64bfde40a64730c261d1e52a812181427
+  languageName: node
+  linkType: hard
+
+"@atproto/syntax@npm:^0.3.2, @atproto/syntax@npm:^0.3.3":
+  version: 0.3.3
+  resolution: "@atproto/syntax@npm:0.3.3"
+  checksum: 10c0/89a47402086d19ee79b9ae6ade25f28f4c0945f9c88355c5d7462a4bb857bf51a50b1ab84d57257a749e650cc49e55dba5dde7f05bc4c2dcbd5948606843e34b
+  languageName: node
+  linkType: hard
+
+"@atproto/xrpc@npm:^0.6.8":
+  version: 0.6.9
+  resolution: "@atproto/xrpc@npm:0.6.9"
+  dependencies:
+    "@atproto/lexicon": "npm:^0.4.7"
+    zod: "npm:^3.23.8"
+  checksum: 10c0/8a00bb9451a197b61b6dc0cc0b0f713da77b53c8ed3644c8c5540d8d6a1da2ae71502f12074e0375be771fa697282cf69b5332b1ec8e65b7f7a06e69f4f6fb94
+  languageName: node
+  linkType: hard
+
 "@babel/code-frame@npm:^7.25.9, @babel/code-frame@npm:^7.26.0":
   version: 7.26.2
   resolution: "@babel/code-frame@npm:7.26.2"
@@ -1804,6 +1862,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"await-lock@npm:^2.2.2":
+  version: 2.2.2
+  resolution: "await-lock@npm:2.2.2"
+  checksum: 10c0/bedf00dad44c6325a655bf3bd523ab9e1ce41023da6a8c379990c76ac1d942ac7e5301627ab84ba37917ab5247506ba429b7f6e4bf77074093f255571b9ad5ee
+  languageName: node
+  linkType: hard
+
 "bail@npm:^2.0.0":
   version: 2.0.2
   resolution: "bail@npm:2.0.2"
@@ -1829,6 +1894,19 @@ __metadata:
   version: 2.1.5
   resolution: "blake3-wasm@npm:2.1.5"
   checksum: 10c0/5dc729d8e3a9d1d7ab016b36cdda264a327ada0239716df48435163e11d2bf6df25d6e421655a1f52649098ae49555268a654729b7d02768f77c571ab37ef814
+  languageName: node
+  linkType: hard
+
+"bluesky-embed-react@npm:^0.0.8":
+  version: 0.0.8
+  resolution: "bluesky-embed-react@npm:0.0.8"
+  dependencies:
+    "@atproto/api": "npm:^0.13.18"
+    hls.js: "npm:^1.5.17"
+  peerDependencies:
+    react: ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+    react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10c0/11be9dbbfc47f456a6a68c6d5e1807a915d2a7eda1f39083a0e0e3af2f54a9c9b644bc1a6f3da44c978c781f1978e5555277e19a768e4a92c985d8fae8c16ee9
   languageName: node
   linkType: hard
 
@@ -2448,6 +2526,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^8.13.0"
     "@typescript-eslint/parser": "npm:^8.13.0"
     "@vitejs/plugin-react": "npm:^4.3.3"
+    bluesky-embed-react: "npm:^0.0.8"
     clsx: "npm:^2.1.1"
     concurrently: "npm:^9.1.0"
     dayjs: "npm:^1.11.13"
@@ -3233,6 +3312,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"hls.js@npm:^1.5.17":
+  version: 1.5.20
+  resolution: "hls.js@npm:1.5.20"
+  checksum: 10c0/1d0357e381f6fa81a6b2737aab7fcf88b79b8f9b23c66665e0405eea6c2cfb58df00ba7fc72ee71990c6898d67f092732f8e7046914098ebba2c33323dc627f4
+  languageName: node
+  linkType: hard
+
 "html-url-attributes@npm:^3.0.0":
   version: 3.0.1
   resolution: "html-url-attributes@npm:3.0.1"
@@ -3506,6 +3592,13 @@ __metadata:
   version: 3.1.1
   resolution: "isexe@npm:3.1.1"
   checksum: 10c0/9ec257654093443eb0a528a9c8cbba9c0ca7616ccb40abd6dde7202734d96bb86e4ac0d764f0f8cd965856aacbff2f4ce23e730dc19dfb41e3b0d865ca6fdcc7
+  languageName: node
+  linkType: hard
+
+"iso-datestring-validator@npm:^2.2.2":
+  version: 2.2.2
+  resolution: "iso-datestring-validator@npm:2.2.2"
+  checksum: 10c0/34f05a6ac62f311feda19328c033d94a2a52789d07b9863fec304ed11f69f8bba7922dc6fef5b88a53bd722ddfd9446a2433cb29459885549f69af16672b6f74
   languageName: node
   linkType: hard
 
@@ -4299,6 +4392,13 @@ __metadata:
   version: 2.1.3
   resolution: "ms@npm:2.1.3"
   checksum: 10c0/d924b57e7312b3b63ad21fc5b3dc0af5e78d61a1fc7cfb5457edaf26326bf62be5307cc87ffb6862ef1c2b33b0233cdb5d4f01c4c958cc0d660948b65a287a48
+  languageName: node
+  linkType: hard
+
+"multiformats@npm:^9.4.2, multiformats@npm:^9.9.0":
+  version: 9.9.0
+  resolution: "multiformats@npm:9.9.0"
+  checksum: 10c0/1fdb34fd2fb085142665e8bd402570659b50a5fae5994027e1df3add9e1ce1283ed1e0c2584a5c63ac0a58e871b8ee9665c4a99ca36ce71032617449d48aa975
   languageName: node
   linkType: hard
 
@@ -5813,6 +5913,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tlds@npm:^1.234.0":
+  version: 1.256.0
+  resolution: "tlds@npm:1.256.0"
+  bin:
+    tlds: bin.js
+  checksum: 10c0/93c5bfb14ccbca2d4a2da8d13f36585a4069920c9f883eb587619f2285e9c1adf3b13cc49b147ac59e4f6be5ced3ec965327d4634a427574a725609e41ce3c3e
+  languageName: node
+  linkType: hard
+
 "to-regex-range@npm:^5.0.1":
   version: 5.0.1
   resolution: "to-regex-range@npm:5.0.1"
@@ -5940,6 +6049,15 @@ __metadata:
   version: 1.5.4
   resolution: "ufo@npm:1.5.4"
   checksum: 10c0/b5dc4dc435c49c9ef8890f1b280a19ee4d0954d1d6f9ab66ce62ce64dd04c7be476781531f952a07c678d51638d02ad4b98e16237be29149295b0f7c09cda765
+  languageName: node
+  linkType: hard
+
+"uint8arrays@npm:3.0.0":
+  version: 3.0.0
+  resolution: "uint8arrays@npm:3.0.0"
+  dependencies:
+    multiformats: "npm:^9.4.2"
+  checksum: 10c0/19efb7d2ba20ec2550d1ca5b453c01ad62e70098e6454d0a446b12991fa5f3286f8ee979e5cec020fac6b4cbbaad4597024dcc8b2c69365af95443cce1323e34
   languageName: node
   linkType: hard
 
@@ -6481,7 +6599,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.24.2":
+"zod@npm:^3.23.8, zod@npm:^3.24.2":
   version: 3.24.2
   resolution: "zod@npm:3.24.2"
   checksum: 10c0/c638c7220150847f13ad90635b3e7d0321b36cce36f3fc6050ed960689594c949c326dfe2c6fa87c14b126ee5d370ccdebd6efb304f41ef5557a4aaca2824565
