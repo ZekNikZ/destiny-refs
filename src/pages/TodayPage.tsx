@@ -2,7 +2,7 @@ import { activityTypes } from "../routes";
 import TodayPageDisplay from "../components/TodayPageDisplay";
 import { useGlobalData } from "../data/useGlobalData";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
-import { Group, Stack } from "@mantine/core";
+import { Group, Stack, Title } from "@mantine/core";
 import dayjs from "dayjs";
 import Countdown from "../components/Countdown";
 import { isBetween } from "../utils/dates";
@@ -60,11 +60,14 @@ export default function TodayPage() {
             ))}
         </Masonry>
       </ResponsiveMasonry>
+      <Title order={2} size="h2">
+        Bluesky Feeds
+      </Title>
       <BlueskyConfigProvider width="500px" openLinksInNewTab>
-        <Group gap="md" align="flex-start" justify="center" wrap="wrap" mt="md">
+        <Group gap="md" align="flex-start" mt="md" wrap="nowrap" style={{ overflowX: "auto" }}>
+          <BlueskyAccountFeed userHandle="bungiehelp.bungie.net" />
           <BlueskyAccountFeed userHandle="destiny2team.bungie.net" />
           <BlueskyAccountFeed userHandle="destinythegame.bungie.net" />
-          <BlueskyAccountFeed userHandle="bungiehelp.bungie.net" />
         </Group>
       </BlueskyConfigProvider>
     </Stack>
