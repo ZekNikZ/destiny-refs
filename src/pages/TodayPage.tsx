@@ -64,10 +64,10 @@ export default function TodayPage() {
         Bluesky Feeds
       </Title>
       <BlueskyConfigProvider width="min(500px, 90vw)" openLinksInNewTab>
-        <Group gap="md" align="flex-start" wrap="nowrap" style={{ overflowX: "auto" }}>
-          <BlueskyAccountFeed userHandle="bungiehelp.bungie.net" />
-          <BlueskyAccountFeed userHandle="destiny2team.bungie.net" />
-          <BlueskyAccountFeed userHandle="destinythegame.bungie.net" />
+        <Group gap="md" align="flex-start" justify="center">
+          <BlueskyAccountFeed userHandle="bungiehelp.bungie.net" postLimit={5} />
+          <BlueskyAccountFeed userHandle="destiny2team.bungie.net" postLimit={5} />
+          <BlueskyAccountFeed userHandle="destinythegame.bungie.net" postLimit={2} />
         </Group>
       </BlueskyConfigProvider>
     </Stack>
