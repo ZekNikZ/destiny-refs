@@ -33,7 +33,14 @@ function makePhosphorIcon(Icon: Icon) {
 function LinkTile(props: LinkData) {
   return (
     <Link to={props.link} style={{ textDecoration: "none" }} target="_blank">
-      <Card shadow="sm" padding="xs" radius="sm" withBorder w={180} h={180}>
+      <Card
+        shadow="sm"
+        padding="xs"
+        radius="sm"
+        withBorder
+        w="min(180px, 44vw)"
+        h="min(180px, 44vw)"
+      >
         <Stack align="center" justify="center" gap="xs" h="100%">
           {props.icon}
           <Title size="h4" c="#fff" fw="bold" lh="xs" ta="center">
