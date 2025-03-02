@@ -63,8 +63,8 @@ export default function TodayPage() {
       <Title order={2} size="h2">
         Bluesky Feeds
       </Title>
-      <BlueskyConfigProvider width="500px" openLinksInNewTab>
-        <Group gap="md" align="flex-start" mt="md" wrap="nowrap" style={{ overflowX: "auto" }}>
+      <BlueskyConfigProvider width="min(500px, 90vw)" openLinksInNewTab>
+        <Group gap="md" align="flex-start" wrap="nowrap" style={{ overflowX: "auto" }}>
           <BlueskyAccountFeed userHandle="bungiehelp.bungie.net" />
           <BlueskyAccountFeed userHandle="destiny2team.bungie.net" />
           <BlueskyAccountFeed userHandle="destinythegame.bungie.net" />
