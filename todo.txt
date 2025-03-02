@@ -1,10 +1,10 @@
-- more links
 - threats, shields, overcharges, special modifiers for GMs and lost sectors
 https://kyberscorner.com/destiny2/lost-sector-today/
+- migrate to Next.js and generally optimize site performance
 
 - Raid and dungeon secret chests & puzzles rewards
 - Raid and dungeon guide links
-- Improve discord embeds (vite plugin to auto generate?)
+- Improve discord embeds / SEO - after SSR migration
 - crucible rotators?
 - refactor: move custom svgs to phosphor icon
 - refactor: move ammo icons to phosphor icons
@@ -16,4 +16,3 @@ https://kyberscorner.com/destiny2/lost-sector-today/
   - verity
 - add seasonal exotic missions
 - add icon to activities showing which season/expansion they are from
-- migrate to Next.js
