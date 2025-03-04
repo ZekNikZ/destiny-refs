@@ -15,6 +15,7 @@ import {
   Rewind,
   Sword,
   Trash,
+  User,
   Users,
   UsersFour,
   type Icon,
@@ -161,6 +162,11 @@ export default function HelpfulLinksPage() {
             title="Emblems Report"
             link="https://emblems.report/"
             icon={makePhosphorIcon(Medal)}
+          />
+          <LinkTile
+            title="Lowman Central"
+            link="https://lowman-central.com/"
+            icon={makePhosphorIcon(User)}
           />
         </Group>
       </Stack>
