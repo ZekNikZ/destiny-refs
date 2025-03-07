@@ -3,6 +3,7 @@ import {
   Bookmarks,
   Calendar,
   Gear,
+  HandHeart,
   Icon,
   Info,
   Toolbox,
@@ -28,6 +29,7 @@ import HelpfulLinksPage from "./pages/HelpfulLinksPage";
 export interface RouteData {
   path: string;
   title: string;
+  link?: string;
   element?: React.ReactNode;
   navbarProperties?: {
     label?: string;
@@ -208,6 +210,14 @@ const routes: RouteData[] = [
     element: <ContactPage />,
     navbarProperties: {
       icon: makePhosphorIcon(Info),
+    },
+  },
+  {
+    path: "/donate",
+    title: "Donate",
+    link: "https://ko-fi.com/zeknikz",
+    navbarProperties: {
+      icon: makePhosphorIcon(HandHeart),
     },
   },
   {

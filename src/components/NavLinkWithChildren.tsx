@@ -57,7 +57,11 @@ const NavLinkWithChildren = (props: Props) => {
         }
         active={props.route.path === pathname || (routeSelected && !props.route.children)}
         onClick={() => {
-          navigate(generatePath(props.route.path));
+          if (props.route.link) {
+            window.open(props.route.link, "_blank");
+          } else {
+            navigate(generatePath(props.route.path));
+          }
           props.onClick?.(props.route);
         }}
       />

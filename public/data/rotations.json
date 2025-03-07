@@ -64,7 +64,7 @@
 
         ["nightfall-the-insight-terminus"],
         ["nightfall-warden-of-nothing"],
-        ["nightfall-classified"]
+        ["nightfall-the-sunless-cell"]
       ],
       "lootRotation": [
         [
@@ -119,7 +119,16 @@
             "itemHash": 3106557243
           }
         ],
-        [],
+        [
+          {
+            "type": "item",
+            "itemHash": 3922217119
+          },
+          {
+            "type": "item",
+            "itemHash": 2697143634
+          }
+        ],
         [],
         []
       ]
@@ -238,18 +247,18 @@
       "type": "event",
       "name": "Trials of Osiris",
       "activityType": "crucible_map",
-      "startDate": "2025-02-28T16:00:00Z",
-      "endDate": "2025-03-04T16:00:00Z",
+      "startDate": "2025-03-07T16:00:00Z",
+      "endDate": "2025-03-11T16:00:00Z",
       "activityIds": ["crucible_map-solitude"],
       "loot": [
         [
           {
             "type": "item",
-            "itemHash": 3969379530
+            "itemHash": 1893967086
           },
           {
             "type": "item",
-            "itemHash": 3332125295
+            "itemHash": 3503560035
           },
           {
             "type": "group",
