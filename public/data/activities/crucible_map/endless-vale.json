@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "crucible_map-endless-vale",
+    "type": "crucible_map",
+    "name": "Endless Vale",
+    "location": "Arcadian Valley, Nessus",
+    "backgroundImage": "/images/crucible_map/endless-vale.avif"
+  }
+}

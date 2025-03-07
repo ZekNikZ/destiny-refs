@@ -187,9 +187,6 @@ const routes: RouteData[] = [
         path: "/tools/wheel-of-misfortune",
         title: "Wheel of Misfortune",
         element: <WheelOfMisfortune />,
-        navbarProperties: {
-          beta: true,
-        },
         displayProperties: {
           backgroundImage: "/images/misc/wheel.avif",
         },

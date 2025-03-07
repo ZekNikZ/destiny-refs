@@ -22,7 +22,6 @@ const NavLinkWithChildren = (props: Props) => {
         key={props.route.path}
         label={
           <Box>
-            {props.route.navbarProperties?.label ?? props.route.title}&nbsp;&nbsp;
             {props.route.navbarProperties?.beta && (
               <Badge
                 color="red"
@@ -37,6 +36,8 @@ const NavLinkWithChildren = (props: Props) => {
                 Beta
               </Badge>
             )}
+            &nbsp;&nbsp;
+            {props.route.navbarProperties?.label ?? props.route.title}
           </Box>
         }
         pl={12}

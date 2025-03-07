@@ -1,5 +1,5 @@
 {
-  "id": "f6a7b977-f270-4524-9165-e711298332b3",
+  "id": "6ad5b0e0-ea02-4ae5-a352-bf996ae42bdc",
   "name": "Default (1)",
   "punishments": [
     {
@@ -704,6 +704,34 @@
       "id": "8d1a3b8f-0ca9-49ed-9c23-ebd78a901592",
       "weight": 10,
       "tags": []
+    },
+    {
+      "id": "35152fc9-8623-4d26-94d3-61477320cf5a",
+      "weight": 10,
+      "text": "You have 5 minutes to create a reference image for the callouts for this encounter that the team will use this encounter.",
+      "tags": [],
+      "extraSpins": 0
+    },
+    {
+      "id": "004d8cfe-fada-4399-8ca9-a5274b65eeff",
+      "weight": 10,
+      "text": "Talk in egirl voice",
+      "tags": ["voice"],
+      "extraSpins": 0
+    },
+    {
+      "id": "f5c3771e-4078-46cd-ac5a-8d5d640cd3e3",
+      "weight": 10,
+      "text": "Swap input methods (kbm <=> controller)",
+      "tags": ["physical"],
+      "extraSpins": 0
+    },
+    {
+      "id": "7d3f675c-a085-4b85-91f1-8d889ed891e4",
+      "weight": 10,
+      "text": "Overstimulation: have 3 tabs of destiny streams playing while doing this encounter",
+      "tags": [],
+      "extraSpins": 0
     }
   ]
 }
