@@ -195,6 +195,7 @@ const routes: RouteData[] = [
         element: <WeaponSearchPage />,
         navbarProperties: {
           beta: true,
+          hidden: true,
         },
       },
     ],

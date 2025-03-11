@@ -34,7 +34,7 @@ export default function TodayPage() {
       </Group>
       <Grid gutter="md">
         {activityTypes.map((activityType) => (
-          <Grid.Col span={{ base: 12, md: 6, lg: 4 }}>
+          <Grid.Col key={activityType.title} span={{ base: 12, md: 6, lg: 4 }}>
             <TodayPageDisplay
               key={activityType.type}
               title={activityType.title}
@@ -49,7 +49,7 @@ export default function TodayPage() {
           .filter((rotation) => rotation.type === "event")
           .filter((rotation) => isBetween(dayjs(rotation.startDate), now, dayjs(rotation.endDate)))
           .map((rotation) => (
-            <Grid.Col span={{ base: 12, md: 6, lg: 4 }}>
+            <Grid.Col key={rotation.id} span={{ base: 12, md: 6, lg: 4 }}>
               <TodayPageDisplay
                 key={rotation.id}
                 title={`Limited Time: ${rotation.name}`}
