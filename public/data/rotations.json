@@ -34,12 +34,14 @@
       "type": "weekly",
       "activityType": "dungeon",
       "startDate": "2025-02-04T16:00:00Z",
+      "endDate": "2025-03-11T16:00:00Z",
       "rotation": [
         ["dungeon-shattered-throne", "dungeon-spire-of-the-watcher"],
         ["dungeon-pit-of-heresy", "dungeon-ghosts-of-the-deep"],
         ["dungeon-prophecy", "dungeon-warlords-ruin"],
         ["dungeon-grasp-of-avarice", "dungeon-vespers-host"],
-        ["dungeon-duality", "dungeon-shattered-throne"]
+        ["dungeon-duality", "dungeon-shattered-throne"],
+        ["dungeon-pit-of-heresy", "dungeon-spire-of-the-watcher"]
       ]
     },
     {
