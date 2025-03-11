@@ -178,8 +178,9 @@ export default function VerityHelperPage() {
           onChange={(event) => setShowOrnaments(event.target.checked)}
         />
         <Switch
-          label="Show calculator"
+          label="Show calculator (TBA)"
           checked={showCalculator}
+          disabled
           onChange={(event) => setShowCalculator(event.target.checked)}
         />
       </Group>

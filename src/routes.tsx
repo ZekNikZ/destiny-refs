@@ -25,6 +25,7 @@ import VerityHelperPage from "./pages/tools/VerityHelperPage";
 import WheelOfMisfortune from "./pages/tools/WheelOfMisfortune";
 import ToolsPage from "./pages/ToolsPage";
 import HelpfulLinksPage from "./pages/HelpfulLinksPage";
+import WeaponSearchPage from "./pages/tools/WeaponSearchPage";
 
 export interface RouteData {
   path: string;
@@ -149,6 +150,25 @@ const routes: RouteData[] = [
     },
     children: [
       {
+        path: "/tools/wheel-of-misfortune",
+        title: "Wheel of Misfortune",
+        element: <WheelOfMisfortune />,
+        displayProperties: {
+          backgroundImage: "/images/misc/wheel.avif",
+        },
+      },
+      {
+        path: "/tools/raid-summary",
+        title: "Fireteam Raid Summary",
+        element: <FireteamRaidReport />,
+        navbarProperties: {
+          beta: true,
+        },
+        displayProperties: {
+          backgroundImage: "/images/misc/fireteam.avif",
+        },
+      },
+      {
         path: "/tools/vow-chest",
         title: "VOTD Deepsight Puzzle",
         element: <TodayPage />,
@@ -168,27 +188,13 @@ const routes: RouteData[] = [
         path: "/tools/se-verity",
         title: "SE Verity Helper",
         element: <VerityHelperPage />,
-        navbarProperties: {
-          hidden: true,
-        },
       },
       {
-        path: "/tools/raid-summary",
-        title: "Fireteam Raid Summary",
-        element: <FireteamRaidReport />,
+        path: "/tools/weapon-search",
+        title: "Weapon Search",
+        element: <WeaponSearchPage />,
         navbarProperties: {
           beta: true,
-        },
-        displayProperties: {
-          backgroundImage: "/images/misc/fireteam.avif",
-        },
-      },
-      {
-        path: "/tools/wheel-of-misfortune",
-        title: "Wheel of Misfortune",
-        element: <WheelOfMisfortune />,
-        displayProperties: {
-          backgroundImage: "/images/misc/wheel.avif",
         },
       },
     ],
