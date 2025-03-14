@@ -249,18 +249,18 @@
       "type": "event",
       "name": "Trials of Osiris",
       "activityType": "crucible_map",
-      "startDate": "2025-03-07T17:00:00Z",
-      "endDate": "2025-03-11T17:00:00Z",
-      "activityIds": ["crucible_map-endless-vale"],
+      "startDate": "2025-03-14T17:00:00Z",
+      "endDate": "2025-03-18T17:00:00Z",
+      "activityIds": ["crucible_map-cirrus-plaza"],
       "loot": [
         [
           {
             "type": "item",
-            "itemHash": 1893967086
+            "itemHash": 3009199534
           },
           {
             "type": "item",
-            "itemHash": 3503560035
+            "itemHash": 303107619
           },
           {
             "type": "group",

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "crucible_map-cirrus-plaza",
+    "type": "crucible_map",
+    "name": "Cirrus Plaza",
+    "location": "Neomuna, Neptune",
+    "backgroundImage": "/images/crucible_map/cirrus-plaza.avif"
+  }
+}
