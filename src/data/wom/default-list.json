@@ -1,5 +1,5 @@
 {
-  "id": "6ad5b0e0-ea02-4ae5-a352-bf996ae42bdc",
+  "id": "0717d4ff-d000-431d-bc01-9ff9d1a388fe",
   "name": "Default (1)",
   "punishments": [
     {
@@ -730,6 +730,132 @@
       "id": "7d3f675c-a085-4b85-91f1-8d889ed891e4",
       "weight": 10,
       "text": "Overstimulation: have 3 tabs of destiny streams playing while doing this encounter",
+      "tags": [],
+      "extraSpins": 0
+    },
+    {
+      "id": "75e6ed45-5631-41d4-a148-faa7d802f4ef",
+      "weight": 10,
+      "text": "No game audio",
+      "tags": ["audio"],
+      "extraSpins": 0
+    },
+    {
+      "id": "bb1e5539-49e0-41b4-9fa7-336d54783ac0",
+      "weight": 10,
+      "text": "Team: must emote before each damage / mechanic phase",
+      "tags": ["team"],
+      "extraSpins": 0
+    },
+    {
+      "id": "9e33186f-632d-441e-96fc-124a9572a051",
+      "weight": 10,
+      "text": "Can only shoot while airborne",
+      "tags": ["movement"],
+      "extraSpins": 0
+    },
+    {
+      "id": "3a5b7b51-70ba-4441-8208-cf2146120591",
+      "weight": 10,
+      "text": "No jumping",
+      "tags": ["movement"],
+      "extraSpins": 0
+    },
+    {
+      "id": "55a1572d-b177-4a37-821b-c6a6b9a518e1",
+      "weight": 10,
+      "text": "All three weapons' names must start with the same letter (teammate chooses letter)",
+      "tags": ["weapons"],
+      "extraSpins": 0
+    },
+    {
+      "id": "4458a1fe-9dda-4ebf-871d-d796618206bb",
+      "weight": 10,
+      "text": "Equip only seasonal weapons from the current season",
+      "tags": ["weapons"],
+      "extraSpins": 0
+    },
+    {
+      "id": "5c02f570-4631-454f-a932-f6fb15e75b7b",
+      "weight": 10,
+      "text": "Equip only weapons and exotic armor that came out (in D2) before the current expansion",
+      "tags": ["weapons", "armor"],
+      "extraSpins": 0
+    },
+    {
+      "id": "b1261697-70f4-416a-80a5-044136b6e499",
+      "weight": 10,
+      "text": "Invert aim",
+      "tags": ["physical"],
+      "extraSpins": 0
+    },
+    {
+      "id": "e1224a93-edd4-453a-aea1-e83a0cc31ef1",
+      "weight": 10,
+      "text": "Max 30fps",
+      "tags": [],
+      "extraSpins": 0
+    },
+    {
+      "id": "4b22978d-17de-4ab3-a2f0-4b7f02c7d567",
+      "weight": 10,
+      "text": "Find two weapons with the same roll and use both at once",
+      "tags": ["weapons"],
+      "extraSpins": 0
+    },
+    {
+      "id": "2a3f40aa-880c-4c25-ba1b-ae1f1dd5f31a",
+      "weight": 10,
+      "text": "Go do the opening of Vow of the Disciple",
+      "tags": ["leave"],
+      "extraSpins": 0
+    },
+    {
+      "id": "49823ff3-5dc6-4d0d-a894-3efc667c41e1",
+      "weight": 10,
+      "text": "Go do a lost sector in 3 unique destinations",
+      "tags": ["leave"],
+      "extraSpins": 0
+    },
+    {
+      "id": "38d45a07-9898-4c41-9117-b453e4f575ac",
+      "weight": 10,
+      "text": "Go acquire and complete a bounty from any source",
+      "tags": ["leave"],
+      "extraSpins": 0
+    },
+    {
+      "id": "a68cbb49-8b86-4803-8d84-d5e803314c5a",
+      "weight": 10,
+      "text": "Complement each of your teammates",
+      "tags": [],
+      "extraSpins": 0
+    },
+    {
+      "id": "77c80346-0e30-4dbc-8c3a-ddeb05a31c8c",
+      "weight": 10,
+      "text": "Buy something from Eververse (bright dust or silver)",
+      "tags": [],
+      "extraSpins": 0
+    },
+    {
+      "id": "a995d31f-8331-403e-a39a-63e8921c548b",
+      "weight": 10,
+      "text": "During the encounter, read out the current top r/AmItheAsshole post",
+      "tags": ["voice"],
+      "extraSpins": 0
+    },
+    {
+      "id": "36aa347b-7b64-4908-8123-2c075d0db95f",
+      "weight": 10,
+      "text": "Crouching only",
+      "tags": ["movement"],
+      "extraSpins": 0
+    },
+    {
+      "id": "9a3dae8d-2579-409f-8355-af8cc7ce93ec",
+      "weight": 10,
+      "text": "Min sensitivity",
       "tags": [],
       "extraSpins": 0
     }
