@@ -15,7 +15,12 @@ interface WOMState {
   openModal?: "list" | "edit";
   openEditor: string;
 
+  previousState: WOMFireteamMember[][];
+
   // Actions
+  setMembers: (members: WOMFireteamMember[]) => void;
+  undo: () => void;
+
   addFireteamMember: (member: WOMFireteamMember) => void;
   removeFireteamMember: (username: string) => void;
   clearFireteam: () => void;
@@ -47,22 +52,31 @@ export const useWOMData = create<WOMState>()(
         customPunishmentLists: [],
         openEditor: "default",
         draftPunishmentList: { id: 0, name: "", punishments: [] },
+        previousState: [],
 
         // Actions
-        addFireteamMember(member) {
+        setMembers(members) {
+          set((state) => ({ members, previousState: [...state.previousState, state.members] }));
+        },
+        undo() {
+          if (get().previousState.length === 0) {
+            return;
+          }
+
           set((state) => ({
-            members: [...state.members, member],
+            members: state.previousState[state.previousState.length - 1],
+            previousState: state.previousState.slice(0, state.previousState.length - 1),
           }));
+        },
+
+        addFireteamMember(member) {
+          get().setMembers([...get().members, member]);
         },
         removeFireteamMember(username) {
-          set((state) => ({
-            members: state.members.filter((member) => member.username !== username),
-          }));
+          get().setMembers(get().members.filter((member) => member.username !== username));
         },
         clearFireteam() {
-          set(() => ({
-            members: [],
-          }));
+          get().setMembers([]);
         },
 
         rerollFireteamMember(username) {
@@ -73,11 +87,11 @@ export const useWOMData = create<WOMState>()(
           );
 
           // Add the punishment to the member
-          set((state) => ({
-            members: state.members.map((m) =>
+          get().setMembers(
+            get().members.map((m) =>
               m.username === username ? { ...m, punishments: [punishment] } : m
-            ),
-          }));
+            )
+          );
         },
         addPunishmentToFireteamMember(username) {
           // Get the new punishment
@@ -87,24 +101,24 @@ export const useWOMData = create<WOMState>()(
           );
 
           // Add the punishment to the member
-          set((state) => ({
-            members: state.members.map((m) =>
+          get().setMembers(
+            get().members.map((m) =>
               m.username === username ? { ...m, punishments: [...m.punishments, punishment] } : m
-            ),
-          }));
+            )
+          );
         },
         rerollAllFireteamMembers() {
           const teamPunishmentsSoFar: WOMPunishment[] = [];
-          set((state) => ({
-            members: state.members.map((member) => {
+          get().setMembers(
+            get().members.map((member) => {
               // Get the new punishment
               const punishment = getRandomPunishment([], teamPunishmentsSoFar);
 
               teamPunishmentsSoFar.push(punishment);
 
               return { ...member, punishments: [punishment] };
-            }),
-          }));
+            })
+          );
         },
 
         openListModal() {

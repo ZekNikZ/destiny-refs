@@ -1,6 +1,6 @@
 import { Box, Button, Group, Input, LoadingOverlay, Stack, Switch, Text } from "@mantine/core";
-import { useLocalStorage } from "@mantine/hooks";
-import { ArrowRight } from "@phosphor-icons/react";
+import { useClipboard, useInterval, useLocalStorage } from "@mantine/hooks";
+import { ArrowRight, Check, Copy } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import {
   bungieGetMembershipTypes,
@@ -11,6 +11,8 @@ import dayjs from "dayjs";
 import LootIcon from "../../components/loot/LootIcon";
 import { useAsideComponentContext } from "../../components/AsideComponentContext";
 import VerityCalculator from "../page-components/VerityCalculator";
+import React from "react";
+import { useSearchParams } from "react-router-dom";
 
 interface PlayerData {
   membershipId: string;
@@ -44,9 +46,24 @@ export default function VerityHelperPage() {
     key: "verity-tool-show-calculator",
     defaultValue: false,
   });
+  const [autoRefresh, setAutoRefresh] = useLocalStorage({
+    key: "verity-tool-auto-refresh",
+    defaultValue: false,
+  });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [data, setData] = useState<PlayerData[]>([]);
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const clipboard = useClipboard({ timeout: 2000 });
+
+  useEffect(() => {
+    if (searchParams.has("username")) {
+      const usernameToLoad = searchParams.get("username")!;
+      setUsername(usernameToLoad);
+      handleLoad(usernameToLoad);
+    }
+  }, []);
 
   useEffect(() => {
     if (showCalculator) {
@@ -58,15 +75,27 @@ export default function VerityHelperPage() {
     };
   }, [showCalculator]);
 
-  async function handleLoad() {
-    if (username.trim() === "") return;
+  useInterval(
+    () => {
+      if (autoRefresh && username) {
+        handleLoad();
+      }
+    },
+    60000,
+    { autoInvoke: true }
+  );
+
+  async function handleLoad(usernameToLoadRaw?: string) {
+    const usernameToLoad = usernameToLoadRaw ? usernameToLoadRaw.trim() : username.trim();
+
+    if (usernameToLoad === "") return;
 
     setLoading(true);
     setError("");
 
     try {
-      const displayName = username.trim().split("#")[0];
-      const displayNameCode = parseInt(username.trim().split("#")[1]);
+      const displayName = usernameToLoad.split("#")[0];
+      const displayNameCode = parseInt(usernameToLoad.split("#")[1]);
 
       if (isNaN(displayNameCode)) {
         return setError("Invalid username format");
@@ -150,6 +179,11 @@ export default function VerityHelperPage() {
     }
   }
 
+  function handleCopy() {
+    setSearchParams({ username });
+    clipboard.copy(window.location.href);
+  }
+
   return (
     <Stack gap="sm">
       <Group maw={500}>
@@ -164,7 +198,7 @@ export default function VerityHelperPage() {
         </Box>
         <Box pos="relative" style={{ flexGrow: 1, flexBasis: "200px" }}>
           <LoadingOverlay visible={loading} loaderProps={{ size: "sm" }} />
-          <Button onClick={handleLoad} fullWidth>
+          <Button onClick={() => handleLoad()} fullWidth>
             <Group gap="xs">
               Search <ArrowRight weight="bold" />
             </Group>
@@ -178,33 +212,57 @@ export default function VerityHelperPage() {
           onChange={(event) => setShowOrnaments(event.target.checked)}
         />
         <Switch
+          label="Auto refresh (60 secs)"
+          checked={autoRefresh}
+          onChange={(event) => setAutoRefresh(event.target.checked)}
+        />
+        <Switch
           label="Show calculator (TBA)"
           checked={showCalculator}
           disabled
           onChange={(event) => setShowCalculator(event.target.checked)}
         />
+        <Button onClick={handleCopy} size="xs" color={clipboard.copied ? "green" : "teal"}>
+          <Group gap="xs">
+            {clipboard.copied ? (
+              <>
+                Copied! <Check weight="bold" />
+              </>
+            ) : (
+              <>
+                Copy Link <Copy weight="bold" />
+              </>
+            )}
+          </Group>
+        </Button>
       </Group>
       <Text c="red">{error}</Text>
       {data.length > 0 && (
-        <Group wrap="nowrap">
+        <Group wrap="nowrap" style={{ overflow: "auto" }} gap="60px">
           {Object.entries(Object.groupBy(data, (player) => player.class))
             .sort((a, b) => a[0].localeCompare(b[0]))
             .map(([classType, players]) => (
-              <Stack align="center">
+              <Stack align="center" key={classType}>
                 <Text
                   ta="center"
                   fw="bold"
+                  fz={22}
                   style={{ borderBottom: "1px solid rgb(201, 201, 201)", width: "100%" }}
                 >
                   {classType === "1" ? "Hunter" : classType === "2" ? "Warlock" : "Titan"}
                 </Text>
-                <Group wrap="nowrap">
+                <Group gap="40px">
                   {(players ?? []).map((player) => (
-                    <Stack gap="xs" key={player.membershipId} align="center">
-                      <Text size="lg">{player.username}</Text>
+                    <Stack gap="sm" key={player.membershipId} align="center">
+                      <Text size="lg" ta="center" w="100%">
+                        {player.username}
+                      </Text>
                       {(showOrnaments ? player.equipmentWithOrnaments : player.equipment).map(
-                        (itemHash) => (
-                          <LootIcon key={itemHash} loot={{ type: "item", itemHash }} />
+                        (itemHash, index) => (
+                          <React.Fragment key={itemHash}>
+                            <LootIcon loot={{ type: "item", itemHash }} size={90} />
+                            {index === 0 && <Box h={0} />}
+                          </React.Fragment>
                         )
                       )}
                     </Stack>

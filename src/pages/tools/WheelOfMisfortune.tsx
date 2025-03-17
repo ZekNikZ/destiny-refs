@@ -48,6 +48,7 @@ export default function WheelOfMisfortune() {
   );
   const rerollAllFireteamMembers = useWOMData((state) => state.rerollAllFireteamMembers);
   const openListModal = useWOMData((state) => state.openListModal);
+  const undo = useWOMData((state) => state.undo);
 
   async function handleLoad() {
     if (username.trim() === "") return;
@@ -226,6 +227,9 @@ ${fireteamMembers
         </Button>
         <Button onClick={openListModal}>Settings</Button>
         <Button onClick={copyMarkdown}>Copy Markdown</Button>
+        <Button onClick={undo} color="orange">
+          Undo
+        </Button>
       </Group>
       <Table striped withTableBorder>
         <Table.Thead>
