@@ -34,7 +34,7 @@
       "type": "weekly",
       "activityType": "dungeon",
       "startDate": "2025-02-04T17:00:00Z",
-      "endDate": "2025-03-11T17:00:00Z",
+      "endDate": "2025-03-25T17:00:00Z",
       "note": "The dungeon rotation is currently inconsistent and will be updated as soon as Bungie clarifies the schedule.",
       "rotation": [
         ["dungeon-shattered-throne", "dungeon-spire-of-the-watcher"],
@@ -42,7 +42,9 @@
         ["dungeon-prophecy", "dungeon-warlords-ruin"],
         ["dungeon-grasp-of-avarice", "dungeon-vespers-host"],
         ["dungeon-duality", "dungeon-shattered-throne"],
-        ["dungeon-pit-of-heresy", "dungeon-spire-of-the-watcher"]
+        ["dungeon-pit-of-heresy", "dungeon-spire-of-the-watcher"],
+        ["dungeon-prophecy", "dungeon-ghosts-of-the-deep"],
+        ["dungeon-grasp-of-avarice", "dungeon-warlords-ruin"]
       ]
     },
     {
