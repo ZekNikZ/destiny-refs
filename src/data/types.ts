@@ -223,6 +223,7 @@ export type ActivityRotation =
       activityType: ActivityType;
       startDate: string;
       endDate?: string;
+      note?: string;
       rotation: string[][];
       lootRotation?: Loot[][];
       overrides?: RotationOverride[];
@@ -233,6 +234,7 @@ export type ActivityRotation =
       type: "newest";
       activityType: ActivityType;
       activityId: string;
+      note?: string;
     }
   | {
       id: string;
@@ -241,6 +243,7 @@ export type ActivityRotation =
       activityType: ActivityType;
       activityId: string;
       rotation: string[][];
+      note?: string;
     }
   | {
       id: string;
@@ -249,6 +252,7 @@ export type ActivityRotation =
       activityType: ActivityType;
       startDate: string;
       endDate: string;
+      note?: string;
       activityIds: string[];
       loot?: Loot[][];
     };

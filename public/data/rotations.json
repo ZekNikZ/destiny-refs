@@ -35,6 +35,7 @@
       "activityType": "dungeon",
       "startDate": "2025-02-04T17:00:00Z",
       "endDate": "2025-03-11T17:00:00Z",
+      "note": "The dungeon rotation is currently inconsistent and will be updated as soon as Bungie clarifies the schedule.",
       "rotation": [
         ["dungeon-shattered-throne", "dungeon-spire-of-the-watcher"],
         ["dungeon-pit-of-heresy", "dungeon-ghosts-of-the-deep"],
@@ -51,6 +52,7 @@
       "activityType": "nightfall",
       "startDate": "2025-02-04T17:00:00Z",
       "endDate": "2025-07-15T17:00:00Z",
+      "note": "The nightfall rotation listed below is based on the assumption that it will match how it worked in previous seasons/episodes. It will be updated here if any inconsistencies are discovered.",
       "rotation": [
         ["nightfall-hypernet-current"],
         ["nightfall-heist-battleground-mars"],

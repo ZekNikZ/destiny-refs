@@ -188,6 +188,9 @@ const routes: RouteData[] = [
         path: "/tools/se-verity",
         title: "SE Verity Helper",
         element: <VerityHelperPage />,
+        displayProperties: {
+          backgroundImage: "/images/misc/verity.avif",
+        },
       },
       {
         path: "/tools/weapon-search",
