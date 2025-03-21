@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "crucible_map-radiant-cliffs",
+    "type": "crucible_map",
+    "name": "Radiant Cliffs",
+    "location": "Infinite Forest, Mercury",
+    "backgroundImage": "/images/crucible_map/radiant-cliffs.avif"
+  }
+}
