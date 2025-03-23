@@ -1,5 +1,5 @@
 {
-  "id": "0717d4ff-d000-431d-bc01-9ff9d1a388fe",
+  "id": "ca7cce41-b227-4228-8de7-7b58b41c5227",
   "name": "Default (1)",
   "punishments": [
     {
@@ -49,7 +49,7 @@
       "id": "35d78955-5a8c-495b-a1e7-8a92099db9d4",
       "weight": 10,
       "extraSpins": 0,
-      "tags": []
+      "tags": ["permanent"]
     },
     {
       "text": "Go touch grass",
@@ -70,20 +70,6 @@
       "text": "Listen to ASMR full blast",
       "tags": ["audio"],
       "id": "7ddb5dd2-29c4-4e74-a8a6-8f3a565e1f6e",
-      "weight": 10,
-      "extraSpins": 0
-    },
-    {
-      "text": "Secret: Be really toxic to a random teammate",
-      "tags": ["secret"],
-      "id": "3477dde5-db00-4a12-a7b2-bda79ccc93ca",
-      "weight": 10,
-      "extraSpins": 0
-    },
-    {
-      "text": "Secret: Throw until called out",
-      "tags": ["secret"],
-      "id": "8270922a-43c8-4bd6-a9b2-7a73d1ed6277",
       "weight": 10,
       "extraSpins": 0
     },
@@ -510,7 +496,7 @@
       "tags": []
     },
     {
-      "text": "Copy EVERYONE else's punishment (if conflicting, choose one of the conflicting punishments)",
+      "text": "Copy EVERYONE else's punishment (if conflicting, choose only one of the conflicting punishments)",
       "id": "29f8d923-a53e-47db-af73-ea8be36681a9",
       "weight": 10,
       "extraSpins": 0,
@@ -552,14 +538,14 @@
       "extraSpins": 0
     },
     {
-      "text": "Team: each player must have a unique primary and special weapon type",
+      "text": "Team: each player must have a unique primary and special weapon type. Pick in order of fireteam list",
       "tags": ["team"],
       "id": "26bed2a6-ad79-4940-a625-a6b5073cebfc",
       "weight": 10,
       "extraSpins": 0
     },
     {
-      "text": "Team: each player must have a unique heavy weapon type",
+      "text": "Team: each player must have a unique heavy weapon type. Pick in order of fireteam list",
       "tags": ["team"],
       "id": "5c216a98-ca25-4343-9b0c-74e488b32775",
       "weight": 10,
@@ -841,7 +827,7 @@
     {
       "id": "a995d31f-8331-403e-a39a-63e8921c548b",
       "weight": 10,
-      "text": "During the encounter, read out the current top r/AmItheAsshole post",
+      "text": "During the encounter, read out the current top r/AmItheAsshole post. The team then needs to decide who was, in fact, the asshole",
       "tags": ["voice"],
       "extraSpins": 0
     },
@@ -857,6 +843,90 @@
       "weight": 10,
       "text": "Min sensitivity",
       "tags": [],
+      "extraSpins": 0
+    },
+    {
+      "id": "c745a2ae-0b0d-42b0-b659-86298017e80f",
+      "weight": 10,
+      "text": "Team: every wipe (due to encounter failure), one team member gets an additional punishment",
+      "tags": ["team"],
+      "extraSpins": 0
+    },
+    {
+      "id": "a93178d4-433c-46ec-a648-baa57531fe46",
+      "weight": 10,
+      "text": "You can only communicate using the Discord soundboard. If not able to (e.g., on console), make sound effects instead",
+      "tags": ["voice"],
+      "extraSpins": 0
+    },
+    {
+      "id": "0b772085-d60b-4e9a-899d-e427271a6670",
+      "weight": 10,
+      "text": "Go make a salad (of any variety)",
+      "tags": ["leave"],
+      "extraSpins": 0
+    },
+    {
+      "id": "696de8fa-021f-4dba-9cc4-3b1cac7d0904",
+      "weight": 10,
+      "text": "Change to a different class",
+      "tags": [],
+      "extraSpins": 0
+    },
+    {
+      "id": "4d280630-f386-4c2c-bf1c-30a67a115ada",
+      "weight": 10,
+      "text": "Team: equip the selfie emote and take a screenshot of the whole team. In boss encounters, this screenshot must happen mid-DPS phase. In mechanic encounters, set a timer for 2 minutes - the screenshot must happen when the timer goes off.",
+      "tags": ["team"],
+      "extraSpins": 0
+    },
+    {
+      "id": "6b55399a-e0fd-4d03-bec3-514a3c58a1d1",
+      "weight": 10,
+      "text": "Reset to default keybinds",
+      "tags": [],
+      "extraSpins": 0
+    },
+    {
+      "id": "ac166c0e-2f4f-4049-bbf2-e6863cde5cda",
+      "weight": 10,
+      "text": "Leviathan's Breath",
+      "tags": ["weapons"],
+      "extraSpins": 0
+    },
+    {
+      "id": "4ed73de0-f8fb-4c36-b518-a6488fd342e0",
+      "weight": 10,
+      "text": "Sherpa the encounter like the team has never done it before",
+      "tags": [],
+      "extraSpins": 0
+    },
+    {
+      "id": "fd75591d-9b0a-4396-beae-ad5ca3680cb0",
+      "weight": 10,
+      "text": "Pair: choose another teammate and a \"Would you rather?\" question. Throughout the encounter, each of you argue for one of the sides",
+      "tags": ["team"],
+      "extraSpins": 0
+    },
+    {
+      "id": "99765eec-e745-4ad6-b218-c08b89150c60",
+      "weight": 10,
+      "text": "Add clear only - you cannot interact with any mechanics (as much as is possible)",
+      "tags": [],
+      "extraSpins": 0
+    },
+    {
+      "id": "7b8c7389-2398-42fa-9967-abc731500705",
+      "weight": 10,
+      "text": "Change colorblind setting to something else for the rest of the raid",
+      "tags": [],
+      "extraSpins": 0
+    },
+    {
+      "id": "e07a4e04-e308-4c5b-80f7-facbaa4348fe",
+      "weight": 10,
+      "text": "Can only speak using the words \"this\", \"that\", \"other\", and \"one\"",
+      "tags": ["callouts"],
       "extraSpins": 0
     }
   ]

@@ -1,6 +1,11 @@
 - threats, shields, overcharges, special modifiers for GMs and lost sectors
 https://kyberscorner.com/destiny2/lost-sector-today/
 - migrate to Next.js and generally optimize site performance
+- allow wheel of misfortune to be synced
+- WHEEL OF MISFORTUNE - make team punishments more obvious
+- WOM - only have undo 5 times
+- WOM - have ability to make prevent or force a team punishment
+- WOM - have ability to blacklist tags ??
 
 - Raid and dungeon secret chests & puzzles rewards
 - Raid and dungeon guide links
