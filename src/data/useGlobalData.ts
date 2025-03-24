@@ -43,6 +43,7 @@ export const useGlobalData = create<GlobalState>()(
           set({ lastUpdateCheck: Date.now() });
 
           const hash = await getLatestCommitHash("ZekNikZ", "destiny-refs");
+          console.log("Latest commit hash:", hash);
 
           if (hash === import.meta.env.VITE_COMMIT_HASH) {
             console.log("No updates found.");

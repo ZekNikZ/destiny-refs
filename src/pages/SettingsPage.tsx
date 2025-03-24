@@ -1,4 +1,4 @@
-import { Container, Stack, Title, NativeSelect } from "@mantine/core";
+import { Container, Stack, Title, NativeSelect, Text } from "@mantine/core";
 import { useLocalStorage } from "@mantine/hooks";
 
 export default function SettingsPage() {
@@ -22,6 +22,9 @@ export default function SettingsPage() {
           value={perkWebsite}
           onChange={(event) => setPerkWebsite(event.target.value)}
         />
+        <Text c="gray.6" fs="italic">
+          Debug hash: {import.meta.env.VITE_COMMIT_HASH}
+        </Text>
       </Stack>
     </Container>
   );
