@@ -1,6 +1,6 @@
 {
-  "id": "a2ee5717-b717-44f6-9146-67539dd5f567",
-  "name": "Default",
+  "id": "06e7e7e3-b36a-4cef-8523-2205d7311050",
+  "name": "Default (1)",
   "punishments": [
     {
       "id": "e276c1d7-9d2a-467e-9079-c9394d86947c",
@@ -987,6 +987,13 @@
       "weight": 10,
       "text": "Actively attempt to hinder the team",
       "tags": [],
+      "extraSpins": 0
+    },
+    {
+      "id": "085e3ab4-37d0-4fee-9ed2-a9cae46a6b4a",
+      "weight": 10,
+      "text": "Team: LFG DPS - double primary and Thunderlord",
+      "tags": ["weapons"],
       "extraSpins": 0
     }
   ]
