@@ -5,6 +5,7 @@ import { WOMFireteamMember, WOMPunishment, WOMPunishmentList } from "./wom-types
 import { getRandomPunishment, getValidPunishmentListName } from "./wom-utils";
 import { v4 as uuidv4 } from "uuid";
 import DEFAULT_LIST from "./default-list.json";
+import { checkForUpdates } from "../../utils/check-for-updates";
 
 interface WOMState {
   // State
@@ -108,6 +109,8 @@ export const useWOMData = create<WOMState>()(
           );
         },
         rerollAllFireteamMembers() {
+          checkForUpdates();
+
           const teamPunishmentsSoFar: WOMPunishment[] = [];
           get().setMembers(
             get().members.map((member) => {
