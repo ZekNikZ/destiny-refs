@@ -11,6 +11,7 @@ import {
 import { Activity, Countdown } from "./types";
 import { applyLootRefs } from "./data-helpers";
 import dayjs from "dayjs";
+import { getLatestCommitHash } from "../utils/check-for-updates";
 
 interface GlobalState {
   bungieApiError: boolean;
@@ -19,18 +20,39 @@ interface GlobalState {
   rotations: RotationsJson;
   loot: LootJson;
   countdowns: Countdown[];
+
+  lastUpdateCheck: number;
+  checkForUpdates: () => Promise<void>;
 }
 
 export const useGlobalData = create<GlobalState>()(
   devtools(
     persist(
-      (_set) => ({
+      (set, get) => ({
         bungieApiError: false,
         bungieApiLoading: false,
         activities: [],
         rotations: { activityRotations: [], challengeRotations: [] },
         loot: { sharedLoot: { loot: {}, sets: {}, pools: {} }, doubleLootOverrides: [] },
         countdowns: [],
+        lastUpdateCheck: 0,
+        checkForUpdates: async () => {
+          if (get().lastUpdateCheck > Date.now() - 1000 * 60 * 10) return;
+
+          console.log("Checking for updates...");
+          set({ lastUpdateCheck: Date.now() });
+
+          const hash = await getLatestCommitHash("ZekNikZ", "destiny-refs");
+
+          if (hash === import.meta.env.VITE_COMMIT_HASH) {
+            console.log("No updates found.");
+          } else {
+            console.log("Update found, reloading...");
+            if (typeof window !== "undefined") {
+              window.location.reload();
+            }
+          }
+        },
       }),
       {
         name: "global-data",

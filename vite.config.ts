@@ -1,5 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import * as child from "child_process";
+
+const commitHash = child.execSync("git rev-parse HEAD").toString().trim();
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -15,5 +18,8 @@ export default defineConfig({
         api: "modern",
       },
     },
+  },
+  define: {
+    "import.meta.env.VITE_COMMIT_HASH": JSON.stringify(commitHash),
   },
 });

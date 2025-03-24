@@ -2,6 +2,7 @@ import { generatePath, matchPath, useLocation, useNavigate } from "react-router-
 import { RouteData } from "../routes";
 import { CaretDown, CaretRight } from "@phosphor-icons/react";
 import { Badge, Box, Collapse, NavLink } from "@mantine/core";
+import { checkForUpdates } from "../utils/check-for-updates";
 
 interface Props {
   route: RouteData;
@@ -61,6 +62,7 @@ const NavLinkWithChildren = (props: Props) => {
           if (props.route.link) {
             window.open(props.route.link, "_blank");
           } else {
+            checkForUpdates();
             navigate(generatePath(props.route.path));
           }
           props.onClick?.(props.route);
