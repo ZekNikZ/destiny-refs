@@ -932,7 +932,7 @@
     {
       "id": "19a733c5-4a7e-40e7-bcfc-1b78bac9a30d",
       "weight": 10,
-      "text": "Team: every team member gets this punishment - in addition to their specific punishment. If this conflicts, prioritize this punishment",
+      "text": "Team: every team member gets this punishment in addition to their personal punishment(s). If there are conflicts, prioritize this punishment",
       "tags": ["team"],
       "extraSpins": 1
     }
