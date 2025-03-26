@@ -6,6 +6,7 @@ https://kyberscorner.com/destiny2/lost-sector-today/
 - WOM - only have undo 5 times
 - WOM - have ability to make prevent or force a team punishment
 - WOM - have ability to blacklist tags ??
+- WOM - ability to add full-activity punishments (locking??)
 
 - Raid and dungeon secret chests & puzzles rewards
 - Raid and dungeon guide links
