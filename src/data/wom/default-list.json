@@ -1,5 +1,5 @@
 {
-  "id": "06e7e7e3-b36a-4cef-8523-2205d7311050",
+  "id": "b928d2bf-4f53-48d0-a623-286dde6d3189",
   "name": "Default (1)",
   "punishments": [
     {
@@ -263,21 +263,21 @@
     },
     {
       "id": "cfbf437b-d3b3-48a6-b1e6-53e35b95e499",
-      "text": "Triple trace rifles",
+      "text": "Triple trace rifles (can't use slots you don't have weapons for)",
       "weight": 10,
       "extraSpins": 0,
       "tags": ["weapons"]
     },
     {
       "id": "0527420a-cab3-4094-9168-228fe930db93",
-      "text": "Triple glaives",
+      "text": "Triple glaives (can't use slots you don't have weapons for)",
       "weight": 10,
       "extraSpins": 0,
       "tags": ["weapons"]
     },
     {
       "id": "dcea5933-70d2-4629-9ee3-32be14acaab4",
-      "text": "Triple bows",
+      "text": "Triple bows (can't use slots you don't have weapons for)",
       "weight": 10,
       "extraSpins": 0,
       "tags": ["weapons"]
@@ -340,8 +340,8 @@
     },
     {
       "id": "bfc8fce4-35dc-45fe-bc48-3c003d0a0760",
-      "text": "Random loadout",
-      "weight": 10,
+      "text": "Random loadout (weapons + subclass)",
+      "weight": 30,
       "extraSpins": 0,
       "tags": ["weapons", "armor"]
     },
@@ -578,10 +578,10 @@
     },
     {
       "id": "b7d67914-8ab9-40c9-b14f-ba27ed32e900",
-      "text": "Choose another fireteam member and stay within melee range of them (to the best of your ability) for the rest of the encounter/section",
+      "text": "Pair: choose a teammate. Stay within melee range of them (to the best of your ability) for the rest of the encounter/section",
       "weight": 10,
       "extraSpins": 0,
-      "tags": []
+      "tags": ["pair"]
     },
     {
       "id": "3375e26b-b6a9-49b8-a394-a9ee4038e569",
@@ -774,7 +774,7 @@
     },
     {
       "id": "2a3f40aa-880c-4c25-ba1b-ae1f1dd5f31a",
-      "text": "Go do the opening of Vow of the Disciple",
+      "text": "Go kill Savathun in the opening of Vow of the Disciple",
       "weight": 10,
       "extraSpins": 0,
       "tags": ["leave"]
@@ -858,7 +858,7 @@
     },
     {
       "id": "4d280630-f386-4c2c-bf1c-30a67a115ada",
-      "text": "Team: equip the selfie emote and take a screenshot of the whole team. In boss encounters, this screenshot must happen mid-DPS phase. In mechanic encounters, set a timer for 2 minutes - the screenshot must happen when the timer goes off.",
+      "text": "Team: equip the selfie emote and take a screenshot of the WHOLE team. In boss encounters, this screenshot must happen mid-DPS phase. In mechanic encounters, set a timer for 2 minutes - the screenshot must happen when the timer goes off.",
       "weight": 10,
       "extraSpins": 0,
       "tags": ["team"]
@@ -886,10 +886,10 @@
     },
     {
       "id": "fd75591d-9b0a-4396-beae-ad5ca3680cb0",
-      "text": "Pair: choose another teammate and a \"Would you rather?\" question. Throughout the encounter, each of you argue for one of the sides",
+      "text": "Pair: choose a teammate and a \"Would you rather?\" question. Throughout the encounter, each of you argue for one of the sides",
       "weight": 10,
       "extraSpins": 0,
-      "tags": ["team"]
+      "tags": ["team", "pair"]
     },
     {
       "id": "99765eec-e745-4ad6-b218-c08b89150c60",
@@ -970,7 +970,7 @@
     },
     {
       "id": "fd6c27e7-8e51-4865-be20-e511de3a1f32",
-      "text": "Locked loadout: you cannot change your current loadout for the rest of the activity. Ignore any future loadout restriction punishments",
+      "text": "Locked loadout: you cannot change your current loadout (weapons, armor, abilities) for the rest of the activity. Ignore any future loadout restriction punishments",
       "weight": 10,
       "extraSpins": 0,
       "tags": ["weapons", "armor", "abilities"]
@@ -993,6 +993,97 @@
       "id": "085e3ab4-37d0-4fee-9ed2-a9cae46a6b4a",
       "weight": 10,
       "text": "Team: LFG DPS - double primary and Thunderlord",
+      "tags": ["team", "weapons"],
+      "extraSpins": 0
+    },
+    {
+      "id": "0dea3577-84f7-46e6-a46e-591362e8285a",
+      "weight": 10,
+      "text": "Leave and rejoin the activity",
+      "tags": ["leave"],
+      "extraSpins": 0
+    },
+    {
+      "id": "e7fc6111-5718-4d3b-a8a3-97da51ca5c21",
+      "weight": 10,
+      "text": "Lock your FPS to 150. For the rest of the activity, every time you die (for any reason), lower it by 10 FPS ",
+      "tags": [],
+      "extraSpins": 0
+    },
+    {
+      "id": "64b3a319-a9e2-411e-95cb-18d1cb741ef1",
+      "weight": 10,
+      "text": "Starting now, all of your future punishments are cumulative for the rest of the activity",
+      "tags": [],
+      "extraSpins": 0
+    },
+    {
+      "id": "b4ee2647-6f51-4371-aeb1-febe216dd014",
+      "weight": 10,
+      "text": "Pair: choose a teammate. Both teammates swap (to the best of their ability) their current loadouts (weapons, subclass, exotic armor) and use these new loadouts for this encounter",
+      "tags": ["pair", "weapons"],
+      "extraSpins": 0
+    },
+    {
+      "id": "09f12a08-3d04-4e56-9206-3f22639af31f",
+      "weight": 10,
+      "text": "Pair: choose a teammate. Only one of you can move at a time",
+      "tags": ["pair"],
+      "extraSpins": 0
+    },
+    {
+      "id": "f5cace06-2534-40ad-832d-126a6391c4d7",
+      "weight": 10,
+      "text": "Pair: choose a teammate. Between the two of you, all 6 damage types need to be represented with your 6 weapons",
+      "tags": ["pair", "team", "weapons"],
+      "extraSpins": 0
+    },
+    {
+      "id": "178be9d0-b818-44b0-ab72-1ee6b054a804",
+      "weight": 10,
+      "text": "Turn your keyboard or mouse sideways (but don't shift your body/arms to account for it)",
+      "tags": ["input"],
+      "extraSpins": 0
+    },
+    {
+      "id": "59b8aa51-e1b9-435f-9a52-a520fb45e125",
+      "weight": 10,
+      "text": "Use only weapon(s) that can change their damage types (e.g., Hard Light, Conditional Finality, Two-Tailed Fox, weapons with Osmosis/Permeability)",
+      "tags": ["weapons"],
+      "extraSpins": 0
+    },
+    {
+      "id": "7ef58142-efb9-4dcf-8c3d-13b6fe5a82eb",
+      "weight": 10,
+      "text": "Go do a BuzzFeed quiz",
+      "tags": ["leave"],
+      "extraSpins": 0
+    },
+    {
+      "id": "8bc2e293-767c-4732-b35b-4682b430e5e1",
+      "weight": 10,
+      "text": "Triple Vanguard weapons (can't use slots you don't have weapons for)",
+      "tags": ["weapons"],
+      "extraSpins": 0
+    },
+    {
+      "id": "7499157c-37dc-475c-b480-938dc8f94b39",
+      "weight": 10,
+      "text": "Triple Crucible weapons (can't use slots you don't have weapons for)",
+      "tags": ["weapons"],
+      "extraSpins": 0
+    },
+    {
+      "id": "69cb0e50-f0d6-4bdf-971f-256211894ff7",
+      "weight": 10,
+      "text": "Triple Gambit weapons (can't use slots you don't have weapons for)",
+      "tags": ["weapons"],
+      "extraSpins": 0
+    },
+    {
+      "id": "95958579-ed19-4ed7-a4f5-bf5e603e79aa",
+      "weight": 10,
+      "text": "Use an exotic weapon you have unlocked, but not yet completed, the catalyst for",
       "tags": ["weapons"],
       "extraSpins": 0
     }
