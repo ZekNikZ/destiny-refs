@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "crucible_map-disjunction",
+    "type": "crucible_map",
+    "name": "Disjunction",
+    "location": "Runoff, Savathun's Throne World",
+    "backgroundImage": "/images/crucible_map/disjunction.avif"
+  }
+}

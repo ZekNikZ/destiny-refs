@@ -272,18 +272,18 @@
       "type": "event",
       "name": "Trials of Osiris",
       "activityType": "crucible_map",
-      "startDate": "2025-03-21T17:00:00Z",
-      "endDate": "2025-03-25T17:00:00Z",
-      "activityIds": ["crucible_map-radiant-cliffs"],
+      "startDate": "2025-03-28T17:00:00Z",
+      "endDate": "2025-04-01T17:00:00Z",
+      "activityIds": ["crucible_map-disjunction"],
       "loot": [
         [
           {
             "type": "item",
-            "itemHash": 2300143112
+            "itemHash": 2022294213
           },
           {
             "type": "item",
-            "itemHash": 2378785953
+            "itemHash": 501345268
           },
           {
             "type": "group",

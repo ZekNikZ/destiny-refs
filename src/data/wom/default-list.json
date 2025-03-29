@@ -1076,7 +1076,7 @@
     {
       "id": "69cb0e50-f0d6-4bdf-971f-256211894ff7",
       "weight": 10,
-      "text": "Triple Gambit weapons (can't use slots you don't have weapons for)",
+      "text": "Gambit weapons only",
       "tags": ["weapons"],
       "extraSpins": 0
     },
@@ -1085,6 +1085,34 @@
       "weight": 10,
       "text": "Use an exotic weapon you have unlocked, but not yet completed, the catalyst for",
       "tags": ["weapons"],
+      "extraSpins": 0
+    },
+    {
+      "id": "0d813485-7038-4736-8645-df48e4152856",
+      "weight": 10,
+      "text": "Use only weapons from the light.gg \"Hot Items\" list",
+      "tags": ["weapons"],
+      "extraSpins": 0
+    },
+    {
+      "id": "a9b056fd-04ae-45b1-9526-68bfbb5b27a3",
+      "weight": 10,
+      "text": "Use the current top nightfall loadout for your class on light.gg",
+      "tags": ["weapons", "abilities", "armor"],
+      "extraSpins": 0
+    },
+    {
+      "id": "1ccdfa27-20e8-4d21-b7fd-1571f090f6c6",
+      "weight": 10,
+      "text": "Use the current top lost sector loadout for your class on light.gg",
+      "tags": [],
+      "extraSpins": 0
+    },
+    {
+      "id": "203c6842-1fe1-44e8-a36a-c9c673dfb7f8",
+      "weight": 10,
+      "text": "Use the current top competitive or trials loadout for your class on light.gg",
+      "tags": [],
       "extraSpins": 0
     }
   ]
