@@ -1,5 +1,5 @@
 {
-  "id": "b928d2bf-4f53-48d0-a623-286dde6d3189",
+  "id": "b903dc0f-dfa6-49c2-a555-12c76eaebb88",
   "name": "Default (1)",
   "punishments": [
     {
@@ -1114,6 +1114,13 @@
       "text": "Use the current top competitive or trials loadout for your class on light.gg",
       "tags": [],
       "extraSpins": 0
+    },
+    {
+      "id": "6988f499-87bd-4c43-b5e8-a2ec2a742580",
+      "weight": 10,
+      "text": "No movement tech/abilities beyond your selected jump ability (skating, grapple, icarus dash, etc.) for the rest of the activity. Also roll again:",
+      "tags": [],
+      "extraSpins": 1
     }
   ]
 }
