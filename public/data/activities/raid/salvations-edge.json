@@ -437,6 +437,11 @@
             "content": [
               {
                 "type": "image",
+                "url": "/images/raids/salvations-edge/references/se-e4-standard.avif",
+                "alt": "Reference image for the Verity encounter using the standard method."
+              },
+              {
+                "type": "image",
                 "url": "/images/raids/salvations-edge/references/se-e4-fast.avif",
                 "alt": "Reference image for the Verity encounter using the fast method."
               }
