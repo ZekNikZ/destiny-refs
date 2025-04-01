@@ -62,7 +62,7 @@ export default function TodayPage() {
       <Title order={2} size="h2">
         Bluesky Feeds
       </Title>
-      <BlueskyConfigProvider width="min(27vw, 500px, 90vw)" openLinksInNewTab>
+      <BlueskyConfigProvider width="clamp(27vw, 500px, 90vw)" openLinksInNewTab>
         <Group gap="md" align="flex-start" justify="center">
           <BlueskyAccountFeed userHandle="bungiehelp.bungie.net" postLimit={8} />
           <BlueskyAccountFeed userHandle="destiny2team.bungie.net" postLimit={6} />
