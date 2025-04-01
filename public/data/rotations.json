@@ -62,10 +62,10 @@
         ["nightfall-psiops-battleground-cosmodrome"],
         ["nightfall-lake-of-shadows"],
         ["nightfall-psiops-battleground-moon"],
-        ["nightfall-the-sunless-cell"],
         ["nightfall-the-scarlet-keep"],
         ["nightfall-the-insight-terminus"],
-        ["nightfall-warden-of-nothing"]
+        ["nightfall-warden-of-nothing"],
+        ["nightfall-the-sunless-cell"]
       ],
       "lootRotation": [
         [
