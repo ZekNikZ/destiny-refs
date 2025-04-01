@@ -76,7 +76,13 @@ export default function ActivityCard(props: Props) {
           backgroundImage: `url('${props.activity.backgroundImage}')`,
           backgroundSize: "cover",
           backgroundPosition: "50% 50%",
-          borderBottom: `1px solid ${theme.colors.dark[4]}`,
+          borderBottom:
+            !props.hideDetails &&
+            (lootSummary.length > 0 ||
+              props.activity.triumphs?.length ||
+              props.activity.extraSections?.length)
+              ? `1px solid ${theme.colors.dark[4]}`
+              : undefined,
           flexGrow: 1,
         }}
       >
@@ -159,101 +165,100 @@ export default function ActivityCard(props: Props) {
       </Card.Section>
 
       {/* Body */}
-      {!props.hideDetails && (
-        <Card.Section>
-          {/* Loot Summary */}
-          <Collapse in={accordionOpen === null}>
-            {lootSummary.length > 0 && (
-              <Group
-                gap="xs"
-                p="xs"
-                style={{
-                  borderBottom: `1px solid ${theme.colors.dark[4]}`,
-                }}
-              >
-                {lootSummary.map((loot) => (
-                  <LootIcon key={getLootKey(loot)} loot={loot} />
-                ))}
-              </Group>
-            )}
-          </Collapse>
 
-          {/* Details */}
-          {
-            <Accordion
-              radius={0}
-              classNames={{ item: classes.accordianChild }}
-              value={accordionOpen}
-              onChange={setAccordionOpen}
+      <Card.Section>
+        {/* Loot Summary */}
+        <Collapse in={accordionOpen === null}>
+          {lootSummary.length > 0 && (
+            <Group
+              gap="xs"
+              p="xs"
+              style={{
+                borderBottom: `1px solid ${theme.colors.dark[4]}`,
+              }}
             >
-              {/* Triumphs */}
-              {props.activity.triumphs && (
-                <Accordion.Item key="Triumphs" value="Triumphs">
-                  <Accordion.Control icon={<Trophy />}>Triumphs</Accordion.Control>
-                  <Accordion.Panel>
-                    <Box
-                      display="grid"
-                      style={{
-                        gridTemplateColumns: `repeat(auto-fit, ${isLargeScreen ? "minmax(450px, 1fr)" : "1fr"})`,
-                        gap: "var(--mantine-spacing-md)",
-                      }}
-                    >
-                      {props.activity.triumphs.map((triumph) => (
-                        <TriumphDisplay
-                          triumph={triumph}
-                          key={triumph.bungieRecordHash}
-                          parentChallengesActive={challengesActive}
-                        />
-                      ))}
-                    </Box>
-                  </Accordion.Panel>
-                </Accordion.Item>
-              )}
+              {lootSummary.map((loot) => (
+                <LootIcon key={getLootKey(loot)} loot={loot} />
+              ))}
+            </Group>
+          )}
+        </Collapse>
 
-              {/* Extra Sections */}
-              {props.activity.extraSections
-                ?.filter((s) => !s.hidden)
-                .map((section) => {
-                  // @ts-ignore-next-line
-                  const Icon = Icons[section.phosphorIconName] ?? Question;
-                  return (
-                    <Accordion.Item key={section.id} value={section.name}>
-                      <Accordion.Control icon={<Icon />}>{section.name}</Accordion.Control>
-                      <Accordion.Panel>
-                        <Stack>
-                          {section.content.map((contentBlock, i) => (
-                            <ContentBlockDisplay
-                              key={i}
-                              activity={props.activity}
-                              activityAvailability={props.availability}
-                              contentBlock={contentBlock}
-                            />
-                          ))}
-                        </Stack>
-                      </Accordion.Panel>
-                    </Accordion.Item>
-                  );
-                })}
+        {/* Details */}
+        {!props.hideDetails && (
+          <Accordion
+            radius={0}
+            classNames={{ item: classes.accordianChild }}
+            value={accordionOpen}
+            onChange={setAccordionOpen}
+          >
+            {/* Triumphs */}
+            {props.activity.triumphs && (
+              <Accordion.Item key="Triumphs" value="Triumphs">
+                <Accordion.Control icon={<Trophy />}>Triumphs</Accordion.Control>
+                <Accordion.Panel>
+                  <Box
+                    display="grid"
+                    style={{
+                      gridTemplateColumns: `repeat(auto-fit, ${isLargeScreen ? "minmax(450px, 1fr)" : "1fr"})`,
+                      gap: "var(--mantine-spacing-md)",
+                    }}
+                  >
+                    {props.activity.triumphs.map((triumph) => (
+                      <TriumphDisplay
+                        triumph={triumph}
+                        key={triumph.bungieRecordHash}
+                        parentChallengesActive={challengesActive}
+                      />
+                    ))}
+                  </Box>
+                </Accordion.Panel>
+              </Accordion.Item>
+            )}
 
-              {/* Loot */}
-              {props.activity.loot && (
-                <Accordion.Item key="Loot" value="Loot">
-                  <Accordion.Control icon={<TreasureChest />}>
-                    {props.activity.encounters ? "Quest / Non-Encounter Loot" : "Detailed Loot"}
-                  </Accordion.Control>
-                  <Accordion.Panel>
-                    <LootTable
-                      lootPools={props.activity.loot}
-                      availability={props.availability}
-                      activity={props.activity}
-                    />
-                  </Accordion.Panel>
-                </Accordion.Item>
-              )}
-            </Accordion>
-          }
-        </Card.Section>
-      )}
+            {/* Extra Sections */}
+            {props.activity.extraSections
+              ?.filter((s) => !s.hidden)
+              .map((section) => {
+                // @ts-ignore-next-line
+                const Icon = Icons[section.phosphorIconName] ?? Question;
+                return (
+                  <Accordion.Item key={section.id} value={section.name}>
+                    <Accordion.Control icon={<Icon />}>{section.name}</Accordion.Control>
+                    <Accordion.Panel>
+                      <Stack>
+                        {section.content.map((contentBlock, i) => (
+                          <ContentBlockDisplay
+                            key={i}
+                            activity={props.activity}
+                            activityAvailability={props.availability}
+                            contentBlock={contentBlock}
+                          />
+                        ))}
+                      </Stack>
+                    </Accordion.Panel>
+                  </Accordion.Item>
+                );
+              })}
+
+            {/* Loot */}
+            {props.activity.loot && (
+              <Accordion.Item key="Loot" value="Loot">
+                <Accordion.Control icon={<TreasureChest />}>
+                  {props.activity.encounters ? "Quest / Non-Encounter Loot" : "Detailed Loot"}
+                </Accordion.Control>
+                <Accordion.Panel>
+                  <LootTable
+                    lootPools={props.activity.loot}
+                    availability={props.availability}
+                    activity={props.activity}
+                  />
+                </Accordion.Panel>
+              </Accordion.Item>
+            )}
+          </Accordion>
+        )}
+      </Card.Section>
     </Card>
   );
 }

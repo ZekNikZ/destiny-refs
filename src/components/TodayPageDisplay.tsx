@@ -23,9 +23,9 @@ function ActivityCardWrapper(props: { activity: Activity; disableLink?: boolean 
       key={props.activity.id}
       activity={{
         ...props.activity,
-        loot: loot
-          ? [{ type: "pool", quantity: 1, showInLootSummary: true, loot }]
-          : props.activity.loot,
+        loot:
+          props.activity.loot ??
+          (loot ? [{ type: "pool", quantity: 1, showInLootSummary: true, loot }] : undefined),
       }}
       availability={availability}
       forceState="summary"
