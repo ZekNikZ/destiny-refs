@@ -34,6 +34,7 @@ function ActivityCardWrapper(props: {
       availability={availability}
       forceState={props.forceState ? "summary" : false}
       style={props.forceState ? { height: "100%" } : undefined}
+      hideDetails={!props.disableLink}
     />
   );
 

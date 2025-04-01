@@ -17,7 +17,7 @@ export default function ImageBlock(props: Props) {
   const { ref, hovered } = useHover();
 
   return (
-    <Box w="100%" pos="relative" ref={ref}>
+    <Box maw="800px" pos="relative" ref={ref}>
       <Image
         src={props.contentBlock.url}
         alt={props.contentBlock.alt}

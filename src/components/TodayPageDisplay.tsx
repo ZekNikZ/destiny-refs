@@ -29,6 +29,7 @@ function ActivityCardWrapper(props: { activity: Activity; disableLink?: boolean 
       }}
       availability={availability}
       forceState="summary"
+      hideDetails
       style={{ height: "100%" }}
     />
   );

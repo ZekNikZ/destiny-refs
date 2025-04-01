@@ -265,6 +265,13 @@
         ["exotic_mission-vox-obscura"],
         ["exotic_mission-operation-seraph-shield"],
         ["exotic_mission-node-ovrd-avalon"]
+      ],
+      "lootRotation": [
+        [{ "type": "item", "itemHash": 2910326942 }],
+        [{ "type": "item", "itemHash": 2188764214 }],
+        [{ "type": "item", "itemHash": 46125926 }],
+        [{ "type": "item", "itemHash": 1473821207 }],
+        [{ "type": "item", "itemHash": 3118061005 }]
       ]
     },
     {
