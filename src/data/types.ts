@@ -190,6 +190,7 @@ export type ContentBlock =
   | {
       type: "image";
       url: string;
+      alt?: string;
     }
   | {
       type: "loot";

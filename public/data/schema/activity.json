@@ -160,6 +160,9 @@
         {
           "additionalProperties": false,
           "properties": {
+            "alt": {
+              "type": "string"
+            },
             "type": {
               "const": "image",
               "type": "string"

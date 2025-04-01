@@ -317,6 +317,20 @@
             "guide": "No team member can pick up the same type of resonance twice in a row, including between rooms.",
             "isChallenge": true
           }
+        ],
+        "extraSections": [
+          {
+            "id": "reference-images",
+            "name": "Reference Images",
+            "phosphorIconName": "ImagesSquare",
+            "content": [
+              {
+                "type": "image",
+                "url": "/images/raids/salvations-edge/references/se-e3.avif",
+                "alt": "Reference image for the Repository encounter."
+              }
+            ]
+          }
         ]
       },
       {
@@ -413,6 +427,20 @@
             "bungieRecordHash": 1311861933,
             "guide": "Complete the encounter while using each 3D shape at least once to allow teammates to escape the inside rooms before reusing any 3D shapes. The easy strategy is to perform the second phase as follows: rotate the call (TCS => CST) and make the \"double-shapes\" corresponding to that new call.",
             "isChallenge": true
+          }
+        ],
+        "extraSections": [
+          {
+            "id": "reference-images",
+            "name": "Reference Images",
+            "phosphorIconName": "ImagesSquare",
+            "content": [
+              {
+                "type": "image",
+                "url": "/images/raids/salvations-edge/references/se-e4-fast.avif",
+                "alt": "Reference image for the Verity encounter using the fast method."
+              }
+            ]
           }
         ]
       },
