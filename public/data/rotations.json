@@ -71,38 +71,6 @@
         [
           {
             "type": "item",
-            "itemHash": 2591257541
-          },
-          {
-            "type": "item",
-            "adept": true,
-            "itemHash": 1492522228
-          }
-        ],
-        [
-          {
-            "type": "item",
-            "itemHash": 2298039571
-          },
-          {
-            "type": "item",
-            "adept": true,
-            "itemHash": 3997086838
-          }
-        ],
-        [
-          {
-            "type": "item",
-            "itemHash": 2322926844
-          },
-          {
-            "type": "item",
-            "itemHash": 1056103557
-          }
-        ],
-        [
-          {
-            "type": "item",
             "itemHash": 2876244791
           },
           {
@@ -148,6 +116,38 @@
           {
             "type": "item",
             "itemHash": 1354727549
+          }
+        ],
+        [
+          {
+            "type": "item",
+            "itemHash": 2591257541
+          },
+          {
+            "type": "item",
+            "adept": true,
+            "itemHash": 1492522228
+          }
+        ],
+        [
+          {
+            "type": "item",
+            "itemHash": 2298039571
+          },
+          {
+            "type": "item",
+            "adept": true,
+            "itemHash": 3997086838
+          }
+        ],
+        [
+          {
+            "type": "item",
+            "itemHash": 2322926844
+          },
+          {
+            "type": "item",
+            "itemHash": 1056103557
           }
         ]
       ]
