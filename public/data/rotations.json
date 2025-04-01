@@ -53,25 +53,19 @@
       "name": "Nightfalls",
       "type": "weekly",
       "activityType": "nightfall",
-      "startDate": "2025-02-04T17:00:00Z",
+      "startDate": "2025-02-25T17:00:00Z",
       "endDate": "2025-07-15T17:00:00Z",
       "note": "The nightfall rotation listed below is based on the assumption that it will match how it worked in previous seasons/episodes. It will be updated here if any inconsistencies are discovered.",
       "rotation": [
         ["nightfall-hypernet-current"],
         ["nightfall-heist-battleground-mars"],
         ["nightfall-psiops-battleground-cosmodrome"],
-
-        ["nightfall-hypernet-current"],
-        ["nightfall-heist-battleground-mars"],
-        ["nightfall-psiops-battleground-cosmodrome"],
-
         ["nightfall-lake-of-shadows"],
         ["nightfall-psiops-battleground-moon"],
+        ["nightfall-the-sunless-cell"],
         ["nightfall-the-scarlet-keep"],
-
         ["nightfall-the-insight-terminus"],
-        ["nightfall-warden-of-nothing"],
-        ["nightfall-the-sunless-cell"]
+        ["nightfall-warden-of-nothing"]
       ],
       "lootRotation": [
         [
