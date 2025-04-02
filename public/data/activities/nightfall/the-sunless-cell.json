@@ -5,6 +5,7 @@
     "type": "nightfall",
     "name": "The Sunless Cell",
     "category": "Episode: Heresy // Act 3",
-    "backgroundImage": "/images/nightfalls/the-sunless-cell.avif"
+    "backgroundImage": "/images/nightfalls/the-sunless-cell.avif",
+    "championTypes": ["unstoppable"]
   }
 }
