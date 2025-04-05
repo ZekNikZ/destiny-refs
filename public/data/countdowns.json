@@ -1,4 +1,9 @@
 {
   "$schema": "./schema/countdowns.json",
-  "countdowns": []
+  "countdowns": [
+    {
+      "title": "Iron Banner",
+      "date": "2025-04-08T17:00:00Z"
+    }
+  ]
 }

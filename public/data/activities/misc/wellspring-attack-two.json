@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "wellspring-attack-two",
+    "type": "misc",
+    "name": "Attack: Bor'gong, Warden of the Spring",
+    "backgroundImage": "/images/wellspring/attack-two.avif"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "dares_of_eternity-hive",
+    "type": "misc",
+    "name": "Crota",
+    "backgroundImage": "/images/dares_of_eternity/hive.avif"
+  }
+}

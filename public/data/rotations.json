@@ -382,9 +382,9 @@
       "type": "event",
       "name": "Iron Banner",
       "activityType": "crucible_map",
-      "startDate": "2025-02-18T17:00:00Z",
-      "endDate": "2025-02-25T17:00:00Z",
-      "activityIds": ["iron_banner-control", "iron_banner-eruption"],
+      "startDate": "2025-04-01T17:00:00Z",
+      "endDate": "2025-04-08T17:00:00Z",
+      "activityIds": ["iron_banner-control", "iron_banner-tribute"],
       "loot": [
         [
           {
@@ -549,7 +549,7 @@
             "type": "group",
             "name": "Titan Armor",
             "groupType": "Titan Armor",
-            "displayStaticIcon": "helmet",
+            "displayStaticIcon": "titan",
             "children": [
               {
                 "type": "item",
@@ -577,7 +577,7 @@
             "type": "group",
             "name": "Hunter Armor",
             "groupType": "Hunter Armor",
-            "displayStaticIcon": "helmet",
+            "displayStaticIcon": "hunter",
             "children": [
               {
                 "type": "item",
@@ -605,7 +605,7 @@
             "type": "group",
             "name": "Warlock Armor",
             "groupType": "Warlock Armor",
-            "displayStaticIcon": "helmet",
+            "displayStaticIcon": "warlock",
             "children": [
               {
                 "type": "item",
@@ -628,6 +628,907 @@
                 "itemHash": 690855456
               }
             ]
+          }
+        ]
+      ]
+    },
+    {
+      "id": "wellspring",
+      "type": "daily",
+      "activityType": "misc",
+      "name": "Wellspring",
+      "startDate": "2025-04-03T17:00:00Z",
+      "rotation": [
+        ["wellspring-attack-one"],
+        ["wellspring-defend-one"],
+        ["wellspring-attack-two"],
+        ["wellspring-defend-two"]
+      ],
+      "lootRotation": [
+        [{ "type": "item", "itemHash": 927567426 }],
+        [{ "type": "item", "itemHash": 2721157927 }],
+        [{ "type": "item", "itemHash": 1399109800 }],
+        [{ "type": "item", "itemHash": 3865728990 }]
+      ]
+    },
+    {
+      "id": "dares-of-eternity",
+      "type": "weekly",
+      "activityType": "misc",
+      "name": "Dares of Eternity",
+      "startDate": "2025-04-01T17:00:00Z",
+      "rotation": [
+        ["dares_of_eternity-hive"],
+        ["dares_of_eternity-vex"],
+        ["dares_of_eternity-cabal"]
+      ],
+      "lootRotation": [
+        [
+          {
+            "type": "group",
+            "groupType": "Scatterhorn Armor",
+            "name": "Scatterhorn Titan Armor",
+            "displayStaticIcon": "titan",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 822537185
+              },
+              {
+                "type": "item",
+                "itemHash": 1660456696
+              },
+              {
+                "type": "item",
+                "itemHash": 3340244240
+              },
+              {
+                "type": "item",
+                "itemHash": 3990691634
+              },
+              {
+                "type": "item",
+                "itemHash": 2267399501
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "groupType": "Scatterhorn Armor",
+            "name": "Scatterhorn Hunter Armor",
+            "displayStaticIcon": "hunter",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 1164347863
+              },
+              {
+                "type": "item",
+                "itemHash": 237758814
+              },
+              {
+                "type": "item",
+                "itemHash": 4044826514
+              },
+              {
+                "type": "item",
+                "itemHash": 1081701944
+              },
+              {
+                "type": "item",
+                "itemHash": 345100195
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "groupType": "Scatterhorn Armor",
+            "name": "Scatterhorn Warlock Armor",
+            "displayStaticIcon": "warlock",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 3682059404
+              },
+              {
+                "type": "item",
+                "itemHash": 2877933893
+              },
+              {
+                "type": "item",
+                "itemHash": 1222559003
+              },
+              {
+                "type": "item",
+                "itemHash": 3225160391
+              },
+              {
+                "type": "item",
+                "itemHash": 3874345778
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "groupType": "Praefectus Armor",
+            "name": "Praefectus Titan Armor",
+            "displayStaticIcon": "titan",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 4003170632
+              },
+              {
+                "type": "item",
+                "itemHash": 3350504921
+              },
+              {
+                "type": "item",
+                "itemHash": 412014143
+              },
+              {
+                "type": "item",
+                "itemHash": 1947723211
+              },
+              {
+                "type": "item",
+                "itemHash": 1659172686
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "groupType": "Praefectus Armor",
+            "name": "Praefectus Hunter Armor",
+            "displayStaticIcon": "hunter",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 505747572
+              },
+              {
+                "type": "item",
+                "itemHash": 3673119885
+              },
+              {
+                "type": "item",
+                "itemHash": 3100185651
+              },
+              {
+                "type": "item",
+                "itemHash": 48951631
+              },
+              {
+                "type": "item",
+                "itemHash": 1010644330
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "groupType": "Praefectus Armor",
+            "name": "Praefectus Warlock Armor",
+            "displayStaticIcon": "warlock",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 3311198527
+              },
+              {
+                "type": "item",
+                "itemHash": 3245065734
+              },
+              {
+                "type": "item",
+                "itemHash": 2166974634
+              },
+              {
+                "type": "item",
+                "itemHash": 2804094976
+              },
+              {
+                "type": "item",
+                "itemHash": 2803792315
+              }
+            ]
+          },
+          {
+            "type": "item",
+            "itemHash": 602618796
+          },
+          {
+            "type": "item",
+            "itemHash": 1097616550
+          },
+          {
+            "type": "item",
+            "itemHash": 2121785039
+          },
+          {
+            "type": "item",
+            "itemHash": 3075224551
+          },
+          {
+            "type": "item",
+            "itemHash": 2496242052
+          },
+          {
+            "type": "item",
+            "itemHash": 3460122497
+          },
+          {
+            "type": "item",
+            "itemHash": 893527433
+          },
+          {
+            "type": "item",
+            "itemHash": 2857348871
+          },
+          {
+            "type": "item",
+            "itemHash": 2807687156
+          },
+          {
+            "type": "item",
+            "itemHash": 2257180473
+          },
+          {
+            "type": "item",
+            "itemHash": 3743729616
+          },
+          {
+            "type": "item",
+            "itemHash": 6857689
+          }
+        ],
+        [
+          {
+            "type": "group",
+            "groupType": "Scatterhorn Armor",
+            "name": "Scatterhorn Titan Armor",
+            "displayStaticIcon": "titan",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 822537185
+              },
+              {
+                "type": "item",
+                "itemHash": 1660456696
+              },
+              {
+                "type": "item",
+                "itemHash": 3340244240
+              },
+              {
+                "type": "item",
+                "itemHash": 3990691634
+              },
+              {
+                "type": "item",
+                "itemHash": 2267399501
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "groupType": "Scatterhorn Armor",
+            "name": "Scatterhorn Hunter Armor",
+            "displayStaticIcon": "hunter",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 1164347863
+              },
+              {
+                "type": "item",
+                "itemHash": 237758814
+              },
+              {
+                "type": "item",
+                "itemHash": 4044826514
+              },
+              {
+                "type": "item",
+                "itemHash": 1081701944
+              },
+              {
+                "type": "item",
+                "itemHash": 345100195
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "groupType": "Scatterhorn Armor",
+            "name": "Scatterhorn Warlock Armor",
+            "displayStaticIcon": "warlock",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 3682059404
+              },
+              {
+                "type": "item",
+                "itemHash": 2877933893
+              },
+              {
+                "type": "item",
+                "itemHash": 1222559003
+              },
+              {
+                "type": "item",
+                "itemHash": 3225160391
+              },
+              {
+                "type": "item",
+                "itemHash": 3874345778
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "groupType": "Lightkin Armor",
+            "name": "Lightkin Titan Armor",
+            "displayStaticIcon": "titan",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 4129456190
+              },
+              {
+                "type": "item",
+                "itemHash": 3399325807
+              },
+              {
+                "type": "item",
+                "itemHash": 3497822409
+              },
+              {
+                "type": "item",
+                "itemHash": 3973929105
+              },
+              {
+                "type": "item",
+                "itemHash": 517124228
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "groupType": "Lightkin Armor",
+            "name": "Lightkin Hunter Armor",
+            "displayStaticIcon": "hunter",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 30472172
+              },
+              {
+                "type": "item",
+                "itemHash": 3479737253
+              },
+              {
+                "type": "item",
+                "itemHash": 3436655867
+              },
+              {
+                "type": "item",
+                "itemHash": 3827066919
+              },
+              {
+                "type": "item",
+                "itemHash": 1793372050
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "groupType": "Lightkin Armor",
+            "name": "Lightkin Warlock Armor",
+            "displayStaticIcon": "warlock",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 1245678091
+              },
+              {
+                "type": "item",
+                "itemHash": 3862902650
+              },
+              {
+                "type": "item",
+                "itemHash": 2146386894
+              },
+              {
+                "type": "item",
+                "itemHash": 1248864692
+              },
+              {
+                "type": "item",
+                "itemHash": 2888835735
+              }
+            ]
+          },
+          {
+            "type": "item",
+            "itemHash": 1119734784
+          },
+          {
+            "type": "item",
+            "itemHash": 304659313
+          },
+          {
+            "type": "item",
+            "itemHash": 1621558458
+          },
+          {
+            "type": "item",
+            "itemHash": 541188001
+          },
+          {
+            "type": "item",
+            "itemHash": 599895591
+          },
+          {
+            "type": "item",
+            "itemHash": 2434225986
+          },
+          {
+            "type": "item",
+            "itemHash": 253196586
+          },
+          {
+            "type": "item",
+            "itemHash": 3745990145
+          },
+          {
+            "type": "item",
+            "itemHash": 2009277538
+          },
+          {
+            "type": "item",
+            "itemHash": 2957367743
+          },
+          {
+            "type": "item",
+            "itemHash": 3356526253
+          },
+          {
+            "type": "item",
+            "itemHash": 188882152
+          }
+        ],
+        [
+          {
+            "type": "group",
+            "groupType": "Scatterhorn Armor",
+            "name": "Scatterhorn Titan Armor",
+            "displayStaticIcon": "titan",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 822537185
+              },
+              {
+                "type": "item",
+                "itemHash": 1660456696
+              },
+              {
+                "type": "item",
+                "itemHash": 3340244240
+              },
+              {
+                "type": "item",
+                "itemHash": 3990691634
+              },
+              {
+                "type": "item",
+                "itemHash": 2267399501
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "groupType": "Scatterhorn Armor",
+            "name": "Scatterhorn Hunter Armor",
+            "displayStaticIcon": "hunter",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 1164347863
+              },
+              {
+                "type": "item",
+                "itemHash": 237758814
+              },
+              {
+                "type": "item",
+                "itemHash": 4044826514
+              },
+              {
+                "type": "item",
+                "itemHash": 1081701944
+              },
+              {
+                "type": "item",
+                "itemHash": 345100195
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "groupType": "Scatterhorn Armor",
+            "name": "Scatterhorn Warlock Armor",
+            "displayStaticIcon": "warlock",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 3682059404
+              },
+              {
+                "type": "item",
+                "itemHash": 2877933893
+              },
+              {
+                "type": "item",
+                "itemHash": 1222559003
+              },
+              {
+                "type": "item",
+                "itemHash": 3225160391
+              },
+              {
+                "type": "item",
+                "itemHash": 3874345778
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "groupType": "Pathfinder's Armor",
+            "name": "Pathfinder's Titan Armor",
+            "displayStaticIcon": "titan",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 430504837
+              },
+              {
+                "type": "item",
+                "itemHash": 1211181652
+              },
+              {
+                "type": "item",
+                "itemHash": 2606405484
+              },
+              {
+                "type": "item",
+                "itemHash": 1457343582
+              },
+              {
+                "type": "item",
+                "itemHash": 1010196641
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "groupType": "Pathfinder's Armor",
+            "name": "Pathfinder's Hunter Armor",
+            "displayStaticIcon": "hunter",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 2957532337
+              },
+              {
+                "type": "item",
+                "itemHash": 1574187016
+              },
+              {
+                "type": "item",
+                "itemHash": 1049436160
+              },
+              {
+                "type": "item",
+                "itemHash": 2675526370
+              },
+              {
+                "type": "item",
+                "itemHash": 401152189
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "groupType": "Pathfinder's Armor",
+            "name": "Pathfinder's Warlock Armor",
+            "displayStaticIcon": "warlock",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 3642146012
+              },
+              {
+                "type": "item",
+                "itemHash": 743529557
+              },
+              {
+                "type": "item",
+                "itemHash": 2259629899
+              },
+              {
+                "type": "item",
+                "itemHash": 2319651767
+              },
+              {
+                "type": "item",
+                "itemHash": 616346210
+              }
+            ]
+          },
+          {
+            "type": "item",
+            "itemHash": 3184681056
+          },
+          {
+            "type": "item",
+            "itemHash": 1337707096
+          },
+          {
+            "type": "item",
+            "itemHash": 1622998472
+          },
+          {
+            "type": "item",
+            "itemHash": 3472875143
+          },
+          {
+            "type": "item",
+            "itemHash": 3044460004
+          },
+          {
+            "type": "item",
+            "itemHash": 2066434718
+          },
+          {
+            "type": "item",
+            "itemHash": 577528837
+          },
+          {
+            "type": "item",
+            "itemHash": 3409645497
+          },
+          {
+            "type": "item",
+            "itemHash": 4146702548
+          },
+          {
+            "type": "item",
+            "itemHash": 4230993599
+          },
+          {
+            "type": "item",
+            "itemHash": 2588048270
+          }
+        ],
+        [
+          {
+            "type": "group",
+            "groupType": "Scatterhorn Armor",
+            "name": "Scatterhorn Titan Armor",
+            "displayStaticIcon": "titan",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 822537185
+              },
+              {
+                "type": "item",
+                "itemHash": 1660456696
+              },
+              {
+                "type": "item",
+                "itemHash": 3340244240
+              },
+              {
+                "type": "item",
+                "itemHash": 3990691634
+              },
+              {
+                "type": "item",
+                "itemHash": 2267399501
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "groupType": "Scatterhorn Armor",
+            "name": "Scatterhorn Hunter Armor",
+            "displayStaticIcon": "hunter",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 1164347863
+              },
+              {
+                "type": "item",
+                "itemHash": 237758814
+              },
+              {
+                "type": "item",
+                "itemHash": 4044826514
+              },
+              {
+                "type": "item",
+                "itemHash": 1081701944
+              },
+              {
+                "type": "item",
+                "itemHash": 345100195
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "groupType": "Scatterhorn Armor",
+            "name": "Scatterhorn Warlock Armor",
+            "displayStaticIcon": "warlock",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 3682059404
+              },
+              {
+                "type": "item",
+                "itemHash": 2877933893
+              },
+              {
+                "type": "item",
+                "itemHash": 1222559003
+              },
+              {
+                "type": "item",
+                "itemHash": 3225160391
+              },
+              {
+                "type": "item",
+                "itemHash": 3874345778
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "groupType": "Wild Hunt Armor",
+            "name": "Wild Hunt Titan Armor",
+            "displayStaticIcon": "titan",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 3887272785
+              },
+              {
+                "type": "item",
+                "itemHash": 2545401128
+              },
+              {
+                "type": "item",
+                "itemHash": 3351935136
+              },
+              {
+                "type": "item",
+                "itemHash": 3180809346
+              },
+              {
+                "type": "item",
+                "itemHash": 2279193565
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "groupType": "Wild Hunt Armor",
+            "name": "Wild Hunt Hunter Armor",
+            "displayStaticIcon": "hunter",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 4079117607
+              },
+              {
+                "type": "item",
+                "itemHash": 2025716654
+              },
+              {
+                "type": "item",
+                "itemHash": 1458739906
+              },
+              {
+                "type": "item",
+                "itemHash": 238284968
+              },
+              {
+                "type": "item",
+                "itemHash": 1148770067
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "groupType": "Wild Hunt Armor",
+            "name": "Wild Hunt Warlock Armor",
+            "displayStaticIcon": "warlock",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 251310542
+              },
+              {
+                "type": "item",
+                "itemHash": 1276513983
+              },
+              {
+                "type": "item",
+                "itemHash": 317220729
+              },
+              {
+                "type": "item",
+                "itemHash": 197764097
+              },
+              {
+                "type": "item",
+                "itemHash": 2055947316
+              }
+            ]
+          },
+          {
+            "type": "item",
+            "itemHash": 720351795
+          },
+          {
+            "type": "item",
+            "itemHash": 2453357042
+          },
+          {
+            "type": "item",
+            "itemHash": 2714022207
+          },
+          {
+            "type": "item",
+            "itemHash": 981718087
+          },
+          {
+            "type": "item",
+            "itemHash": 2742838701
+          },
+          {
+            "type": "item",
+            "itemHash": 1723380073
+          },
+          {
+            "type": "item",
+            "itemHash": 1786797708
+          },
+          {
+            "type": "item",
+            "itemHash": 1162247618
+          },
+          {
+            "type": "item",
+            "itemHash": 2776503072
+          },
+          {
+            "type": "item",
+            "itemHash": 2742838700
+          },
+          {
+            "type": "item",
+            "itemHash": 1513993763
+          },
+          {
+            "type": "item",
+            "itemHash": 3055192515
           }
         ]
       ]

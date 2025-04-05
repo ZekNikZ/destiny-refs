@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "iron_banner-tribute",
+    "type": "misc",
+    "name": "Tribute",
+    "description": "Collect crests from defeated opponents and deposit them to earn points.",
+    "backgroundImage": "/images/crucible_map/multiplex.avif"
+  }
+}

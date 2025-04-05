@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "wellspring-defend-two",
+    "type": "misc",
+    "name": "Defend: Zeerik, Lightflayer",
+    "backgroundImage": "/images/wellspring/defend-two.avif"
+  }
+}

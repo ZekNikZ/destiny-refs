@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "dares_of_eternity-cabal",
+    "type": "misc",
+    "name": "Valus Ta'aurc",
+    "backgroundImage": "/images/dares_of_eternity/cabal.avif"
+  }
+}

@@ -37,7 +37,7 @@ export default function RotationEntry(props: Props) {
           {props.date.format("MMMM D")}
         </Text>
       )}
-      <Group gap={0} style={{ flexGrow: 1, flexBasis: "150px" }}>
+      <Group gap={0} style={{ flexGrow: 1, flexBasis: "150px", alignItems: "stretch" }}>
         {activities
           .filter((a) => !!a)
           .map((activity) => {
@@ -46,6 +46,7 @@ export default function RotationEntry(props: Props) {
                 key={activity.id}
                 miw={240}
                 mih={props.big ? 80 : 40}
+                h="100%"
                 className={classes.darkOverlay}
                 style={{
                   backgroundImage: `url('${activity.backgroundImage}')`,
@@ -84,7 +85,7 @@ export default function RotationEntry(props: Props) {
             );
           })}
         {props.loot && props.loot.length > 0 && (
-          <Group gap={4} wrap="nowrap" p={4}>
+          <Group gap={4} wrap="wrap" p={4} maw="242px">
             {props.loot.map((loot) => (
               <LootIcon key={getLootKey(loot)} loot={loot} size={30} />
             ))}

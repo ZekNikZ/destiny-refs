@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "dares_of_eternity-vex",
+    "type": "misc",
+    "name": "Zydron",
+    "backgroundImage": "/images/dares_of_eternity/vex.avif"
+  }
+}

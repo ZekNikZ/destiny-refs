@@ -1,0 +1,9 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "wellspring-attack-one",
+    "type": "misc",
+    "name": "Attack: Golmag, Warden of the Spring",
+    "backgroundImage": "/images/wellspring/attack-one.avif"
+  }
+}

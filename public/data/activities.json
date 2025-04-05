@@ -77,6 +77,16 @@
     "crucible_map/the-burnout",
 
     "misc/iron_banner-control",
-    "misc/iron_banner-eruption"
+    "misc/iron_banner-eruption",
+    "misc/iron_banner-tribute",
+
+    "misc/dares_of_eternity-cabal",
+    "misc/dares_of_eternity-hive",
+    "misc/dares_of_eternity-vex",
+
+    "misc/wellspring-attack-one",
+    "misc/wellspring-attack-two",
+    "misc/wellspring-defend-one",
+    "misc/wellspring-defend-two"
   ]
 }
