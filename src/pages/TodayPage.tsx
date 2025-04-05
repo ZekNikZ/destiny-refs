@@ -46,6 +46,18 @@ export default function TodayPage() {
           </Grid.Col>
         ))}
         {rotations.activityRotations
+          .filter((x) => x.activityType === "misc")
+          .map((rotation) => (
+            <Grid.Col key={rotation.id} span={{ base: 12, md: 6, lg: 4 }}>
+              <TodayPageDisplay
+                key={rotation.id}
+                title={rotation.name}
+                rotations={[rotation]}
+                disableLinks
+              />
+            </Grid.Col>
+          ))}
+        {rotations.activityRotations
           .filter((rotation) => rotation.type === "event")
           .filter((rotation) => isBetween(dayjs(rotation.startDate), now, dayjs(rotation.endDate)))
           .map((rotation) => (
