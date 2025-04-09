@@ -28,9 +28,11 @@ export default function TodayPage() {
       <Group justify="center">
         <Countdown title="Weekly Reset" to={nextWeeklyReset} />
         <Countdown title="Daily Reset" to={nextDailyReset} />
-        {countdowns.map(({ title, date }) => (
-          <Countdown key={title} title={title} to={date} />
-        ))}
+        {countdowns
+          .filter((countdown) => dayjs(countdown.date).isAfter(now))
+          .map(({ title, date }) => (
+            <Countdown key={title} title={title} to={date} />
+          ))}
       </Group>
       <Grid gutter="md">
         {activityTypes.map((activityType) => (

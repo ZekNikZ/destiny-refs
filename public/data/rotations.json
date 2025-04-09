@@ -34,7 +34,6 @@
       "type": "weekly",
       "activityType": "dungeon",
       "startDate": "2025-02-04T17:00:00Z",
-      "endDate": "2025-04-01T17:00:00Z",
       "note": "The dungeon rotation is currently inconsistent and will be updated as soon as Bungie clarifies the schedule.",
       "rotation": [
         ["dungeon-shattered-throne", "dungeon-spire-of-the-watcher"],
@@ -60,6 +59,9 @@
         ["nightfall-hypernet-current"],
         ["nightfall-heist-battleground-mars"],
         ["nightfall-psiops-battleground-cosmodrome"],
+        ["nightfall-lake-of-shadows"],
+        ["nightfall-psiops-battleground-moon"],
+        ["nightfall-the-scarlet-keep"],
         ["nightfall-lake-of-shadows"],
         ["nightfall-psiops-battleground-moon"],
         ["nightfall-the-scarlet-keep"],
