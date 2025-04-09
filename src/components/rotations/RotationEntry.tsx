@@ -1,4 +1,4 @@
-import { Group, Title, Text, Image } from "@mantine/core";
+import { Group, Title, Text, Image, Box } from "@mantine/core";
 import { useGlobalData } from "../../data/useGlobalData";
 import classes from "./RotationEntry.module.scss";
 import { Link } from "react-router-dom";
@@ -77,7 +77,7 @@ export default function RotationEntry(props: Props) {
               </Group>
             );
             return props.noLink ? (
-              inside
+              <Box className={classes.nolink}>{inside}</Box>
             ) : (
               <Link to={makeRouteFromActivity(activity)} key={activity.id} className={classes.link}>
                 {inside}

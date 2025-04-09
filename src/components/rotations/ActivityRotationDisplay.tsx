@@ -4,6 +4,7 @@ import RotationEntry from "./RotationEntry";
 import dayjs from "dayjs";
 import { rotateArray } from "../../utils/arrays";
 import { isBetween } from "../../utils/dates";
+import { activityTypes } from "../../routes";
 
 interface Props {
   rotation: ActivityRotation;
@@ -75,7 +76,7 @@ export default function ActivityRotationDisplay(props: Props) {
                   date={entryDate}
                   activityIds={activityIds}
                   loot={lootRotation ? lootRotation[index % lootRotation.length] : undefined}
-                  //   noLink={noLinks}
+                  noLink={!activityTypes.some((type) => type.type === props.rotation.activityType)}
                 />
               );
             })}

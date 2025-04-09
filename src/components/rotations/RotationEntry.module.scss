@@ -27,6 +27,12 @@
   }
 }
 
+.nolink {
+  text-decoration: none;
+  flex-grow: 1;
+  flex-basis: 150px;
+}
+
 .link {
   text-decoration: none;
   flex-grow: 1;
