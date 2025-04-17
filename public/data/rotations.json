@@ -34,7 +34,6 @@
       "type": "weekly",
       "activityType": "dungeon",
       "startDate": "2025-02-04T17:00:00Z",
-      "note": "The dungeon rotation is currently inconsistent and will be updated as soon as Bungie clarifies the schedule.",
       "rotation": [
         ["dungeon-shattered-throne", "dungeon-spire-of-the-watcher"],
         ["dungeon-pit-of-heresy", "dungeon-ghosts-of-the-deep"],
