@@ -48,7 +48,7 @@ export default function TodayPage() {
           </Grid.Col>
         ))}
         {rotations.activityRotations
-          .filter((x) => x.activityType === "misc")
+          .filter((x) => x.activityType === "misc" && x.type !== "event")
           .map((rotation) => (
             <Grid.Col key={rotation.id} span={{ base: 12, md: 6, lg: 4 }}>
               <TodayPageDisplay

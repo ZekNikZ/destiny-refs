@@ -2,6 +2,7 @@
 https://kyberscorner.com/destiny2/lost-sector-today/
 - migrate to Next.js and generally optimize site performance
 - allow wheel of misfortune to be synced
+- add custom callout maker
 - WHEEL OF MISFORTUNE - make team punishments more obvious
 - WOM - only have undo 5 times
 - WOM - have ability to make prevent or force a team punishment
@@ -22,3 +23,6 @@ https://kyberscorner.com/destiny2/lost-sector-today/
   - verity
 - add seasonal exotic missions
 - add icon to activities showing which season/expansion they are from
+
+
+Team: rezzing is not allowed. If someone dies, they need to stay dead until the end of the encounter

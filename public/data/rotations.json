@@ -1533,6 +1533,111 @@
           }
         ]
       ]
+    },
+    {
+      "id": "rite-of-the-nine",
+      "type": "event",
+      "name": "Rite of the Nine",
+      "activityType": "misc",
+      "startDate": "2025-05-20T17:00:00Z",
+      "endDate": "2025-06-03T17:00:00Z",
+      "activityIds": ["dungeon-ghosts-of-the-deep"],
+      "loot": [
+        [
+          {
+            "type": "item",
+            "itemHash": 291447487
+          },
+          {
+            "type": "item",
+            "itemHash": 4193602194
+          },
+          {
+            "type": "item",
+            "itemHash": 2934305134
+          },
+          {
+            "type": "item",
+            "itemHash": 2059741649
+          },
+          {
+            "type": "item",
+            "itemHash": 2512446424
+          },
+          {
+            "type": "group",
+            "name": "Holofoil Weapons",
+            "groupType": "Holofoil Weapons",
+            "displayStaticIcon": "weapon",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 2760833884
+              },
+              {
+                "type": "item",
+                "itemHash": 4193602194
+              },
+              {
+                "type": "item",
+                "itemHash": 1685406703
+              },
+              {
+                "type": "item",
+                "itemHash": 492673102
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "name": "Adept Weapons",
+            "groupType": "Adept Weapons",
+            "displayStaticIcon": "weapon",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 1817605554
+              },
+              {
+                "type": "item",
+                "itemHash": 189194532
+              },
+              {
+                "type": "item",
+                "itemHash": 1050582210
+              },
+              {
+                "type": "item",
+                "itemHash": 233402416
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "name": "Holofoil Adept Weapons",
+            "groupType": "Holofoil Adept Weapons",
+            "displayStaticIcon": "weapon",
+            "children": [
+              {
+                "type": "item",
+                "itemHash": 2126543269
+              },
+              {
+                "type": "item",
+                "itemHash": 1157220231
+              },
+              {
+                "type": "item",
+                "itemHash": 1050582210
+              },
+              {
+                "type": "item",
+                "itemHash": 3185151619
+              }
+            ]
+          }
+        ]
+      ]
     }
   ],
   "challengeRotations": [
