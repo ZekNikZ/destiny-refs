@@ -1,0 +1,16 @@
+{
+  "$schema": "../../schema/activity.json",
+  "activity": {
+    "id": "raid-the-desert-perpetual",
+    "type": "raid",
+    "name": "The Desert Perpetual",
+    "abbreviation": "TDP",
+    "description": "Free the Light.",
+    "backgroundImage": "/images/raids/the-desert-perpetual/banner.avif",
+    "hasMasterMode": true,
+    "bungieActivityHashes": [1044919065, 3896382790],
+    "bungieMasterActivityHashes": [3817322389, 2586252122],
+    "triumphs": [],
+    "encounters": []
+  }
+}

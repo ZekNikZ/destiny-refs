@@ -60,7 +60,7 @@ export default function FireteamRaidReport() {
   });
   const [selectedRaid, setSelectedRaid] = useLocalStorage({
     key: "fireteam-tool-raid",
-    defaultValue: "raid-salvations-edge",
+    defaultValue: "raid-the-desert-perpetual",
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
